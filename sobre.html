@@ -7,76 +7,159 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: { extend: { colors: { brand: { pure: '#FFFFFF', canvas: '#F9FAFB', surface: '#F3F4F6', border: '#E5E7EB', muted: '#6B7280', technical: '#4B5563', dark: '#111827', charcoal: '#0F172A' } }, fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            dsc: {
+              white: '#FFFFFF',
+              canvas: '#F8FAFC',
+              surface: '#F1F5F9',
+              line: '#E2E8F0',
+              muted: '#64748B',
+              body: '#334155',
+              navy: {
+                subtle: '#1E293B',
+                DEFAULT: '#0F172A',
+                deep: '#0A0F1D',
+                accent: '#1D4ED8',
+              }
+            }
+          }
+        }
+      }
     }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>.ph { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; letter-spacing: -0.02em; background-color: #F3F4F6; border: 1px dashed #CBD5E1; padding: 0.1rem 0.4rem; border-radius: 2px; color: #64748B; }</style>
+  <style>.ph { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; background-color: #F1F5F9; border: 1px dashed #E2E8F0; padding: 0.1rem 0.4rem; color: #64748B; }</style>
   <script src="js/main.js" defer></script>
 </head>
-<body class="bg-brand-canvas text-brand-dark font-sans antialiased selection:bg-brand-dark selection:text-white">
+<body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
 
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-border">
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-dsc-white/90 backdrop-blur-md border-b border-dsc-line">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex flex-col">
-        <span class="text-xl font-bold tracking-tighter text-brand-dark">DSC</span>
-        <span class="text-[10px] uppercase font-mono tracking-widest text-brand-muted">Domingos Silva & Cunha</span>
+        <span class="text-xl font-bold tracking-tighter text-dsc-navy">DSC</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted">Domingos Silva & Cunha</span>
       </a>
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-tight">
-        <a href="sobre.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_about">Sobre Nós</a>
-        <a href="servicos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_services">Serviços & Cadeia</a>
-        <a href="catalogo.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_catalog">Catálogo & Toalhas</a>
-        <a href="sustentabilidade.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_blog">Caderno Técnico</a>
-        <a href="contactos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_contact">Contactos</a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
+        <a href="sobre.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.contacts">Contactos</a>
       </nav>
       <div class="flex items-center space-x-6">
-        <div class="flex items-center border border-brand-border rounded text-xs font-mono">
-          <button id="btn-pt" onclick="setLanguage('pt')" class="px-2.5 py-1 bg-brand-dark text-white font-semibold transition-all">PT</button>
-          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-brand-muted hover:text-brand-dark transition-all">EN</button>
+        <div class="flex items-center border border-dsc-line rounded-none text-xs font-mono">
+          <button id="btn-pt" onclick="setLanguage('pt')" class="px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none">PT</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none">EN</button>
         </div>
-        <a href="contactos.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-brand-dark text-xs uppercase font-mono tracking-widest text-brand-dark hover:bg-brand-dark hover:text-white transition-all">
-          <span data-i18n="nav_cta">Sourcing B2B</span>
+        <a href="contactos.html" class="hidden sm:inline-flex items-center justify-center px-6 py-3.5 border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none">
+          <span data-i18n="nav.cta">Sourcing B2B</span>
         </a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="py-24 border-b border-brand-border bg-white min-h-[70vh] flex items-center">
+    <section class="py-24 border-b border-dsc-line bg-dsc-white min-h-[70vh]">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div class="lg:col-span-4">
-            <span class="text-xs font-mono uppercase tracking-widest text-brand-muted block mb-3" data-i18n="about_badge">01 / História & Rigor</span>
-            <h2 class="text-3xl font-normal tracking-tight text-brand-dark" data-i18n="about_title">Equilíbrio entre a tradição de confeção e a engenharia moderna.</h2>
+        
+        <div class="flex flex-col md:flex-row gap-16 mb-24">
+          <div class="md:w-1/3">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="about.badge">01 / Herança & Capacidade</span>
+            </span>
+            <h2 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1]" data-i18n="about.h1">
+              Tradição têxtil, engenharia e visão global a partir de Portugal.
+            </h2>
           </div>
-          <div class="lg:col-span-8 space-y-6 text-brand-technical leading-relaxed font-light text-base">
-            <p data-i18n="about_p1">
-              Fundada na bacia têxtil de referência de Portugal, a Domingos Silva & Cunha (DSC) nasceu do compromisso inegociável com a durabilidade, o toque e a consistência técnica dos têxteis de lar.
+          <div class="md:w-2/3">
+            <p class="text-lg text-dsc-body font-light leading-relaxed max-w-3xl" data-i18n="about.lead">
+              Localizada no coração do cluster têxtil do Norte de Portugal...
             </p>
-            <p data-i18n="about_p2">
-              Não atuamos como um fornecedor estático. A nossa estrutura integra tanto o desenvolvimento cuidado de linhas de marca própria como a resposta ágil a encomendas B2B internacionais que exigem soluções técnicas específicas, tolerâncias milimétricas de costura e rigor nos prazos de expedição.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-brand-border">
-              <div>
-                <span class="text-xs font-mono uppercase tracking-widest text-brand-dark block mb-2" data-i18n="about_pillar1_title">Infraestrutura Adaptável</span>
-                <p class="text-sm text-brand-muted" data-i18n="about_pillar1_desc">Equipamento industrial para tecelagem felpuda, veludos, estruturas waffle e confeção de bainhas técnicas.</p>
-              </div>
-              <div>
-                <span class="text-xs font-mono uppercase tracking-widest text-brand-dark block mb-2" data-i18n="about_pillar2_title">Auditoria e Lotes</span>
-                <p class="text-sm text-brand-muted" data-i18n="about_pillar2_desc">Monitorização do encolhimento, solidez à lavagem industrial e absorção hidrófila em cada lote.</p>
-              </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <h3 class="text-2xl font-light text-dsc-navy mb-6 tracking-tight" data-i18n="about.story_title">A Nossa Identidade</h3>
+            <div class="space-y-6 text-sm text-dsc-body font-light leading-relaxed">
+              <p data-i18n="about.story_p1">Nascemos no ecossistema têxtil de excelência de Portugal com um propósito claro...</p>
+              <p data-i18n="about.story_p2">Com um modelo operacional ágil...</p>
             </div>
           </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-dsc-line border border-dsc-line">
+            
+            <div class="bg-dsc-canvas p-8">
+              <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted mb-2 block"><span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="about.metrics.0.label">Origem</span></span>
+              <span class="text-xl font-light text-dsc-navy block mb-1 font-mono" data-i18n="about.metrics.0.val">Norte de Portugal</span>
+              <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted" data-i18n="about.metrics.0.sub">EU Textile Hub</span>
+            </div>
+
+            <div class="bg-dsc-canvas p-8">
+              <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted mb-2 block"><span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="about.metrics.1.label">Especialização</span></span>
+              <span class="text-xl font-light text-dsc-navy block mb-1 font-mono" data-i18n="about.metrics.1.val">Banho & Felpos</span>
+              <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted" data-i18n="about.metrics.1.sub">350 a 900 g/m²</span>
+            </div>
+            
+            <div class="bg-dsc-canvas p-8">
+              <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted mb-2 block"><span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="about.metrics.2.label">Modelo</span></span>
+              <span class="text-xl font-light text-dsc-navy block mb-1 font-mono" data-i18n="about.metrics.2.val">Marca Própria & OEM</span>
+              <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted" data-i18n="about.metrics.2.sub">Soluções à medida</span>
+            </div>
+            
+            <div class="bg-dsc-canvas p-8">
+              <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted mb-2 block"><span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="about.metrics.3.label">Capacidade</span></span>
+              <span class="text-xl font-light text-dsc-navy block mb-1 font-mono"><span class="ph">[MONTHLY_CAPACITY]</span></span>
+              <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted" data-i18n="about.metrics.3.sub">Lotes rastreados</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pilares -->
+    <section class="py-24 bg-dsc-canvas border-b border-dsc-line">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          
+          <div class="border-t border-dsc-line pt-6">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-4" data-i18n="about.values.0.num">01</span>
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="about.values.0.title">Saber-Fazer Fabril</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="about.values.0.desc">Domínio profundo...</p>
+          </div>
+
+          <div class="border-t border-dsc-line pt-6">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-4" data-i18n="about.values.1.num">02</span>
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="about.values.1.title">Rigor Técnico Europeu</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="about.values.1.desc">Garantia de conformidade...</p>
+          </div>
+
+          <div class="border-t border-dsc-line pt-6">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-4" data-i18n="about.values.2.num">03</span>
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="about.values.2.title">Flexibilidade Operacional</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="about.values.2.desc">Capacidade para desenvolver...</p>
+          </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="bg-brand-charcoal text-white border-t border-brand-border/20 py-12">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-400">
+  <footer class="bg-dsc-navy-deep text-slate-300 border-t border-dsc-navy/30 py-14">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center font-mono text-[10px] tracking-widest uppercase">
       <div class="flex items-center space-x-4 mb-4 md:mb-0">
-        <span class="text-white font-bold">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+        <span class="text-white font-normal">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
       </div>
       <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
     </div>

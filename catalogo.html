@@ -7,148 +7,175 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: { extend: { colors: { brand: { pure: '#FFFFFF', canvas: '#F9FAFB', surface: '#F3F4F6', border: '#E5E7EB', muted: '#6B7280', technical: '#4B5563', dark: '#111827', charcoal: '#0F172A' } }, fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            dsc: {
+              white: '#FFFFFF',
+              canvas: '#F8FAFC',
+              surface: '#F1F5F9',
+              line: '#E2E8F0',
+              muted: '#64748B',
+              body: '#334155',
+              navy: {
+                subtle: '#1E293B',
+                DEFAULT: '#0F172A',
+                deep: '#0A0F1D',
+                accent: '#1D4ED8',
+              }
+            }
+          }
+        }
+      }
     }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>.ph { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; letter-spacing: -0.02em; background-color: #F3F4F6; border: 1px dashed #CBD5E1; padding: 0.1rem 0.4rem; border-radius: 2px; color: #64748B; }</style>
+  <style>.ph { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; background-color: #F1F5F9; border: 1px dashed #E2E8F0; padding: 0.1rem 0.4rem; color: #64748B; }</style>
   <script src="js/main.js" defer></script>
 </head>
-<body class="bg-brand-canvas text-brand-dark font-sans antialiased selection:bg-brand-dark selection:text-white">
+<body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
 
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-border">
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-dsc-white/90 backdrop-blur-md border-b border-dsc-line">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex flex-col">
-        <span class="text-xl font-bold tracking-tighter text-brand-dark">DSC</span>
-        <span class="text-[10px] uppercase font-mono tracking-widest text-brand-muted">Domingos Silva & Cunha</span>
+        <span class="text-xl font-bold tracking-tighter text-dsc-navy">DSC</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted">Domingos Silva & Cunha</span>
       </a>
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-tight">
-        <a href="sobre.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_about">Sobre Nós</a>
-        <a href="servicos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_services">Serviços & Cadeia</a>
-        <a href="catalogo.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_catalog">Catálogo & Toalhas</a>
-        <a href="sustentabilidade.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_blog">Caderno Técnico</a>
-        <a href="contactos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_contact">Contactos</a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
+        <a href="sobre.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.contacts">Contactos</a>
       </nav>
       <div class="flex items-center space-x-6">
-        <div class="flex items-center border border-brand-border rounded text-xs font-mono">
-          <button id="btn-pt" onclick="setLanguage('pt')" class="px-2.5 py-1 bg-brand-dark text-white font-semibold transition-all">PT</button>
-          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-brand-muted hover:text-brand-dark transition-all">EN</button>
+        <div class="flex items-center border border-dsc-line rounded-none text-xs font-mono">
+          <button id="btn-pt" onclick="setLanguage('pt')" class="px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none">PT</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none">EN</button>
         </div>
-        <a href="contactos.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-brand-dark text-xs uppercase font-mono tracking-widest text-brand-dark hover:bg-brand-dark hover:text-white transition-all">
-          <span data-i18n="nav_cta">Sourcing B2B</span>
+        <a href="contactos.html" class="hidden sm:inline-flex items-center justify-center px-6 py-3.5 border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none">
+          <span data-i18n="nav.cta">Sourcing B2B</span>
         </a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="py-24 border-b border-brand-border bg-brand-canvas min-h-[70vh]">
+    <section class="py-24 border-b border-dsc-line bg-dsc-canvas min-h-[70vh]">
       <div class="max-w-7xl mx-auto px-6">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
-          <div>
-            <span class="text-xs font-mono uppercase tracking-widest text-brand-muted block mb-2" data-i18n="catalog_badge">03 / Especificações Técnicas & Banho</span>
-            <h2 class="text-3xl font-normal tracking-tight text-brand-dark" data-i18n="catalog_title">Coleção de Banho & Artigos de Referência</h2>
+        <div class="flex flex-col md:flex-row gap-16 mb-16 pb-6 border-b border-dsc-line">
+          <div class="md:w-1/2">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="products.badge">03 / Especificações Técnicas</span>
+            </span>
+            <h2 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-4" data-i18n="products.h1">Coleções de banho concebidas com precisão...</h2>
+          </div>
+          <div class="md:w-1/2 flex items-center">
+            <p class="text-base text-dsc-body font-light leading-relaxed" data-i18n="products.lead">Do retalho sofisticado à exigência da hotelaria de luxo...</p>
           </div>
         </div>
 
-        <!-- Barra de Controlo / Filtros -->
-        <div class="flex flex-wrap items-center justify-between border-b border-brand-border pb-6 mb-12">
-          <div class="flex flex-wrap gap-2 font-mono text-xs mb-4 md:mb-0" id="filter-controls">
-            <button data-filter="all" class="px-4 py-2 bg-brand-dark text-white transition-all outline-none" data-i18n="cat_filter_all">Todos</button>
-            <button data-filter="terry" class="px-4 py-2 bg-brand-surface text-brand-muted border border-brand-border hover:border-brand-dark transition-all outline-none" data-i18n="cat_filter_terry">Turco Clássico</button>
-            <button data-filter="contract" class="px-4 py-2 bg-brand-surface text-brand-muted border border-brand-border hover:border-brand-dark transition-all outline-none" data-i18n="cat_filter_contract">Contract / Hospitality</button>
-            <button data-filter="waffle" class="px-4 py-2 bg-brand-surface text-brand-muted border border-brand-border hover:border-brand-dark transition-all outline-none" data-i18n="cat_filter_waffle">Estruturas Waffle</button>
+        <div class="flex flex-wrap items-center justify-between border-b border-dsc-line pb-6 mb-12">
+          <div class="flex flex-wrap gap-2 font-mono text-[10px] tracking-widest uppercase mb-4 md:mb-0" id="filter-controls">
+            <button data-filter="all" class="px-4 py-2 bg-dsc-navy text-white transition-all outline-none rounded-none border border-dsc-navy" data-i18n="products.categories.0">Todos</button>
+            <button data-filter="terry" class="px-4 py-2 bg-dsc-white text-dsc-body border border-dsc-line hover:border-dsc-navy transition-all outline-none rounded-none" data-i18n="products.categories.1">Toalhas & Felpos</button>
+            <button data-filter="contract" class="px-4 py-2 bg-dsc-white text-dsc-body border border-dsc-line hover:border-dsc-navy transition-all outline-none rounded-none" data-i18n="products.categories.2">Linha Hotelaria (Contract)</button>
+            <button data-filter="waffle" class="px-4 py-2 bg-dsc-white text-dsc-body border border-dsc-line hover:border-dsc-navy transition-all outline-none rounded-none" data-i18n="products.categories.3">Estruturas Waffle</button>
           </div>
-          <div class="text-xs font-mono text-brand-muted">
-            <span data-i18n="cat_showing">Mostrando</span> <span id="item-count" class="text-brand-dark font-medium">4</span> <span data-i18n="cat_of">de</span> 4 <span data-i18n="cat_refs">referências técnicas</span>
+          <div class="text-[10px] font-mono tracking-widest uppercase text-dsc-muted">
+            <span data-i18n="products.showing">Mostrando</span> <span id="item-count" class="text-dsc-navy font-normal">4</span> <span data-i18n="products.of">de</span> 4 <span data-i18n="products.refs">referências técnicas</span>
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="catalog-grid">
           
-          <!-- Artigo 1 -->
-          <div class="border border-brand-border bg-white flex flex-col justify-between transition-opacity duration-300" data-category="terry">
+          <!-- Artigo 0: T550 -->
+          <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy group" data-category="terry">
             <div class="p-6">
-              <div class="aspect-square bg-brand-surface border border-brand-border mb-6 flex items-center justify-center overflow-hidden">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden">
                 <img src="assets/towel-macro.jpg" alt="DSC-T550" class="w-full h-full object-cover">
               </div>
-              <div class="text-[11px] font-mono uppercase tracking-widest text-brand-muted mb-1">Ref. DSC-T550</div>
-              <h3 class="text-base font-medium text-brand-dark mb-4" data-i18n="cat_art1_title">Toalha Turco Puro Conforto</h3>
-              <dl class="space-y-2 text-xs border-t border-brand-border pt-4">
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Composição:</dt><dd class="font-mono text-brand-dark">100% Algodão Penteado</dd></div>
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Densidade:</dt><dd class="font-mono text-brand-dark">550 g/m²</dd></div>
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Acabamento:</dt><dd class="font-mono text-brand-dark">Bainha dupla</dd></div>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-T550-COM</div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="products.items.0.name">Toalha Turco Algodão Penteado</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.0.desc">Artigo de referência da DSC...</p>
+              <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.0.specs.composition">100% Algodão Penteado</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.0.specs.density">550 g/m²</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-brand-surface border-t border-brand-border mt-auto">
-              <a href="contactos.html?ref=DSC-T550&name=Toalha+Turco+Puro+Conforto" class="text-xs font-mono uppercase tracking-wider text-brand-dark hover:underline flex justify-between items-center">
-                <span data-i18n="cat_btn_sample">Pedir Amostra B2B</span><span>&rarr;</span>
+            <div class="p-4 bg-dsc-surface/30 border-t border-dsc-line mt-auto">
+              <a href="contactos.html?ref=DSC-T550-COM&name=Toalha+Turco+Algodao+Penteado" class="text-dsc-navy font-mono text-xs uppercase tracking-wider flex justify-between items-center group-hover:translate-x-1 transition-transform">
+                <span data-i18n="products.btn_sample">Pedir Amostra B2B</span><span class="font-mono">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- Artigo 2 -->
-          <div class="border border-brand-border bg-white flex flex-col justify-between transition-opacity duration-300" data-category="contract">
+          <!-- Artigo 1: T700 -->
+          <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy group" data-category="contract">
             <div class="p-6">
-              <div class="aspect-square bg-brand-surface border border-brand-border mb-6 flex items-center justify-center overflow-hidden">
-                <img src="assets/towels-editorial.jpg" alt="DSC-T700-HT" class="w-full h-full object-cover grayscale contrast-125">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden">
+                <img src="assets/towels-editorial.jpg" alt="DSC-T700" class="w-full h-full object-cover grayscale contrast-125">
               </div>
-              <div class="text-[11px] font-mono uppercase tracking-widest text-brand-muted mb-1">Ref. DSC-T700-HT</div>
-              <h3 class="text-base font-medium text-brand-dark mb-4" data-i18n="cat_art2_title">Linha Heavy Hospitality</h3>
-              <dl class="space-y-2 text-xs border-t border-brand-border pt-4">
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Composição:</dt><dd class="font-mono text-brand-dark">Fio Duplo (24/2)</dd></div>
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Densidade:</dt><dd class="font-mono text-brand-dark">700 g/m²</dd></div>
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Resistência:</dt><dd class="font-mono text-brand-dark">Lavagem a 90°C</dd></div>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-T700-HT</div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="products.items.1.name">Toalha Linha Heavy Contract</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.1.desc">Desenvolvida especificamente para alta rotação...</p>
+              <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.1.specs.composition">Fio Retorcido</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.1.specs.density">700 g/m²</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-brand-surface border-t border-brand-border mt-auto">
-              <a href="contactos.html?ref=DSC-T700-HT&name=Linha+Heavy+Hospitality" class="text-xs font-mono uppercase tracking-wider text-brand-dark hover:underline flex justify-between items-center">
-                <span data-i18n="cat_btn_sample">Pedir Amostra B2B</span><span>&rarr;</span>
+            <div class="p-4 bg-dsc-surface/30 border-t border-dsc-line mt-auto">
+              <a href="contactos.html?ref=DSC-T700-HT&name=Toalha+Linha+Heavy+Contract" class="text-dsc-navy font-mono text-xs uppercase tracking-wider flex justify-between items-center group-hover:translate-x-1 transition-transform">
+                <span data-i18n="products.btn_sample">Pedir Amostra B2B</span><span class="font-mono">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- Artigo 3 -->
-          <div class="border border-brand-border bg-white flex flex-col justify-between transition-opacity duration-300" data-category="waffle">
+          <!-- Artigo 2: W420 -->
+          <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy group" data-category="waffle">
             <div class="p-6">
-              <div class="aspect-square bg-brand-surface border border-brand-border mb-6 flex items-center justify-center overflow-hidden">
-                <img src="assets/hero-looms.jpg" alt="DSC-W420-ECO" class="w-full h-full object-cover grayscale opacity-80">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden">
+                <img src="assets/hero-looms.jpg" alt="DSC-W420" class="w-full h-full object-cover grayscale opacity-80">
               </div>
-              <div class="text-[11px] font-mono uppercase tracking-widest text-brand-muted mb-1">Ref. DSC-W420-ECO</div>
-              <h3 class="text-base font-medium text-brand-dark mb-4" data-i18n="cat_art3_title">Estrutura Waffle Honeycomb</h3>
-              <dl class="space-y-2 text-xs border-t border-brand-border pt-4">
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Composição:</dt><dd class="font-mono text-brand-dark">Algodão Reciclado</dd></div>
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Densidade:</dt><dd class="font-mono text-brand-dark">420 g/m²</dd></div>
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Propriedade:</dt><dd class="font-mono text-brand-dark">Secagem ultra-rápida</dd></div>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-W420-ECO</div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="products.items.2.name">Toalha Ninho de Abelha (Waffle)</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.2.desc">Design contemporâneo e secagem ultrarrápida...</p>
+              <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.2.specs.composition">Alg. Orgânico / Linho</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.2.specs.density">420 g/m²</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-brand-surface border-t border-brand-border mt-auto">
-              <a href="contactos.html?ref=DSC-W420-ECO&name=Estrutura+Waffle+Honeycomb" class="text-xs font-mono uppercase tracking-wider text-brand-dark hover:underline flex justify-between items-center">
-                <span data-i18n="cat_btn_sample">Pedir Amostra B2B</span><span>&rarr;</span>
+            <div class="p-4 bg-dsc-surface/30 border-t border-dsc-line mt-auto">
+              <a href="contactos.html?ref=DSC-W420-ECO&name=Toalha+Ninho+de+Abelha" class="text-dsc-navy font-mono text-xs uppercase tracking-wider flex justify-between items-center group-hover:translate-x-1 transition-transform">
+                <span data-i18n="products.btn_sample">Pedir Amostra B2B</span><span class="font-mono">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- Artigo 4 -->
-          <div class="border border-brand-border bg-white flex flex-col justify-between transition-opacity duration-300" data-category="terry">
+          <!-- Artigo 3: Z600 -->
+          <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy group" data-category="terry">
             <div class="p-6">
-              <div class="aspect-square bg-brand-surface border border-brand-border mb-6 flex items-center justify-center overflow-hidden">
-                <!-- Placeholder if no image -->
-                <div class="text-xs font-mono text-brand-muted">Zero-Twist Macro</div>
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden">
+                <div class="text-[11px] font-mono tracking-widest uppercase text-dsc-muted">Zero-Twist Macro</div>
               </div>
-              <div class="text-[11px] font-mono uppercase tracking-widest text-brand-muted mb-1">Ref. DSC-Z600-PL</div>
-              <h3 class="text-base font-medium text-brand-dark mb-4" data-i18n="cat_art4_title">Turco Zero-Twist Premium</h3>
-              <dl class="space-y-2 text-xs border-t border-brand-border pt-4">
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Composição:</dt><dd class="font-mono text-brand-dark">Laçada sem torção</dd></div>
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Densidade:</dt><dd class="font-mono text-brand-dark">600 g/m²</dd></div>
-                <div class="flex justify-between py-1 border-b border-brand-border/40"><dt class="text-brand-muted">Propriedade:</dt><dd class="font-mono text-brand-dark">Toque aveludado</dd></div>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-Z600-PL</div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="products.items.3.name">Toalha Turco Zero-Twist Premium</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.3.desc">Fibras sem torção que aprisionam o ar...</p>
+              <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.3.specs.composition">Algodão Nobre</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.3.specs.density">600 g/m²</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-brand-surface border-t border-brand-border mt-auto">
-              <a href="contactos.html?ref=DSC-Z600-PL&name=Turco+Zero-Twist+Premium" class="text-xs font-mono uppercase tracking-wider text-brand-dark hover:underline flex justify-between items-center">
-                <span data-i18n="cat_btn_sample">Pedir Amostra B2B</span><span>&rarr;</span>
+            <div class="p-4 bg-dsc-surface/30 border-t border-dsc-line mt-auto">
+              <a href="contactos.html?ref=DSC-Z600-PL&name=Toalha+Turco+Zero-Twist+Premium" class="text-dsc-navy font-mono text-xs uppercase tracking-wider flex justify-between items-center group-hover:translate-x-1 transition-transform">
+                <span data-i18n="products.btn_sample">Pedir Amostra B2B</span><span class="font-mono">&rarr;</span>
               </a>
             </div>
           </div>
@@ -158,16 +185,15 @@
     </section>
   </main>
 
-  <footer class="bg-brand-charcoal text-white border-t border-brand-border/20 py-12">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-400">
+  <footer class="bg-dsc-navy-deep text-slate-300 border-t border-dsc-navy/30 py-14">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center font-mono text-[10px] tracking-widest uppercase">
       <div class="flex items-center space-x-4 mb-4 md:mb-0">
-        <span class="text-white font-bold">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+        <span class="text-white font-normal">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
       </div>
       <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
     </div>
   </footer>
 
-  <!-- Lógica Vanilla JS para Filtragem -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const buttons = document.querySelectorAll('#filter-controls button');
@@ -176,31 +202,27 @@
 
       buttons.forEach(btn => {
         btn.addEventListener('click', () => {
-          // Atualiza estilos dos botões
           buttons.forEach(b => {
-            b.classList.remove('bg-brand-dark', 'text-white');
-            b.classList.add('bg-brand-surface', 'text-brand-muted', 'border-brand-border');
+            b.classList.remove('bg-dsc-navy', 'text-white', 'border-dsc-navy');
+            b.classList.add('bg-dsc-white', 'text-dsc-body', 'border-dsc-line');
           });
-          btn.classList.remove('bg-brand-surface', 'text-brand-muted', 'border-brand-border');
-          btn.classList.add('bg-brand-dark', 'text-white');
+          btn.classList.remove('bg-dsc-white', 'text-dsc-body', 'border-dsc-line');
+          btn.classList.add('bg-dsc-navy', 'text-white', 'border-dsc-navy');
 
           const filter = btn.getAttribute('data-filter');
           let visibleCount = 0;
 
-          // Filtra itens
           items.forEach(item => {
             if (filter === 'all' || item.getAttribute('data-category') === filter) {
               item.style.display = 'flex';
-              // Delay opacidade para transição suave
               setTimeout(() => { item.style.opacity = '1'; }, 50);
               visibleCount++;
             } else {
               item.style.opacity = '0';
-              setTimeout(() => { item.style.display = 'none'; }, 300); // 300ms de transição no css/tailwind (duration-300)
+              setTimeout(() => { item.style.display = 'none'; }, 300);
             }
           });
 
-          // Atualiza contador
           countEl.innerText = visibleCount;
         });
       });

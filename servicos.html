@@ -3,134 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DSC — Matriz Interativa de Serviços</title>
+  <title>DSC — Serviços & Cadeia de Valor</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: { extend: { colors: { brand: { pure: '#FFFFFF', canvas: '#F9FAFB', surface: '#F3F4F6', border: '#E5E7EB', muted: '#6B7280', technical: '#4B5563', dark: '#111827', charcoal: '#0F172A' } }, fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            dsc: {
+              white: '#FFFFFF',
+              canvas: '#F8FAFC',
+              surface: '#F1F5F9',
+              line: '#E2E8F0',
+              muted: '#64748B',
+              body: '#334155',
+              navy: {
+                subtle: '#1E293B',
+                DEFAULT: '#0F172A',
+                deep: '#0A0F1D',
+                accent: '#1D4ED8',
+              }
+            }
+          }
+        }
+      }
     }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>.ph { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; letter-spacing: -0.02em; background-color: #F3F4F6; border: 1px dashed #CBD5E1; padding: 0.1rem 0.4rem; border-radius: 2px; color: #64748B; }</style>
+  <style>.ph { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; background-color: #F1F5F9; border: 1px dashed #E2E8F0; padding: 0.1rem 0.4rem; color: #64748B; }</style>
   <script src="js/main.js" defer></script>
 </head>
-<body class="bg-brand-canvas text-brand-dark font-sans antialiased selection:bg-brand-dark selection:text-white">
+<body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
 
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-border">
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-dsc-white/90 backdrop-blur-md border-b border-dsc-line">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex flex-col">
-        <span class="text-xl font-bold tracking-tighter text-brand-dark">DSC</span>
-        <span class="text-[10px] uppercase font-mono tracking-widest text-brand-muted">Domingos Silva & Cunha</span>
+        <span class="text-xl font-bold tracking-tighter text-dsc-navy">DSC</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted">Domingos Silva & Cunha</span>
       </a>
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-tight">
-        <a href="sobre.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_about">Sobre Nós</a>
-        <a href="servicos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_services">Serviços & Cadeia</a>
-        <a href="catalogo.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_catalog">Catálogo & Toalhas</a>
-        <a href="sustentabilidade.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_blog">Caderno Técnico</a>
-        <a href="contactos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_contact">Contactos</a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
+        <a href="sobre.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-dsc-body hover:text-dsc-navy transition-colors uppercase font-mono text-[10px] tracking-widest" data-i18n="nav.contacts">Contactos</a>
       </nav>
       <div class="flex items-center space-x-6">
-        <div class="flex items-center border border-brand-border rounded text-xs font-mono">
-          <button id="btn-pt" onclick="setLanguage('pt')" class="px-2.5 py-1 bg-brand-dark text-white font-semibold transition-all">PT</button>
-          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-brand-muted hover:text-brand-dark transition-all">EN</button>
+        <div class="flex items-center border border-dsc-line rounded-none text-xs font-mono">
+          <button id="btn-pt" onclick="setLanguage('pt')" class="px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none">PT</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none">EN</button>
         </div>
-        <a href="contactos.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-brand-dark text-xs uppercase font-mono tracking-widest text-brand-dark hover:bg-brand-dark hover:text-white transition-all">
-          <span data-i18n="nav_cta">Sourcing B2B</span>
+        <a href="contactos.html" class="hidden sm:inline-flex items-center justify-center px-6 py-3.5 border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none">
+          <span data-i18n="nav.cta">Sourcing B2B</span>
         </a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="py-24 border-b border-brand-border bg-white min-h-[80vh]">
+    <section class="py-24 border-b border-dsc-line bg-dsc-white min-h-[80vh]">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-brand-border">
-          <div>
-            <span class="text-xs font-mono uppercase tracking-widest text-brand-muted block mb-2" data-i18n="services_badge">02 / Estrutura Operacional</span>
-            <h2 class="text-3xl font-normal tracking-tight text-brand-dark" data-i18n="services_title">Intervenção Modular em Toda a Cadeia de Valor</h2>
+        
+        <div class="flex flex-col lg:flex-row gap-16 mb-16 pb-6 border-b border-dsc-line">
+          <div class="lg:w-1/2">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="services.badge">02 / Estrutura Operacional</span>
+            </span>
+            <h2 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-6" data-i18n="services.h1">Soluções integradas da conceção do fio ao embalamento final.</h2>
+            <p class="text-base text-dsc-body font-light leading-relaxed mb-8" data-i18n="services.lead">
+              Inspirados na verticalidade industrial, acompanhamos o cliente em todo o ciclo produtivo ou integramos etapas específicas do seu projeto têxtil.
+            </p>
           </div>
-          <p class="text-sm text-brand-muted max-w-md mt-4 md:mt-0 font-light" data-i18n="services_subtitle">
-            O cliente define o escopo: executamos ciclos completos de produção ou integramos etapas especializadas.
-          </p>
+          <div class="lg:w-1/2 lg:pl-16 lg:border-l border-dsc-line flex flex-col justify-center">
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="services.intro_title">Como Operamos</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="services.intro_p">
+              A nossa flexibilidade permite ao cliente decidir onde a DSC intervém...
+            </p>
+          </div>
         </div>
 
         <!-- Controladores da Matriz -->
-        <div class="flex items-center justify-center gap-4 mb-10">
-          <button id="btn-mode-a" class="px-6 py-3 bg-brand-dark text-white text-xs font-mono uppercase tracking-widest border border-brand-dark transition-all" data-i18n="srv_mode_integral">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
+          <button id="btn-mode-a" class="w-full md:w-auto bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 transition-all duration-200 rounded-none border border-dsc-navy" data-i18n="services.mode_a">
             Modo A: Ciclo Integral
           </button>
-          <button id="btn-mode-b" class="px-6 py-3 bg-brand-surface text-brand-muted text-xs font-mono uppercase tracking-widest border border-brand-border hover:border-brand-dark hover:text-brand-dark transition-all" data-i18n="srv_mode_modular">
+          <button id="btn-mode-b" class="w-full md:w-auto bg-dsc-white border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest px-6 py-3.5 hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none" data-i18n="services.mode_b">
             Modo B: Seleção Modular
           </button>
         </div>
 
-        <!-- Matriz Industrial -->
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-px bg-brand-border border border-brand-border" id="matrix-container">
+        <!-- Matriz Industrial (Steps 0 a 4) -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-px bg-dsc-line border border-dsc-line" id="matrix-container">
           
-          <div class="matrix-box bg-white p-8 flex flex-col justify-between cursor-pointer transition-all border-2 border-brand-dark" data-stage="design">
-            <span class="text-xs font-mono text-brand-muted mb-8 matrix-badge">ETAPA // 01</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none" data-stage="design">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent">ETAPA // 01</span>
             <div>
-              <h3 class="text-base font-medium text-brand-dark mb-2" data-i18n="stage1_title">Conceção & I&D</h3>
-              <p class="text-xs text-brand-muted leading-relaxed" data-i18n="stage1_desc">Modelação técnica, cálculo de gramagens e prototipagem de coleções.</p>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.0.name">Conceção & I&D</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.0.desc">Cálculo técnico de densidades...</p>
             </div>
           </div>
 
-          <div class="matrix-box bg-white p-8 flex flex-col justify-between cursor-pointer transition-all border-2 border-brand-dark" data-stage="yarn">
-            <span class="text-xs font-mono text-brand-muted mb-8 matrix-badge">ETAPA // 02</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none" data-stage="yarn">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent">ETAPA // 02</span>
             <div>
-              <h3 class="text-base font-medium text-brand-dark mb-2" data-i18n="stage2_title">Seleção de Fio</h3>
-              <p class="text-xs text-brand-muted leading-relaxed" data-i18n="stage2_desc">Algodão penteado, cardado, fios torcidos e opções recicladas certificadas.</p>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.1.name">Seleção & Engenharia de Fios</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.1.desc">Curadoria rigorosa de matérias-primas...</p>
             </div>
           </div>
 
-          <div class="matrix-box bg-white p-8 flex flex-col justify-between cursor-pointer transition-all border-2 border-brand-dark" data-stage="weaving">
-            <span class="text-xs font-mono text-brand-muted mb-8 matrix-badge">ETAPA // 03</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none" data-stage="weaving">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent">ETAPA // 03</span>
             <div>
-              <h3 class="text-base font-medium text-brand-dark mb-2" data-i18n="stage3_title">Tecelagem Estruturada</h3>
-              <p class="text-xs text-brand-muted leading-relaxed" data-i18n="stage3_desc">Tecelagem de anel felpudo regular, jacquards personalizados e relevos.</p>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.2.name">Tecelagem Estruturada</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.2.desc">Produção de felpo de laçada regular...</p>
             </div>
           </div>
 
-          <div class="matrix-box bg-white p-8 flex flex-col justify-between cursor-pointer transition-all border-2 border-brand-dark" data-stage="finishing">
-            <span class="text-xs font-mono text-brand-muted mb-8 matrix-badge">ETAPA // 04</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none" data-stage="finishing">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent">ETAPA // 04</span>
             <div>
-              <h3 class="text-base font-medium text-brand-dark mb-2" data-i18n="stage4_title">Acabamento</h3>
-              <p class="text-xs text-brand-muted leading-relaxed" data-i18n="stage4_desc">Tratamentos hidrófilos, tingimentos ecológicos e estabilização dimensional.</p>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.3.name">Enobrecimento</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.3.desc">Processos de tinturaria controlada...</p>
             </div>
           </div>
 
-          <div class="matrix-box bg-white p-8 flex flex-col justify-between cursor-pointer transition-all border-2 border-brand-dark" data-stage="cutting">
-            <span class="text-xs font-mono text-brand-muted mb-8 matrix-badge">ETAPA // 05</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none" data-stage="cutting">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent">ETAPA // 05</span>
             <div>
-              <h3 class="text-base font-medium text-brand-dark mb-2" data-i18n="stage5_title">Confeção & Packaging</h3>
-              <p class="text-xs text-brand-muted leading-relaxed" data-i18n="stage5_desc">Corte de precisão, costura de reforço, etiquetagem privada e paletização.</p>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.4.name">Confeção & Packaging</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.4.desc">Corte e costura com bainhas...</p>
             </div>
           </div>
 
         </div>
 
-        <!-- Painel de Ação Dinâmico -->
-        <div class="mt-12 flex justify-center">
-          <a href="contactos.html?scope=integral" id="dynamic-quote-btn" class="px-8 py-4 bg-brand-dark text-white text-sm font-mono uppercase tracking-widest hover:bg-brand-charcoal transition-all">
-            <span data-i18n="srv_btn_quote">Solicitar Cotação para as Etapas Selecionadas</span> &rarr;
+        <div class="mt-12 mb-16 flex justify-center">
+          <a href="contactos.html?scope=integral" id="dynamic-quote-btn" class="bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 hover:bg-dsc-navy-deep transition-all duration-200 rounded-none inline-flex items-center">
+            <span data-i18n="services.btn_quote">Solicitar Cotação para as Etapas Selecionadas</span> <span class="ml-2 font-mono">&rarr;</span>
           </a>
+        </div>
+
+        <!-- Private Label Box -->
+        <div class="bg-dsc-canvas border border-dsc-line p-12 mt-12 max-w-4xl mx-auto text-center rounded-none">
+          <h3 class="text-2xl font-light tracking-tight text-dsc-navy mb-4" data-i18n="services.private_label.title">Soluções de Marca Própria (Private Label)</h3>
+          <p class="text-sm text-dsc-body font-light leading-relaxed max-w-2xl mx-auto" data-i18n="services.private_label.desc">
+            Personalizamos cada pormenor para marcas globais...
+          </p>
         </div>
 
       </div>
     </section>
   </main>
 
-  <footer class="bg-brand-charcoal text-white border-t border-brand-border/20 py-12">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-400">
+  <footer class="bg-dsc-navy-deep text-slate-300 border-t border-dsc-navy/30 py-14">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center font-mono text-[10px] tracking-widest uppercase">
       <div class="flex items-center space-x-4 mb-4 md:mb-0">
-        <span class="text-white font-bold">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+        <span class="text-white font-normal">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
       </div>
       <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
     </div>
   </footer>
 
-  <!-- Lógica da Matriz Modular -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const btnModeA = document.getElementById('btn-mode-a');
@@ -138,67 +177,65 @@
       const boxes = document.querySelectorAll('.matrix-box');
       const quoteBtn = document.getElementById('dynamic-quote-btn');
       
-      let mode = 'A'; // A = Integral, B = Modular
+      let mode = 'A';
       let selectedStages = new Set(['design', 'yarn', 'weaving', 'finishing', 'cutting']);
 
       function updateUI() {
         if (mode === 'A') {
-          // Reset styles to A
-          btnModeA.className = "px-6 py-3 bg-brand-dark text-white text-xs font-mono uppercase tracking-widest border border-brand-dark transition-all";
-          btnModeB.className = "px-6 py-3 bg-brand-surface text-brand-muted text-xs font-mono uppercase tracking-widest border border-brand-border hover:border-brand-dark hover:text-brand-dark transition-all";
+          btnModeA.className = "w-full md:w-auto bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 transition-all duration-200 rounded-none border border-dsc-navy";
+          btnModeB.className = "w-full md:w-auto bg-dsc-white border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest px-6 py-3.5 hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none";
           
           boxes.forEach(box => {
-            box.classList.add('border-brand-dark');
-            box.classList.remove('border-transparent', 'opacity-50', 'bg-brand-surface');
-            box.querySelector('h3').classList.remove('text-brand-muted');
+            box.classList.add('border-dsc-navy');
+            box.classList.remove('border-transparent', 'opacity-50', 'bg-dsc-surface', 'opacity-40');
+            box.querySelector('h3').classList.remove('text-dsc-muted');
+            box.querySelector('h3').classList.add('text-dsc-navy');
+            
+            const badge = box.querySelector('.matrix-badge');
+            badge.classList.remove('text-dsc-muted');
+            badge.classList.add('text-dsc-navy-accent');
           });
           quoteBtn.href = "contactos.html?scope=integral";
         } else {
-          // Reset styles to B
-          btnModeB.className = "px-6 py-3 bg-brand-dark text-white text-xs font-mono uppercase tracking-widest border border-brand-dark transition-all";
-          btnModeA.className = "px-6 py-3 bg-brand-surface text-brand-muted text-xs font-mono uppercase tracking-widest border border-brand-border hover:border-brand-dark hover:text-brand-dark transition-all";
+          btnModeB.className = "w-full md:w-auto bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 transition-all duration-200 rounded-none border border-dsc-navy";
+          btnModeA.className = "w-full md:w-auto bg-dsc-white border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest px-6 py-3.5 hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none";
           
           boxes.forEach(box => {
             const stage = box.getAttribute('data-stage');
+            const badge = box.querySelector('.matrix-badge');
             if (selectedStages.has(stage)) {
-              box.classList.add('border-brand-dark');
-              box.classList.remove('border-transparent', 'opacity-50', 'bg-brand-surface');
-              box.querySelector('h3').classList.remove('text-brand-muted');
+              box.classList.add('border-dsc-navy');
+              box.classList.remove('border-transparent', 'opacity-40', 'bg-dsc-surface');
+              box.querySelector('h3').classList.remove('text-dsc-muted');
+              box.querySelector('h3').classList.add('text-dsc-navy');
+              
+              badge.classList.remove('text-dsc-muted');
+              badge.classList.add('text-dsc-navy-accent');
             } else {
-              box.classList.remove('border-brand-dark');
-              box.classList.add('border-transparent', 'opacity-50', 'bg-brand-surface');
-              box.querySelector('h3').classList.add('text-brand-muted');
+              box.classList.remove('border-dsc-navy');
+              box.classList.add('border-transparent', 'opacity-40', 'bg-dsc-surface');
+              box.querySelector('h3').classList.add('text-dsc-muted');
+              box.querySelector('h3').classList.remove('text-dsc-navy');
+              
+              badge.classList.remove('text-dsc-navy-accent');
+              badge.classList.add('text-dsc-muted');
             }
           });
           quoteBtn.href = "contactos.html?scope=" + Array.from(selectedStages).join(',');
         }
       }
 
-      btnModeA.addEventListener('click', () => {
-        mode = 'A';
-        selectedStages = new Set(['design', 'yarn', 'weaving', 'finishing', 'cutting']);
-        updateUI();
-      });
+      // Inicializa a UI
+      updateUI();
 
-      btnModeB.addEventListener('click', () => {
-        mode = 'B';
-        // Clear logic when switching to B for the first time, or keep current
-        if(selectedStages.size === 5) {
-          selectedStages.clear();
-        }
-        updateUI();
-      });
+      btnModeA.addEventListener('click', () => { mode = 'A'; selectedStages = new Set(['design', 'yarn', 'weaving', 'finishing', 'cutting']); updateUI(); });
+      btnModeB.addEventListener('click', () => { mode = 'B'; if(selectedStages.size === 5) selectedStages.clear(); updateUI(); });
 
       boxes.forEach(box => {
         box.addEventListener('click', () => {
-          if (mode === 'A') return; // In Mode A, click does nothing
-          
+          if (mode === 'A') return;
           const stage = box.getAttribute('data-stage');
-          if (selectedStages.has(stage)) {
-            selectedStages.delete(stage);
-          } else {
-            selectedStages.add(stage);
-          }
+          selectedStages.has(stage) ? selectedStages.delete(stage) : selectedStages.add(stage);
           updateUI();
         });
       });
