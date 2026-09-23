@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSC — Sobre Nós</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: { pure: '#FFFFFF', canvas: '#F9FAFB', surface: '#F3F4F6', border: '#E5E7EB', muted: '#6B7280', technical: '#4B5563', dark: '#111827', charcoal: '#0F172A' } }, fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>.ph { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; letter-spacing: -0.02em; background-color: #F3F4F6; border: 1px dashed #CBD5E1; padding: 0.1rem 0.4rem; border-radius: 2px; color: #64748B; }</style>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="bg-brand-canvas text-brand-dark font-sans antialiased selection:bg-brand-dark selection:text-white">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex flex-col">
+        <span class="text-xl font-bold tracking-tighter text-brand-dark">DSC</span>
+        <span class="text-[10px] uppercase font-mono tracking-widest text-brand-muted">Domingos Silva & Cunha</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-tight">
+        <a href="sobre.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_about">Sobre Nós</a>
+        <a href="servicos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_catalog">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_contact">Contactos</a>
+      </nav>
+      <div class="flex items-center space-x-6">
+        <div class="flex items-center border border-brand-border rounded text-xs font-mono">
+          <button id="btn-pt" onclick="setLanguage('pt')" class="px-2.5 py-1 bg-brand-dark text-white font-semibold transition-all">PT</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-brand-muted hover:text-brand-dark transition-all">EN</button>
+        </div>
+        <a href="contactos.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-brand-dark text-xs uppercase font-mono tracking-widest text-brand-dark hover:bg-brand-dark hover:text-white transition-all">
+          <span data-i18n="nav_cta">Sourcing B2B</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-24 border-b border-brand-border bg-white min-h-[70vh] flex items-center">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div class="lg:col-span-4">
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-muted block mb-3" data-i18n="about_badge">01 / História & Rigor</span>
+            <h2 class="text-3xl font-normal tracking-tight text-brand-dark" data-i18n="about_title">Equilíbrio entre a tradição de confeção e a engenharia moderna.</h2>
+          </div>
+          <div class="lg:col-span-8 space-y-6 text-brand-technical leading-relaxed font-light text-base">
+            <p data-i18n="about_p1">
+              Fundada na bacia têxtil de referência de Portugal, a Domingos Silva & Cunha (DSC) nasceu do compromisso inegociável com a durabilidade, o toque e a consistência técnica dos têxteis de lar.
+            </p>
+            <p data-i18n="about_p2">
+              Não atuamos como um fornecedor estático. A nossa estrutura integra tanto o desenvolvimento cuidado de linhas de marca própria como a resposta ágil a encomendas B2B internacionais que exigem soluções técnicas específicas, tolerâncias milimétricas de costura e rigor nos prazos de expedição.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-brand-border">
+              <div>
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-dark block mb-2" data-i18n="about_pillar1_title">Infraestrutura Adaptável</span>
+                <p class="text-sm text-brand-muted" data-i18n="about_pillar1_desc">Equipamento industrial para tecelagem felpuda, veludos, estruturas waffle e confeção de bainhas técnicas.</p>
+              </div>
+              <div>
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-dark block mb-2" data-i18n="about_pillar2_title">Auditoria e Lotes</span>
+                <p class="text-sm text-brand-muted" data-i18n="about_pillar2_desc">Monitorização do encolhimento, solidez à lavagem industrial e absorção hidrófila em cada lote.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-charcoal text-white border-t border-brand-border/20 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-400">
+      <div class="flex items-center space-x-4 mb-4 md:mb-0">
+        <span class="text-white font-bold">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+      </div>
+      <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

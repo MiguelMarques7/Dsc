@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSC — Sustentabilidade & Certificações</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: { pure: '#FFFFFF', canvas: '#F9FAFB', surface: '#F3F4F6', border: '#E5E7EB', muted: '#6B7280', technical: '#4B5563', dark: '#111827', charcoal: '#0F172A' } }, fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>.ph { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; letter-spacing: -0.02em; background-color: #F3F4F6; border: 1px dashed #CBD5E1; padding: 0.1rem 0.4rem; border-radius: 2px; color: #64748B; }</style>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="bg-brand-canvas text-brand-dark font-sans antialiased selection:bg-brand-dark selection:text-white">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex flex-col">
+        <span class="text-xl font-bold tracking-tighter text-brand-dark">DSC</span>
+        <span class="text-[10px] uppercase font-mono tracking-widest text-brand-muted">Domingos Silva & Cunha</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-tight">
+        <a href="sobre.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_about">Sobre Nós</a>
+        <a href="servicos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_catalog">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_contact">Contactos</a>
+      </nav>
+      <div class="flex items-center space-x-6">
+        <div class="flex items-center border border-brand-border rounded text-xs font-mono">
+          <button id="btn-pt" onclick="setLanguage('pt')" class="px-2.5 py-1 bg-brand-dark text-white font-semibold transition-all">PT</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-brand-muted hover:text-brand-dark transition-all">EN</button>
+        </div>
+        <a href="contactos.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-brand-dark text-xs uppercase font-mono tracking-widest text-brand-dark hover:bg-brand-dark hover:text-white transition-all">
+          <span data-i18n="nav_cta">Sourcing B2B</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-24 border-b border-brand-border bg-white min-h-[70vh]">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mb-16">
+          <span class="text-xs font-mono uppercase tracking-widest text-brand-muted block mb-2" data-i18n="sust_badge">04 / Práticas & Auditoria</span>
+          <h2 class="text-3xl font-normal tracking-tight text-brand-dark mb-6" data-i18n="sust_title">Rastreabilidade, Gestão Térmica e Certificações Globais</h2>
+          <p class="text-base text-brand-muted font-light leading-relaxed" data-i18n="sust_desc">
+            Produzir no espaço europeu exige compromisso mensurável. As nossas operações estão preparadas para auditorias contínuas de gestão de resíduos, consumo hídrico e segurança humana em conformidade com as diretivas europeias.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="border border-brand-border p-6 text-center">
+            <div class="text-xs font-mono text-brand-muted uppercase mb-1">Standard 100</div>
+            <div class="font-mono text-sm text-brand-dark font-medium"><span class="ph">[OEKO-TEX]</span></div>
+          </div>
+          <div class="border border-brand-border p-6 text-center">
+            <div class="text-xs font-mono text-brand-muted uppercase mb-1">Fibras Orgânicas</div>
+            <div class="font-mono text-sm text-brand-dark font-medium"><span class="ph">[GOTS / OCS]</span></div>
+          </div>
+          <div class="border border-brand-border p-6 text-center">
+            <div class="text-xs font-mono text-brand-muted uppercase mb-1">Auditoria Social</div>
+            <div class="font-mono text-sm text-brand-dark font-medium"><span class="ph">[SMETA / SEDEX]</span></div>
+          </div>
+          <div class="border border-brand-border p-6 text-center">
+            <div class="text-xs font-mono text-brand-muted uppercase mb-1">Gestão Ambiental</div>
+            <div class="font-mono text-sm text-brand-dark font-medium"><span class="ph">[ISO 14001]</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-charcoal text-white border-t border-brand-border/20 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-400">
+      <div class="flex items-center space-x-4 mb-4 md:mb-0">
+        <span class="text-white font-bold">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+      </div>
+      <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

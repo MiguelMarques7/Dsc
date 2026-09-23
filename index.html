@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSC — Domingos Silva e Cunha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { brand: { pure: '#FFFFFF', canvas: '#F9FAFB', surface: '#F3F4F6', border: '#E5E7EB', muted: '#6B7280', technical: '#4B5563', dark: '#111827', charcoal: '#0F172A' } }, fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>.ph { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; letter-spacing: -0.02em; background-color: #F3F4F6; border: 1px dashed #CBD5E1; padding: 0.1rem 0.4rem; border-radius: 2px; color: #64748B; }</style>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="bg-brand-canvas text-brand-dark font-sans antialiased selection:bg-brand-dark selection:text-white">
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex flex-col">
+        <span class="text-xl font-bold tracking-tighter text-brand-dark">DSC</span>
+        <span class="text-[10px] uppercase font-mono tracking-widest text-brand-muted">Domingos Silva & Cunha</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-tight">
+        <a href="sobre.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_about">Sobre Nós</a>
+        <a href="servicos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_catalog">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-brand-technical hover:text-brand-dark transition-colors" data-i18n="nav_contact">Contactos</a>
+      </nav>
+      <div class="flex items-center space-x-6">
+        <div class="flex items-center border border-brand-border rounded text-xs font-mono">
+          <button id="btn-pt" onclick="setLanguage('pt')" class="px-2.5 py-1 bg-brand-dark text-white font-semibold transition-all">PT</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="px-2.5 py-1 text-brand-muted hover:text-brand-dark transition-all">EN</button>
+        </div>
+        <a href="contactos.html" class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-brand-dark text-xs uppercase font-mono tracking-widest text-brand-dark hover:bg-brand-dark hover:text-white transition-all">
+          <span data-i18n="nav_cta">Sourcing B2B</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="border-b border-brand-border bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-28 lg:py-36">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+          
+          <div class="lg:col-span-8">
+            <div class="inline-flex items-center gap-2 mb-6">
+              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+              <span class="text-xs uppercase font-mono tracking-widest text-brand-muted" data-i18n="hero_eyebrow">Engenharia Têxtil • Manufatura em Portugal</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-normal tracking-tight text-brand-dark leading-[1.08] mb-8" data-i18n="hero_title">
+              Precisão fabril e desenvolvimento modular para o universo do têxtil-lar.
+            </h1>
+            <p class="text-lg text-brand-muted max-w-2xl font-light leading-relaxed mb-10" data-i18n="hero_desc">
+              Da arquitetura da fibra ao acabamento final. Desenvolvemos coleções de marca própria e atuamos com flexibilidade rigorosa em qualquer fase da cadeia produtiva têxtil.
+            </p>
+            <div class="flex flex-wrap gap-4 items-center">
+              <a href="catalogo.html" class="px-6 py-3.5 bg-brand-dark text-white text-xs font-mono uppercase tracking-widest hover:bg-brand-charcoal transition-all" data-i18n="hero_btn_explore">
+                Explorar Catálogo
+              </a>
+              <a href="servicos.html" class="px-6 py-3.5 border border-brand-border text-brand-technical text-xs font-mono uppercase tracking-widest hover:border-brand-dark hover:text-brand-dark transition-all" data-i18n="hero_btn_modular">
+                Modelo Modular
+              </a>
+            </div>
+          </div>
+
+          <!-- Métricas -->
+          <div class="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-brand-border pt-8 lg:pt-0 lg:pl-10 space-y-6">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-brand-muted" data-i18n="metric_density">Especialização em Banho</span>
+              <div class="text-2xl font-mono text-brand-dark mt-1">350 — 900 <span class="text-sm font-sans text-brand-muted font-normal">g/m²</span></div>
+            </div>
+            <div class="border-t border-brand-border/60 pt-4">
+              <span class="text-xs font-mono uppercase tracking-wider text-brand-muted" data-i18n="metric_reach">Capacidade Operacional</span>
+              <div class="text-sm text-brand-technical mt-1 font-mono">
+                <span class="ph">[CAPACIDADE_MENSAL_PEÇAS]</span>
+              </div>
+            </div>
+            <div class="border-t border-brand-border/60 pt-4">
+              <span class="text-xs font-mono uppercase tracking-wider text-brand-muted" data-i18n="metric_origin">Origem & Controlo</span>
+              <div class="text-sm font-medium text-brand-dark mt-1 flex items-center gap-2">
+                <span>Norte de Portugal</span>
+                <span class="text-xs font-mono text-brand-muted border px-1.5 py-0.5 border-brand-border">Hub Têxtil da UE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTAL DE ENCAMINHAMENTO INSTITUCIONAL -->
+    <section class="py-24 bg-brand-canvas">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <a href="sobre.html" class="group block p-8 bg-white border border-brand-border hover:border-brand-dark transition-all">
+            <h2 class="text-xl font-medium text-brand-dark mb-2" data-i18n="portal_about">Identidade & Estrutura</h2>
+            <p class="text-sm text-brand-muted font-light leading-relaxed mb-8" data-i18n="portal_about_desc">Conheça o nosso parque industrial, os ensaios laboratoriais e a flexibilidade entre private label e subcontratação técnica.</p>
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-dark group-hover:underline" data-i18n="portal_btn">Ver secção &rarr;</span>
+          </a>
+
+          <a href="servicos.html" class="group block p-8 bg-white border border-brand-border hover:border-brand-dark transition-all">
+            <h2 class="text-xl font-medium text-brand-dark mb-2" data-i18n="portal_services">Cadeia de Valor</h2>
+            <p class="text-sm text-brand-muted font-light leading-relaxed mb-8" data-i18n="portal_services_desc">A nossa intervenção modular: do design técnico à tecelagem e acabamentos.</p>
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-dark group-hover:underline" data-i18n="portal_btn">Ver secção &rarr;</span>
+          </a>
+
+          <a href="catalogo.html" class="group block p-8 bg-white border border-brand-border hover:border-brand-dark transition-all">
+            <h2 class="text-xl font-medium text-brand-dark mb-2" data-i18n="portal_catalog">Catálogo Técnico</h2>
+            <p class="text-sm text-brand-muted font-light leading-relaxed mb-8" data-i18n="portal_catalog_desc">Fichas técnicas dos nossos artigos de banho, desde hotelaria a estruturas waffle.</p>
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-dark group-hover:underline" data-i18n="portal_btn">Ver secção &rarr;</span>
+          </a>
+
+          <a href="sustentabilidade.html" class="group block p-8 bg-white border border-brand-border hover:border-brand-dark transition-all">
+            <h2 class="text-xl font-medium text-brand-dark mb-2" data-i18n="portal_sust">Sustentabilidade</h2>
+            <p class="text-sm text-brand-muted font-light leading-relaxed mb-8" data-i18n="portal_sust_desc">Gestão hídrica, térmica e matriz de certificações globais.</p>
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-dark group-hover:underline" data-i18n="portal_btn">Ver secção &rarr;</span>
+          </a>
+
+          <a href="blog.html" class="group block p-8 bg-white border border-brand-border hover:border-brand-dark transition-all">
+            <h2 class="text-xl font-medium text-brand-dark mb-2" data-i18n="portal_blog">Caderno Técnico</h2>
+            <p class="text-sm text-brand-muted font-light leading-relaxed mb-8" data-i18n="portal_blog_desc">Artigos de I&D sobre calibração de gramagens e materiais reciclados.</p>
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-dark group-hover:underline" data-i18n="portal_btn">Ver secção &rarr;</span>
+          </a>
+
+          <a href="contactos.html" class="group block p-8 bg-white border border-brand-border hover:border-brand-dark transition-all">
+            <h2 class="text-xl font-medium text-brand-dark mb-2" data-i18n="portal_contact">Contactos B2B</h2>
+            <p class="text-sm text-brand-muted font-light leading-relaxed mb-8" data-i18n="portal_contact_desc">Formulário estruturado para amostras, sourcing e parcerias industriais.</p>
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-dark group-hover:underline" data-i18n="portal_btn">Ver secção &rarr;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-charcoal text-white border-t border-brand-border/20 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-400">
+      <div class="flex items-center space-x-4 mb-4 md:mb-0">
+        <span class="text-white font-bold">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+      </div>
+      <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
