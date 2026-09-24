@@ -235,13 +235,124 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="bg-dsc-navy-deep text-slate-300 border-t border-dsc-navy/30 py-14">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center font-mono text-[10px] tracking-widest uppercase">
-      <div class="flex items-center space-x-4 mb-4 md:mb-0">
-        <span class="text-white font-normal">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+    <!-- ================= FOOTER INDUSTRIAL NO PADRÃO SIDI ================= -->
+  <footer class="bg-[#0A0F1D] text-slate-300 border-t border-slate-800">
+    
+    <!-- 1. Pré-Footer / CTA B2B -->
+    <div class="border-b border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1" data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
+          <h2 class="text-2xl sm:text-3xl font-light text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
+        </div>
+        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-[#0A0F1D] hover:bg-slate-100 font-mono text-xs uppercase tracking-widest transition-all">
+          <span data-i18n="footer_cta_btn">Iniciar Diálogo Técnico</span>
+          <span>&rarr;</span>
+        </a>
       </div>
-      <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
     </div>
+
+    <!-- 2. Grelha Modular de Conteúdos -->
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+        
+        <!-- Coluna 1: Marca & Síntese (Span 4) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex flex-col">
+            <span class="text-2xl font-bold tracking-tighter text-white">DSC</span>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Domingos Silva & Cunha</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed font-light pr-6" data-i18n="footer_bio">
+            Desenvolvimento e engenharia de têxteis-lar e felpos de alto rendimento. Combinamos coleções de marca própria com produção modular flexível para mercados internacionais.
+          </p>
+          <div class="inline-flex items-center gap-2 pt-2 text-[11px] font-mono text-slate-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            <span>Norte de Portugal • Vale do Ave</span>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação (Span 2) -->
+        <div class="lg:col-span-2 space-y-3">
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_nav">Estrutura</span>
+          <ul class="space-y-2 text-xs font-mono text-slate-400">
+            <li><a href="sobre.html" class="hover:text-white transition-colors" data-i18n="nav_about">Sobre nós</a></li>
+            <li><a href="servicos.html" class="hover:text-white transition-colors" data-i18n="nav_services">Serviços</a></li>
+            <li><a href="catalogo.html" class="hover:text-white transition-colors" data-i18n="nav_catalog">Produtos</a></li>
+            <li><a href="sustentabilidade.html" class="hover:text-white transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors" data-i18n="nav_blog">Blog</a></li>
+            <li><a href="contactos.html" class="hover:text-white transition-colors" data-i18n="nav_contact">Contactos</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Especializações (Span 2) -->
+        <div class="lg:col-span-2 space-y-3">
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_spec">Especialidade</span>
+          <ul class="space-y-2 text-xs font-mono text-slate-400">
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Toalhas Felpo 550g</a></li>
+            <li><a href="catalogo.html?cat=contract" class="hover:text-white transition-colors">Linha Contract 700g</a></li>
+            <li><a href="catalogo.html?cat=waffle" class="hover:text-white transition-colors">Waffle & Linho</a></li>
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Zero-Twist Macio</a></li>
+            <li><a href="servicos.html" class="hover:text-white transition-colors">Private Label B2B</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Unidade Fabril & Logística (Span 4) -->
+        <div class="lg:col-span-4 space-y-4">
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_mill">Instalações & Logística</span>
+          <div class="space-y-2 text-xs font-mono text-slate-400">
+            <div>
+              <span class="text-slate-200">Sede Fabril:</span>
+              <div class="text-slate-300 font-sans mt-0.5"><span class="ph">[INSERIR_MORADA_FABRIL_DSC]</span>, Portugal</div>
+            </div>
+            <div>
+              <span class="text-slate-200">Exportação Direta:</span>
+              <div class="text-slate-300 mt-0.5"><span class="ph">[EMAIL_COMERCIAL@DSC.PT]</span></div>
+            </div>
+            <div class="pt-2 text-[11px] text-slate-400 leading-normal border-t border-slate-800">
+              A 45 min. do Aeroporto Sá Carneiro (OPO) e Porto de Leixões. Expedição de contentores para os principais hubs da Europa.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3. Barra de Conformidade & Certificações -->
+      <div class="mt-14 pt-8 border-t border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-4 text-center font-mono text-xs">
+        <div class="border border-slate-800 p-3 bg-slate-900/40">
+          <div class="text-[10px] text-slate-400 uppercase">Segurança Química</div>
+          <div class="text-white mt-1"><span class="ph">[OEKO-TEX STANDARD 100]</span></div>
+        </div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40">
+          <div class="text-[10px] text-slate-400 uppercase">Fibras Orgânicas</div>
+          <div class="text-white mt-1"><span class="ph">[GOTS CERTIFIED]</span></div>
+        </div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40">
+          <div class="text-[10px] text-slate-400 uppercase">Origem & Fabricação</div>
+          <div class="text-white mt-1">MADE IN PORTUGAL (UE)</div>
+        </div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40">
+          <div class="text-[10px] text-slate-400 uppercase">Auditoria Social</div>
+          <div class="text-white mt-1"><span class="ph">[SMETA / SEDEX]</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Sub-Footer Jurídico -->
+    <div class="border-t border-slate-800/80 bg-[#070B14]">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-[11px] font-mono text-slate-400 gap-4">
+        <div>
+          <span data-i18n="footer_rights">&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
+          <span class="mx-2 hidden md:inline">•</span>
+          <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">[500_XXX_XXX]</span></span>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_terms">Termos B2B</a>
+          <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_privacy">Privacidade</a>
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="hover:text-white transition-colors" data-i18n="footer_legal_complaints">Livro de Reclamações</a>
+        </div>
+      </div>
+    </div>
+
   </footer>
 
 </body>

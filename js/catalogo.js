@@ -48,4 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 4. Check URL query parameters (e.g. ?cat=contract from footer)
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get('cat');
+  if (catParam) {
+    const targetBtn = Array.from(buttons).find(b => b.getAttribute('data-filter') === catParam);
+    if (targetBtn) {
+      targetBtn.click();
+    }
+  }
 });
