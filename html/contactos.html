@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSC — Contactos & Sourcing B2B</title>
+  
+  <!-- Tailwind CSS & Centralized Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
+
+  <!-- Design System & Architecture Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* Suavização de scroll e renderização tipográfica ultra-nítida */
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Transição global por omissão para interações táteis */
+    a, button, input, select, textarea, .interactive-card {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* 1. Efeito de linha deslizante sob links de navegação */
+    .nav-link {
+      position: relative;
+      display: inline-block;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background-color: #0F172A; /* dsc-navy */
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* 2. Micro-zoom suave em imagens/placeholders de tecido/toalha */
+    .img-zoom-container {
+      overflow: hidden;
+      position: relative;
+    }
+    .img-zoom-container .zoom-target {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .interactive-card:hover .zoom-target {
+      transform: scale(1.035);
+    }
+
+    /* 3. Efeito de elevação milimétrica e contorno técnico ativo */
+    .interactive-card {
+      position: relative;
+      will-change: transform, box-shadow;
+    }
+    .interactive-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.06);
+      border-color: #0F172A !important;
+    }
+
+    /* 4. Indicador de seta animada em botões e links de catálogo */
+    .arrow-trigger:hover .arrow-target {
+      transform: translateX(4px);
+    }
+    .arrow-target {
+      display: inline-block;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* 5. Foco moderno em inputs com anel de precisão sem deslocamento */
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px #0F172A;
+      background-color: #FFFFFF !important;
+    }
+  </style>
+
+  <!-- Core & Page Scripts -->
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/contactos.js" defer></script>
+</head>
+<body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex flex-col">
+        <span class="text-xl font-bold tracking-tighter text-dsc-navy">DSC</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted">Domingos Silva & Cunha</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
+        <a href="sobre.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.contacts">Contactos</a>
+      </nav>
+
+      <!-- Desktop Language & CTA -->
+      <div class="hidden sm:flex items-center space-x-6">
+        <div class="flex items-center border border-dsc-line rounded-none text-xs font-mono">
+          <button id="btn-pt" onclick="setLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95">PT</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95">EN</button>
+        </div>
+        <a href="contactos.html" class="inline-flex items-center justify-center px-6 py-3.5 border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest hover:border-dsc-navy hover:bg-dsc-navy hover:text-white active:scale-[0.98] transition-all duration-200 rounded-none">
+          <span data-i18n="nav.cta">Sourcing B2B</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center space-x-3 md:hidden">
+        <div class="flex items-center border border-dsc-line text-[11px] font-mono">
+          <button onclick="setLanguage('pt')" class="btn-lang-pt px-2 py-1 bg-dsc-navy text-white active:scale-95">PT</button>
+          <button onclick="setLanguage('en')" class="btn-lang-en px-2 py-1 text-dsc-muted active:scale-95">EN</button>
+        </div>
+        <button id="mobile-menu-btn" aria-label="Abrir Menu" class="p-2 border border-dsc-line text-dsc-navy hover:border-dsc-navy active:scale-95">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="menu-closed md:hidden fixed inset-x-0 top-20 bg-dsc-white border-b border-dsc-line shadow-xl z-40 px-6 py-8">
+      <nav class="flex flex-col space-y-5">
+        <a href="sobre.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
+        <div class="pt-4 border-t border-dsc-line">
+          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest" data-i18n="nav.cta">Sourcing B2B</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-24 bg-dsc-canvas min-h-[80vh] border-b border-dsc-line" id="contact-section">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          
+          <!-- Lado Esquerdo (Informações) -->
+          <div class="lg:col-span-5">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="contacts.badge">06 / Relações Comerciais & Exportação</span>
+            </span>
+            <h2 class="text-4xl font-light tracking-tight text-dsc-navy mb-6 leading-[1.1]" data-i18n="contacts.h1">Inicie o seu próximo projeto têxtil com a equipa da DSC.</h2>
+            <p class="text-sm text-dsc-body leading-relaxed font-light mb-8" data-i18n="contacts.lead">
+              Estamos à disposição para receber pedidos de cotação de produção, envio de coleções de amostras ou marcação de reuniões com o nosso departamento técnico-comercial.
+            </p>
+            
+            <div class="space-y-6 border-t border-dsc-line pt-8 text-xs font-mono">
+              <div>
+                <div class="text-[10px] text-dsc-muted uppercase tracking-widest mb-1" data-i18n="contacts.info.factory_title">Unidade Fabril & Sede:</div>
+                <div class="text-dsc-navy font-sans font-light text-sm"><span class="ph">[INSERIR_MORADA_FABRIL_DSC]</span>, Portugal</div>
+                <div class="text-dsc-muted mt-1 text-[10px] uppercase tracking-widest" data-i18n="contacts.info.geo">Cluster Têxtil do Vale do Ave</div>
+              </div>
+              <div>
+                <div class="text-[10px] text-dsc-muted uppercase tracking-widest mb-1" data-i18n="contacts.info.email_title">Departamento Comercial & B2B:</div>
+                <div class="text-dsc-navy text-sm"><span class="ph">[EMAIL_COMERCIAL@DSC.PT]</span></div>
+              </div>
+              <div>
+                <div class="text-[10px] text-dsc-muted uppercase tracking-widest mb-1" data-i18n="contacts.info.phone_title">Telefone Direto:</div>
+                <div class="text-dsc-navy text-sm"><span class="ph">[+351_TELEFONE_DSC]</span></div>
+                <div class="text-dsc-muted mt-1 text-[10px] uppercase tracking-widest" data-i18n="contacts.info.hours">Segunda a Sexta-feira: 08:30 — 17:30 (GMT)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lado Direito (Formulário) -->
+          <div class="lg:col-span-7 bg-dsc-white border border-dsc-line shadow-sm p-8 md:p-12 relative rounded-none">
+            
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-8 pb-4 border-b border-dsc-line" data-i18n="contacts.form.title">Formulário de Pedido Técnico B2B</h3>
+
+            <div id="sample-badge" class="hidden mb-6 bg-dsc-surface border border-dsc-line p-4 text-[10px] font-mono tracking-widest uppercase text-dsc-navy flex items-center rounded-none">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent mr-3"></span>
+              <div>
+                <strong data-i18n="contacts.form.sample_badge_prefix">Amostra em configuração:</strong> <span id="sample-ref-name"></span>
+              </div>
+            </div>
+
+            <form id="b2b-contact-form" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-dsc-white focus:border-dsc-navy focus:ring-1 focus:ring-dsc-navy text-dsc-navy rounded-none font-light hover:border-slate-400 transition-colors duration-150" data-i18n="contacts.form.field_name" placeholder="Nome Completo *">
+                <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-dsc-white focus:border-dsc-navy focus:ring-1 focus:ring-dsc-navy text-dsc-navy rounded-none font-light hover:border-slate-400 transition-colors duration-150" data-i18n="contacts.form.field_company" placeholder="Empresa / Entidade *">
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-dsc-white focus:border-dsc-navy focus:ring-1 focus:ring-dsc-navy text-dsc-navy rounded-none font-light hover:border-slate-400 transition-colors duration-150" data-i18n="contacts.form.field_country" placeholder="País de Destino *">
+                <input type="email" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-dsc-white focus:border-dsc-navy focus:ring-1 focus:ring-dsc-navy text-dsc-navy rounded-none font-light hover:border-slate-400 transition-colors duration-150" data-i18n="contacts.form.field_email" placeholder="Email Corporativo *">
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="tel" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-dsc-white focus:border-dsc-navy focus:ring-1 focus:ring-dsc-navy text-dsc-navy rounded-none font-light hover:border-slate-400 transition-colors duration-150" data-i18n="contacts.form.field_phone" placeholder="Telefone / WhatsApp">
+                <select id="form-scope-select" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-dsc-white focus:border-dsc-navy focus:ring-1 focus:ring-dsc-navy text-dsc-body rounded-none font-light hover:border-slate-400 transition-colors duration-150">
+                  <option value="" disabled selected data-i18n="contacts.form.field_scope">Âmbito do Projeto *</option>
+                  <option value="opt0" data-i18n="contacts.form.scope_options.opt0">Pedido de Amostras de Toalhas</option>
+                  <option value="opt1" data-i18n="contacts.form.scope_options.opt1">Desenvolvimento de Coleção Private Label</option>
+                  <option value="opt2" data-i18n="contacts.form.scope_options.opt2">Produção Modular (Tecelagem / Confeção)</option>
+                  <option value="opt3" data-i18n="contacts.form.scope_options.opt3">Parceria / Representação Comercial de Marca Própria</option>
+                  <option value="opt4" data-i18n="contacts.form.scope_options.opt4">Outro Pedido Técnico</option>
+                  <option value="opt_sample" data-i18n="contacts.form.scope_options.opt_sample" class="hidden">Amostragem de Artigo Específico</option>
+                </select>
+              </div>
+              <div>
+                <textarea id="form-specs" rows="4" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-dsc-white focus:border-dsc-navy focus:ring-1 focus:ring-dsc-navy text-dsc-navy rounded-none font-light hover:border-slate-400 transition-colors duration-150" data-i18n="contacts.form.field_details" placeholder="Especificações do Pedido (Quantidades estimadas, gramagens pretendidas, referências) *"></textarea>
+              </div>
+              <p class="font-mono text-[10px] text-dsc-muted font-light leading-relaxed mb-4 tracking-widest uppercase" data-i18n="contacts.form.privacy">
+                Os seus dados serão processados exclusivamente pela equipa comercial da DSC para resposta à presente consulta técnica.
+              </p>
+              <button type="submit" class="w-full py-4 bg-dsc-navy hover:bg-dsc-navy-deep text-white text-xs font-mono uppercase tracking-widest transition-all duration-200 rounded-none cursor-pointer hover:shadow-lg hover:shadow-dsc-navy/10 active:scale-[0.99]" data-i18n="contacts.form.button">
+                Enviar Pedido de Cotação
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-dsc-navy-deep text-slate-300 border-t border-dsc-navy/30 py-14">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center font-mono text-[10px] tracking-widest uppercase">
+      <div class="flex items-center space-x-4 mb-4 md:mb-0">
+        <span class="text-white font-normal">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+      </div>
+      <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSC — Sustentabilidade & Conformidade</title>
+  
+  <!-- Tailwind CSS & Centralized Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
+
+  <!-- Design System & Architecture Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* Suavização de scroll e renderização tipográfica ultra-nítida */
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Transição global por omissão para interações táteis */
+    a, button, input, select, textarea, .interactive-card {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* 1. Efeito de linha deslizante sob links de navegação */
+    .nav-link {
+      position: relative;
+      display: inline-block;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background-color: #0F172A; /* dsc-navy */
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* 2. Micro-zoom suave em imagens/placeholders de tecido/toalha */
+    .img-zoom-container {
+      overflow: hidden;
+      position: relative;
+    }
+    .img-zoom-container .zoom-target {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .interactive-card:hover .zoom-target {
+      transform: scale(1.035);
+    }
+
+    /* 3. Efeito de elevação milimétrica e contorno técnico ativo */
+    .interactive-card {
+      position: relative;
+      will-change: transform, box-shadow;
+    }
+    .interactive-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.06);
+      border-color: #0F172A !important;
+    }
+
+    /* 4. Indicador de seta animada em botões e links de catálogo */
+    .arrow-trigger:hover .arrow-target {
+      transform: translateX(4px);
+    }
+    .arrow-target {
+      display: inline-block;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* 5. Foco moderno em inputs com anel de precisão sem deslocamento */
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px #0F172A;
+      background-color: #FFFFFF !important;
+    }
+  </style>
+
+  <!-- Core Scripts -->
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex flex-col">
+        <span class="text-xl font-bold tracking-tighter text-dsc-navy">DSC</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted">Domingos Silva & Cunha</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
+        <a href="sobre.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.contacts">Contactos</a>
+      </nav>
+
+      <!-- Desktop Language & CTA -->
+      <div class="hidden sm:flex items-center space-x-6">
+        <div class="flex items-center border border-dsc-line rounded-none text-xs font-mono">
+          <button id="btn-pt" onclick="setLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95">PT</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95">EN</button>
+        </div>
+        <a href="contactos.html" class="inline-flex items-center justify-center px-6 py-3.5 border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest hover:border-dsc-navy hover:bg-dsc-navy hover:text-white active:scale-[0.98] transition-all duration-200 rounded-none">
+          <span data-i18n="nav.cta">Sourcing B2B</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center space-x-3 md:hidden">
+        <div class="flex items-center border border-dsc-line text-[11px] font-mono">
+          <button onclick="setLanguage('pt')" class="btn-lang-pt px-2 py-1 bg-dsc-navy text-white active:scale-95">PT</button>
+          <button onclick="setLanguage('en')" class="btn-lang-en px-2 py-1 text-dsc-muted active:scale-95">EN</button>
+        </div>
+        <button id="mobile-menu-btn" aria-label="Abrir Menu" class="p-2 border border-dsc-line text-dsc-navy hover:border-dsc-navy active:scale-95">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="menu-closed md:hidden fixed inset-x-0 top-20 bg-dsc-white border-b border-dsc-line shadow-xl z-40 px-6 py-8">
+      <nav class="flex flex-col space-y-5">
+        <a href="sobre.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
+        <div class="pt-4 border-t border-dsc-line">
+          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest" data-i18n="nav.cta">Sourcing B2B</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-24 border-b border-dsc-line bg-dsc-white min-h-[70vh]">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="flex flex-col md:flex-row gap-16 mb-24">
+          <div class="md:w-1/2">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="sustainability.badge">04 / Responsabilidade Ambiental & Social</span>
+            </span>
+            <h2 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-6" data-i18n="sustainability.h1">
+              Compromisso ecológico com práticas de fabrico limpas e rastreáveis.
+            </h2>
+          </div>
+          <div class="md:w-1/2">
+            <p class="text-base text-dsc-body font-light leading-relaxed max-w-xl" data-i18n="sustainability.lead">
+              Acreditamos que a verdadeira excelência têxtil respeita os recursos naturais. Toda a nossa produção segue diretivas comunitárias rigorosas de proteção ambiental e dignidade laboral.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
+          
+          <!-- Pilar 1 -->
+          <div class="border-t border-dsc-line pt-6">
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.0.title">Eficiência Hídrica & Térmica</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="sustainability.pillars.0.desc">
+              Otimização contínua nos processos de enobrecimento e lavagem, reduzindo o volume de água por quilograma de tecido produzido e reaproveitando energia térmica residual nas instalações.
+            </p>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div class="border-t border-dsc-line pt-6">
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.1.title">Fibras Conscientes & Economia Circular</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="sustainability.pillars.1.desc">
+              Integração crescente de algodão orgânico certificado, fios reciclados pós-consumo e redução ativa de desperdício têxtil através da reincorporação de aparas de corte.
+            </p>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div class="border-t border-dsc-line pt-6">
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.2.title">Segurança Química do Artigo</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="sustainability.pillars.2.desc">
+              Ausência comprovada de corantes nocivos ou metais pesados. Os nossos produtos respeitam a saúde dérmica dos utilizadores finais e a segurança dos operadores que os produzem.
+            </p>
+          </div>
+
+          <!-- Pilar 4 -->
+          <div class="border-t border-dsc-line pt-6">
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.3.title">Ética e Padrões Laborais</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="sustainability.pillars.3.desc">
+              Condições de trabalho justas, proteção e remuneração transparente no cluster industrial português, rejeitando qualquer cadeia de fornecimento desregulada.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="bg-dsc-canvas p-8 md:p-12 border border-dsc-line text-center rounded-none">
+          <p class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted leading-relaxed max-w-4xl mx-auto" data-i18n="sustainability.certifications_note">
+            Trabalhamos com fornecedores e processos alinhados com referenciais internacionais de qualidade e conformidade: [OEKO-TEX STANDARD 100] • [GOTS] • [SEDEX/SMETA] • [ISO 9001/14001].
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-dsc-navy-deep text-slate-300 border-t border-dsc-navy/30 py-14">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center font-mono text-[10px] tracking-widest uppercase">
+      <div class="flex items-center space-x-4 mb-4 md:mb-0">
+        <span class="text-white font-normal">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+      </div>
+      <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

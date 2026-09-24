@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSC — Serviços & Cadeia de Valor</title>
+  
+  <!-- Tailwind CSS & Centralized Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
+
+  <!-- Design System & Architecture Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* Suavização de scroll e renderização tipográfica ultra-nítida */
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Transição global por omissão para interações táteis */
+    a, button, input, select, textarea, .interactive-card {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* 1. Efeito de linha deslizante sob links de navegação */
+    .nav-link {
+      position: relative;
+      display: inline-block;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background-color: #0F172A; /* dsc-navy */
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* 2. Micro-zoom suave em imagens/placeholders de tecido/toalha */
+    .img-zoom-container {
+      overflow: hidden;
+      position: relative;
+    }
+    .img-zoom-container .zoom-target {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .interactive-card:hover .zoom-target {
+      transform: scale(1.035);
+    }
+
+    /* 3. Efeito de elevação milimétrica e contorno técnico ativo */
+    .interactive-card {
+      position: relative;
+      will-change: transform, box-shadow;
+    }
+    .interactive-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.06);
+      border-color: #0F172A !important;
+    }
+
+    /* 4. Indicador de seta animada em botões e links de catálogo */
+    .arrow-trigger:hover .arrow-target {
+      transform: translateX(4px);
+    }
+    .arrow-target {
+      display: inline-block;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* 5. Foco moderno em inputs com anel de precisão sem deslocamento */
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px #0F172A;
+      background-color: #FFFFFF !important;
+    }
+  </style>
+
+  <!-- Core & Page Scripts -->
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/servicos.js" defer></script>
+</head>
+<body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex flex-col">
+        <span class="text-xl font-bold tracking-tighter text-dsc-navy">DSC</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted">Domingos Silva & Cunha</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
+        <a href="sobre.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.contacts">Contactos</a>
+      </nav>
+
+      <!-- Desktop Language & CTA -->
+      <div class="hidden sm:flex items-center space-x-6">
+        <div class="flex items-center border border-dsc-line rounded-none text-xs font-mono">
+          <button id="btn-pt" onclick="setLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95">PT</button>
+          <button id="btn-en" onclick="setLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95">EN</button>
+        </div>
+        <a href="contactos.html" class="inline-flex items-center justify-center px-6 py-3.5 border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest hover:border-dsc-navy hover:bg-dsc-navy hover:text-white active:scale-[0.98] transition-all duration-200 rounded-none">
+          <span data-i18n="nav.cta">Sourcing B2B</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center space-x-3 md:hidden">
+        <div class="flex items-center border border-dsc-line text-[11px] font-mono">
+          <button onclick="setLanguage('pt')" class="btn-lang-pt px-2 py-1 bg-dsc-navy text-white active:scale-95">PT</button>
+          <button onclick="setLanguage('en')" class="btn-lang-en px-2 py-1 text-dsc-muted active:scale-95">EN</button>
+        </div>
+        <button id="mobile-menu-btn" aria-label="Abrir Menu" class="p-2 border border-dsc-line text-dsc-navy hover:border-dsc-navy active:scale-95">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="menu-closed md:hidden fixed inset-x-0 top-20 bg-dsc-white border-b border-dsc-line shadow-xl z-40 px-6 py-8">
+      <nav class="flex flex-col space-y-5">
+        <a href="sobre.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
+        <div class="pt-4 border-t border-dsc-line">
+          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest" data-i18n="nav.cta">Sourcing B2B</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-24 border-b border-dsc-line bg-dsc-white min-h-[80vh]">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="flex flex-col lg:flex-row gap-16 mb-16 pb-6 border-b border-dsc-line">
+          <div class="lg:w-1/2">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="services.badge">02 / Estrutura Operacional</span>
+            </span>
+            <h2 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-6" data-i18n="services.h1">Soluções integradas da conceção do fio ao embalamento final.</h2>
+            <p class="text-base text-dsc-body font-light leading-relaxed mb-8" data-i18n="services.lead">
+              Inspirados na verticalidade industrial, acompanhamos o cliente em todo o ciclo produtivo ou integramos etapas específicas do seu projeto têxtil.
+            </p>
+          </div>
+          <div class="lg:w-1/2 lg:pl-16 lg:border-l border-dsc-line flex flex-col justify-center">
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="services.intro_title">Como Operamos</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="services.intro_p">
+              A nossa flexibilidade permite ao cliente decidir onde a DSC intervém. Seja no desenvolvimento de uma linha completa de raiz (Full Package / Turnkey), seja em fases isoladas como tecelagem estruturada, acabamento ou confeção especializada.
+            </p>
+          </div>
+        </div>
+
+        <!-- Controladores da Matriz -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
+          <button id="btn-mode-a" class="w-full md:w-auto bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 transition-all duration-200 rounded-none border border-dsc-navy active:scale-95" data-i18n="services.mode_a">
+            Modo A: Ciclo Integral
+          </button>
+          <button id="btn-mode-b" class="w-full md:w-auto bg-dsc-white border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest px-6 py-3.5 hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none active:scale-95" data-i18n="services.mode_b">
+            Modo B: Seleção Modular
+          </button>
+        </div>
+
+        <!-- Matriz Industrial (Steps 0 a 4) -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-px bg-dsc-line border border-dsc-line" id="matrix-container">
+          
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="design">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 01</span>
+            <div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.0.name">Conceção & I&D</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.0.desc">Cálculo técnico de densidades, definição de gramagens ideais (GSM), desenvolvimento de fichas técnicas e ensaios de prototipagem para validação de toque e cor.</p>
+            </div>
+          </div>
+
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="yarn">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 02</span>
+            <div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.1.name">Seleção & Engenharia de Fios</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.1.desc">Curadoria rigorosa de matérias-primas: algodão penteado de fibra longa, fios torcidos duplos, estruturas zero-twist e misturas com fibras sustentáveis (recicladas, linho, bambu).</p>
+            </div>
+          </div>
+
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="weaving">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 03</span>
+            <div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.2.name">Tecelagem Estruturada</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.2.desc">Produção de felpo de laçada regular, estruturas jacquard em relevo, bordaduras e texturas waffle em teares modernos de alta precisão.</p>
+            </div>
+          </div>
+
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="finishing">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 04</span>
+            <div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.3.name">Enobrecimento</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.3.desc">Processos de tinturaria controlada com solidez a lavagens frequentes, tratamentos hidrófilos de alta absorção imediata e estabilização para evitar o encolhimento pós-lavagem.</p>
+            </div>
+          </div>
+
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="cutting">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 05</span>
+            <div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.4.name">Confeção & Packaging</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.4.desc">Corte e costura com bainhas duplas reforçadas, controlo peça a peça por operadores qualificados, etiquetagem privada (Private Label) e paletização de exportação.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-12 mb-16 flex justify-center">
+          <a href="contactos.html?scope=integral" id="dynamic-quote-btn" class="bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 hover:bg-dsc-navy-deep transition-all duration-200 rounded-none inline-flex items-center">
+            <span data-i18n="services.btn_quote">Solicitar Cotação para as Etapas Selecionadas</span> <span class="ml-2 font-mono">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Private Label Box -->
+        <div class="bg-dsc-canvas border border-dsc-line p-12 mt-12 max-w-4xl mx-auto text-center rounded-none">
+          <h3 class="text-2xl font-light tracking-tight text-dsc-navy mb-4" data-i18n="services.private_label.title">Soluções de Marca Própria (Private Label)</h3>
+          <p class="text-sm text-dsc-body font-light leading-relaxed max-w-2xl mx-auto" data-i18n="services.private_label.desc">
+            Personalizamos cada pormenor para marcas globais e cadeias hoteleiras: etiquetas tecidas ou impressas, fitas de suspensão de alta resistência, embalagens personalizadas com código de barras próprio e conformidade com normas aduaneiras internacionais.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-dsc-navy-deep text-slate-300 border-t border-dsc-navy/30 py-14">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center font-mono text-[10px] tracking-widest uppercase">
+      <div class="flex items-center space-x-4 mb-4 md:mb-0">
+        <span class="text-white font-normal">DSC</span><span>•</span><span>Domingos Silva & Cunha, Lda.</span><span>•</span><span>Made in Portugal</span>
+      </div>
+      <div data-i18n="footer_rights">© 2026 DSC. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
