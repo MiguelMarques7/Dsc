@@ -1178,7 +1178,13 @@ const GLOBAL_PHRASES = {
   "Toalhas Turco Penteado Premium (Equilíbrio Nobre)": "Premium Combed Cotton Terry (Classic Balance)",
   "Aveludado, denso, laçada homogénea equilibrada": "Velvety, plush, balanced uniform loop ground",
   "Rápida (< 3 segundos absorção imediata)": "Rapid (< 3 seconds instant moisture wicking)",
-  "Retalho de luxo, boutiques exclusivas e uso residencial nobre.": "Prestige retail boutiques and high-end residential bath lines."
+  "Retalho de luxo, boutiques exclusivas e uso residencial nobre.": "Prestige retail boutiques and high-end residential bath lines.",
+  "Lotes rastreados desde o fio": "Batches tracked from yarn origin",
+  "Manufatura Têxtil Europeia": "European Textile Manufacturing",
+  "Felpo denso de alta tolerância para hotelaria de luxo e retalho internacional": "High-tolerance dense terry for luxury hospitality and international retail",
+  "Cluster Têxtil do Vale do Ave • Portugal": "Vale do Ave Textile Cluster • Portugal",
+  "Telefone:": "Phone:",
+  "Solicitar Amostra Nesta Gramagem": "Request Sample at this Weight"
 };
 
 // Generate reverse lookup dictionary for restoring PT perfectly
