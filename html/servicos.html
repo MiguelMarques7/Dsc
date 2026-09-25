@@ -12,79 +12,6 @@
   <!-- Design System & Architecture Stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
 
-  <style>
-    /* Suavização de scroll e renderização tipográfica ultra-nítida */
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* Transição global por omissão para interações táteis */
-    a, button, input, select, textarea, .interactive-card {
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* 1. Efeito de linha deslizante sob links de navegação */
-    .nav-link {
-      position: relative;
-      display: inline-block;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0%;
-      height: 1px;
-      background-color: #0F172A; /* dsc-navy */
-      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      width: 100%;
-    }
-
-    /* 2. Micro-zoom suave em imagens/placeholders de tecido/toalha */
-    .img-zoom-container {
-      overflow: hidden;
-      position: relative;
-    }
-    .img-zoom-container .zoom-target {
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .interactive-card:hover .zoom-target {
-      transform: scale(1.035);
-    }
-
-    /* 3. Efeito de elevação milimétrica e contorno técnico ativo */
-    .interactive-card {
-      position: relative;
-      will-change: transform, box-shadow;
-    }
-    .interactive-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.06);
-      border-color: #0F172A !important;
-    }
-
-    /* 4. Indicador de seta animada em botões e links de catálogo */
-    .arrow-trigger:hover .arrow-target {
-      transform: translateX(4px);
-    }
-    .arrow-target {
-      display: inline-block;
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* 5. Foco moderno em inputs com anel de precisão sem deslocamento */
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      box-shadow: 0 0 0 1px #0F172A;
-      background-color: #FFFFFF !important;
-    }
-  </style>
-
   <!-- Core & Page Scripts -->
   <script src="../js/i18n.js" defer></script>
   <script src="../js/main.js" defer></script>
@@ -95,19 +22,22 @@
   <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex flex-col">
-        <span class="text-xl font-bold tracking-tighter text-dsc-navy">DSC</span>
-        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted">Domingos Silva & Cunha</span>
+      <a href="index.html" class="flex flex-col group">
+        <span class="text-xl font-bold tracking-tighter text-dsc-navy flex items-center gap-1">
+          DSC
+          <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
+        </span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors">Domingos Silva & Cunha</span>
       </a>
       
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
-        <a href="sobre.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.services">Serviços & Cadeia</a>
-        <a href="catalogo.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.products">Catálogo & Toalhas</a>
-        <a href="sustentabilidade.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.blog">Caderno Técnico</a>
-        <a href="contactos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="nav-link" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="nav-link active" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="nav-link" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="nav-link" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="nav-link" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="nav-link" data-i18n="nav.contacts">Contactos</a>
       </nav>
 
       <!-- Desktop Language & CTA -->
@@ -116,8 +46,10 @@
           <button id="btn-pt" onclick="setLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95">PT</button>
           <button id="btn-en" onclick="setLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95">EN</button>
         </div>
-        <a href="contactos.html" class="inline-flex items-center justify-center px-6 py-3.5 border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest hover:border-dsc-navy hover:bg-dsc-navy hover:text-white active:scale-[0.98] transition-all duration-200 rounded-none">
+        <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
+          <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
           <span data-i18n="nav.cta">Sourcing B2B</span>
+          <span class="text-dsc-gold text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
 
@@ -157,16 +89,22 @@
         
         <div class="flex flex-col lg:flex-row gap-16 mb-16 pb-6 border-b border-dsc-line">
           <div class="lg:w-1/2">
-            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="services.badge">02 / Estrutura Operacional</span>
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
+              <span class="micro-dot micro-dot-pulse"></span>
+              <span data-i18n="services.badge">02 / Estrutura Operacional</span>
             </span>
-            <h2 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-6" data-i18n="services.h1">Soluções integradas da conceção do fio ao embalamento final.</h2>
+            <h1 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-6" data-i18n="services.h1">
+              Soluções integradas da conceção do fio ao embalamento final.
+            </h1>
             <p class="text-base text-dsc-body font-light leading-relaxed mb-8" data-i18n="services.lead">
               Inspirados na verticalidade industrial, acompanhamos o cliente em todo o ciclo produtivo ou integramos etapas específicas do seu projeto têxtil.
             </p>
           </div>
           <div class="lg:w-1/2 lg:pl-16 lg:border-l border-dsc-line flex flex-col justify-center">
-            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3" data-i18n="services.intro_title">Como Operamos</h3>
+            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3 flex items-center gap-2" data-i18n="services.intro_title">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              Como Operamos
+            </h3>
             <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="services.intro_p">
               A nossa flexibilidade permite ao cliente decidir onde a DSC intervém. Seja no desenvolvimento de uma linha completa de raiz (Full Package / Turnkey), seja em fases isoladas como tecelagem estruturada, acabamento ou confeção especializada.
             </p>
@@ -175,7 +113,7 @@
 
         <!-- Controladores da Matriz -->
         <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
-          <button id="btn-mode-a" class="w-full md:w-auto bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 transition-all duration-200 rounded-none border border-dsc-navy active:scale-95" data-i18n="services.mode_a">
+          <button id="btn-mode-a" class="w-full md:w-auto bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 transition-all duration-200 rounded-none border border-dsc-navy active:scale-95 shadow-sm" data-i18n="services.mode_a">
             Modo A: Ciclo Integral
           </button>
           <button id="btn-mode-b" class="w-full md:w-auto bg-dsc-white border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest px-6 py-3.5 hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none active:scale-95" data-i18n="services.mode_b">
@@ -186,40 +124,55 @@
         <!-- Matriz Industrial (Steps 0 a 4) -->
         <div class="grid grid-cols-1 md:grid-cols-5 gap-px bg-dsc-line border border-dsc-line" id="matrix-container">
           
-          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="design">
-            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 01</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group interactive-card" data-stage="design">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-gold font-semibold transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              ETAPA // 01
+            </span>
             <div>
               <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.0.name">Conceção & I&D</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.0.desc">Cálculo técnico de densidades, definição de gramagens ideais (GSM), desenvolvimento de fichas técnicas e ensaios de prototipagem para validação de toque e cor.</p>
             </div>
           </div>
 
-          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="yarn">
-            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 02</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group interactive-card" data-stage="yarn">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-gold font-semibold transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              ETAPA // 02
+            </span>
             <div>
               <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.1.name">Seleção & Engenharia de Fios</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.1.desc">Curadoria rigorosa de matérias-primas: algodão penteado de fibra longa, fios torcidos duplos, estruturas zero-twist e misturas com fibras sustentáveis (recicladas, linho, bambu).</p>
             </div>
           </div>
 
-          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="weaving">
-            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 03</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group interactive-card" data-stage="weaving">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-gold font-semibold transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              ETAPA // 03
+            </span>
             <div>
               <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.2.name">Tecelagem Estruturada</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.2.desc">Produção de felpo de laçada regular, estruturas jacquard em relevo, bordaduras e texturas waffle em teares modernos de alta precisão.</p>
             </div>
           </div>
 
-          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="finishing">
-            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 04</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group interactive-card" data-stage="finishing">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-gold font-semibold transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              ETAPA // 04
+            </span>
             <div>
               <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.3.name">Enobrecimento</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.3.desc">Processos de tinturaria controlada com solidez a lavagens frequentes, tratamentos hidrófilos de alta absorção imediata e estabilização para evitar o encolhimento pós-lavagem.</p>
             </div>
           </div>
 
-          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group" data-stage="cutting">
-            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-navy-accent group-hover:text-dsc-navy-accent transition-colors">ETAPA // 05</span>
+          <div class="matrix-box bg-dsc-white p-8 flex flex-col justify-between cursor-pointer transition-all border border-transparent rounded-none hover:bg-slate-50 transition-colors duration-200 group interactive-card" data-stage="cutting">
+            <span class="font-mono text-[10px] md:text-xs tracking-widest uppercase mb-8 matrix-badge text-dsc-gold font-semibold transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              ETAPA // 05
+            </span>
             <div>
               <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.4.name">Confeção & Packaging</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="services.steps.4.desc">Corte e costura com bainhas duplas reforçadas, controlo peça a peça por operadores qualificados, etiquetagem privada (Private Label) e paletização de exportação.</p>
@@ -229,13 +182,18 @@
         </div>
 
         <div class="mt-12 mb-16 flex justify-center">
-          <a href="contactos.html?scope=integral" id="dynamic-quote-btn" class="bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 hover:bg-dsc-navy-deep transition-all duration-200 rounded-none inline-flex items-center">
-            <span data-i18n="services.btn_quote">Solicitar Cotação para as Etapas Selecionadas</span> <span class="ml-2 font-mono">&rarr;</span>
+          <a href="contactos.html?scope=integral" id="dynamic-quote-btn" class="bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-7 py-4 hover:bg-dsc-navy-deep hover:border-dsc-gold border border-dsc-navy transition-all duration-200 rounded-none inline-flex items-center gap-3 shadow-md hover:shadow-lg hover:shadow-dsc-navy/20 arrow-trigger">
+            <span data-i18n="services.btn_quote">Solicitar Cotação para as Etapas Selecionadas</span>
+            <span class="arrow-target text-dsc-gold font-mono">&rarr;</span>
           </a>
         </div>
 
         <!-- Private Label Box -->
-        <div class="bg-dsc-canvas border border-dsc-line p-12 mt-12 max-w-4xl mx-auto text-center rounded-none">
+        <div class="bg-white border border-dsc-line p-12 mt-12 max-w-4xl mx-auto text-center rounded-none shadow-sm relative">
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="micro-dot micro-dot-pulse"></span>
+            <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">Soluções Customizadas</span>
+          </div>
           <h3 class="text-2xl font-light tracking-tight text-dsc-navy mb-4" data-i18n="services.private_label.title">Soluções de Marca Própria (Private Label)</h3>
           <p class="text-sm text-dsc-body font-light leading-relaxed max-w-2xl mx-auto" data-i18n="services.private_label.desc">
             Personalizamos cada pormenor para marcas globais e cadeias hoteleiras: etiquetas tecidas ou impressas, fitas de suspensão de alta resistência, embalagens personalizadas com código de barras próprio e conformidade com normas aduaneiras internacionais.
@@ -246,20 +204,22 @@
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
-    <!-- ================= FOOTER INDUSTRIAL NO PADRÃO SIDI ================= -->
-  <footer class="bg-[#0A0F1D] text-slate-300 border-t border-slate-800">
+  <!-- ================= FOOTER INDUSTRIAL NO PADRÃO SIDI ================= -->
+  <footer class="bg-[#070D1E] text-slate-300 border-t border-slate-800">
     
     <!-- 1. Pré-Footer / CTA B2B -->
     <div class="border-b border-slate-800/80">
       <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1" data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1 flex items-center gap-2">
+            <span class="micro-dot micro-dot-pulse"></span>
+            <span data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
+          </span>
           <h2 class="text-2xl sm:text-3xl font-light text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
         </div>
-        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-[#0A0F1D] hover:bg-slate-100 font-mono text-xs uppercase tracking-widest transition-all">
+        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-mono text-xs uppercase tracking-widest transition-all duration-200 shadow-md group">
           <span data-i18n="footer_cta_btn">Iniciar Diálogo Técnico</span>
-          <span>&rarr;</span>
+          <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
     </div>
@@ -271,14 +231,17 @@
         <!-- Coluna 1: Marca & Síntese (Span 4) -->
         <div class="lg:col-span-4 space-y-4">
           <div class="flex flex-col">
-            <span class="text-2xl font-bold tracking-tighter text-white">DSC</span>
+            <span class="text-2xl font-bold tracking-tighter text-white flex items-center gap-1">
+              DSC
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
+            </span>
             <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Domingos Silva & Cunha</span>
           </div>
           <p class="text-xs text-slate-400 leading-relaxed font-light pr-6" data-i18n="footer_bio">
             Desenvolvimento e engenharia de têxteis-lar e felpos de alto rendimento. Combinamos coleções de marca própria com produção modular flexível para mercados internacionais.
           </p>
           <div class="inline-flex items-center gap-2 pt-2 text-[11px] font-mono text-slate-400">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
             <span>Norte de Portugal • Vale do Ave</span>
           </div>
         </div>
@@ -330,27 +293,27 @@
 
       <!-- 3. Barra de Conformidade & Certificações -->
       <div class="mt-14 pt-8 border-t border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-4 text-center font-mono text-xs">
-        <div class="border border-slate-800 p-3 bg-slate-900/40">
-          <div class="text-[10px] text-slate-400 uppercase">Segurança Química</div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
+          <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Segurança Química</div>
           <div class="text-white mt-1"><span class="ph">[OEKO-TEX STANDARD 100]</span></div>
         </div>
-        <div class="border border-slate-800 p-3 bg-slate-900/40">
-          <div class="text-[10px] text-slate-400 uppercase">Fibras Orgânicas</div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
+          <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Fibras Orgânicas</div>
           <div class="text-white mt-1"><span class="ph">[GOTS CERTIFIED]</span></div>
         </div>
-        <div class="border border-slate-800 p-3 bg-slate-900/40">
-          <div class="text-[10px] text-slate-400 uppercase">Origem & Fabricação</div>
-          <div class="text-white mt-1">MADE IN PORTUGAL (UE)</div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
+          <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Origem & Fabricação</div>
+          <div class="text-white mt-1 font-medium">MADE IN PORTUGAL (UE)</div>
         </div>
-        <div class="border border-slate-800 p-3 bg-slate-900/40">
-          <div class="text-[10px] text-slate-400 uppercase">Auditoria Social</div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
+          <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Auditoria Social</div>
           <div class="text-white mt-1"><span class="ph">[SMETA / SEDEX]</span></div>
         </div>
       </div>
     </div>
 
     <!-- 4. Sub-Footer Jurídico -->
-    <div class="border-t border-slate-800/80 bg-[#070B14]">
+    <div class="border-t border-slate-800/80 bg-[#050914]">
       <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-[11px] font-mono text-slate-400 gap-4">
         <div>
           <span data-i18n="footer_rights">&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>

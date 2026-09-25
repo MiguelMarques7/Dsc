@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const badge = box.querySelector('.matrix-badge');
         if (badge) {
           badge.classList.remove('text-dsc-muted');
-          badge.classList.add('text-dsc-navy-accent');
+          badge.classList.add('text-dsc-gold');
         }
       });
       quoteBtn.href = "contactos.html?scope=integral";
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           if (badge) {
             badge.classList.remove('text-dsc-muted');
-            badge.classList.add('text-dsc-navy-accent');
+            badge.classList.add('text-dsc-gold');
           }
         } else {
           box.classList.remove('border-dsc-navy');
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             h3.classList.remove('text-dsc-navy');
           }
           if (badge) {
-            badge.classList.remove('text-dsc-navy-accent');
+            badge.classList.remove('text-dsc-gold');
             badge.classList.add('text-dsc-muted');
           }
         }

@@ -2,7 +2,7 @@
  * DSC (Domingos Silva & Cunha, Lda.)
  * Architecture & Design System Stylesheet
  * 
- * Palette: DSC Navy & Architectural White
+ * Palette: DSC Navy Tonal System, Architectural White & Textile Amber/Gold
  * Typography: Inter (Sans) & JetBrains Mono (Mono)
  */
 
@@ -12,18 +12,30 @@
    1. DESIGN TOKENS & CSS VARIABLES
    ========================================================================== */
 :root {
-  /* Colors */
+  /* Colors - Architectural White & Canvas */
   --dsc-white: #FFFFFF;
-  --dsc-canvas: #F8FAFC;
-  --dsc-surface: #F1F5F9;
-  --dsc-line: #E2E8F0;
+  --dsc-canvas: #F8FAFD;
+  --dsc-surface: #EEF3F9;
+  --dsc-surface-hover: #E5ECF6;
+  --dsc-line: #DCE5F2;
   --dsc-line-dark: #CBD5E1;
-  --dsc-muted: #64748B;
-  --dsc-body: #334155;
-  --dsc-navy-subtle: #1E293B;
-  --dsc-navy: #0F172A;
-  --dsc-navy-deep: #0A0F1D;
-  --dsc-navy-accent: #1D4ED8;
+  --dsc-muted: #62748E;
+  --dsc-body: #2D3E56;
+
+  /* Colors - DSC Navy Tonal Scale */
+  --dsc-navy-deep: #070D1E;
+  --dsc-navy: #0B1E48;
+  --dsc-navy-light: #142C69;
+  --dsc-navy-slate: #1E3A70;
+  --dsc-navy-subtle: #1E2E4A;
+  --dsc-navy-accent: #2563EB;
+
+  /* Colors - Yellow / Refined Architectural Amber Gold (Micro-Details) */
+  --dsc-gold: #F59E0B;
+  --dsc-gold-light: #FBBF24;
+  --dsc-gold-dark: #D97706;
+  --dsc-gold-subtle: #FEF3C7;
+  --dsc-gold-glow: rgba(245, 158, 11, 0.45);
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -71,7 +83,7 @@ a, button, input, select, textarea, .interactive-card {
 }
 
 /* ==========================================================================
-   3. TYPOGRAPHY & CODE LABELS
+   3. TYPOGRAPHY & TECHNICAL BADGES
    ========================================================================== */
 .font-sans {
   font-family: var(--font-sans);
@@ -84,23 +96,63 @@ a, button, input, select, textarea, .interactive-card {
 /* Technical Placeholder Badges */
 .ph {
   font-family: var(--font-mono);
-  font-size: 0.85em;
+  font-size: 0.82em;
   background-color: var(--dsc-surface);
-  border: 1px dashed var(--dsc-line);
-  padding: 0.15rem 0.45rem;
-  color: var(--dsc-muted);
+  border: 1px dashed var(--dsc-line-dark);
+  padding: 0.15rem 0.5rem;
+  color: var(--dsc-navy-slate);
   letter-spacing: -0.01em;
   display: inline-block;
   vertical-align: middle;
+  border-radius: 2px;
 }
 
 footer .ph {
   background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: #E2E8F0;
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #F8FAFD;
 }
 
 .ph-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dsc-muted);
+}
+
+/* Micro-detalhes em Amarelo/Dourado Âmbar */
+.micro-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--dsc-gold);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--dsc-gold-glow);
+  vertical-align: middle;
+}
+
+.micro-dot-pulse {
+  animation: micro-pulse 2.4s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes micro-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 6px var(--dsc-gold-glow);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(0.85);
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.75);
+  }
+}
+
+.badge-gold {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -108,7 +160,24 @@ footer .ph {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--dsc-muted);
+  padding: 0.2rem 0.6rem;
+  background-color: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #B45309;
+}
+
+.badge-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.25rem 0.65rem;
+  background-color: var(--dsc-navy);
+  color: var(--dsc-white);
+  border: 1px solid var(--dsc-navy-light);
 }
 
 /* ==========================================================================
@@ -118,22 +187,24 @@ footer .ph {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 2px solid var(--dsc-navy);
   border-bottom: 1px solid var(--dsc-line);
   transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-/* 1. Efeito de linha deslizante sob links de navegação */
+/* Efeito de linha deslizante com toque dourado sob links de navegação */
 .nav-link {
   position: relative;
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   padding: 0.25rem 0;
+  color: var(--dsc-muted);
 }
 
 .nav-link::after {
@@ -142,9 +213,13 @@ footer .ph {
   bottom: -4px;
   left: 0;
   width: 0%;
-  height: 1px;
-  background-color: var(--dsc-navy);
+  height: 2px;
+  background: linear-gradient(90deg, var(--dsc-navy) 0%, var(--dsc-gold) 100%);
   transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover {
+  color: var(--dsc-navy);
 }
 
 .nav-link:hover::after,
@@ -177,60 +252,91 @@ footer .ph {
 /* ==========================================================================
    5. MICRO-INTERAÇÕES & CARTÕES TÉCNICOS
    ========================================================================== */
-/* 2. Micro-zoom suave em imagens/placeholders de tecido/toalha */
+/* Micro-zoom suave em imagens/placeholders de tecido/toalha */
 .img-zoom-container {
   overflow: hidden;
   position: relative;
 }
 
 .img-zoom-container .zoom-target {
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .interactive-card:hover .zoom-target {
-  transform: scale(1.035);
+  transform: scale(1.045);
 }
 
-/* 3. Efeito de elevação milimétrica e contorno técnico ativo */
+/* Efeito de elevação milimétrica com contorno azul marinho e detalhe dourado */
 .interactive-card {
   position: relative;
+  background-color: var(--dsc-white);
+  border: 1px solid var(--dsc-line);
   will-change: transform, box-shadow;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--dsc-navy) 0%, var(--dsc-gold) 100%);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10;
 }
 
 .interactive-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.06);
-  border-color: #0F172A !important;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -10px rgba(11, 30, 72, 0.12);
+  border-color: var(--dsc-navy) !important;
 }
 
-/* 4. Indicador de seta animada em botões e links de catálogo */
+.interactive-card:hover::before {
+  opacity: 1;
+}
+
+/* Indicador de seta animada em botões e links de catálogo */
+.arrow-trigger {
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arrow-trigger:hover {
+  color: var(--dsc-navy);
+}
+
 .arrow-trigger:hover .arrow-target {
-  transform: translateX(4px);
+  transform: translateX(5px);
+  color: var(--dsc-gold);
 }
 
 .arrow-target {
   display: inline-block;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Matrix Stage Selection Box (servicos.html) */
 .matrix-box {
   cursor: pointer;
   transition: all var(--transition-normal);
+  background-color: var(--dsc-white);
 }
 
 .matrix-box:hover {
-  border-color: var(--dsc-navy-subtle);
+  border-color: var(--dsc-navy) !important;
+  background-color: #F8FAFD;
 }
 
 /* ==========================================================================
    6. FORMS & INPUTS
    ========================================================================== */
-/* 5. Foco moderno em inputs com anel de precisão sem deslocamento */
+/* Foco moderno em inputs com anel de precisão no tom azul marinho */
 input:focus, select:focus, textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px #0F172A;
+  box-shadow: 0 0 0 1px var(--dsc-navy), 0 0 0 4px rgba(11, 30, 72, 0.08);
+  border-color: var(--dsc-navy) !important;
   background-color: #FFFFFF !important;
 }
 
@@ -245,11 +351,11 @@ input:focus, select:focus, textarea:focus {
   max-width: 24rem;
   background-color: var(--dsc-navy-deep);
   color: var(--dsc-white);
-  border-left: 3px solid var(--dsc-navy-accent);
+  border-left: 3px solid var(--dsc-gold);
   padding: 1rem 1.25rem;
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 25px -5px rgba(7, 13, 30, 0.35);
   transform: translateY(150%);
   opacity: 0;
   transition: transform var(--transition-slow), opacity var(--transition-slow);
@@ -277,11 +383,11 @@ input:focus, select:focus, textarea:focus {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--dsc-muted);
+  background: var(--dsc-navy-slate);
 }
 
 :focus-visible {
-  outline: 2px solid var(--dsc-navy-accent);
+  outline: 2px solid var(--dsc-gold);
   outline-offset: 2px;
 }
 

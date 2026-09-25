@@ -12,79 +12,6 @@
   <!-- Design System & Architecture Stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
 
-  <style>
-    /* Suavização de scroll e renderização tipográfica ultra-nítida */
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* Transição global por omissão para interações táteis */
-    a, button, input, select, textarea, .interactive-card {
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* 1. Efeito de linha deslizante sob links de navegação */
-    .nav-link {
-      position: relative;
-      display: inline-block;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0%;
-      height: 1px;
-      background-color: #0F172A; /* dsc-navy */
-      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .nav-link:hover::after,
-    .nav-link.active::after {
-      width: 100%;
-    }
-
-    /* 2. Micro-zoom suave em imagens/placeholders de tecido/toalha */
-    .img-zoom-container {
-      overflow: hidden;
-      position: relative;
-    }
-    .img-zoom-container .zoom-target {
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .interactive-card:hover .zoom-target {
-      transform: scale(1.035);
-    }
-
-    /* 3. Efeito de elevação milimétrica e contorno técnico ativo */
-    .interactive-card {
-      position: relative;
-      will-change: transform, box-shadow;
-    }
-    .interactive-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.06);
-      border-color: #0F172A !important;
-    }
-
-    /* 4. Indicador de seta animada em botões e links de catálogo */
-    .arrow-trigger:hover .arrow-target {
-      transform: translateX(4px);
-    }
-    .arrow-target {
-      display: inline-block;
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* 5. Foco moderno em inputs com anel de precisão sem deslocamento */
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      box-shadow: 0 0 0 1px #0F172A;
-      background-color: #FFFFFF !important;
-    }
-  </style>
-
   <!-- Core & Page Scripts -->
   <script src="../js/i18n.js" defer></script>
   <script src="../js/main.js" defer></script>
@@ -95,19 +22,22 @@
   <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex flex-col">
-        <span class="text-xl font-bold tracking-tighter text-dsc-navy">DSC</span>
-        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted">Domingos Silva & Cunha</span>
+      <a href="index.html" class="flex flex-col group">
+        <span class="text-xl font-bold tracking-tighter text-dsc-navy flex items-center gap-1">
+          DSC
+          <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
+        </span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors">Domingos Silva & Cunha</span>
       </a>
       
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
-        <a href="sobre.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.services">Serviços & Cadeia</a>
-        <a href="catalogo.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.products">Catálogo & Toalhas</a>
-        <a href="sustentabilidade.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.blog">Caderno Técnico</a>
-        <a href="contactos.html" class="nav-link text-dsc-muted hover:text-dsc-navy" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="nav-link" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="nav-link" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="nav-link active" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="nav-link" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="nav-link" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="nav-link" data-i18n="nav.contacts">Contactos</a>
       </nav>
 
       <!-- Desktop Language & CTA -->
@@ -116,8 +46,10 @@
           <button id="btn-pt" onclick="setLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95">PT</button>
           <button id="btn-en" onclick="setLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95">EN</button>
         </div>
-        <a href="contactos.html" class="inline-flex items-center justify-center px-6 py-3.5 border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest hover:border-dsc-navy hover:bg-dsc-navy hover:text-white active:scale-[0.98] transition-all duration-200 rounded-none">
+        <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
+          <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
           <span data-i18n="nav.cta">Sourcing B2B</span>
+          <span class="text-dsc-gold text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
 
@@ -157,10 +89,13 @@
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-dsc-line">
           <div class="md:w-2/3">
-            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-dsc-navy-accent inline-block mr-2"></span><span data-i18n="products.badge">03 / Arquitetura de Catálogo</span>
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
+              <span class="micro-dot micro-dot-pulse"></span>
+              <span data-i18n="products.badge">03 / Arquitetura de Catálogo</span>
             </span>
-            <h2 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-4" data-i18n="products.h1">Coleções de banho concebidas com precisão, estética e durabilidade.</h2>
+            <h1 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-4" data-i18n="products.h1">
+              Coleções de banho concebidas com precisão, estética e durabilidade.
+            </h1>
             <p class="text-sm text-dsc-body font-light leading-relaxed max-w-2xl" data-i18n="products.lead">
               Do retalho sofisticado à exigência da hotelaria de luxo. Explore as nossas referências técnicas estruturadas por gramagem, fibra e tipologia de uso.
             </p>
@@ -170,13 +105,14 @@
         <!-- Filtros e Contador -->
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div class="flex flex-wrap gap-2 text-xs font-mono" id="filter-controls">
-            <button data-filter="all" class="px-4 py-2 bg-dsc-navy text-white border border-dsc-navy transition-all outline-none rounded-none active:scale-95" data-i18n="products.categories.0">Todos</button>
-            <button data-filter="terry" class="px-4 py-2 bg-dsc-white text-dsc-body border border-dsc-line hover:border-dsc-navy transition-all outline-none rounded-none active:scale-95" data-i18n="products.categories.1">Toalhas & Felpos</button>
-            <button data-filter="contract" class="px-4 py-2 bg-dsc-white text-dsc-body border border-dsc-line hover:border-dsc-navy transition-all outline-none rounded-none active:scale-95" data-i18n="products.categories.2">Linha Hotelaria (Contract)</button>
-            <button data-filter="waffle" class="px-4 py-2 bg-dsc-white text-dsc-body border border-dsc-line hover:border-dsc-navy transition-all outline-none rounded-none active:scale-95" data-i18n="products.categories.3">Estruturas Waffle</button>
+            <button data-filter="all" class="px-4 py-2.5 bg-dsc-navy text-white border border-dsc-navy hover:border-dsc-gold transition-all outline-none rounded-none active:scale-95 shadow-sm" data-i18n="products.categories.0">Todos</button>
+            <button data-filter="terry" class="px-4 py-2.5 bg-dsc-white text-dsc-body border border-dsc-line hover:border-dsc-navy hover:text-dsc-navy transition-all outline-none rounded-none active:scale-95" data-i18n="products.categories.1">Toalhas & Felpos</button>
+            <button data-filter="contract" class="px-4 py-2.5 bg-dsc-white text-dsc-body border border-dsc-line hover:border-dsc-navy hover:text-dsc-navy transition-all outline-none rounded-none active:scale-95" data-i18n="products.categories.2">Linha Hotelaria (Contract)</button>
+            <button data-filter="waffle" class="px-4 py-2.5 bg-dsc-white text-dsc-body border border-dsc-line hover:border-dsc-navy hover:text-dsc-navy transition-all outline-none rounded-none active:scale-95" data-i18n="products.categories.3">Estruturas Waffle</button>
           </div>
-          <div class="text-[10px] font-mono tracking-widest uppercase text-dsc-muted">
-            <span data-i18n="products.showing">Mostrando</span> <span id="item-count" class="text-dsc-navy font-normal">4</span> <span data-i18n="products.of">de</span> 4 <span data-i18n="products.refs">referências técnicas</span>
+          <div class="text-[10px] font-mono tracking-widest uppercase text-dsc-muted flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+            <span data-i18n="products.showing">Mostrando</span> <span id="item-count" class="text-dsc-navy font-semibold">4</span> <span data-i18n="products.of">de</span> 4 <span data-i18n="products.refs">referências técnicas</span>
           </div>
         </div>
 
@@ -185,18 +121,22 @@
           <!-- Artigo 0: T550 -->
           <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="terry">
             <div class="p-6">
-              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
                 <img src="../assets/terry_macro.png" alt="DSC-T550" class="w-full h-full object-cover zoom-target">
+                <span class="absolute top-2 right-2 badge-gold text-[9px] shadow-sm">550 g/m²</span>
               </div>
-              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-T550-COM</div>
-              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="products.items.0.name">Toalha Turco Algodão Penteado</h3>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2 flex items-center justify-between">
+                <span>Ref. DSC-T550-COM</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              </div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.0.name">Toalha Turco Algodão Penteado</h3>
               <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.0.desc">Artigo de referência da DSC. Laçada de turco densa e homogénea que garante toque aveludado e absorção rápida desde a primeira utilização.</p>
               <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
                 <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.0.specs.composition">100% Algodão Penteado</dd></div>
-                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.0.specs.density">550 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold text-dsc-navy" data-i18n="products.items.0.specs.density">550 g/m²</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-dsc-surface/30 border-t border-dsc-line mt-auto">
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto">
               <a href="contactos.html?ref=DSC-T550-COM&name=Toalha+Turco+Algodao+Penteado" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full">
                 <span data-i18n="products.btn_sample">Pedir Amostra B2B</span>
                 <span class="arrow-target">&rarr;</span>
@@ -207,18 +147,22 @@
           <!-- Artigo 1: T700 -->
           <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="contract">
             <div class="p-6">
-              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
                 <img src="../assets/folded_towels.png" alt="DSC-T700" class="w-full h-full object-cover grayscale contrast-125 zoom-target">
+                <span class="absolute top-2 right-2 badge-gold text-[9px] shadow-sm">700 g/m²</span>
               </div>
-              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-T700-HT</div>
-              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="products.items.1.name">Toalha Linha Heavy Contract</h3>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2 flex items-center justify-between">
+                <span>Ref. DSC-T700-HT</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              </div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.1.name">Toalha Linha Heavy Contract</h3>
               <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.1.desc">Desenvolvida especificamente para alta rotação e lavandarias industriais. Fio retorcido com elevada resistência mecânica e laçada anti-puxão.</p>
               <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
                 <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.1.specs.composition">Fio Retorcido 24/2</dd></div>
-                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.1.specs.density">700 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold text-dsc-navy" data-i18n="products.items.1.specs.density">700 g/m²</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-dsc-surface/30 border-t border-dsc-line mt-auto">
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto">
               <a href="contactos.html?ref=DSC-T700-HT&name=Toalha+Linha+Heavy+Contract" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full">
                 <span data-i18n="products.btn_sample">Pedir Amostra B2B</span>
                 <span class="arrow-target">&rarr;</span>
@@ -229,18 +173,22 @@
           <!-- Artigo 2: W420 -->
           <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="waffle">
             <div class="p-6">
-              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
                 <img src="../assets/waffle_towel.jpg" alt="DSC-W420" class="w-full h-full object-cover zoom-target">
+                <span class="absolute top-2 right-2 badge-gold text-[9px] shadow-sm">420 g/m²</span>
               </div>
-              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-W420-ECO</div>
-              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="products.items.2.name">Toalha Ninho de Abelha (Waffle)</h3>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2 flex items-center justify-between">
+                <span>Ref. DSC-W420-ECO</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              </div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.2.name">Toalha Ninho de Abelha (Waffle)</h3>
               <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.2.desc">Design contemporâneo e secagem ultrarrápida. Estrutura tridimensional que estimula a pele e reduz substancialmente o consumo energético na secagem.</p>
               <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
                 <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.2.specs.composition">80% Alg. Orgânico / 20% Linho</dd></div>
-                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.2.specs.density">420 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold text-dsc-navy" data-i18n="products.items.2.specs.density">420 g/m²</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-dsc-surface/30 border-t border-dsc-line mt-auto">
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto">
               <a href="contactos.html?ref=DSC-W420-ECO&name=Toalha+Ninho+de+Abelha" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full">
                 <span data-i18n="products.btn_sample">Pedir Amostra B2B</span>
                 <span class="arrow-target">&rarr;</span>
@@ -251,18 +199,22 @@
           <!-- Artigo 3: Z600 -->
           <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="terry">
             <div class="p-6">
-              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
                 <img src="../assets/zero_twist.jpg" alt="DSC-Z600" class="w-full h-full object-cover zoom-target">
+                <span class="absolute top-2 right-2 badge-gold text-[9px] shadow-sm">600 g/m²</span>
               </div>
-              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-Z600-PL</div>
-              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2" data-i18n="products.items.3.name">Toalha Turco Zero-Twist Premium</h3>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2 flex items-center justify-between">
+                <span>Ref. DSC-Z600-PL</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              </div>
+              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.3.name">Toalha Turco Zero-Twist Premium</h3>
               <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.3.desc">Fibras sem torção que aprisionam o ar no interior do fio. Proporciona um volume visual extraordinário com leveza e capacidade de secagem instantânea.</p>
               <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
                 <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.3.specs.composition">100% Algodão Nobre</dd></div>
-                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.3.specs.density">600 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold text-dsc-navy" data-i18n="products.items.3.specs.density">600 g/m²</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-dsc-surface/30 border-t border-dsc-line mt-auto">
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto">
               <a href="contactos.html?ref=DSC-Z600-PL&name=Toalha+Turco+Zero-Twist+Premium" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full">
                 <span data-i18n="products.btn_sample">Pedir Amostra B2B</span>
                 <span class="arrow-target">&rarr;</span>
@@ -275,20 +227,22 @@
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
-    <!-- ================= FOOTER INDUSTRIAL NO PADRÃO SIDI ================= -->
-  <footer class="bg-[#0A0F1D] text-slate-300 border-t border-slate-800">
+  <!-- ================= FOOTER INDUSTRIAL NO PADRÃO SIDI ================= -->
+  <footer class="bg-[#070D1E] text-slate-300 border-t border-slate-800">
     
     <!-- 1. Pré-Footer / CTA B2B -->
     <div class="border-b border-slate-800/80">
       <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div>
-          <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1" data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
+          <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1 flex items-center gap-2">
+            <span class="micro-dot micro-dot-pulse"></span>
+            <span data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
+          </span>
           <h2 class="text-2xl sm:text-3xl font-light text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
         </div>
-        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-[#0A0F1D] hover:bg-slate-100 font-mono text-xs uppercase tracking-widest transition-all">
+        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-mono text-xs uppercase tracking-widest transition-all duration-200 shadow-md group">
           <span data-i18n="footer_cta_btn">Iniciar Diálogo Técnico</span>
-          <span>&rarr;</span>
+          <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
     </div>
@@ -300,14 +254,17 @@
         <!-- Coluna 1: Marca & Síntese (Span 4) -->
         <div class="lg:col-span-4 space-y-4">
           <div class="flex flex-col">
-            <span class="text-2xl font-bold tracking-tighter text-white">DSC</span>
+            <span class="text-2xl font-bold tracking-tighter text-white flex items-center gap-1">
+              DSC
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
+            </span>
             <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Domingos Silva & Cunha</span>
           </div>
           <p class="text-xs text-slate-400 leading-relaxed font-light pr-6" data-i18n="footer_bio">
             Desenvolvimento e engenharia de têxteis-lar e felpos de alto rendimento. Combinamos coleções de marca própria com produção modular flexível para mercados internacionais.
           </p>
           <div class="inline-flex items-center gap-2 pt-2 text-[11px] font-mono text-slate-400">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
             <span>Norte de Portugal • Vale do Ave</span>
           </div>
         </div>
@@ -359,27 +316,27 @@
 
       <!-- 3. Barra de Conformidade & Certificações -->
       <div class="mt-14 pt-8 border-t border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-4 text-center font-mono text-xs">
-        <div class="border border-slate-800 p-3 bg-slate-900/40">
-          <div class="text-[10px] text-slate-400 uppercase">Segurança Química</div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
+          <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Segurança Química</div>
           <div class="text-white mt-1"><span class="ph">[OEKO-TEX STANDARD 100]</span></div>
         </div>
-        <div class="border border-slate-800 p-3 bg-slate-900/40">
-          <div class="text-[10px] text-slate-400 uppercase">Fibras Orgânicas</div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
+          <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Fibras Orgânicas</div>
           <div class="text-white mt-1"><span class="ph">[GOTS CERTIFIED]</span></div>
         </div>
-        <div class="border border-slate-800 p-3 bg-slate-900/40">
-          <div class="text-[10px] text-slate-400 uppercase">Origem & Fabricação</div>
-          <div class="text-white mt-1">MADE IN PORTUGAL (UE)</div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
+          <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Origem & Fabricação</div>
+          <div class="text-white mt-1 font-medium">MADE IN PORTUGAL (UE)</div>
         </div>
-        <div class="border border-slate-800 p-3 bg-slate-900/40">
-          <div class="text-[10px] text-slate-400 uppercase">Auditoria Social</div>
+        <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
+          <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Auditoria Social</div>
           <div class="text-white mt-1"><span class="ph">[SMETA / SEDEX]</span></div>
         </div>
       </div>
     </div>
 
     <!-- 4. Sub-Footer Jurídico -->
-    <div class="border-t border-slate-800/80 bg-[#070B14]">
+    <div class="border-t border-slate-800/80 bg-[#050914]">
       <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-[11px] font-mono text-slate-400 gap-4">
         <div>
           <span data-i18n="footer_rights">&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>

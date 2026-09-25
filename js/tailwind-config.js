@@ -12,16 +12,25 @@ tailwind.config = {
       colors: {
         dsc: {
           white: '#FFFFFF',
-          canvas: '#F8FAFC',
-          surface: '#F1F5F9',
-          line: '#E2E8F0',
-          muted: '#64748B',
-          body: '#334155',
+          canvas: '#F8FAFD',
+          surface: '#EEF3F9',
+          line: '#DCE5F2',
+          'line-dark': '#CBD5E1',
+          muted: '#62748E',
+          body: '#2D3E56',
           navy: {
-            subtle: '#1E293B',
-            DEFAULT: '#0F172A',
-            deep: '#0A0F1D',
-            accent: '#1D4ED8',
+            deep: '#070D1E',
+            DEFAULT: '#0B1E48',
+            light: '#142C69',
+            slate: '#1E3A70',
+            subtle: '#1E2E4A',
+            accent: '#2563EB',
+          },
+          gold: {
+            subtle: '#FEF3C7',
+            light: '#FBBF24',
+            DEFAULT: '#F59E0B',
+            dark: '#D97706',
           }
         }
       }
