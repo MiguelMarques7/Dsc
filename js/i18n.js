@@ -1162,7 +1162,23 @@ const GLOBAL_PHRASES = {
   "Aceder ao Catálogo": "Access Catalog",
   "Entrar no Portal": "Enter Portal",
   "Fechar Artigo (Esc)": "Close Article (Esc)",
-  "Ref. DSC-T550-COM": "Ref. DSC-T550-COM"
+  "Ref. DSC-T550-COM": "Ref. DSC-T550-COM",
+  "03.1 / FERRAMENTA TÉCNICA DE CALIBRAÇÃO": "03.1 / TECHNICAL CALIBRATION TOOL",
+  "Simulador de Gramagem (GSM) & Densidade de Fio": "GSM & Yarn Density Technical Simulator",
+  "Calibração Ativa:": "Active Calibration:",
+  "Arraste o cursor de calibração para explorar o comportamento físico, o tempo de secagem e a aplicação recomendada da fibra para cada densidade têxtil.": "Drag the calibration slider to evaluate physical hand-feel, drying performance, and recommended application across textile densities.",
+  "350 g/m² (Waffle / Viagem)": "350 g/m² (Waffle / Travel)",
+  "550 g/m² (Equilíbrio Nobre)": "550 g/m² (Classic Balance)",
+  "700 g/m² (Contract 5★)": "700 g/m² (Contract 5★)",
+  "950 g/m² (Tapete / Spa)": "950 g/m² (Mat / Spa)",
+  "Arquitetura da Fibra & Toque": "Fiber Architecture & Hand-Feel",
+  "Tempo de Secagem & Absorção": "Drying Performance & Absorption",
+  "Segmento Recomendado": "Recommended Sector",
+  "Solicitar Amostra Nesta Gramagem →": "Request Sample in This GSM →",
+  "Toalhas Turco Penteado Premium (Equilíbrio Nobre)": "Premium Combed Cotton Terry (Classic Balance)",
+  "Aveludado, denso, laçada homogénea equilibrada": "Velvety, plush, balanced uniform loop ground",
+  "Rápida (< 3 segundos absorção imediata)": "Rapid (< 3 seconds instant moisture wicking)",
+  "Retalho de luxo, boutiques exclusivas e uso residencial nobre.": "Prestige retail boutiques and high-end residential bath lines."
 };
 
 // Generate reverse lookup dictionary for restoring PT perfectly

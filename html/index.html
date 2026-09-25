@@ -84,7 +84,7 @@
 
   <main>
     <!-- ================= HERO ================= -->
-    <section class="relative border-b border-dsc-line bg-gradient-to-br from-white via-white to-dsc-surface/60 overflow-hidden">
+    <section class="relative border-b border-dsc-line bg-gradient-to-br from-white via-white to-dsc-surface/60 overflow-hidden bg-grid-pattern">
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 min-h-[75vh]">
         
         <div class="lg:col-span-8 flex flex-col justify-center px-6 py-20 lg:py-0 border-r border-dsc-line">
@@ -300,6 +300,80 @@
             </div>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SIMULADOR INTERATIVO DE GRAMAGEM & ENGENHARIA TÊXTIL ================= -->
+    <section class="py-20 bg-dsc-surface/40 border-b border-dsc-line relative overflow-hidden bg-grid-pattern">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-white border border-dsc-line p-8 md:p-12 shadow-sm relative reveal-on-scroll">
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-8 pb-6 border-b border-dsc-line">
+            <div>
+              <div class="inline-flex items-center gap-2 mb-2">
+                <span class="micro-dot micro-dot-pulse"></span>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">03.1 / FERRAMENTA TÉCNICA DE CALIBRAÇÃO</span>
+              </div>
+              <h2 class="text-2xl md:text-3xl font-light text-dsc-navy tracking-tight">
+                Simulador de Gramagem (GSM) & Densidade de Fio
+              </h2>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs text-dsc-muted">Calibração Ativa:</span>
+              <span id="gsm-val-display" class="font-mono text-xl font-bold text-dsc-navy bg-dsc-surface border border-dsc-line px-3 py-1">
+                550 g/m²
+              </span>
+            </div>
+          </div>
+
+          <p class="text-sm text-dsc-body font-light leading-relaxed max-w-3xl mb-8">
+            Arraste o cursor de calibração para explorar o comportamento físico, o tempo de secagem e a aplicação recomendada da fibra para cada densidade têxtil.
+          </p>
+
+          <!-- Slider de Calibração -->
+          <div class="mb-10 max-w-4xl">
+            <div class="flex justify-between font-mono text-[11px] text-dsc-muted mb-2">
+              <span>350 g/m² (Waffle / Viagem)</span>
+              <span>550 g/m² (Equilíbrio Nobre)</span>
+              <span>700 g/m² (Contract 5★)</span>
+              <span>950 g/m² (Tapete / Spa)</span>
+            </div>
+            <input type="range" min="350" max="950" value="550" step="25" id="gsm-slider-input" class="gsm-slider w-full cursor-pointer" aria-label="Calibrar Gramagem Têxtil">
+          </div>
+
+          <!-- Métricas Dinâmicas da Fibra -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="p-5 border border-dsc-line bg-dsc-canvas">
+              <span class="font-mono text-[10px] uppercase tracking-wider text-dsc-muted block mb-1">Arquitetura da Fibra & Toque</span>
+              <div id="gsm-touch-display" class="text-xs md:text-sm font-medium text-dsc-navy leading-snug">
+                Aveludado, denso, laçada homogénea equilibrada
+              </div>
+            </div>
+
+            <div class="p-5 border border-dsc-line bg-dsc-canvas">
+              <span class="font-mono text-[10px] uppercase tracking-wider text-dsc-muted block mb-1">Tempo de Secagem & Absorção</span>
+              <div id="gsm-drying-display" class="text-xs md:text-sm font-medium text-dsc-navy leading-snug">
+                Rápida (&lt; 3 segundos absorção imediata)
+              </div>
+            </div>
+
+            <div class="p-5 border border-dsc-line bg-dsc-canvas">
+              <span class="font-mono text-[10px] uppercase tracking-wider text-dsc-muted block mb-1">Segmento Recomendado</span>
+              <div id="gsm-use-display" class="text-xs md:text-sm font-medium text-dsc-navy leading-snug">
+                Retalho de luxo, boutiques exclusivas e uso residencial nobre.
+              </div>
+            </div>
+          </div>
+
+          <!-- Ação B2B Direta com Parâmetro -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-dsc-line">
+            <span id="gsm-cat-display" class="font-mono text-xs text-dsc-navy font-semibold uppercase tracking-wider">
+              Toalhas Turco Penteado Premium (Equilíbrio Nobre)
+            </span>
+            <a id="gsm-cta-link" href="contactos.html?scope=integral&gsm=550" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest hover:bg-dsc-navy-deep hover:border-dsc-gold border border-dsc-navy transition-all duration-200">
+              <span>Solicitar Amostra Nesta Gramagem &rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

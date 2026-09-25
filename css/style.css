@@ -395,7 +395,7 @@ input:focus, select:focus, textarea:focus {
    9. PRINT MEDIA
    ========================================================================== */
 @media print {
-  .site-header, footer, #mobile-menu, .no-print {
+  .site-header, footer, #mobile-menu, .no-print, #scroll-progress-bar, #back-to-top {
     display: none !important;
   }
 
@@ -404,3 +404,95 @@ input:focus, select:focus, textarea:focus {
     color: #000000 !important;
   }
 }
+
+/* ==========================================================================
+   10. LIGHTWEIGHT VISUAL POLISH & TEXTILE PATTERNS (PURE CSS)
+   ========================================================================== */
+/* Subtle architectural textile warp & weft blueprint grid */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(11, 30, 72, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-grid-pattern-dark {
+  background-image: radial-gradient(rgba(245, 158, 11, 0.14) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle linear weave lines */
+.bg-weave-pattern {
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(11, 30, 72, 0.03) 20px),
+                    repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(11, 30, 72, 0.03) 20px);
+}
+
+/* Lightweight Scroll Reveal */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modern Gradient Text */
+.text-gradient-navy {
+  background: linear-gradient(135deg, var(--dsc-navy-deep) 0%, var(--dsc-navy-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #FBBF24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Interactive GSM Slider (Pure CSS) */
+.gsm-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--dsc-line);
+  outline: none;
+  border-radius: 0;
+  transition: background 0.2s;
+}
+
+.gsm-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--dsc-navy);
+  border: 2px solid var(--dsc-gold);
+  cursor: pointer;
+  transition: transform 0.15s, background-color 0.15s;
+  box-shadow: 0 2px 6px rgba(11, 30, 72, 0.25);
+}
+
+.gsm-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: var(--dsc-navy-deep);
+}
+
+.gsm-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: var(--dsc-navy);
+  border: 2px solid var(--dsc-gold);
+  cursor: pointer;
+  border-radius: 0;
+  transition: transform 0.15s, background-color 0.15s;
+  box-shadow: 0 2px 6px rgba(11, 30, 72, 0.25);
+}
+
+.gsm-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  background: var(--dsc-navy-deep);
+}
+
