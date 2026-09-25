@@ -112,13 +112,13 @@
           </div>
           <div class="text-[10px] font-mono tracking-widest uppercase text-dsc-muted flex items-center gap-1.5">
             <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-            <span data-i18n="products.showing">Mostrando</span> <span id="item-count" class="text-dsc-navy font-semibold">4</span> <span data-i18n="products.of">de</span> 4 <span data-i18n="products.refs">referências técnicas</span>
+            <span data-i18n="products.showing">Mostrando</span> <span id="item-count" class="text-dsc-navy font-semibold">8</span> <span data-i18n="products.of">de</span> 8 <span data-i18n="products.refs">referências técnicas</span>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="catalog-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20" id="catalog-grid">
           
-          <!-- Artigo 0: T550 -->
+          <!-- Artigo 0: T550 (Terry) -->
           <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="terry">
             <div class="p-6">
               <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
@@ -129,48 +129,56 @@
                 <span>Ref. DSC-T550-COM</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
               </div>
-              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.0.name">Toalha Turco Algodão Penteado</h3>
+              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.0.name">Toalha Turco Algodão Penteado</h3>
               <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.0.desc">Artigo de referência da DSC. Laçada de turco densa e homogénea que garante toque aveludado e absorção rápida desde a primeira utilização.</p>
               <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
-                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.0.specs.composition">100% Algodão Penteado</dd></div>
-                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold text-dsc-navy" data-i18n="products.items.0.specs.density">550 g/m²</dd></div>
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.0.specs.composition">100% Algodão Penteado Long-Staple</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold" data-i18n="products.items.0.specs.density">550 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">Laçada:</dt><dd class="font-mono text-dsc-navy">Simples 16/1 Ring-Spun</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto">
-              <a href="contactos.html?ref=DSC-T550-COM&name=Toalha+Turco+Algodao+Penteado" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full">
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto space-y-2">
+              <button onclick="openSpecModal('DSC-T550-COM', 'Toalha Turco Algodão Penteado', '550 g/m²', '100% Algodão Penteado Long-Staple', 'Ne 16/1 Ring Spun', 'Dupla laçada reforçada 4.5mm', '< 3.5 segundos (DIN 53923)', 'Lavagem a 60°C / Secagem industrial', 'OEKO-TEX Standard 100 Classe I')" class="w-full py-2 border border-dsc-line bg-white hover:bg-slate-50 text-[11px] font-mono uppercase tracking-wider text-dsc-navy transition-colors text-center">
+                Ver Ficha Técnica
+              </button>
+              <a href="contactos.html?ref=DSC-T550-COM&name=Toalha+Turco+Algodao+Penteado" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full pt-1">
                 <span data-i18n="products.btn_sample">Pedir Amostra B2B</span>
                 <span class="arrow-target">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- Artigo 1: T700 -->
+          <!-- Artigo 1: T700 (Contract) -->
           <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="contract">
             <div class="p-6">
               <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
-                <img src="../assets/folded_towels.png" alt="DSC-T700" class="w-full h-full object-cover grayscale contrast-125 zoom-target">
+                <img src="../assets/folded_towels.png" alt="DSC-T700" class="w-full h-full object-cover zoom-target">
                 <span class="absolute top-2 right-2 badge-gold text-[9px] shadow-sm">700 g/m²</span>
               </div>
               <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2 flex items-center justify-between">
                 <span>Ref. DSC-T700-HT</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
               </div>
-              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.1.name">Toalha Linha Heavy Contract</h3>
+              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.1.name">Toalha Linha Heavy Contract</h3>
               <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.1.desc">Desenvolvida especificamente para alta rotação e lavandarias industriais. Fio retorcido com elevada resistência mecânica e laçada anti-puxão.</p>
               <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
-                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.1.specs.composition">Fio Retorcido 24/2</dd></div>
-                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold text-dsc-navy" data-i18n="products.items.1.specs.density">700 g/m²</dd></div>
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.1.specs.composition">Fio Retorcido 24/2 (Anti-Snag)</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold" data-i18n="products.items.1.specs.density">700 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">Acabamento:</dt><dd class="font-mono text-dsc-navy">Costura Dupla 4 Lados</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto">
-              <a href="contactos.html?ref=DSC-T700-HT&name=Toalha+Linha+Heavy+Contract" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full">
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto space-y-2">
+              <button onclick="openSpecModal('DSC-T700-HT', 'Toalha Linha Heavy Contract', '700 g/m²', '100% Algodão Cardado Retorcido', 'Ne 24/2 Fio Duplo', 'Laçada curta compacta anti-desfiamento', '< 4.0 segundos (DIN 53923)', 'Lavagem intensiva a 90°C e cloro-resistente', 'OEKO-TEX Standard 100 / ISO 9001')" class="w-full py-2 border border-dsc-line bg-white hover:bg-slate-50 text-[11px] font-mono uppercase tracking-wider text-dsc-navy transition-colors text-center">
+                Ver Ficha Técnica
+              </button>
+              <a href="contactos.html?ref=DSC-T700-HT&name=Toalha+Linha+Heavy+Contract" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full pt-1">
                 <span data-i18n="products.btn_sample">Pedir Amostra B2B</span>
                 <span class="arrow-target">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- Artigo 2: W420 -->
+          <!-- Artigo 2: W420 (Waffle) -->
           <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="waffle">
             <div class="p-6">
               <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
@@ -181,22 +189,26 @@
                 <span>Ref. DSC-W420-ECO</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
               </div>
-              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.2.name">Toalha Ninho de Abelha (Waffle)</h3>
-              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.2.desc">Design contemporâneo e secagem ultrarrápida. Estrutura tridimensional que estimula a pele e reduz substancialmente o consumo energético na secagem.</p>
+              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.2.name">Toalha Ninho de Abelha (Waffle)</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.2.desc">Design contemporâneo e secagem ultrarrápida. Estrutura tridimensional alveolar que reduz substancialmente o consumo energético na lavagem e secagem.</p>
               <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
                 <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.2.specs.composition">80% Alg. Orgânico / 20% Linho</dd></div>
-                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold text-dsc-navy" data-i18n="products.items.2.specs.density">420 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold" data-i18n="products.items.2.specs.density">420 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">Alvéolo:</dt><dd class="font-mono text-dsc-navy">Geometria 6x6 mm</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto">
-              <a href="contactos.html?ref=DSC-W420-ECO&name=Toalha+Ninho+de+Abelha" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full">
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto space-y-2">
+              <button onclick="openSpecModal('DSC-W420-ECO', 'Toalha Ninho de Abelha (Waffle)', '420 g/m²', '80% Algodão Orgânico GOTS / 20% Linho Europeu', 'Ne 20/2 Urdidura e Trama', 'Estrutura Honeycomb 3D aerada', '< 2.0 segundos (DIN 53923)', 'Lavagem suave a 40°C / Secagem rápida ao ar', 'GOTS & OEKO-TEX Standard 100')" class="w-full py-2 border border-dsc-line bg-white hover:bg-slate-50 text-[11px] font-mono uppercase tracking-wider text-dsc-navy transition-colors text-center">
+                Ver Ficha Técnica
+              </button>
+              <a href="contactos.html?ref=DSC-W420-ECO&name=Toalha+Ninho+de+Abelha" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full pt-1">
                 <span data-i18n="products.btn_sample">Pedir Amostra B2B</span>
                 <span class="arrow-target">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <!-- Artigo 3: Z600 -->
+          <!-- Artigo 3: Z600 (Terry) -->
           <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="terry">
             <div class="p-6">
               <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
@@ -207,24 +219,276 @@
                 <span>Ref. DSC-Z600-PL</span>
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
               </div>
-              <h3 class="text-base font-light tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.3.name">Toalha Turco Zero-Twist Premium</h3>
-              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.3.desc">Fibras sem torção que aprisionam o ar no interior do fio. Proporciona um volume visual extraordinário com leveza e capacidade de secagem instantânea.</p>
+              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors" data-i18n="products.items.3.name">Toalha Turco Zero-Twist Premium</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3" data-i18n="products.items.3.desc">Fibras sem torção que aprisionam micro-bolsas de ar no interior do fio. Proporciona um volume visual extraordinário com extrema suavidade cutânea.</p>
               <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
-                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.3.specs.composition">100% Algodão Nobre</dd></div>
-                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold text-dsc-navy" data-i18n="products.items.3.specs.density">600 g/m²</dd></div>
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium" data-i18n="products.items.3.specs.composition">100% Algodão Nobre Solúvel PVA</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold" data-i18n="products.items.3.specs.density">600 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">Toque:</dt><dd class="font-mono text-dsc-navy">Ultra Aveludado Plump</dd></div>
               </dl>
             </div>
-            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto">
-              <a href="contactos.html?ref=DSC-Z600-PL&name=Toalha+Turco+Zero-Twist+Premium" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full">
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto space-y-2">
+              <button onclick="openSpecModal('DSC-Z600-PL', 'Toalha Turco Zero-Twist Premium', '600 g/m²', '100% Algodão Egípcio Nobre', 'Zero-Twist com dissolução de PVA', 'Laçada aberta ultra volumosa', '< 2.5 segundos (DIN 53923)', 'Lavagem a 40°C com amaciador moderado', 'OEKO-TEX Standard 100 Classe I')" class="w-full py-2 border border-dsc-line bg-white hover:bg-slate-50 text-[11px] font-mono uppercase tracking-wider text-dsc-navy transition-colors text-center">
+                Ver Ficha Técnica
+              </button>
+              <a href="contactos.html?ref=DSC-Z600-PL&name=Toalha+Turco+Zero-Twist+Premium" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full pt-1">
                 <span data-i18n="products.btn_sample">Pedir Amostra B2B</span>
                 <span class="arrow-target">&rarr;</span>
               </a>
             </div>
           </div>
 
+          <!-- Artigo 4: M950 (Contract) -->
+          <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="contract">
+            <div class="p-6">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
+                <img src="../assets/hotel_bath_mat.jpg" alt="DSC-M950" class="w-full h-full object-cover zoom-target">
+                <span class="absolute top-2 right-2 badge-gold text-[9px] shadow-sm">950 g/m²</span>
+              </div>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2 flex items-center justify-between">
+                <span>Ref. DSC-M950-HT</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              </div>
+              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors">Tapete de Banho Pé de Hotel Greca</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3">Estrutura ultra-densa em fio retorcido duplo concebida para saídas de duche em hotéis 5 estrelas. Bordo em moldura Greca clássica tecida em relevo.</p>
+              <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium">100% Algodão Cardado Retorcido</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold">950 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">Bainha:</dt><dd class="font-mono text-dsc-navy">Travamento de Segurança 4 Cantos</dd></div>
+              </dl>
+            </div>
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto space-y-2">
+              <button onclick="openSpecModal('DSC-M950-HT', 'Tapete de Banho Pé de Hotel Greca', '950 g/m²', '100% Algodão Puro 2-Ply', 'Ne 20/2 Urdidura e Trama', 'Laçada compactada anti-deslizamento', '< 3.0 segundos (DIN 53923)', 'Lavável a 95°C / Apto para calandra industrial', 'OEKO-TEX Standard 100 / ISO 9001')" class="w-full py-2 border border-dsc-line bg-white hover:bg-slate-50 text-[11px] font-mono uppercase tracking-wider text-dsc-navy transition-colors text-center">
+                Ver Ficha Técnica
+              </button>
+              <a href="contactos.html?ref=DSC-M950-HT&name=Tapete+de+Banho+Pe+de+Hotel" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full pt-1">
+                <span>Pedir Amostra B2B</span>
+                <span class="arrow-target">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Artigo 5: R850 (Contract) -->
+          <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="contract">
+            <div class="p-6">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
+                <img src="../assets/spa_bathrobe.jpg" alt="DSC-R850" class="w-full h-full object-cover zoom-target">
+                <span class="absolute top-2 right-2 badge-gold text-[9px] shadow-sm">450 g/m² (850g total)</span>
+              </div>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2 flex items-center justify-between">
+                <span>Ref. DSC-R850-SPA</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              </div>
+              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors">Roupão Velour Gola Xale Spa Luxury</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3">Exterior em veludo cortado de brilho nobre e interior em turco absorvente. Corte unissexo ergonómico com cinto cosido e dois bolsos frontais de precisão.</p>
+              <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium">100% Algodão Penteado Velour</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">Construção:</dt><dd class="font-mono text-dsc-navy font-semibold">Dual-Face (Velour / Terry)</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">Tamanhos:</dt><dd class="font-mono text-dsc-navy">S, M, L, XL, XXL</dd></div>
+              </dl>
+            </div>
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto space-y-2">
+              <button onclick="openSpecModal('DSC-R850-SPA', 'Roupão Velour Gola Xale Spa Luxury', '450 g/m²', '100% Algodão Penteado de Fibra Nobre', 'Dual-Face: Veludo tosquiado exterior / Turco interior', 'Gola xale com reforço de entretela macia', 'Absorção imediata e retenção térmica', 'Lavagem industrial a 60°C', 'OEKO-TEX Standard 100 Classe I')" class="w-full py-2 border border-dsc-line bg-white hover:bg-slate-50 text-[11px] font-mono uppercase tracking-wider text-dsc-navy transition-colors text-center">
+                Ver Ficha Técnica
+              </button>
+              <a href="contactos.html?ref=DSC-R850-SPA&name=Roupao+Velour+Gola+Xale" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full pt-1">
+                <span>Pedir Amostra B2B</span>
+                <span class="arrow-target">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Artigo 6: J500 (Terry) -->
+          <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="terry">
+            <div class="p-6">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
+                <img src="../assets/ribbed_towel.jpg" alt="DSC-J500" class="w-full h-full object-cover zoom-target">
+                <span class="absolute top-2 right-2 badge-gold text-[9px] shadow-sm">500 g/m²</span>
+              </div>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2 flex items-center justify-between">
+                <span>Ref. DSC-J500-RIB</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              </div>
+              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors">Toalha Canelada Puro Algodão & Linho</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3">Padrão com canelado arquitetónico linear que proporciona uma massagem sutil à pele. Excelente equilíbrio de gramagem e tempo de secagem.</p>
+              <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium">90% Algodão Penteado / 10% Linho</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold">500 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">Padrão:</dt><dd class="font-mono text-dsc-navy">Canelado Relevo Dobby</dd></div>
+              </dl>
+            </div>
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto space-y-2">
+              <button onclick="openSpecModal('DSC-J500-RIB', 'Toalha Canelada Puro Algodão & Linho', '500 g/m²', '90% Algodão Nobre / 10% Fio de Linho Europeu', 'Ne 16/1 Penteado + Linho Nm 26', 'Canelado estruturado anti-achatamento', '< 3.0 segundos (DIN 53923)', 'Lavagem a 60°C / Secagem standard', 'OEKO-TEX Standard 100 / European Flax')" class="w-full py-2 border border-dsc-line bg-white hover:bg-slate-50 text-[11px] font-mono uppercase tracking-wider text-dsc-navy transition-colors text-center">
+                Ver Ficha Técnica
+              </button>
+              <a href="contactos.html?ref=DSC-J500-RIB&name=Toalha+Canelada+Algodao+Linho" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full pt-1">
+                <span>Pedir Amostra B2B</span>
+                <span class="arrow-target">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Artigo 7: P480 (Waffle) -->
+          <div class="bg-dsc-white flex flex-col justify-between transition-all duration-300 rounded-none border border-dsc-line hover:border-dsc-navy interactive-card group catalog-card" data-category="waffle">
+            <div class="p-6">
+              <div class="aspect-square bg-dsc-surface/60 mb-6 flex items-center justify-center overflow-hidden img-zoom-container relative border border-dsc-line/50">
+                <img src="../assets/waffle_towel.jpg" alt="DSC-P480" class="w-full h-full object-cover zoom-target">
+                <span class="absolute top-2 right-2 badge-gold text-[9px] shadow-sm">480 g/m²</span>
+              </div>
+              <div class="text-[11px] font-mono uppercase tracking-widest text-dsc-muted mb-2 flex items-center justify-between">
+                <span>Ref. DSC-P480-JAC</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              </div>
+              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2 group-hover:text-dsc-navy transition-colors">Piquet Favo Triplo Relevo Alto</h3>
+              <p class="text-[11px] text-dsc-body font-light mb-4 line-clamp-3">Tecelagem Jacquard com alvéolos profundos que geram retenção térmica e rápida drenagem de humidade. Perfeito para spas e resorts sustentáveis.</p>
+              <dl class="space-y-0 text-xs border-t border-dsc-line/80 pt-4">
+                <div class="flex flex-col py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted mb-0.5">Composição:</dt><dd class="font-mono text-dsc-navy font-medium">100% Algodão Orgânico Certificado</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">GSM:</dt><dd class="font-mono text-dsc-navy font-semibold">480 g/m²</dd></div>
+                <div class="flex justify-between py-1.5 border-b border-dsc-line/80"><dt class="font-sans text-dsc-muted">Estabilidade:</dt><dd class="font-mono text-dsc-navy">Pré-Encolhido Sanforizado</dd></div>
+              </dl>
+            </div>
+            <div class="p-4 bg-dsc-surface/40 border-t border-dsc-line mt-auto space-y-2">
+              <button onclick="openSpecModal('DSC-P480-JAC', 'Piquet Favo Triplo Relevo Alto', '480 g/m²', '100% Algodão Orgânico Certificado GOTS', 'Ne 24/2 Algodão Orgânico Penteado', 'Padrão alveolar triplo de alta profundidade', '< 2.2 segundos (DIN 53923)', 'Lavagem a 60°C / Não necessita engomagem', 'GOTS & OEKO-TEX Standard 100')" class="w-full py-2 border border-dsc-line bg-white hover:bg-slate-50 text-[11px] font-mono uppercase tracking-wider text-dsc-navy transition-colors text-center">
+                Ver Ficha Técnica
+              </button>
+              <a href="contactos.html?ref=DSC-P480-JAC&name=Piquet+Favo+Triplo+Relevo" class="arrow-trigger text-xs font-mono uppercase tracking-wider text-dsc-navy flex justify-between items-center w-full pt-1">
+                <span>Pedir Amostra B2B</span>
+                <span class="arrow-target">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
         </div>
+
+        <!-- ================= TABELA INTERNACIONAL DE TAMANHOS & DIMENSÕES ================= -->
+        <div class="mb-20 bg-white border border-dsc-line p-8 md:p-12 shadow-sm">
+          <div class="max-w-3xl mb-8">
+            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2 flex items-center gap-2">
+              <span class="micro-dot micro-dot-pulse"></span>
+              Especificações Dimensionais Industriais
+            </span>
+            <h2 class="text-3xl font-light tracking-tight text-dsc-navy">
+              Tabela de Tamanhos & Medidas Internacionais de Banho
+            </h2>
+            <p class="text-sm text-dsc-body font-light leading-relaxed mt-2">
+              Gama completa de formatos fabricados segundo as normas europeias e norte-americanas para retalho e hotelaria de alta gama.
+            </p>
+          </div>
+
+          <div class="overflow-x-auto border border-dsc-line">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="bg-dsc-navy text-white font-mono uppercase tracking-widest text-[11px]">
+                  <th class="p-4 border-r border-dsc-navy-light/40">Denominação</th>
+                  <th class="p-4 border-r border-dsc-navy-light/40">Dimensão Métrica (cm)</th>
+                  <th class="p-4 border-r border-dsc-navy-light/40">Dimensão Imperial (in)</th>
+                  <th class="p-4 border-r border-dsc-navy-light/40">Peso Médio (550g)</th>
+                  <th class="p-4">Aplicação Comercial</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-dsc-line font-light text-dsc-body">
+                <tr class="hover:bg-slate-50/70">
+                  <td class="p-4 font-mono text-dsc-navy font-medium border-r border-dsc-line">Toalhete de Rosto / Lavabo (Guest)</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">30 &times; 50 cm</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">12 &times; 20 in</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">~83 g</td>
+                  <td class="p-4">Hotéis, lavabos sociais, spas, kits de boas-vindas</td>
+                </tr>
+                <tr class="hover:bg-slate-50/70">
+                  <td class="p-4 font-mono text-dsc-navy font-medium border-r border-dsc-line">Toalha de Rosto (Hand Towel)</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">50 &times; 100 cm</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">20 &times; 40 in</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">~275 g</td>
+                  <td class="p-4">Uso diário de banho e hotelaria de luxo</td>
+                </tr>
+                <tr class="hover:bg-slate-50/70">
+                  <td class="p-4 font-mono text-dsc-navy font-medium border-r border-dsc-line">Toalha de Banho (Bath Towel)</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">70 &times; 140 cm</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">28 &times; 55 in</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">~539 g</td>
+                  <td class="p-4">Standard europeu de secagem de corpo</td>
+                </tr>
+                <tr class="hover:bg-slate-50/70">
+                  <td class="p-4 font-mono text-dsc-navy font-medium border-r border-dsc-line">Lençol de Banho XL (Bath Sheet)</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">100 &times; 150 cm</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">40 &times; 60 in</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">~825 g</td>
+                  <td class="p-4">Suítes presidenciais, retalho premium e bem-estar</td>
+                </tr>
+                <tr class="hover:bg-slate-50/70">
+                  <td class="p-4 font-mono text-dsc-navy font-medium border-r border-dsc-line">Tapete de Banho (Bath Mat 950g)</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">50 &times; 70 cm</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">20 &times; 28 in</td>
+                  <td class="p-4 font-mono border-r border-dsc-line">~333 g</td>
+                  <td class="p-4">Piso de duche de alto tráfego com absorção de segurança</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-4 text-[11px] font-mono text-dsc-muted flex flex-wrap items-center justify-between gap-2">
+            <span>* Dimensões especiais (ex: toalhas de praia 100x180 cm ou tapetes 60x90 cm) disponíveis sob encomenda B2B.</span>
+            <span>Tolerância dimensional: &plusmn; 2.5% (DIN EN 14697)</span>
+          </div>
+        </div>
+
       </div>
     </section>
+
+    <!-- ================= MODAL / DRAWER DE FICHA TÉCNICA ================= -->
+    <div id="spec-modal" class="fixed inset-0 z-50 bg-dsc-navy/70 backdrop-blur-sm hidden items-center justify-center p-4">
+      <div class="bg-white max-w-xl w-full border border-dsc-line shadow-2xl p-8 relative animate-in fade-in zoom-in-95 duration-200">
+        <button onclick="closeSpecModal()" class="absolute top-6 right-6 text-dsc-muted hover:text-dsc-navy p-1 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <div class="inline-flex items-center gap-2 mb-2">
+          <span class="micro-dot micro-dot-pulse"></span>
+          <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">Ficha Técnica Laboratorial</span>
+        </div>
+        <div class="flex items-baseline justify-between mb-4 border-b border-dsc-line pb-3">
+          <div>
+            <h3 id="modal-title" class="text-xl font-medium text-dsc-navy">Referência</h3>
+            <span id="modal-ref" class="font-mono text-xs text-dsc-gold font-bold">DSC-REF</span>
+          </div>
+          <span id="modal-gsm" class="badge-gold">550 g/m²</span>
+        </div>
+
+        <div class="space-y-3 font-mono text-xs mb-6">
+          <div class="flex justify-between py-1.5 border-b border-slate-100">
+            <span class="text-dsc-muted">Composição:</span>
+            <span id="modal-comp" class="text-dsc-navy font-semibold text-right max-w-xs">100% Algodão</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-slate-100">
+            <span class="text-dsc-muted">Título do Fio:</span>
+            <span id="modal-yarn" class="text-dsc-navy font-semibold">Ne 16/1</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-slate-100">
+            <span class="text-dsc-muted">Estrutura / Laçada:</span>
+            <span id="modal-loop" class="text-dsc-navy font-semibold text-right max-w-xs">Laçada dupla</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-slate-100">
+            <span class="text-dsc-muted">Higroscopicidade:</span>
+            <span id="modal-absorb" class="text-dsc-navy font-semibold">< 3.5 segundos</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-slate-100">
+            <span class="text-dsc-muted">Conservação & Lavagem:</span>
+            <span id="modal-wash" class="text-dsc-navy font-semibold text-right max-w-xs">60°C</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-slate-100">
+            <span class="text-dsc-muted">Certificação de Origem:</span>
+            <span id="modal-cert" class="text-dsc-navy font-semibold text-right max-w-xs">OEKO-TEX</span>
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <a id="modal-sample-link" href="contactos.html" class="flex-1 text-center py-3 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest hover:bg-dsc-navy-deep hover:border-dsc-gold border border-dsc-navy transition-all">
+            Solicitar Amostra Deste Artigo &rarr;
+          </a>
+          <button onclick="closeSpecModal()" class="px-5 py-3 border border-dsc-line text-dsc-body hover:border-dsc-navy font-mono text-xs uppercase tracking-widest transition-all">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- ================= FOOTER INDUSTRIAL NO PADRÃO SIDI ================= -->

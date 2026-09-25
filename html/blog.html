@@ -12,9 +12,10 @@
   <!-- Design System & Architecture Stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
 
-  <!-- Core Scripts -->
+  <!-- Core & Page Scripts -->
   <script src="../js/i18n.js" defer></script>
   <script src="../js/main.js" defer></script>
+  <script src="../js/blog.js" defer></script>
 </head>
 <body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
 
@@ -89,82 +90,74 @@
           <div class="md:w-2/3">
             <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
               <span class="micro-dot micro-dot-pulse"></span>
-              <span data-i18n="blog.badge">05 / Caderno Técnico</span>
+              <span data-i18n="blog.badge">05 / Caderno Técnico & Engenharia Têxtil</span>
             </span>
             <h1 class="text-4xl font-light tracking-tight text-dsc-navy mb-4 leading-[1.1]" data-i18n="blog.h1">
               Conhecimento fabril, inovação têxtil e guias de especificações.
             </h1>
             <p class="text-sm text-dsc-body font-light leading-relaxed max-w-2xl" data-i18n="blog.lead">
-              Partilhamos as nossas análises de engenharia, tendências de consumo e boas práticas industriais com compradores, marcas e profissionais do setor.
+              Partilhamos as nossas análises de engenharia, tendências de consumo e boas práticas industriais com compradores, marcas e profissionais do setor. Clique em qualquer artigo para aceder ao ensaio completo.
             </p>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-dsc-line border border-dsc-line">
-          
-          <article class="p-8 bg-dsc-white hover:bg-dsc-surface transition-colors duration-200 cursor-pointer flex flex-col justify-between h-full rounded-none interactive-card group">
-            <div>
-              <div class="font-mono text-[10px] text-dsc-navy uppercase tracking-widest mb-4 flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                <span data-i18n="blog.posts.0.category">ESPECIFICAÇÕES B2B</span>
-              </div>
-              <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3 leading-snug group-hover:text-dsc-navy transition-colors" data-i18n="blog.posts.0.title">Gramagem (GSM) vs. Durabilidade: Como especificar toalhas para o setor contract</h3>
-              <p class="text-xs text-dsc-body font-light leading-relaxed mb-8" data-i18n="blog.posts.0.snippet">
-                Compreender porque nem sempre a toalha mais pesada é a mais eficiente. Analisamos tempos de secagem em lavandarias industriais, perda de fibras e custos energéticos operacionais.
-              </p>
-            </div>
-            <div class="flex justify-between items-center border-t border-dsc-line/80 pt-4 mt-auto">
-              <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted" data-i18n="blog.posts.0.date">Q3 2026</span>
-              <span class="arrow-trigger font-mono text-[10px] uppercase tracking-widest text-dsc-navy font-medium flex items-center gap-1.5">
-                <span data-i18n="blog.btn_read">Ler Artigo</span>
-                <span class="arrow-target text-dsc-gold">&rarr;</span>
-              </span>
-            </div>
-          </article>
-
-          <article class="p-8 bg-dsc-white hover:bg-dsc-surface transition-colors duration-200 cursor-pointer flex flex-col justify-between h-full rounded-none interactive-card group">
-            <div>
-              <div class="font-mono text-[10px] text-dsc-navy uppercase tracking-widest mb-4 flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                <span data-i18n="blog.posts.1.category">I&D DE MATÉRIAS-PRIMAS</span>
-              </div>
-              <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3 leading-snug group-hover:text-dsc-navy transition-colors" data-i18n="blog.posts.1.title">Fios Zero-Twist vs. Fios Retorcidos: Qual a estrutura certa para o seu mercado?</h3>
-              <p class="text-xs text-dsc-body font-light leading-relaxed mb-8" data-i18n="blog.posts.1.snippet">
-                Uma comparação técnica ao microscópio entre a laçada aberta de torção zero e o fio retorcido clássico 24/2. Como o tipo de fiação dita o ciclo de vida do artigo de banho.
-              </p>
-            </div>
-            <div class="flex justify-between items-center border-t border-dsc-line/80 pt-4 mt-auto">
-              <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted" data-i18n="blog.posts.1.date">Q2 2026</span>
-              <span class="arrow-trigger font-mono text-[10px] uppercase tracking-widest text-dsc-navy font-medium flex items-center gap-1.5">
-                <span data-i18n="blog.btn_read">Ler Artigo</span>
-                <span class="arrow-target text-dsc-gold">&rarr;</span>
-              </span>
-            </div>
-          </article>
-          
-          <article class="p-8 bg-dsc-white hover:bg-dsc-surface transition-colors duration-200 cursor-pointer flex flex-col justify-between h-full rounded-none interactive-card group">
-            <div>
-              <div class="font-mono text-[10px] text-dsc-navy uppercase tracking-widest mb-4 flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                <span data-i18n="blog.posts.2.category">SUSTENTABILIDADE APLICADA</span>
-              </div>
-              <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3 leading-snug group-hover:text-dsc-navy transition-colors" data-i18n="blog.posts.2.title">Algodão Reciclado no Turco: Desafios de resistência mecânica e toque final</h3>
-              <p class="text-xs text-dsc-body font-light leading-relaxed mb-8" data-i18n="blog.posts.2.snippet">
-                Como combinar fios reciclados com algodão virgem de fibra longa para atingir os critérios de sustentabilidade internacional sem abdicar da sensação aveludada.
-              </p>
-            </div>
-            <div class="flex justify-between items-center border-t border-dsc-line/80 pt-4 mt-auto">
-              <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted" data-i18n="blog.posts.2.date">Q1 2026</span>
-              <span class="arrow-trigger font-mono text-[10px] uppercase tracking-widest text-dsc-navy font-medium flex items-center gap-1.5">
-                <span data-i18n="blog.btn_read">Ler Artigo</span>
-                <span class="arrow-target text-dsc-gold">&rarr;</span>
-              </span>
-            </div>
-          </article>
-
+        <!-- Grelha de Artigos (Renderizada Dinamicamente & com Fallback) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+          <!-- O conteúdo dos 6 artigos é injetado via js/blog.js -->
         </div>
+
       </div>
     </section>
+
+    <!-- ================= MODAL LEITOR DE ARTIGO COMPLETO ================= -->
+    <div id="article-reader-modal" class="fixed inset-0 z-50 bg-dsc-navy/70 backdrop-blur-sm hidden items-center justify-center p-4 sm:p-6 overflow-y-auto">
+      <div class="bg-white max-w-3xl w-full border border-dsc-line shadow-2xl my-8 relative flex flex-col max-h-[90vh] overflow-hidden">
+        
+        <!-- Header do Leitor -->
+        <div class="p-6 sm:p-8 border-b border-dsc-line bg-slate-50 flex items-start justify-between">
+          <div class="pr-6">
+            <div class="flex items-center gap-2 mb-2 font-mono text-[11px] uppercase tracking-wider text-dsc-navy">
+              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+              <span id="reader-category" class="font-semibold text-dsc-navy">ESPECIFICAÇÕES B2B</span>
+              <span class="text-dsc-muted">•</span>
+              <span id="reader-date" class="text-dsc-muted">Setembro 2026</span>
+            </div>
+            <h2 id="reader-title" class="text-2xl sm:text-3xl font-light text-dsc-navy tracking-tight leading-tight mb-2">Título do Artigo</h2>
+            <p id="reader-subtitle" class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed">Subtítulo explicativo</p>
+          </div>
+          <button onclick="closeArticleModal()" class="text-dsc-muted hover:text-dsc-navy p-2 border border-dsc-line/80 hover:border-dsc-navy transition-all shrink-0 bg-white" title="Fechar Artigo (Esc)">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <!-- Corpo do Artigo com Scroll -->
+        <div class="p-6 sm:p-10 overflow-y-auto space-y-4 text-xs sm:text-sm text-dsc-body font-light leading-relaxed prose prose-dsc" id="reader-body">
+          <!-- Injetado dinamicamente -->
+        </div>
+
+        <!-- Footer do Leitor / Call to Action B2B -->
+        <div class="p-6 border-t border-dsc-line bg-dsc-surface/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-dsc-navy flex items-center justify-center text-dsc-gold font-mono text-xs font-bold">
+              DSC
+            </div>
+            <div class="text-[11px] font-mono text-dsc-muted">
+              <div class="text-dsc-navy font-semibold">Gabinete Técnico & I&D</div>
+              <div>Domingos Silva & Cunha, Lda.</div>
+            </div>
+          </div>
+          <div class="flex gap-3 w-full sm:w-auto">
+            <a id="reader-sample-btn" href="contactos.html" class="flex-1 sm:flex-none px-6 py-3 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest hover:bg-dsc-navy-deep hover:border-dsc-gold border border-dsc-navy transition-all text-center">
+              Falar Sobre Este Tema &rarr;
+            </a>
+            <button onclick="closeArticleModal()" class="px-5 py-3 border border-dsc-line text-dsc-body hover:border-dsc-navy font-mono text-xs uppercase tracking-widest transition-all">
+              Fechar
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </main>
 
   <!-- ================= FOOTER INDUSTRIAL NO PADRÃO SIDI ================= -->

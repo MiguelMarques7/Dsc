@@ -59,3 +59,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+// Technical Specification Modal Handlers
+window.openSpecModal = function(ref, title, gsm, comp, yarn, loop, absorb, wash, cert) {
+  const modal = document.getElementById('spec-modal');
+  if (!modal) return;
+
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-ref').innerText = ref;
+  document.getElementById('modal-gsm').innerText = gsm;
+  document.getElementById('modal-comp').innerText = comp;
+  document.getElementById('modal-yarn').innerText = yarn;
+  document.getElementById('modal-loop').innerText = loop;
+  document.getElementById('modal-absorb').innerText = absorb;
+  document.getElementById('modal-wash').innerText = wash;
+  document.getElementById('modal-cert').innerText = cert;
+
+  const sampleLink = document.getElementById('modal-sample-link');
+  if (sampleLink) {
+    sampleLink.href = `contactos.html?ref=${encodeURIComponent(ref)}&name=${encodeURIComponent(title)}`;
+  }
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeSpecModal = function() {
+  const modal = document.getElementById('spec-modal');
+  if (!modal) return;
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+  document.body.style.overflow = '';
+};
+
