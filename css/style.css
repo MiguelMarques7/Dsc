@@ -408,21 +408,11 @@ input:focus, select:focus, textarea:focus {
 /* ==========================================================================
    10. LIGHTWEIGHT VISUAL POLISH & TEXTILE PATTERNS (PURE CSS)
    ========================================================================== */
-/* Subtle architectural textile warp & weft blueprint grid */
-.bg-grid-pattern {
-  background-image: radial-gradient(rgba(11, 30, 72, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-.bg-grid-pattern-dark {
-  background-image: radial-gradient(rgba(245, 158, 11, 0.14) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-/* Subtle linear weave lines */
+/* Clean, smooth architectural backgrounds without textured patterns */
+.bg-grid-pattern,
+.bg-grid-pattern-dark,
 .bg-weave-pattern {
-  background-image: repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(11, 30, 72, 0.03) 20px),
-                    repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(11, 30, 72, 0.03) 20px);
+  background-image: none !important;
 }
 
 /* Lightweight Scroll Reveal */
