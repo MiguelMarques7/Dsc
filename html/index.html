@@ -131,73 +131,116 @@
           </div>
         </div>
         
-        <!-- Coluna Direita: Showcase Fotográfico e Painel de Métricas -->
-        <div class="lg:col-span-5 bg-dsc-canvas flex flex-col justify-between p-6 lg:p-8 space-y-6">
+        <!-- Coluna Direita: Painel Técnico de Engenharia & Capacidade Fabril -->
+        <div class="lg:col-span-5 bg-dsc-canvas flex flex-col justify-center p-6 lg:p-10 space-y-6">
           
-          <!-- Imagem Hero em Destaque com Moldura Elegante -->
-          <div class="relative overflow-hidden border border-dsc-line bg-white shadow-sm group">
-            <div class="aspect-[16/10] overflow-hidden img-zoom-container relative">
-              <img src="../assets/folded_towels.png" alt="Têxteis de Banho DSC Portugal" class="w-full h-full object-cover zoom-target transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-dsc-navy-deep/80 via-dsc-navy-deep/20 to-transparent"></div>
-              
-              <!-- Badge Flutuante Dourado -->
-              <div class="absolute top-4 left-4">
-                <span class="badge-gold backdrop-blur-md bg-white/90 shadow-sm text-[10px]">
-                  Portugal • Vale do Ave
-                </span>
-              </div>
-              
-              <!-- Info de Sobreposição -->
-              <div class="absolute bottom-4 left-4 right-4 text-white">
-                <div class="text-[10px] font-mono uppercase tracking-widest text-dsc-gold mb-1">Manufatura Têxtil Europeia</div>
-                <div class="text-sm font-medium leading-snug">Felpo denso de alta tolerância para hotelaria de luxo e retalho internacional</div>
+          <!-- Cabeçalho do Painel Operacional -->
+          <div class="bg-white p-5 border border-dsc-line shadow-xs flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <span class="micro-dot micro-dot-pulse"></span>
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted block">Unidade Fabril & Engenharia</span>
+                <span class="text-xs font-medium text-dsc-navy font-mono">Cluster Têxtil • Vale do Ave</span>
               </div>
             </div>
+            <span class="badge-gold text-[10px] font-mono">Produção Ativa</span>
           </div>
 
-          <!-- Grelha de Métricas Fabris Vivas -->
+          <!-- Matriz de Métricas Fabris (Grelha 2x2) -->
           <div class="grid grid-cols-2 gap-4">
             
-            <div class="p-5 bg-white border border-dsc-line shadow-xs flex flex-col justify-between">
+            <!-- Métrica 1: Densidade -->
+            <div class="p-5 bg-white border border-dsc-line shadow-xs flex flex-col justify-between group hover:border-dsc-navy transition-colors">
               <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted mb-1 flex items-center gap-1.5">
-                <span class="micro-dot"></span>
+                <span class="w-1 h-1 rounded-full bg-dsc-gold"></span>
                 <span data-i18n="index.metric_density">Especialização em Banho</span>
               </span>
-              <div class="my-1">
-                <span class="text-2xl font-light text-dsc-navy font-mono">350 <span class="text-dsc-gold text-base">&mdash;</span> 900</span>
+              <div class="my-1.5">
+                <span class="text-2xl lg:text-3xl font-light text-dsc-navy font-mono">350 <span class="text-dsc-gold text-base">&mdash;</span> 900</span>
                 <span class="text-xs font-mono text-dsc-muted">g/m²</span>
               </div>
               <div class="text-[10px] font-mono text-dsc-muted">Turco clássico, waffle e zero-twist</div>
             </div>
 
-            <div class="p-5 bg-white border border-dsc-line shadow-xs flex flex-col justify-between">
+            <!-- Métrica 2: Volume Anual -->
+            <div class="p-5 bg-white border border-dsc-line shadow-xs flex flex-col justify-between group hover:border-dsc-navy transition-colors">
               <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted mb-1 flex items-center gap-1.5">
-                <span class="micro-dot"></span>
+                <span class="w-1 h-1 rounded-full bg-dsc-gold"></span>
                 <span>Capacidade Fabril Anual</span>
               </span>
-              <div class="my-1">
-                <span class="text-2xl font-light text-dsc-navy font-mono">2.500+</span>
+              <div class="my-1.5">
+                <span class="text-2xl lg:text-3xl font-light text-dsc-navy font-mono">2.500+</span>
                 <span class="text-xs font-mono text-dsc-muted">toneladas/ano</span>
               </div>
               <div class="text-[10px] font-mono text-dsc-muted">Teares de alta precisão contínua</div>
             </div>
 
+            <!-- Métrica 3: Amostragem Rápida -->
+            <div class="p-5 bg-white border border-dsc-line shadow-xs flex flex-col justify-between group hover:border-dsc-navy transition-colors">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted mb-1 flex items-center gap-1.5">
+                <span class="w-1 h-1 rounded-full bg-dsc-gold"></span>
+                <span>Desenvolvimento de Amostras</span>
+              </span>
+              <div class="my-1.5">
+                <span class="text-2xl lg:text-3xl font-light text-dsc-navy font-mono">7 <span class="text-dsc-gold text-base">&mdash;</span> 10</span>
+                <span class="text-xs font-mono text-dsc-muted">dias</span>
+              </div>
+              <div class="text-[10px] font-mono text-dsc-muted">Lab-dips e protótipos funcionais</div>
+            </div>
+
+            <!-- Métrica 4: Mercados Globais -->
+            <div class="p-5 bg-white border border-dsc-line shadow-xs flex flex-col justify-between group hover:border-dsc-navy transition-colors">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted mb-1 flex items-center gap-1.5">
+                <span class="w-1 h-1 rounded-full bg-dsc-gold"></span>
+                <span>Presença Internacional</span>
+              </span>
+              <div class="my-1.5">
+                <span class="text-2xl lg:text-3xl font-light text-dsc-navy font-mono">24+</span>
+                <span class="text-xs font-mono text-dsc-muted">países</span>
+              </div>
+              <div class="text-[10px] font-mono text-dsc-muted">85% da produção para exportação</div>
+            </div>
+
           </div>
 
-          <!-- Cartão de Origem & Controlo -->
-          <div class="p-5 bg-white border border-dsc-line shadow-xs flex items-center justify-between">
-            <div>
-              <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted block mb-1" data-i18n="index.metric_origin">Origem & Controlo</span>
-              <div class="text-sm font-medium text-dsc-navy font-mono">Made in Portugal (UE)</div>
-              <div class="text-[10px] font-mono text-emerald-700 flex items-center gap-1 mt-0.5">
+          <!-- Cartão de Origem, Rastreabilidade & Certificação Integrada -->
+          <div class="p-5 bg-white border border-dsc-line shadow-xs flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted block mb-0.5" data-i18n="index.metric_origin">Origem & Controlo</span>
+                <div class="text-sm font-medium text-dsc-navy font-mono flex items-center gap-1.5">
+                  <span>Made in Portugal (UE)</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                  <span class="text-xs font-normal text-dsc-muted">Guimarães</span>
+                </div>
+              </div>
+              <span class="badge-navy text-[10px] font-mono">ISO 9001 • 14001</span>
+            </div>
+            
+            <div class="pt-3 border-t border-dsc-line/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] font-mono">
+              <div class="text-emerald-700 flex items-center gap-1.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                 <span>Lotes rastreados desde o fio</span>
               </div>
-            </div>
-            <div class="text-right">
-              <span class="badge-navy text-[10px] font-mono">ISO 9001 • 14001</span>
+              <div class="text-dsc-muted">
+                Laboratório interno de controlo
+              </div>
             </div>
           </div>
+
+          <!-- Ação Direta B2B -->
+          <a href="contactos.html?scope=integral" class="p-4 bg-white border border-dsc-line hover:border-dsc-navy transition-all duration-200 flex items-center justify-between shadow-2xs group">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 bg-dsc-surface border border-dsc-line flex items-center justify-center text-dsc-navy group-hover:bg-dsc-navy group-hover:text-white transition-colors">
+                <svg class="w-4 h-4 text-dsc-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs font-medium text-dsc-navy font-mono group-hover:text-dsc-navy-deep">Solicitar Dossier Técnico & Amostras</div>
+                <div class="text-[10px] text-dsc-muted font-mono">Apoio direto com os engenheiros têxteis da fábrica</div>
+              </div>
+            </div>
+            <span class="text-dsc-gold text-xs group-hover:translate-x-1 transition-transform">&rarr;</span>
+          </a>
 
         </div>
 

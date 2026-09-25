@@ -1184,7 +1184,19 @@ const GLOBAL_PHRASES = {
   "Felpo denso de alta tolerância para hotelaria de luxo e retalho internacional": "High-tolerance dense terry for luxury hospitality and international retail",
   "Cluster Têxtil do Vale do Ave • Portugal": "Vale do Ave Textile Cluster • Portugal",
   "Telefone:": "Phone:",
-  "Solicitar Amostra Nesta Gramagem": "Request Sample at this Weight"
+  "Solicitar Amostra Nesta Gramagem": "Request Sample at this Weight",
+  "Unidade Fabril & Engenharia": "Mill Facility & Engineering",
+  "Cluster Têxtil • Vale do Ave": "Textile Cluster • Vale do Ave",
+  "Produção Ativa": "Active Production",
+  "Desenvolvimento de Amostras": "Sample Development",
+  "Lab-dips e protótipos funcionais": "Lab-dips and functional prototypes",
+  "Presença Internacional": "International Reach",
+  "85% da produção para exportação": "85% of production for export",
+  "Laboratório interno de controlo": "In-house quality laboratory",
+  "Solicitar Dossier Técnico & Amostras": "Request Technical Dossier & Samples",
+  "Apoio direto com os engenheiros têxteis da fábrica": "Direct support with factory textile engineers",
+  "dias": "days",
+  "países": "countries"
 };
 
 // Generate reverse lookup dictionary for restoring PT perfectly
