@@ -140,7 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Inicializar Simulador de Gramagem GSM
   initGsmCalculator();
 
-  // 6. Botão de Copiar Dados de Contacto
+  // 6. Relógio & Estado da Unidade Fabril em Tempo Real
+  initFactoryLiveStatus();
+
+  // 7. Botão de Copiar Dados de Contacto
   document.querySelectorAll('.copy-trigger').forEach(trigger => {
     trigger.addEventListener('click', () => {
       const copyVal = trigger.getAttribute('data-copy') || trigger.innerText.trim();
@@ -152,6 +155,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/**
+ * Motor de Estado Fabril & Fuso Horário em Tempo Real (Europe/Lisbon)
+ */
+function initFactoryLiveStatus() {
+  const statusElements = document.querySelectorAll('.mill-live-indicator, #factory-live-status');
+  if (statusElements.length === 0) return;
+
+  function updateStatus() {
+    // Obter hora legal de Portugal
+    const now = new Date();
+    const ptTimeString = now.toLocaleTimeString('pt-PT', {
+      timeZone: 'Europe/Lisbon',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    });
+
+    const ptDate = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Lisbon' }));
+    const day = ptDate.getDay(); // 0 = Domingo, 6 = Sábado
+    const hour = ptDate.getHours();
+    const minute = ptDate.getMinutes();
+    const timeVal = hour * 60 + minute;
+
+    // Horário de Produção & Escritórios: Segunda a Sexta, 08:30 às 17:30 (510 min a 1050 min)
+    const isWorkday = day >= 1 && day <= 5;
+    const isWorkHours = timeVal >= 510 && timeVal <= 1050;
+    const isOpen = isWorkday && isWorkHours;
+
+    statusElements.forEach(el => {
+      if (isOpen) {
+        el.innerHTML = `
+          <span class="inline-flex items-center gap-1.5 font-mono text-[10px] text-emerald-600 font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Unidade Fabril Operacional • ${ptTimeString} (GMT)</span>
+          </span>
+        `;
+      } else {
+        el.innerHTML = `
+          <span class="inline-flex items-center gap-1.5 font-mono text-[10px] text-slate-500 font-medium">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            <span>Turno Noturno / Pausa Fabril • ${ptTimeString} (GMT)</span>
+          </span>
+        `;
+      }
+    });
+  }
+
+  updateStatus();
+  setInterval(updateStatus, 30000);
+}
 
 /**
  * Motor do Simulador Técnico de Gramagem (GSM)

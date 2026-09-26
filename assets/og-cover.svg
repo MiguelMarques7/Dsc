@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060C1A" />
+      <stop offset="60%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#060C1A" />
+    </linearGradient>
+
+    <!-- Radial Gold Lighting -->
+    <radialGradient id="goldGlow" cx="85%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#B39860" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Technical Grid Pattern -->
+    <pattern id="techGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+      <circle cx="40" cy="40" r="1.5" fill="#B39860" fill-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#techGrid)"/>
+  <rect width="1200" height="630" fill="url(#goldGlow)"/>
+
+  <!-- Outer Editorial Framing -->
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1"/>
+  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="#B39860" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- Top Metadata Bar -->
+  <text x="80" y="95" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="13" font-weight="500" fill="#B39860" letter-spacing="3">
+    01 // CADEIA DE VALOR &amp; FABRICO INDUSTRIAL DE TÊXTEIS-LAR
+  </text>
+  <text x="1120" y="95" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="13" font-weight="500" fill="#94A3B8" letter-spacing="2" text-anchor="end">
+    SANTO TIRSO • PORTUGAL (UE)
+  </text>
+  <line x1="80" y1="115" x2="1120" y2="115" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+
+  <!-- Main Monogram & Typography -->
+  <g transform="translate(80, 220)">
+    <text x="0" y="0" font-family="'Cormorant Garamond', Georgia, serif" font-size="96" font-weight="600" fill="#FFFFFF" letter-spacing="-2">DSC</text>
+    <circle cx="215" cy="-75" r="9" fill="#B39860"/>
+    <text x="240" y="-68" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#B39860" letter-spacing="4">DOMINGOS SILVA &amp; CUNHA</text>
+    
+    <text x="0" y="55" font-family="'Cormorant Garamond', Georgia, serif" font-size="38" font-style="italic" font-weight="300" fill="#E2E8F0" letter-spacing="0">
+      Engenharia Têxtil Integral &amp; Toalhas de Felpo Premium
+    </text>
+    <text x="0" y="100" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="300" fill="#94A3B8" letter-spacing="0.5">
+      Fabricante de Têxteis-Lar para Marcas Internacionais, Retalho de Luxo &amp; Linha Contract 5 Estrelas
+    </text>
+  </g>
+
+  <!-- Bottom Technical Badges & Specs Strip -->
+  <g transform="translate(80, 480)">
+    <!-- Badge 1: Made in Portugal -->
+    <rect x="0" y="0" width="220" height="52" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(179, 152, 96, 0.4)" stroke-width="1"/>
+    <circle cx="24" cy="26" r="4" fill="#B39860"/>
+    <text x="40" y="24" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8" letter-spacing="1">ORIGEM &amp; FABRICO</text>
+    <text x="40" y="40" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Made in Portugal (UE)</text>
+
+    <!-- Badge 2: Capacity -->
+    <rect x="235" y="0" width="220" height="52" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    <text x="20" y="24" transform="translate(235, 0)" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8" letter-spacing="1">CAPACIDADE INSTALADA</text>
+    <text x="20" y="40" transform="translate(235, 0)" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">2.500 Toneladas / Ano</text>
+
+    <!-- Badge 3: Sourcing Model -->
+    <rect x="470" y="0" width="240" height="52" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    <text x="20" y="24" transform="translate(470, 0)" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8" letter-spacing="1">MODELO DE FORNECIMENTO</text>
+    <text x="20" y="40" transform="translate(470, 0)" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Turnkey &amp; Private Label</text>
+
+    <!-- Badge 4: Certifications -->
+    <rect x="725" y="0" width="315" height="52" fill="rgba(255, 255, 255, 0.04)" stroke="rgba(179, 152, 96, 0.4)" stroke-width="1"/>
+    <text x="20" y="24" transform="translate(725, 0)" font-family="'JetBrains Mono', monospace" font-size="10" fill="#B39860" letter-spacing="1">CONFORMIDADE &amp; AUDITORIA</text>
+    <text x="20" y="40" transform="translate(725, 0)" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">OEKO-TEX • GOTS • SMETA / SEDEX</text>
+  </g>
+
+</svg>

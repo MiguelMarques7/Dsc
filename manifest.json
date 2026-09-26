@@ -1,0 +1,17 @@
+{
+  "name": "DSC — Domingos Silva & Cunha, Lda.",
+  "short_name": "DSC Têxteis",
+  "description": "Fabricante industrial de têxteis-lar e felpos de banho de alto rendimento no Norte de Portugal.",
+  "start_url": "/html/index.html",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

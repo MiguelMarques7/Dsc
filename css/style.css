@@ -367,11 +367,20 @@ footer .ph {
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* ============================================================
-   13. BACKGROUND PATTERNS
+   13. BACKGROUND PATTERNS & TEXTURES
    ============================================================ */
 .bg-grid-pattern,
 .bg-grid-pattern-dark,
 .bg-weave-pattern { background-image: none !important; }
+
+.bg-textile-grid {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.cursor-inspect {
+  cursor: zoom-in;
+}
 
 /* ============================================================
    14. PRINT
@@ -380,3 +389,4 @@ footer .ph {
   .site-header, footer, #mobile-menu { display: none !important; }
   body { background: #fff !important; color: #000 !important; }
 }
+
