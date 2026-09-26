@@ -31,7 +31,7 @@
           DSC
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
         </span>
-        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors">Domingos Silva & Cunha</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors" data-i18n="index_domingos_silva_cunha">Domingos Silva & Cunha</span>
       </a>
       
       <!-- Desktop Navigation -->
@@ -47,8 +47,8 @@
       <!-- Desktop Language & CTA -->
       <div class="hidden sm:flex items-center space-x-6">
         <div class="flex items-center border border-dsc-line bg-dsc-surface/60 rounded-none p-0.5 font-mono text-[11px]">
-          <button id="btn-pt" onclick="applyLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-medium transition-all" aria-label="Versão em Português">PT</button>
-          <button id="btn-en" onclick="applyLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all" aria-label="English Version">EN</button>
+          <button id="btn-pt" onclick="applyLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-medium transition-all" aria-label="Versão em Português" data-i18n="index_pt">PT</button>
+          <button id="btn-en" onclick="applyLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all" aria-label="English Version" data-i18n="index_en">EN</button>
         </div>
         <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
@@ -60,8 +60,8 @@
       <!-- Mobile Menu Button -->
       <div class="flex items-center space-x-3 md:hidden">
         <div class="flex items-center border border-dsc-line bg-dsc-surface/60 text-[11px] font-mono">
-          <button onclick="applyLanguage('pt')" class="btn-lang-pt px-2 py-1 bg-dsc-navy text-white active:scale-95" aria-label="Versão em Português">PT</button>
-          <button onclick="applyLanguage('en')" class="btn-lang-en px-2 py-1 text-dsc-muted active:scale-95" aria-label="English Version">EN</button>
+          <button onclick="applyLanguage('pt')" class="btn-lang-pt px-2 py-1 bg-dsc-navy text-white active:scale-95" aria-label="Versão em Português" data-i18n="index_pt">PT</button>
+          <button onclick="applyLanguage('en')" class="btn-lang-en px-2 py-1 text-dsc-muted active:scale-95" aria-label="English Version" data-i18n="index_en">EN</button>
         </div>
         <button id="mobile-menu-btn" aria-label="Abrir Menu" class="p-2 border border-dsc-line text-dsc-navy hover:border-dsc-navy active:scale-95">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@
             <span class="font-mono text-[10px] sm:text-xs uppercase tracking-[.28em] text-white/60" data-i18n="index.hero_eyebrow">Engenharia Têxtil &middot; Manufatura em Portugal</span>
           </div>
           <div class="flex items-center gap-3">
-            <span class="badge-gold">Vale do Ave</span>
+            <span class="badge-gold" data-i18n="index_vale_do_ave">Vale do Ave</span>
             <span class="badge-navy text-[9px]">B2B &amp; Private Label</span>
           </div>
         </div>
@@ -382,13 +382,13 @@
             </div>
             <div class="flex items-center gap-3">
               <span class="font-mono text-xs text-dsc-muted">Calibração:</span>
-              <span id="gsm-val-display" class="font-mono text-xl font-bold text-dsc-navy bg-dsc-surface border border-dsc-line px-3 py-1">550 g/m²</span>
+              <span id="gsm-val-display" class="font-mono text-xl font-bold text-dsc-navy bg-dsc-surface border border-dsc-line px-3 py-1" data-i18n="index_550_g_m_">550 g/m²</span>
             </div>
           </div>
           <p class="font-sans text-base text-dsc-body font-light leading-relaxed max-w-3xl mb-8">Arraste o cursor para explorar o comportamento físico e a aplicação recomendada para cada densidade têxtil.</p>
           <div class="mb-10 max-w-4xl">
             <div class="flex justify-between font-mono text-[11px] text-dsc-muted mb-2">
-              <span>350 g/m²</span><span>550 g/m²</span><span>700 g/m²</span><span>950 g/m²</span>
+              <span>350 g/m²</span><span data-i18n="index_550_g_m_">550 g/m²</span><span data-i18n="index_700_g_m_">700 g/m²</span><span data-i18n="index_950_g_m_">950 g/m²</span>
             </div>
             <input type="range" min="350" max="950" value="550" step="25" id="gsm-slider-input" class="gsm-slider w-full cursor-pointer" aria-label="Calibrar Gramagem">
           </div>
@@ -447,14 +447,14 @@
               DSC
               <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
             </span>
-            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Domingos Silva & Cunha</span>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400" data-i18n="index_domingos_silva_cunha">Domingos Silva & Cunha</span>
           </div>
           <p class="text-xs text-slate-400 leading-relaxed font-light pr-6" data-i18n="footer_bio">
             Desenvolvimento e engenharia de têxteis-lar e felpos de alto rendimento. Combinamos coleções de marca própria com produção modular flexível para mercados internacionais.
           </p>
           <div class="inline-flex items-center gap-2 pt-2 text-[11px] font-mono text-slate-400">
             <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-            <span>Norte de Portugal • Vale do Ave</span>
+            <span data-i18n="index_norte_de_portugal_vale_do_ave">Norte de Portugal • Vale do Ave</span>
           </div>
         </div>
 
@@ -475,11 +475,11 @@
         <div class="lg:col-span-2 space-y-3">
           <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_spec">Especialidade</span>
           <ul class="space-y-2 text-xs font-mono text-slate-400">
-            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Toalhas Felpo 550g</a></li>
-            <li><a href="catalogo.html?cat=contract" class="hover:text-white transition-colors">Linha Contract 700g</a></li>
-            <li><a href="catalogo.html?cat=waffle" class="hover:text-white transition-colors">Waffle & Linho</a></li>
-            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Zero-Twist Macio</a></li>
-            <li><a href="servicos.html" class="hover:text-white transition-colors">Private Label B2B</a></li>
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors" data-i18n="index_toalhas_felpo_550g">Toalhas Felpo 550g</a></li>
+            <li><a href="catalogo.html?cat=contract" class="hover:text-white transition-colors" data-i18n="index_linha_contract_700g">Linha Contract 700g</a></li>
+            <li><a href="catalogo.html?cat=waffle" class="hover:text-white transition-colors" data-i18n="index_waffle_linho">Waffle & Linho</a></li>
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors" data-i18n="index_zero_twist_macio">Zero-Twist Macio</a></li>
+            <li><a href="servicos.html" class="hover:text-white transition-colors" data-i18n="index_private_label_b2b">Private Label B2B</a></li>
           </ul>
         </div>
 
@@ -488,16 +488,14 @@
           <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_mill">Instalações & Logística</span>
           <div class="space-y-2 text-xs font-mono text-slate-400">
             <div>
-              <span class="text-slate-200">Sede Fabril:</span>
+              <span class="text-slate-200" data-i18n="index_sede_fabril_">Sede Fabril:</span>
               <div class="text-slate-300 font-sans mt-0.5"><span class="ph">Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso</span>, Portugal</div>
             </div>
             <div>
-              <span class="text-slate-200">Exportação Direta:</span>
+              <span class="text-slate-200" data-i18n="index_exporta_o_direta_">Exportação Direta:</span>
               <div class="text-slate-300 mt-0.5"><span class="ph">[EMAIL_COMERCIAL@DSC.PT]</span></div>
             </div>
-            <div class="pt-2 text-[11px] text-slate-400 leading-normal border-t border-slate-800">
-              A 45 min. do Aeroporto Sá Carneiro (OPO) e Porto de Leixões. Expedição de contentores para os principais hubs da Europa.
-            </div>
+            <div class="pt-2 text-[11px] text-slate-400 leading-normal border-t border-slate-800" data-i18n="index_a_45_min_do_aeroporto_s_carneiro_op">A 45 min. do Aeroporto Sá Carneiro (OPO) e Porto de Leixões. Expedição de contentores para os principais hubs da Europa.</div>
           </div>
         </div>
 
@@ -515,7 +513,7 @@
         </div>
         <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
           <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Origem & Fabricação</div>
-          <div class="text-white mt-1 font-medium">MADE IN PORTUGAL (UE)</div>
+          <div class="text-white mt-1 font-medium" data-i18n="index_made_in_portugal_ue_">MADE IN PORTUGAL (UE)</div>
         </div>
         <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
           <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Auditoria Social</div>
