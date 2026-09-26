@@ -107,8 +107,165 @@
         </div>
 
         <!-- Grelha de Artigos (Renderizada Dinamicamente & com Fallback) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24" id="blog-grid">
           <!-- O conteúdo dos 6 artigos é injetado via js/blog.js -->
+        </div>
+
+        <!-- ================= EVENTOS & MARCOS HISTÓRICOS DA DSC ================= -->
+        <div class="border-t border-dsc-line pt-20">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-dsc-line">
+            <div class="md:w-2/3">
+              <span class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
+                <span class="micro-dot micro-dot-pulse"></span>
+                <span>05.B / TRAJET&Oacute;RIA, EVENTOS &amp; MARCOS INDUSTRIAIS</span>
+              </span>
+              <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight mb-3">
+                Marcos Hist&oacute;ricos, Distin&ccedil;&otilde;es &amp; Eventos do Setor
+              </h2>
+              <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed max-w-2xl">
+                Acompanhe os acontecimentos marcantes da Domingos Silva &amp; Cunha: desde a comemora&ccedil;&atilde;o das Bodas de Prata e distin&ccedil;&otilde;es de PME Excel&ecirc;ncia, at&eacute; &agrave;s miss&otilde;es de internacionaliza&ccedil;&atilde;o e expans&atilde;o tecnol&oacute;gica no Norte de Portugal.
+              </p>
+            </div>
+            <div class="mt-4 md:mt-0">
+              <span class="inline-flex items-center gap-2 px-4 py-2 bg-dsc-white border border-dsc-line text-dsc-navy font-mono text-xs">
+                <span class="w-2 h-2 rounded-full bg-dsc-gold"></span>
+                <span>Trajet&oacute;ria Fabril Consolidada</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Grelha de Eventos e Marcos -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Evento 1: Bodas de Prata -->
+            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="badge-gold text-[9px] uppercase tracking-widest">COMEMORA&Ccedil;&Atilde;O HIST&Oacute;RICA</span>
+                  <span class="font-mono text-[11px] text-dsc-muted">Roriz &middot; Santo Tirso</span>
+                </div>
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                  Celebra&ccedil;&atilde;o das Bodas de Prata da DSC
+                </h3>
+                <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
+                  Comemora&ccedil;&atilde;o de 25 anos de atividade fabril ininterrupta, reunindo a administra&ccedil;&atilde;o, os 46 mestres t&ecirc;xteis e parceiros comerciais num evento de homenagem &agrave; dedica&ccedil;&atilde;o e continuidade geracional no Vale do Ave.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
+                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> Marco de 25 Anos</span>
+                <span class="text-dsc-navy font-semibold">Cultura Familiar</span>
+              </div>
+            </div>
+
+            <!-- Evento 2: PME Líder & PME Excelência -->
+            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="badge-navy text-[9px] uppercase tracking-widest">DISTIN&Ccedil;&Atilde;O EMPRESARIAL</span>
+                  <span class="font-mono text-[11px] text-dsc-gold font-bold">IAPMEI</span>
+                </div>
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                  Estatuto PME L&iacute;der &amp; PME Excel&ecirc;ncia
+                </h3>
+                <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
+                  Atribui&ccedil;&atilde;o consecutiva pelo IAPMEI dos galard&otilde;es de PME L&iacute;der e PME Excel&ecirc;ncia, reconhecendo o desempenho econ&oacute;mico-financeiro superior, solidez de balan&ccedil;o e baixos n&iacute;veis de risco de cr&eacute;dito em Santo Tirso.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
+                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Desempenho Superior</span>
+                <span class="text-dsc-navy font-semibold">M&eacute;rito de Gest&atilde;o</span>
+              </div>
+            </div>
+
+            <!-- Evento 3: Projetos de Internacionalização Portugal 2020 / Norte 2020 -->
+            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="badge-gold text-[9px] uppercase tracking-widest">EXPANS&Atilde;O DE MERCADOS</span>
+                  <span class="font-mono text-[11px] text-dsc-muted">Europa &middot; Am&eacute;ricas</span>
+                </div>
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                  Miss&otilde;es de Internacionaliza&ccedil;&atilde;o &amp; Prospe&ccedil;&atilde;o
+                </h3>
+                <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
+                  Aprova&ccedil;&atilde;o e execu&ccedil;&atilde;o de projetos no &acirc;mbito do Portugal 2020 e Norte 2020 dedicados &agrave; promo&ccedil;&atilde;o externa, capta&ccedil;&atilde;o de clientes B2B e consolida&ccedil;&atilde;o de 85% de quota de produ&ccedil;&atilde;o canalizada para exporta&ccedil;&atilde;o.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
+                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> Portugal 2020 / Norte 2020</span>
+                <span class="text-dsc-navy font-semibold">24+ Pa&iacute;ses</span>
+              </div>
+            </div>
+
+            <!-- Evento 4: Ampliação da Nave Fabril (4.800 m²) -->
+            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="badge-navy text-[9px] uppercase tracking-widest">INFRAESTRUTURA</span>
+                  <span class="font-mono text-[11px] text-dsc-muted">4.800 m&sup2; Cobertos</span>
+                </div>
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                  Moderniza&ccedil;&atilde;o Tecnol&oacute;gica &amp; Teares Jacquard
+                </h3>
+                <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
+                  Amplia&ccedil;&atilde;o das instala&ccedil;&otilde;es fabris na Rua Quinta do Pinheiro (Roriz) com investimento em teares eletr&oacute;nicos Dobby e Jacquard de alta velocidade para tecelagem at&eacute; 280 cm com toler&acirc;ncia microm&eacute;trica.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
+                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> Capacidade: 2.500 Ton</span>
+                <span class="text-dsc-navy font-semibold">Parque de Teares</span>
+              </div>
+            </div>
+
+            <!-- Evento 5: Parque Solar & Descarbonização -->
+            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="badge-gold text-[9px] uppercase tracking-widest">SUSTENTABILIDADE ESG</span>
+                  <span class="font-mono text-[11px] text-emerald-600 font-bold">100% Solar</span>
+                </div>
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                  Transi&ccedil;&atilde;o Fotovoltaica &amp; Economia Circular
+                </h3>
+                <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
+                  Instala&ccedil;&atilde;o de central solar fotovoltaica para autoconsumo na cobertura da f&aacute;brica, acompanhada da certifica&ccedil;&atilde;o OEKO-TEX Standard 100 e GOTS para garantia de qu&iacute;mica limpa e 0% res&iacute;duos em aterro.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
+                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Energia Renov&aacute;vel</span>
+                <span class="text-dsc-navy font-semibold">OEKO-TEX &middot; GOTS</span>
+              </div>
+            </div>
+
+            <!-- Evento 6: Fóruns do Cluster Têxtil (ATP & CITEVE) -->
+            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="badge-navy text-[9px] uppercase tracking-widest">ECOSSISTEMA SETORIAL</span>
+                  <span class="font-mono text-[11px] text-dsc-muted">ATP &middot; CITEVE</span>
+                </div>
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                  F&oacute;runs T&eacute;cnicos &amp; Passaporte Digital (DPP)
+                </h3>
+                <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
+                  Participa&ccedil;&atilde;o nos encontros de inova&ccedil;&atilde;o e sustentabilidade do cluster têxtil português, preparando a arquitetura de rastreabilidade digital e QR Code estruturado para a regulamenta&ccedil;&atilde;o europeia ESPR.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
+                <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> Rastreabilidade Digital</span>
+                <span class="text-dsc-navy font-semibold">EU DPP Ready</span>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
       </div>

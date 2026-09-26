@@ -169,155 +169,420 @@
     </section>
 
     <!-- ================= IDENTIDADE + STATS — EDITORIAL TWO-COLUMN ================= -->
-    <section id="identity" class="py-0 border-b border-dsc-line bg-dsc-white">
-      <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
+    <section id="identity" class="py-16 lg:py-20 border-b border-dsc-line bg-dsc-white relative overflow-hidden">
+      
+      <!-- Subtle architectural background accent -->
+      <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full opacity-[0.03] pointer-events-none" style="background: radial-gradient(circle, #B39860 0%, transparent 70%);"></div>
 
-        <!-- LEFT: Story text -->
-        <div class="px-10 py-20 lg:px-16 lg:py-24 flex flex-col justify-center border-r border-dsc-line">
-          <span class="font-mono text-[10px] uppercase tracking-[0.3em] text-dsc-muted flex items-center gap-2 mb-6">
-            <span class="micro-dot"></span>A Nossa Identidade
-          </span>
-          <h2 class="font-serif font-normal text-dsc-navy tracking-tight mb-8" style="font-size: clamp(1.8rem,3.5vw,3rem); line-height: 1.05;" data-i18n="about.story_title">
-            Engenharia têxtil<br>
-            <span style="color: #B39860; font-style: italic;">com alma portuguesa.</span>
-          </h2>
-          <div class="space-y-5 text-[0.9rem] text-dsc-body font-light leading-relaxed max-w-lg">
-            <p data-i18n="about.story_p1">
-              Nascemos no ecossistema t&ecirc;xtil de excel&ecirc;ncia de Portugal com um prop&oacute;sito claro: entregar artigos de t&ecirc;xteis-lar que combinam rigor estrutural, durabilidade comprovada e um toque distinto. N&atilde;o encaramos o produto t&ecirc;xtil como uma comodidade, mas como o resultado de uma criteriosa engenharia de fios, tor&ccedil;&otilde;es e acabamentos.
-            </p>
-            <p data-i18n="about.story_p2">
-              Com um modelo operacional &aacute;gil, combinamos o desenvolvimento cont&iacute;nuo da nossa marca pr&oacute;pria com uma rela&ccedil;&atilde;o estreita com parceiros e retalhistas internacionais. Oferecemos a solidez de uma manufatura de raiz europeia com capacidade para responder aos padr&otilde;es mais exigentes de private label e canal contract.
-            </p>
-          </div>
-          <div class="mt-10 flex flex-wrap gap-5">
-            <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep active:scale-[0.98] transition-all duration-200 group">
-              <span>Iniciar Di&aacute;logo</span>
-              <span class="text-dsc-gold group-hover:translate-x-1 transition-transform">&rarr;</span>
-            </a>
-            <a href="catalogo.html" class="inline-flex items-center gap-3 px-6 py-3.5 border border-dsc-line text-dsc-navy font-sans text-xs uppercase font-medium tracking-wider hover:border-dsc-navy active:scale-[0.98] transition-all duration-200 group">
-              <span>Ver Cat&aacute;logo</span>
-              <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-            </a>
-          </div>
-        </div>
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-        <!-- RIGHT: Key metrics grid -->
-        <div class="grid grid-cols-2 divide-x divide-y divide-dsc-line border-t border-dsc-line lg:border-t-0">
+          <!-- LEFT: Story text & Manifesto (Span 5) -->
+          <div class="lg:col-span-5 flex flex-col justify-center">
+            <span class="font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] text-dsc-muted flex items-center gap-2 mb-4">
+              <span class="micro-dot micro-dot-pulse"></span>
+              <span>01 / Identidade &amp; Engenharia</span>
+            </span>
+            
+            <h2 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl text-dsc-navy tracking-tight leading-[1.1] mb-6" data-i18n="about.story_title">
+              Engenharia têxtil<br>
+              <span style="color: #B39860; font-style: italic;">com alma portuguesa.</span>
+            </h2>
 
-          <div class="p-10 lg:p-12 flex flex-col justify-between bg-dsc-white hover:bg-dsc-canvas transition-colors duration-300">
-            <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted block mb-auto">Origem Fabril</span>
-            <div class="mt-8">
-              <span class="font-serif text-4xl font-light text-dsc-navy block leading-none mb-1">Ave</span>
-              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-gold">Norte de Portugal</span>
+            <!-- Editorial Pull Quote -->
+            <div class="border-l-2 border-dsc-gold pl-5 py-2 my-4 bg-dsc-canvas/50">
+              <p class="font-serif italic text-dsc-navy text-base leading-relaxed">
+                &ldquo;Do Vale do Ave para o mercado global: unimos a nobreza sensorial do felpo portugu&ecirc;s ao rigor dimensional europeu.&rdquo;
+              </p>
+            </div>
+
+            <div class="space-y-4 text-sm text-dsc-body font-light leading-relaxed my-4">
+              <p data-i18n="about.story_p1">
+                Nascemos no ecossistema t&ecirc;xtil de excel&ecirc;ncia de Portugal com um prop&oacute;sito claro: entregar artigos de t&ecirc;xteis-lar que combinam rigor estrutural, durabilidade comprovada e um toque distinto. N&atilde;o encaramos o produto t&ecirc;xtil como uma comodidade, mas como o resultado de uma criteriosa engenharia de fios, tor&ccedil;&otilde;es e acabamentos.
+              </p>
+              <p data-i18n="about.story_p2">
+                Com um modelo operacional &aacute;gil, combinamos o desenvolvimento cont&iacute;nuo da nossa marca pr&oacute;pria com uma rela&ccedil;&atilde;o estreita com parceiros e retalhistas internacionais. Oferecemos a solidez de uma manufatura de raiz europeia com capacidade para responder aos padr&otilde;es mais exigentes de private label e canal contract.
+              </p>
+            </div>
+
+            <!-- Value check pills -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 pb-6 font-mono text-[11px] text-dsc-navy">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                <span>Manufatura em Santo Tirso</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                <span>Fios Penteados Long-Staple</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                <span>Toler&acirc;ncia Rigorosa &plusmn;3%</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                <span>100% Energia Solar</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep active:scale-[0.98] transition-all duration-200 group shadow-sm">
+                <span>Iniciar Di&aacute;logo</span>
+                <span class="text-dsc-gold group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </a>
+              <a href="catalogo.html" class="inline-flex items-center gap-3 px-6 py-3.5 border border-dsc-line bg-white text-dsc-navy font-sans text-xs uppercase font-medium tracking-wider hover:border-dsc-navy active:scale-[0.98] transition-all duration-200 group">
+                <span>Ver Cat&aacute;logo</span>
+                <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </a>
             </div>
           </div>
 
-          <div class="p-10 lg:p-12 flex flex-col justify-between bg-dsc-canvas hover:bg-dsc-white transition-colors duration-300">
-            <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted block mb-auto">&Aacute;rea Coberta</span>
-            <div class="mt-8">
-              <span class="font-serif text-4xl font-light text-dsc-navy block leading-none mb-1">4.800</span>
-              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-gold">m&sup2; de Unidade Fabril</span>
-            </div>
-          </div>
+          <!-- RIGHT: 4 Rich Data & Capability Cards (Span 7) -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
 
-          <div class="p-10 lg:p-12 flex flex-col justify-between bg-dsc-canvas hover:bg-dsc-white transition-colors duration-300">
-            <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted block mb-auto">Capacidade</span>
-            <div class="mt-8">
-              <span class="font-serif text-4xl font-light text-dsc-navy block leading-none mb-1">2.500<span class="text-2xl text-dsc-gold">+</span></span>
-              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-gold">Ton. / Ano &mdash; Felpo &amp; Waffle</span>
+            <!-- Card 1: Origem Fabril -->
+            <div class="bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card group relative overflow-hidden">
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="badge-gold text-[9px]">Cluster do Ave</span>
+                <span class="font-mono text-[10px] text-dsc-muted">41.35&deg; N &middot; 8.44&deg; W</span>
+              </div>
+              <div>
+                <div class="flex items-baseline gap-2 mb-1">
+                  <span class="font-serif text-4xl sm:text-5xl font-light text-dsc-navy">Ave</span>
+                  <span class="font-mono text-xs text-dsc-gold font-semibold uppercase">Norte PT</span>
+                </div>
+                <h4 class="font-serif font-medium text-lg text-dsc-navy mb-2">Polo T&ecirc;xtil Europeu</h4>
+                <p class="text-xs text-dsc-body font-light leading-relaxed">
+                  Localiza&ccedil;&atilde;o no cora&ccedil;&atilde;o da ind&uacute;stria t&ecirc;xtil de Santo Tirso, integrando cadeia vertical de fia&ccedil;&atilde;o, tinturaria e acabamentos.
+                </p>
+              </div>
+              <div class="mt-5 pt-3.5 border-t border-dsc-line/80 flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+                <span>Sede: Roriz, Santo Tirso</span>
+                <span class="text-dsc-navy font-medium">CAE 13920</span>
+              </div>
             </div>
-          </div>
 
-          <div class="p-10 lg:p-12 flex flex-col justify-between bg-dsc-white hover:bg-dsc-canvas transition-colors duration-300 relative overflow-hidden">
-            <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted block mb-auto">Exporta&ccedil;&atilde;o</span>
-            <div class="mt-8">
-              <span class="font-serif text-4xl font-light text-dsc-navy block leading-none mb-1">85<span class="text-2xl text-dsc-gold">%</span></span>
-              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-gold">UE &amp; EUA</span>
+            <!-- Card 2: Área Fabril -->
+            <div class="bg-dsc-white border border-dsc-line p-7 flex flex-col justify-between interactive-card group relative overflow-hidden">
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="badge-navy text-[9px]">Unidade Fabril</span>
+                <span class="font-mono text-[10px] text-dsc-muted">Instala&ccedil;&otilde;es</span>
+              </div>
+              <div>
+                <div class="flex items-baseline gap-1.5 mb-1">
+                  <span class="font-serif text-4xl sm:text-5xl font-light text-dsc-navy">4.800</span>
+                  <span class="font-serif text-2xl text-dsc-gold">m&sup2;</span>
+                </div>
+                <h4 class="font-serif font-medium text-lg text-dsc-navy mb-2">&Aacute;rea Coberta Industrial</h4>
+                <p class="text-xs text-dsc-body font-light leading-relaxed">
+                  Parque com teares Jacquard eletr&oacute;nicos, urdissagem pr&oacute;pria, sec&ccedil;&atilde;o de corte automatizado e acabamento de alta precis&atilde;o.
+                </p>
+              </div>
+              <div class="mt-5 pt-3.5 border-t border-dsc-line/80 flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+                <span>Pain&eacute;is Fotovoltaicos</span>
+                <span class="text-emerald-700 font-medium">&bull; 100% Solar</span>
+              </div>
             </div>
-            <!-- decorative -->
-            <div class="absolute bottom-0 right-0 w-20 h-20 opacity-5" style="background: radial-gradient(circle, #B39860 0%, transparent 70%);"></div>
-          </div>
 
+            <!-- Card 3: Capacidade Operacional -->
+            <div class="bg-dsc-white border border-dsc-line p-7 flex flex-col justify-between interactive-card group relative overflow-hidden">
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="badge-gold text-[9px]">Produ&ccedil;&atilde;o Anual</span>
+                <span class="font-mono text-[10px] text-dsc-muted">350 a 950 g/m&sup2;</span>
+              </div>
+              <div>
+                <div class="flex items-baseline gap-1.5 mb-1">
+                  <span class="font-serif text-4xl sm:text-5xl font-light text-dsc-navy">2.500<span class="text-2xl text-dsc-gold">+</span></span>
+                  <span class="font-mono text-xs text-dsc-muted uppercase">Ton./Ano</span>
+                </div>
+                <h4 class="font-serif font-medium text-lg text-dsc-navy mb-2">Capacidade de Transforma&ccedil;&atilde;o</h4>
+                <p class="text-xs text-dsc-body font-light leading-relaxed">
+                  Flexibilidade t&eacute;cnica para assegurar grandes volumes cont&iacute;nuos ou s&eacute;ries exclusivas para private label com rastreabilidade total.
+                </p>
+              </div>
+              <!-- Mini capacity gauge -->
+              <div class="mt-5 pt-3.5 border-t border-dsc-line/80 space-y-1.5">
+                <div class="flex justify-between text-[10px] font-mono text-dsc-muted">
+                  <span>Toler&acirc;ncia de Peso:</span>
+                  <span class="text-dsc-navy font-semibold">&plusmn; 3% DIN</span>
+                </div>
+                <div class="w-full bg-dsc-line h-1.5 overflow-hidden">
+                  <div class="bg-gradient-to-r from-dsc-navy to-dsc-gold h-full w-[88%]"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Vocação Internacional -->
+            <div class="bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card group relative overflow-hidden">
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="badge-navy text-[9px]">Exporta&ccedil;&atilde;o</span>
+                <span class="font-mono text-[10px] text-dsc-muted">24+ Mercados</span>
+              </div>
+              <div>
+                <div class="flex items-baseline gap-1.5 mb-1">
+                  <span class="font-serif text-4xl sm:text-5xl font-light text-dsc-navy">85<span class="text-2xl text-dsc-gold">%</span></span>
+                  <span class="font-mono text-xs text-dsc-muted uppercase">Global</span>
+                </div>
+                <h4 class="font-serif font-medium text-lg text-dsc-navy mb-2">Presen&ccedil;a Internacional</h4>
+                <p class="text-xs text-dsc-body font-light leading-relaxed">
+                  Fornecimento consolidado para resorts hoteleiros 5&starf;, spas e prestigiadas cadeias de retalho na Europa e Am&eacute;rica do Norte.
+                </p>
+              </div>
+              <div class="mt-5 pt-3.5 border-t border-dsc-line/80 flex items-center gap-1.5 flex-wrap font-mono text-[9px]">
+                <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy">Alemanha</span>
+                <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy">Fran&ccedil;a</span>
+                <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy">Su&iacute;&ccedil;a</span>
+                <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy">EUA</span>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= CARROSSEL DE MARCAS & SEGMENTOS B2B ================= -->
-    <section class="py-16 bg-white border-b border-dsc-line overflow-hidden">
+    <!-- ================= CARROSSEL CONTÍNUO DE MARCAS & SEGMENTOS B2B ================= -->
+    <section class="py-16 bg-dsc-white border-b border-dsc-line overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted block mb-1 flex items-center gap-2">
-            <span class="micro-dot"></span>
-            Ecossistema de Confiança Internacional
+          <span class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-dsc-muted block mb-1 flex items-center gap-2">
+            <span class="micro-dot micro-dot-pulse"></span>
+            <span>Ecossistema de Confian&ccedil;a Internacional &middot; Rota&ccedil;&atilde;o B2B</span>
           </span>
-          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">Segmentos e Marcas Parceiras</h2>
+          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">Segmentos e Mercados de Atua&ccedil;&atilde;o</h2>
         </div>
-        <div class="flex items-center gap-2">
-          <button id="carousel-prev" aria-label="Anterior" class="p-2.5 border border-dsc-line hover:border-dsc-navy hover:text-dsc-navy active:scale-95 transition-all text-xs font-mono">
-            &larr;
-          </button>
-          <button id="carousel-next" aria-label="Seguinte" class="p-2.5 border border-dsc-line hover:border-dsc-navy hover:text-dsc-navy active:scale-95 transition-all text-xs font-mono">
-            &rarr;
+        
+        <!-- Controls: Status indicator + Pause/Play toggle -->
+        <div class="flex items-center gap-3">
+          <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 border border-dsc-line text-[11px] font-mono text-dsc-muted bg-dsc-canvas">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>Deslocamento cont&iacute;nuo</span>
+          </div>
+          <button id="carousel-toggle" aria-label="Pausar / Retomar Carrossel" class="px-3 py-1.5 border border-dsc-line hover:border-dsc-navy hover:text-dsc-navy active:scale-95 transition-all text-xs font-mono bg-white flex items-center gap-1.5">
+            <span id="carousel-toggle-icon">&parallel;</span>
+            <span id="carousel-toggle-text">Pausar</span>
           </button>
         </div>
       </div>
 
-      <!-- Content Track -->
-      <div class="max-w-7xl mx-auto px-6">
-        <div id="brands-track" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar">
+      <!-- Continuous Seamless Marquee Track -->
+      <div class="carousel-slow-wrapper py-2">
+        <div id="brands-marquee-track" class="carousel-slow-track">
           
-          <div class="min-w-[280px] md:min-w-[320px] bg-dsc-canvas border border-dsc-line p-6 flex flex-col justify-between interactive-card">
-            <span class="badge-gold text-[9px] mb-4 self-start">HOTELARIA 5 ESTRELAS</span>
-            <h4 class="font-serif text-lg font-medium text-dsc-navy mb-2">Luxury Hospitality Groups</h4>
-            <p class="text-xs text-dsc-body font-light leading-relaxed">
-              Fornecimento contínuo de toalhas 700 g/m² e tapetes de piso para resorts de luxo em França, Suíça e Itália.
-            </p>
-            <div class="mt-4 pt-3 border-t border-dsc-line text-[10px] font-mono text-dsc-muted">
-              Lotes com rastreabilidade total
+          <!-- Card 1: Hotelaria 5 Estrelas -->
+          <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-gold text-[9px]">HOTELARIA 5 ESTRELAS</span>
+                <span class="font-mono text-[10px] text-dsc-muted">700 g/m&sup2;</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Luxury Hospitality &amp; Resorts</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Fornecimento cont&iacute;nuo de toalhas de banho densas e tapetes de piso refor&ccedil;ados para hot&eacute;is de luxo em Fran&ccedil;a, Su&iacute;&ccedil;a e It&aacute;lia.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Lotes com rastreabilidade</span>
+              <span class="text-dsc-navy font-medium">Lavagem a 90&deg;C</span>
             </div>
           </div>
 
-          <div class="min-w-[280px] md:min-w-[320px] bg-dsc-canvas border border-dsc-line p-6 flex flex-col justify-between interactive-card">
-            <span class="badge-navy text-[9px] mb-4 self-start">RETALHO DE PRESTÍGIO</span>
-            <h4 class="font-serif text-lg font-medium text-dsc-navy mb-2">European Department Stores</h4>
-            <p class="text-xs text-dsc-body font-light leading-relaxed">
-              Desenvolvimento de coleções sazonais de marca própria em turco penteado e veludo para a Alemanha e Benelux.
-            </p>
-            <div class="mt-4 pt-3 border-t border-dsc-line text-[10px] font-mono text-dsc-muted">
-              Embalamento EAN com selo FSC
+          <!-- Card 2: Retalho de Prestígio -->
+          <div class="w-[320px] sm:w-[360px] bg-white border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-navy text-[9px]">RETALHO DE PREST&Iacute;GIO</span>
+                <span class="font-mono text-[10px] text-dsc-muted">550 g/m&sup2;</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">European Department Stores</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Desenvolvimento de cole&ccedil;&otilde;es sazonais de marca pr&oacute;pria em turco penteado e veludo jacquard para redes na Alemanha, &Aacute;ustria e Benelux.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Embalamento com c&oacute;digo EAN</span>
+              <span class="text-dsc-navy font-medium">Selo FSC</span>
             </div>
           </div>
 
-          <div class="min-w-[280px] md:min-w-[320px] bg-dsc-canvas border border-dsc-line p-6 flex flex-col justify-between interactive-card">
-            <span class="badge-gold text-[9px] mb-4 self-start">ECO-DESIGN & HOME LIVING</span>
-            <h4 class="font-serif text-lg font-medium text-dsc-navy mb-2">Nordic Living Brands</h4>
-            <p class="text-xs text-dsc-body font-light leading-relaxed">
-              Produção exclusiva em algodão biológico certificado GOTS e linho europeu para marcas da Escandinávia.
-            </p>
-            <div class="mt-4 pt-3 border-t border-dsc-line text-[10px] font-mono text-dsc-muted">
-              Certificação GOTS Anexo 6
+          <!-- Card 3: Eco-Design & Nordic Living -->
+          <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-gold text-[9px]">ECO-DESIGN N&Oacute;RDICO</span>
+                <span class="font-mono text-[10px] text-dsc-muted">GOTS Organic</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Nordic Living Brands</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Produ&ccedil;&atilde;o exclusiva em 100% algod&atilde;o biol&oacute;gico certificado e linho europeu com estruturas waffle 3D para marcas da Escandin&aacute;via.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Certificado GOTS Anexo 6</span>
+              <span class="text-dsc-navy font-medium">Tinto em Fio</span>
             </div>
           </div>
 
-          <div class="min-w-[280px] md:min-w-[320px] bg-dsc-canvas border border-dsc-line p-6 flex flex-col justify-between interactive-card">
-            <span class="badge-navy text-[9px] mb-4 self-start">BEM-ESTAR & SPAS</span>
-            <h4 class="font-serif text-lg font-medium text-dsc-navy mb-2">Thermal & Thalasso Spas</h4>
-            <p class="text-xs text-dsc-body font-light leading-relaxed">
-              Toalhas e roupões de alta absorção resistentes ao vapor, água termal e lavagens químicas de sanitização.
-            </p>
-            <div class="mt-4 pt-3 border-t border-dsc-line text-[10px] font-mono text-dsc-muted">
-              Tecnologia Zero-Twist hidrófila
+          <!-- Card 4: Thermal & Thalasso Spas -->
+          <div class="w-[320px] sm:w-[360px] bg-white border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-navy text-[9px]">BEM-ESTAR &amp; SPAS</span>
+                <span class="font-mono text-[10px] text-dsc-muted">Zero-Twist 600g</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Thermal &amp; Thalasso Spas</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Toalhas e roup&otilde;es de m&aacute;xima absor&ccedil;&atilde;o com fibras sem tor&ccedil;&atilde;o, resistentes ao vapor, cloro e ciclos de desinfe&ccedil;&atilde;o industrial.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Secagem ultrarr&aacute;pida</span>
+              <span class="text-dsc-navy font-medium">Toque volumoso</span>
             </div>
           </div>
 
-          <div class="min-w-[280px] md:min-w-[320px] bg-dsc-canvas border border-dsc-line p-6 flex flex-col justify-between interactive-card">
-            <span class="badge-gold text-[9px] mb-4 self-start">BOUTIQUE CHARM HOTELS</span>
-            <h4 class="font-serif text-lg font-medium text-dsc-navy mb-2">Heritage Wine & Country Estates</h4>
-            <p class="text-xs text-dsc-body font-light leading-relaxed">
-              Coleções personalizadas com bordaduras jacquard exclusivas e monogramas de alta definição para o Douro e Toscânia.
-            </p>
-            <div class="mt-4 pt-3 border-t border-dsc-line text-[10px] font-mono text-dsc-muted">
-              Bordados resistentes a lixívia
+          <!-- Card 5: Heritage Wine & Country Estates -->
+          <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-gold text-[9px]">BOUTIQUE ESTATES</span>
+                <span class="font-mono text-[10px] text-dsc-muted">Jacquard Custom</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Heritage Country Estates</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Cole&ccedil;&otilde;es personalizadas com bordaduras jacquard exclusivas e monogramas bordados de alta defini&ccedil;&atilde;o para o Douro, Toscana e Proven&ccedil;a.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Bordados indel&eacute;veis</span>
+              <span class="text-dsc-navy font-medium">Bordadura Relevo</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Yachting & Private Aviation -->
+          <div class="w-[320px] sm:w-[360px] bg-white border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-navy text-[9px]">MARINE &amp; AVIATION</span>
+                <span class="font-mono text-[10px] text-dsc-muted">800 g/m&sup2; Premium</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Bespoke Yachting Interiors</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Felpos de alta densidade em algod&atilde;o nobre com acabamento antibacteriano e resist&ecirc;ncia &agrave; salinidade mar&iacute;tima para frotas navais e jatos privados.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Tratamento antimicrobiano</span>
+              <span class="text-dsc-navy font-medium">M&oacute;naco &middot; Genebra</span>
+            </div>
+          </div>
+
+          <!-- Duplicate items for seamless continuous infinite marquee loop -->
+          <!-- Card 1 Duplicate -->
+          <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0" aria-hidden="true">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-gold text-[9px]">HOTELARIA 5 ESTRELAS</span>
+                <span class="font-mono text-[10px] text-dsc-muted">700 g/m&sup2;</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Luxury Hospitality &amp; Resorts</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Fornecimento cont&iacute;nuo de toalhas de banho densas e tapetes de piso refor&ccedil;ados para hot&eacute;is de luxo em Fran&ccedil;a, Su&iacute;&ccedil;a e It&aacute;lia.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Lotes com rastreabilidade</span>
+              <span class="text-dsc-navy font-medium">Lavagem a 90&deg;C</span>
+            </div>
+          </div>
+
+          <!-- Card 2 Duplicate -->
+          <div class="w-[320px] sm:w-[360px] bg-white border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0" aria-hidden="true">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-navy text-[9px]">RETALHO DE PREST&Iacute;GIO</span>
+                <span class="font-mono text-[10px] text-dsc-muted">550 g/m&sup2;</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">European Department Stores</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Desenvolvimento de cole&ccedil;&otilde;es sazonais de marca pr&oacute;pria em turco penteado e veludo jacquard para redes na Alemanha, &Aacute;ustria e Benelux.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Embalamento com c&oacute;digo EAN</span>
+              <span class="text-dsc-navy font-medium">Selo FSC</span>
+            </div>
+          </div>
+
+          <!-- Card 3 Duplicate -->
+          <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0" aria-hidden="true">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-gold text-[9px]">ECO-DESIGN N&Oacute;RDICO</span>
+                <span class="font-mono text-[10px] text-dsc-muted">GOTS Organic</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Nordic Living Brands</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Produ&ccedil;&atilde;o exclusiva em 100% algod&atilde;o biol&oacute;gico certificado e linho europeu com estruturas waffle 3D para marcas da Escandin&aacute;via.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Certificado GOTS Anexo 6</span>
+              <span class="text-dsc-navy font-medium">Tinto em Fio</span>
+            </div>
+          </div>
+
+          <!-- Card 4 Duplicate -->
+          <div class="w-[320px] sm:w-[360px] bg-white border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0" aria-hidden="true">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-navy text-[9px]">BEM-ESTAR &amp; SPAS</span>
+                <span class="font-mono text-[10px] text-dsc-muted">Zero-Twist 600g</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Thermal &amp; Thalasso Spas</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Toalhas e roup&otilde;es de m&aacute;xima absor&ccedil;&atilde;o com fibras sem tor&ccedil;&atilde;o, resistentes ao vapor, cloro e ciclos de desinfe&ccedil;&atilde;o industrial.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Secagem ultrarr&aacute;pida</span>
+              <span class="text-dsc-navy font-medium">Toque volumoso</span>
+            </div>
+          </div>
+
+          <!-- Card 5 Duplicate -->
+          <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0" aria-hidden="true">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-gold text-[9px]">BOUTIQUE ESTATES</span>
+                <span class="font-mono text-[10px] text-dsc-muted">Jacquard Custom</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Heritage Country Estates</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Cole&ccedil;&otilde;es personalizadas com bordaduras jacquard exclusivas e monogramas bordados de alta defini&ccedil;&atilde;o para o Douro, Toscana e Proven&ccedil;a.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Bordados indel&eacute;veis</span>
+              <span class="text-dsc-navy font-medium">Bordadura Relevo</span>
+            </div>
+          </div>
+
+          <!-- Card 6 Duplicate -->
+          <div class="w-[320px] sm:w-[360px] bg-white border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0" aria-hidden="true">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="badge-navy text-[9px]">MARINE &amp; AVIATION</span>
+                <span class="font-mono text-[10px] text-dsc-muted">800 g/m&sup2; Premium</span>
+              </div>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Bespoke Yachting Interiors</h4>
+              <p class="text-xs text-dsc-body font-light leading-relaxed">
+                Felpos de alta densidade em algod&atilde;o nobre com acabamento antibacteriano e resist&ecirc;ncia &agrave; salinidade mar&iacute;tima para frotas navais e jatos privados.
+              </p>
+            </div>
+            <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
+              <span>Tratamento antimicrobiano</span>
+              <span class="text-dsc-navy font-medium">M&oacute;naco &middot; Genebra</span>
             </div>
           </div>
 
@@ -595,19 +860,28 @@
 
   </footer>
 
-  <!-- Script de Controlo do Carrossel de Marcas -->
+  <!-- Script de Controlo do Carrossel Contínuo de Marcas -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const track = document.getElementById('brands-track');
-      const prevBtn = document.getElementById('carousel-prev');
-      const nextBtn = document.getElementById('carousel-next');
+      const track = document.getElementById('brands-marquee-track');
+      const toggleBtn = document.getElementById('carousel-toggle');
+      const toggleIcon = document.getElementById('carousel-toggle-icon');
+      const toggleText = document.getElementById('carousel-toggle-text');
 
-      if (track && prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', () => {
-          track.scrollBy({ left: -320, behavior: 'smooth' });
-        });
-        nextBtn.addEventListener('click', () => {
-          track.scrollBy({ left: 320, behavior: 'smooth' });
+      let isPaused = false;
+
+      if (track && toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          isPaused = !isPaused;
+          if (isPaused) {
+            track.style.animationPlayState = 'paused';
+            toggleIcon.innerHTML = '&#9658;';
+            toggleText.textContent = 'Retomar';
+          } else {
+            track.style.animationPlayState = 'running';
+            toggleIcon.innerHTML = '&parallel;';
+            toggleText.textContent = 'Pausar';
+          }
         });
       }
     });

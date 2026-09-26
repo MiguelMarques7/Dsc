@@ -254,6 +254,35 @@ footer .ph {
   to   { transform: translateX(-50%); }
 }
 
+/* Continuous slow marquee for cards carousel */
+.carousel-slow-wrapper {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.carousel-slow-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: slow-scroll 55s linear infinite;
+  will-change: transform;
+}
+
+.carousel-slow-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slow-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* ============================================================
    8. SCROLL REVEAL
    ============================================================ */
