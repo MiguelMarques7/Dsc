@@ -7,9 +7,9 @@
 const dictionary = {
   pt: {
   "nav": {
-    "about": "Sobre nós",
+    "about": "Sobre Nós",
     "services": "Serviços",
-    "products": "Produtos",
+    "products": "Catálogo",
     "sustainability": "Sustentabilidade",
     "blog": "Blog",
     "contacts": "Contactos",
@@ -215,9 +215,9 @@ const dictionary = {
   "footer_col_nav": "Estrutura",
   "footer_col_spec": "Especialidade",
   "footer_col_mill": "Instalações & Logística",
-  "nav_about": "Sobre nós",
+  "nav_about": "Sobre Nós",
   "nav_services": "Serviços",
-  "nav_catalog": "Produtos",
+  "nav_catalog": "Catálogo",
   "nav_sustainability": "Sustentabilidade",
   "nav_blog": "Blog",
   "nav_contact": "Contactos",
@@ -230,7 +230,7 @@ const dictionary = {
   "nav": {
     "about": "About Us",
     "services": "Services",
-    "products": "Products",
+    "products": "Catalog",
     "sustainability": "Sustainability",
     "blog": "Blog",
     "contacts": "Contact",
@@ -438,7 +438,7 @@ const dictionary = {
   "footer_col_mill": "Mill Facilities & Logistics",
   "nav_about": "About Us",
   "nav_services": "Services",
-  "nav_catalog": "Products",
+  "nav_catalog": "Catalog",
   "nav_sustainability": "Sustainability",
   "nav_blog": "Blog",
   "nav_contact": "Contact",
