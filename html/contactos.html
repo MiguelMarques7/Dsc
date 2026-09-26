@@ -9,6 +9,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../js/tailwind-config.js"></script>
 
+  <!-- Importação Tipográfica: Editorial + Suave + Técnica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <!-- Design System & Architecture Stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
 
@@ -31,7 +36,7 @@
       </a>
       
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-normal text-dsc-body">
         <a href="sobre.html" class="nav-link" data-i18n="nav.about">Sobre Nós</a>
         <a href="servicos.html" class="nav-link" data-i18n="nav.services">Serviços & Cadeia</a>
         <a href="catalogo.html" class="nav-link" data-i18n="nav.products">Catálogo & Toalhas</a>
@@ -46,7 +51,7 @@
           <button id="btn-pt" onclick="setLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95">PT</button>
           <button id="btn-en" onclick="setLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95">EN</button>
         </div>
-        <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
+        <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
           <span data-i18n="nav.cta">Sourcing B2B</span>
           <span class="text-dsc-gold text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
@@ -70,34 +75,34 @@
     <!-- Mobile Drawer Menu -->
     <div id="mobile-menu" class="menu-closed md:hidden fixed inset-x-0 top-20 bg-dsc-white border-b border-dsc-line shadow-xl z-40 px-6 py-8">
       <nav class="flex flex-col space-y-5">
-        <a href="sobre.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços & Cadeia</a>
-        <a href="catalogo.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo & Toalhas</a>
-        <a href="sustentabilidade.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Caderno Técnico</a>
-        <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
         <div class="pt-4 border-t border-dsc-line">
-          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest" data-i18n="nav.cta">Sourcing B2B</a>
+          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider" data-i18n="nav.cta">Sourcing B2B</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="py-24 bg-dsc-canvas min-h-[80vh] border-b border-dsc-line" id="contact-section">
+    <section class="py-16 lg:py-20 bg-dsc-canvas border-b border-dsc-line" id="contact-section">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
           <!-- Lado Esquerdo (Informações) -->
           <div class="lg:col-span-5">
-            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
+            <span class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
               <span class="micro-dot micro-dot-pulse"></span>
               <span data-i18n="contacts.badge">06 / Relações Comerciais & Exportação</span>
             </span>
-            <h1 class="text-4xl font-light tracking-tight text-dsc-navy mb-6 leading-[1.1]" data-i18n="contacts.h1">
+            <h1 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1] text-dsc-navy mb-5" data-i18n="contacts.h1">
               Inicie o seu próximo projeto têxtil com a equipa da DSC.
             </h1>
-            <p class="text-sm text-dsc-body leading-relaxed font-light mb-8" data-i18n="contacts.lead">
+            <p class="text-sm sm:text-base text-dsc-body leading-relaxed font-light mb-8" data-i18n="contacts.lead">
               Estamos à disposição para receber pedidos de cotação de produção, envio de coleções de amostras ou marcação de reuniões com o nosso departamento técnico-comercial.
             </p>
             
@@ -107,7 +112,7 @@
                   <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                   Unidade Fabril & Sede:
                 </div>
-                <div class="text-dsc-navy font-sans font-normal text-sm"><span class="ph">[INSERIR_MORADA_FABRIL_DSC]</span>, Portugal</div>
+                <div class="text-dsc-navy font-sans font-normal text-sm"><span class="ph">Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso</span>, Portugal</div>
                 <div class="text-dsc-muted mt-2 text-[10px] uppercase tracking-widest flex items-center gap-1.5" data-i18n="contacts.info.geo">
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                   Cluster Têxtil do Vale do Ave
@@ -127,7 +132,7 @@
                   <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                   Telefone Direto:
                 </div>
-                <div class="text-dsc-navy text-sm font-semibold"><span class="ph">[+351_TELEFONE_DSC]</span></div>
+                <div class="text-dsc-navy text-sm font-semibold"><span class="ph">+351 252 881 145</span></div>
                 <div class="text-dsc-muted mt-2 text-[10px] uppercase tracking-widest" data-i18n="contacts.info.hours">
                   Segunda a Sexta-feira: 08:30 — 17:30 (GMT)
                 </div>
@@ -139,7 +144,7 @@
           <div class="lg:col-span-7 bg-white border border-dsc-line shadow-md p-8 md:p-12 relative rounded-none">
             
             <div class="flex items-center justify-between pb-4 border-b border-dsc-line mb-8">
-              <h2 class="text-xl font-light tracking-tight text-dsc-navy flex items-center gap-2" data-i18n="contacts.form.title">
+              <h2 class="font-serif font-normal text-2xl sm:text-3xl text-dsc-navy flex items-center gap-2" data-i18n="contacts.form.title">
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 Formulário de Pedido Técnico B2B
               </h2>
@@ -156,44 +161,44 @@
             <form id="b2b-contact-form" class="space-y-6">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-muted mb-1.5">
+                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
                     Nome Completo <span class="text-dsc-gold">*</span>
                   </label>
-                  <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_name" placeholder="Ex: Eng. João Silva">
+                  <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_name" placeholder="Ex: Eng. João Silva">
                 </div>
                 <div>
-                  <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-muted mb-1.5">
+                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
                     Empresa / Entidade <span class="text-dsc-gold">*</span>
                   </label>
-                  <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_company" placeholder="Ex: Textil Brand Ltd.">
+                  <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_company" placeholder="Ex: Textil Brand Ltd.">
                 </div>
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-muted mb-1.5">
+                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
                     País de Destino <span class="text-dsc-gold">*</span>
                   </label>
-                  <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_country" placeholder="Ex: Portugal, França, Alemanha...">
+                  <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_country" placeholder="Ex: Portugal, França, Alemanha...">
                 </div>
                 <div>
-                  <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-muted mb-1.5">
+                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
                     Email Corporativo <span class="text-dsc-gold">*</span>
                   </label>
-                  <input type="email" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_email" placeholder="nome@empresa.com">
+                  <input type="email" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_email" placeholder="nome@empresa.com">
                 </div>
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-muted mb-1.5">
+                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
                     Telefone / WhatsApp
                   </label>
-                  <input type="tel" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_phone" placeholder="+351 912 345 678">
+                  <input type="tel" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_phone" placeholder="+351 912 345 678">
                 </div>
                 <div>
-                  <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-muted mb-1.5">
+                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
                     Âmbito do Projeto <span class="text-dsc-gold">*</span>
                   </label>
-                  <select id="form-scope-select" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-body rounded-none font-light hover:border-dsc-navy-slate transition-colors duration-150">
+                  <select id="form-scope-select" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-body rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150">
                     <option value="" disabled selected data-i18n="contacts.form.field_scope">Selecione o âmbito...</option>
                     <option value="opt0" data-i18n="contacts.form.scope_options.opt0">Pedido de Amostras de Toalhas</option>
                     <option value="opt1" data-i18n="contacts.form.scope_options.opt1">Desenvolvimento de Coleção Private Label</option>
@@ -205,16 +210,16 @@
                 </div>
               </div>
               <div>
-                <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-muted mb-1.5">
+                <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
                   Especificações Técnicas <span class="text-dsc-gold">*</span>
                 </label>
-                <textarea id="form-specs" rows="4" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_details" placeholder="Especificações do Pedido (Quantidades estimadas, gramagens pretendidas, referências) *"></textarea>
+                <textarea id="form-specs" rows="4" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_details" placeholder="Especificações do Pedido (Quantidades estimadas, gramagens pretendidas, referências) *"></textarea>
               </div>
               <p class="font-mono text-[10px] text-dsc-muted font-light leading-relaxed mb-4 tracking-widest uppercase flex items-center gap-1.5" data-i18n="contacts.form.privacy">
                 <span class="w-1 h-1 rounded-full bg-dsc-gold"></span>
                 Os seus dados serão processados exclusivamente pela equipa comercial da DSC para resposta à presente consulta técnica.
               </p>
-              <button type="submit" class="w-full py-4 bg-dsc-navy hover:bg-dsc-navy-deep border border-dsc-navy hover:border-dsc-gold text-white text-xs font-mono uppercase tracking-widest transition-all duration-200 rounded-none cursor-pointer shadow-md hover:shadow-xl hover:shadow-dsc-navy/20 active:scale-[0.99] flex items-center justify-center gap-3 arrow-trigger" data-i18n="contacts.form.button">
+              <button type="submit" class="w-full py-4 bg-dsc-navy hover:bg-dsc-navy-deep border border-dsc-navy hover:border-dsc-gold text-white text-xs font-sans uppercase font-medium tracking-wider transition-all duration-200 rounded-none cursor-pointer shadow-md hover:shadow-xl hover:shadow-dsc-navy/20 active:scale-[0.99] flex items-center justify-center gap-3 arrow-trigger" data-i18n="contacts.form.button">
                 <span>Enviar Pedido de Cotação</span>
                 <span class="arrow-target text-dsc-gold">&rarr;</span>
               </button>
@@ -231,14 +236,14 @@
                 <span class="micro-dot micro-dot-pulse"></span>
                 <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">Geolocalização Industrial</span>
               </div>
-              <h2 class="text-2xl sm:text-3xl font-light text-dsc-navy tracking-tight">
+              <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">
                 No Coração do Cluster Têxtil Europeu: Vale do Ave, Portugal
               </h2>
               <p class="text-xs sm:text-sm text-dsc-body font-light mt-1 max-w-2xl">
                 A nossa unidade industrial beneficia de uma localização privilegiada com ligações rodoviárias diretas aos principais eixos logísticos da Península Ibérica e Europa central.
               </p>
             </div>
-            <a href="https://maps.google.com/?q=41.4425,-8.2918" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 border border-dsc-navy bg-white hover:bg-dsc-navy hover:text-white font-mono text-xs uppercase tracking-widest text-dsc-navy transition-all duration-200 shrink-0">
+            <a href="https://maps.google.com/?q=41.4425,-8.2918" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 border border-dsc-navy bg-white hover:bg-dsc-navy hover:text-white font-sans text-xs uppercase font-medium tracking-wider text-dsc-navy transition-all duration-200 shrink-0">
               <span>Abrir no Google Maps</span>
               <span class="text-dsc-gold">&rarr;</span>
             </a>
@@ -340,7 +345,7 @@
 
             <div class="border border-dsc-line bg-white p-6 shadow-sm interactive-card">
               <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">04 // LOGÍSTICA</span>
-              <h4 class="font-medium text-dsc-navy text-sm mb-1">Expedição & Tracking</h4>
+              <h4 class="font-serif font-medium text-dsc-navy text-lg mb-1">Expedição & Tracking</h4>
               <p class="text-xs text-dsc-body font-light mb-3">Agendamento de cargas, documentação EUR1/CMR e seguimento de contentores.</p>
               <span class="copy-trigger cursor-pointer font-mono text-xs font-semibold text-dsc-navy hover:text-dsc-gold transition-colors inline-flex items-center gap-1.5" data-copy="logistics@dsc.pt" title="Copiar email">
                 <span>logistics@dsc.pt</span>
@@ -357,14 +362,14 @@
               <span class="micro-dot micro-dot-pulse"></span>
               Respostas a Compradores Internacionais
             </span>
-            <h2 class="text-3xl font-light tracking-tight text-dsc-navy">
+            <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">
               Perguntas Frequentes sobre Parcerias & Aprovisionamento B2B
             </h2>
           </div>
 
           <div class="space-y-4">
             <details class="group border border-dsc-line bg-slate-50/50 p-5 open:bg-white transition-colors cursor-pointer">
-              <summary class="font-medium text-dsc-navy text-sm flex items-center justify-between list-none">
+              <summary class="font-serif font-medium text-dsc-navy text-lg flex items-center justify-between list-none">
                 <span>Qual é a Quantidade Mínima de Encomenda (MOQ)?</span>
                 <span class="text-dsc-gold font-mono text-lg transition-transform group-open:rotate-45">+</span>
               </summary>
@@ -374,7 +379,7 @@
             </details>
 
             <details class="group border border-dsc-line bg-slate-50/50 p-5 open:bg-white transition-colors cursor-pointer">
-              <summary class="font-medium text-dsc-navy text-sm flex items-center justify-between list-none">
+              <summary class="font-serif font-medium text-dsc-navy text-lg flex items-center justify-between list-none">
                 <span>Como funciona o procedimento de envio de amostras?</span>
                 <span class="text-dsc-gold font-mono text-lg transition-transform group-open:rotate-45">+</span>
               </summary>
@@ -384,7 +389,7 @@
             </details>
 
             <details class="group border border-dsc-line bg-slate-50/50 p-5 open:bg-white transition-colors cursor-pointer">
-              <summary class="font-medium text-dsc-navy text-sm flex items-center justify-between list-none">
+              <summary class="font-serif font-medium text-dsc-navy text-lg flex items-center justify-between list-none">
                 <span>Quais os Incoterms e modalidades de expedição praticados?</span>
                 <span class="text-dsc-gold font-mono text-lg transition-transform group-open:rotate-45">+</span>
               </summary>
@@ -394,7 +399,7 @@
             </details>
 
             <details class="group border border-dsc-line bg-slate-50/50 p-5 open:bg-white transition-colors cursor-pointer">
-              <summary class="font-medium text-dsc-navy text-sm flex items-center justify-between list-none">
+              <summary class="font-serif font-medium text-dsc-navy text-lg flex items-center justify-between list-none">
                 <span>É possível assinar Acordo de Confidencialidade (NDA) para marcas próprias?</span>
                 <span class="text-dsc-gold font-mono text-lg transition-transform group-open:rotate-45">+</span>
               </summary>
@@ -420,9 +425,9 @@
             <span class="micro-dot micro-dot-pulse"></span>
             <span data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
           </span>
-          <h2 class="text-2xl sm:text-3xl font-light text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
+          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
         </div>
-        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-mono text-xs uppercase tracking-widest transition-all duration-200 shadow-md group">
+        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-sans text-xs uppercase font-medium tracking-wider transition-all duration-200 shadow-md group">
           <span data-i18n="footer_cta_btn">Iniciar Diálogo Técnico</span>
           <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
@@ -482,7 +487,7 @@
           <div class="space-y-2 text-xs font-mono text-slate-400">
             <div>
               <span class="text-slate-200">Sede Fabril:</span>
-              <div class="text-slate-300 font-sans mt-0.5"><span class="ph">[INSERIR_MORADA_FABRIL_DSC]</span>, Portugal</div>
+              <div class="text-slate-300 font-sans mt-0.5"><span class="ph">Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso</span>, Portugal</div>
             </div>
             <div>
               <span class="text-slate-200">Exportação Direta:</span>
@@ -523,7 +528,7 @@
         <div>
           <span data-i18n="footer_rights">&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
           <span class="mx-2 hidden md:inline">•</span>
-          <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">[500_XXX_XXX]</span></span>
+          <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">505 528 606</span></span>
         </div>
         <div class="flex items-center space-x-6">
           <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_terms">Termos B2B</a>

@@ -9,6 +9,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../js/tailwind-config.js"></script>
 
+  <!-- Importação Tipográfica: Editorial + Suave + Técnica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <!-- Design System & Architecture Stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
 
@@ -30,7 +35,7 @@
       </a>
       
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-normal text-dsc-body">
         <a href="sobre.html" class="nav-link" data-i18n="nav.about">Sobre Nós</a>
         <a href="servicos.html" class="nav-link" data-i18n="nav.services">Serviços & Cadeia</a>
         <a href="catalogo.html" class="nav-link" data-i18n="nav.products">Catálogo & Toalhas</a>
@@ -45,7 +50,7 @@
           <button id="btn-pt" onclick="setLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95">PT</button>
           <button id="btn-en" onclick="setLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95">EN</button>
         </div>
-        <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
+        <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
           <span data-i18n="nav.cta">Sourcing B2B</span>
           <span class="text-dsc-gold text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
@@ -69,35 +74,35 @@
     <!-- Mobile Drawer Menu -->
     <div id="mobile-menu" class="menu-closed md:hidden fixed inset-x-0 top-20 bg-dsc-white border-b border-dsc-line shadow-xl z-40 px-6 py-8">
       <nav class="flex flex-col space-y-5">
-        <a href="sobre.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços & Cadeia</a>
-        <a href="catalogo.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo & Toalhas</a>
-        <a href="sustentabilidade.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Caderno Técnico</a>
-        <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
+        <a href="servicos.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços & Cadeia</a>
+        <a href="catalogo.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo & Toalhas</a>
+        <a href="sustentabilidade.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
+        <a href="blog.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Caderno Técnico</a>
+        <a href="contactos.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
         <div class="pt-4 border-t border-dsc-line">
-          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest" data-i18n="nav.cta">Sourcing B2B</a>
+          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider" data-i18n="nav.cta">Sourcing B2B</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="py-24 border-b border-dsc-line bg-dsc-white min-h-[70vh]">
+    <section class="py-16 lg:py-20 border-b border-dsc-line bg-dsc-white">
       <div class="max-w-7xl mx-auto px-6">
         
-        <div class="flex flex-col md:flex-row gap-16 mb-20">
+        <div class="flex flex-col md:flex-row gap-12 lg:gap-16 mb-16">
           <div class="md:w-1/2">
-            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
+            <span class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
               <span class="micro-dot micro-dot-pulse"></span>
               <span data-i18n="sustainability.badge">04 / Responsabilidade Ambiental & Social</span>
             </span>
-            <h1 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-6" data-i18n="sustainability.h1">
+            <h1 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1] text-dsc-navy mb-5" data-i18n="sustainability.h1">
               Compromisso ecológico com práticas de fabrico limpas e rastreáveis.
             </h1>
           </div>
           <div class="md:w-1/2 flex items-center">
-            <p class="text-base text-dsc-body font-light leading-relaxed max-w-xl" data-i18n="sustainability.lead">
+            <p class="text-sm sm:text-base text-dsc-body font-light leading-relaxed max-w-xl" data-i18n="sustainability.lead">
               Acreditamos que a verdadeira excelência têxtil respeita os recursos naturais. Toda a nossa produção segue diretivas comunitárias rigorosas de proteção ambiental e dignidade laboral.
             </p>
           </div>
@@ -145,7 +150,7 @@
               <span class="micro-dot micro-dot-pulse"></span>
               Metodologia de Produção Sustentável
             </span>
-            <h2 class="text-3xl font-light tracking-tight text-dsc-navy">
+            <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">
               Os 4 Pilares da Engenharia Têxtil Limpa DSC
             </h2>
           </div>
@@ -160,7 +165,7 @@
                 </span>
                 <span class="text-[10px] font-mono text-dsc-muted uppercase">Eficiência Hídrica</span>
               </div>
-              <h3 class="text-xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.0.title">Tratamento & Recirculação Avançada de Água</h3>
+              <h3 class="font-serif text-xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.0.title">Tratamento & Recirculação Avançada de Água</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed mb-4" data-i18n="sustainability.pillars.0.desc">
                 Os processos de tingimento e purga utilizam máquinas de última geração com monitorização eletrónica do consumo de litros por kg de felpo. As águas residuais passam por desmineralização e retorno térmico, transferindo calor para os novos banhos antes da depuração final.
               </p>
@@ -177,7 +182,7 @@
                 </span>
                 <span class="text-[10px] font-mono text-dsc-muted uppercase">Matérias-Primas</span>
               </div>
-              <h3 class="text-xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.1.title">Fibras Orgânicas Certificadas & Linho Europeu</h3>
+              <h3 class="font-serif text-xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.1.title">Fibras Orgânicas Certificadas & Linho Europeu</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed mb-4" data-i18n="sustainability.pillars.1.desc">
                 Damos primazia a fiação com algodão biológico cultivado sem pesticidas sintéticos ou sementes geneticamente modificadas (não-OGM). Integramos linho europeu rastreado European Flax® e algodão reciclado mecânico pré-consumo sem químicos tóxicos.
               </p>
@@ -194,7 +199,7 @@
                 </span>
                 <span class="text-[10px] font-mono text-dsc-muted uppercase">Segurança Química</span>
               </div>
-              <h3 class="text-xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.2.title">Tinturaria de Reativos Livres de Substâncias Nocivas</h3>
+              <h3 class="font-serif text-xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.2.title">Tinturaria de Reativos Livres de Substâncias Nocivas</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed mb-4" data-i18n="sustainability.pillars.2.desc">
                 Todos os corantes utilizados possuem fixação de elevada afinidade molecular, reduzindo a lavagem subsequente e garantindo que as toalhas libertam zero químicos ou alérgenos em contacto com a pele humana ou na lavagem doméstica.
               </p>
@@ -211,7 +216,7 @@
                 </span>
                 <span class="text-[10px] font-mono text-dsc-muted uppercase">Ética & Pessoas</span>
               </div>
-              <h3 class="text-xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.3.title">Dignidade Laboral & Padrões Sociais SMETA</h3>
+              <h3 class="font-serif text-xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.3.title">Dignidade Laboral & Padrões Sociais SMETA</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed mb-4" data-i18n="sustainability.pillars.3.desc">
                 Produzir em Portugal significa operar dentro do mais exigente quadro legislativo de proteção do trabalhador da União Europeia. Garantimos salários justos, igualdade de género, formação técnica continuada e ergonomia no chão de fábrica.
               </p>
@@ -230,7 +235,7 @@
               <span class="micro-dot micro-dot-pulse"></span>
               Rigor Documental
             </span>
-            <h2 class="text-3xl font-light tracking-tight text-dsc-navy">
+            <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">
               Certificações Internacionais & Conformidade Auditada
             </h2>
             <p class="text-sm text-dsc-body font-light leading-relaxed mt-2">
@@ -293,7 +298,7 @@
                 <span class="w-2 h-2 rounded-full bg-dsc-gold micro-dot-pulse"></span>
                 <span class="font-mono text-[10px] uppercase tracking-widest text-slate-300">Regulamentação Europeia ESPR 2026/2027</span>
               </div>
-              <h3 class="text-2xl sm:text-3xl font-light tracking-tight mb-4">
+              <h3 class="font-serif font-normal text-2xl sm:text-3xl tracking-tight mb-4">
                 Preparados para o Passaporte Digital do Produto (DPP)
               </h3>
               <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed mb-6 max-w-2xl">
@@ -320,7 +325,7 @@
                 <p class="text-[11px] text-slate-400 font-light mb-4">
                   Deseja consultar a matriz de sustentabilidade técnica para auditoria da sua marca?
                 </p>
-                <a href="contactos.html?subject=sustentabilidade" class="block w-full py-3 bg-white text-dsc-navy font-mono text-xs uppercase tracking-widest hover:bg-dsc-gold hover:text-dsc-navy-deep transition-colors">
+                <a href="contactos.html?subject=sustentabilidade" class="block w-full py-3 bg-white text-dsc-navy font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-gold hover:text-dsc-navy-deep transition-colors">
                   Solicitar Dossiê ESG &rarr;
                 </a>
               </div>
@@ -343,9 +348,9 @@
             <span class="micro-dot micro-dot-pulse"></span>
             <span data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
           </span>
-          <h2 class="text-2xl sm:text-3xl font-light text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
+          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
         </div>
-        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-mono text-xs uppercase tracking-widest transition-all duration-200 shadow-md group">
+        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-sans text-xs uppercase font-medium tracking-wider transition-all duration-200 shadow-md group">
           <span data-i18n="footer_cta_btn">Iniciar Diálogo Técnico</span>
           <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
@@ -405,7 +410,7 @@
           <div class="space-y-2 text-xs font-mono text-slate-400">
             <div>
               <span class="text-slate-200">Sede Fabril:</span>
-              <div class="text-slate-300 font-sans mt-0.5"><span class="ph">[INSERIR_MORADA_FABRIL_DSC]</span>, Portugal</div>
+              <div class="text-slate-300 font-sans mt-0.5"><span class="ph">Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso</span>, Portugal</div>
             </div>
             <div>
               <span class="text-slate-200">Exportação Direta:</span>
@@ -446,7 +451,7 @@
         <div>
           <span data-i18n="footer_rights">&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
           <span class="mx-2 hidden md:inline">•</span>
-          <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">[500_XXX_XXX]</span></span>
+          <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">505 528 606</span></span>
         </div>
         <div class="flex items-center space-x-6">
           <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_terms">Termos B2B</a>

@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DSC — Serviços & Cadeia de Valor</title>
   
+  <!-- Importação Tipográfica: Editorial + Suave + Técnica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <!-- Tailwind CSS & Centralized Configuration -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../js/tailwind-config.js"></script>
@@ -31,7 +36,7 @@
       </a>
       
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-light tracking-tight">
+      <nav class="hidden md:flex items-center space-x-8 font-sans text-sm font-medium tracking-normal text-dsc-body">
         <a href="sobre.html" class="nav-link" data-i18n="nav.about">Sobre Nós</a>
         <a href="servicos.html" class="nav-link active" data-i18n="nav.services">Serviços & Cadeia</a>
         <a href="catalogo.html" class="nav-link" data-i18n="nav.products">Catálogo & Toalhas</a>
@@ -46,7 +51,7 @@
           <button id="btn-pt" onclick="setLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95">PT</button>
           <button id="btn-en" onclick="setLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95">EN</button>
         </div>
-        <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
+        <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
           <span data-i18n="nav.cta">Sourcing B2B</span>
           <span class="text-dsc-gold text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
@@ -77,31 +82,31 @@
         <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Caderno Técnico</a>
         <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
         <div class="pt-4 border-t border-dsc-line">
-          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest" data-i18n="nav.cta">Sourcing B2B</a>
+          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider" data-i18n="nav.cta">Sourcing B2B</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="py-24 border-b border-dsc-line bg-dsc-white min-h-[80vh]">
+    <section class="py-16 lg:py-20 border-b border-dsc-line bg-dsc-white">
       <div class="max-w-7xl mx-auto px-6">
         
-        <div class="flex flex-col lg:flex-row gap-16 mb-16 pb-6 border-b border-dsc-line">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 mb-12 pb-6 border-b border-dsc-line">
           <div class="lg:w-1/2">
-            <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
+            <span class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
               <span class="micro-dot micro-dot-pulse"></span>
               <span data-i18n="services.badge">02 / Estrutura Operacional</span>
             </span>
-            <h1 class="text-4xl font-light tracking-tight text-dsc-navy leading-[1.1] mb-6" data-i18n="services.h1">
+            <h1 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1] text-dsc-navy mb-5" data-i18n="services.h1">
               Soluções integradas da conceção do fio ao embalamento final.
             </h1>
-            <p class="text-base text-dsc-body font-light leading-relaxed mb-8" data-i18n="services.lead">
+            <p class="font-sans text-sm sm:text-base text-dsc-body font-light leading-relaxed mb-6" data-i18n="services.lead">
               Inspirados na verticalidade industrial, acompanhamos o cliente em todo o ciclo produtivo ou integramos etapas específicas do seu projeto têxtil.
             </p>
           </div>
           <div class="lg:w-1/2 lg:pl-16 lg:border-l border-dsc-line flex flex-col justify-center">
-            <h3 class="text-xl font-light tracking-tight text-dsc-navy mb-3 flex items-center gap-2" data-i18n="services.intro_title">
+            <h3 class="font-serif font-medium text-xl sm:text-2xl text-dsc-navy mb-3 flex items-center gap-2" data-i18n="services.intro_title">
               <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
               Como Operamos
             </h3>
@@ -113,10 +118,10 @@
 
         <!-- Controladores da Matriz -->
         <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
-          <button id="btn-mode-a" class="w-full md:w-auto bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-6 py-3.5 transition-all duration-200 rounded-none border border-dsc-navy active:scale-95 shadow-sm" data-i18n="services.mode_a">
+          <button id="btn-mode-a" class="w-full md:w-auto bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider px-6 py-3.5 transition-all duration-200 rounded-none border border-dsc-navy active:scale-95 shadow-sm" data-i18n="services.mode_a">
             Modo A: Ciclo Integral
           </button>
-          <button id="btn-mode-b" class="w-full md:w-auto bg-dsc-white border border-dsc-line text-dsc-body font-mono text-xs uppercase tracking-widest px-6 py-3.5 hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none active:scale-95" data-i18n="services.mode_b">
+          <button id="btn-mode-b" class="w-full md:w-auto bg-dsc-white border border-dsc-line text-dsc-body font-sans text-xs uppercase font-medium tracking-wider px-6 py-3.5 hover:border-dsc-navy hover:text-dsc-navy transition-all duration-200 rounded-none active:scale-95" data-i18n="services.mode_b">
             Modo B: Seleção Modular
           </button>
         </div>
@@ -131,7 +136,7 @@
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 ETAPA // 01
               </span>
-              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.0.name">Conceção & I&D</h3>
+              <h3 class="font-serif text-xl font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.0.name">Conceção & I&D</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed mb-5" data-i18n="services.steps.0.desc">Cálculo de densidades por cm², especificação de gramagens ideais (350g a 900g/m²), fichas técnicas estruturais e prototipagem tridimensional.</p>
             </div>
             <div class="pt-4 border-t border-dsc-line/80 space-y-1.5 font-mono text-[10px] text-dsc-muted">
@@ -153,7 +158,7 @@
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 ETAPA // 02
               </span>
-              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.1.name">Engenharia de Fios</h3>
+              <h3 class="font-serif text-xl font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.1.name">Engenharia de Fios</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed mb-5" data-i18n="services.steps.1.desc">Curadoria de algodão de fibra longa penteado, fios retorcidos 2-cabos de alta resistência, tecnologia Zero-Twist e misturas com linho puro ou fibras recicladas rastreadas.</p>
             </div>
             <div class="pt-4 border-t border-dsc-line/80 space-y-1.5 font-mono text-[10px] text-dsc-muted">
@@ -175,7 +180,7 @@
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 ETAPA // 03
               </span>
-              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.2.name">Tecelagem Estruturada</h3>
+              <h3 class="font-serif text-xl font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.2.name">Tecelagem Estruturada</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed mb-5" data-i18n="services.steps.2.desc">Tecelagem em teares de pinças e ar de última geração: felpo com laçada firme, relevos Jacquard arquitetónicos, faixas bordadas (borders) e texturas favo/waffle.</p>
             </div>
             <div class="pt-4 border-t border-dsc-line/80 space-y-1.5 font-mono text-[10px] text-dsc-muted">
@@ -197,7 +202,7 @@
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 ETAPA // 04
               </span>
-              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.3.name">Enobrecimento & Cor</h3>
+              <h3 class="font-serif text-xl font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.3.name">Enobrecimento & Cor</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed mb-5" data-i18n="services.steps.3.desc">Tinturaria em corda sob banhos otimizados, corantes reativos certificados OEKO-TEX, fixação profunda com alta solidez à lavagem industrial e tratamento hidrófilo instantâneo.</p>
             </div>
             <div class="pt-4 border-t border-dsc-line/80 space-y-1.5 font-mono text-[10px] text-dsc-muted">
@@ -219,7 +224,7 @@
                 <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 ETAPA // 05
               </span>
-              <h3 class="text-base font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.4.name">Confeção & Packaging</h3>
+              <h3 class="font-serif text-xl font-medium tracking-tight text-dsc-navy mb-2" data-i18n="services.steps.4.name">Confeção & Packaging</h3>
               <p class="text-xs text-dsc-body font-light leading-relaxed mb-5" data-i18n="services.steps.4.desc">Corte longitudinal automático, costura com bainhas reforçadas e travamentos de segurança nos cantos, colocação de etiquetas personalizadas, embalamento e paletização B2B.</p>
             </div>
             <div class="pt-4 border-t border-dsc-line/80 space-y-1.5 font-mono text-[10px] text-dsc-muted">
@@ -237,9 +242,9 @@
         </div>
 
         <div class="mt-12 mb-20 flex justify-center">
-          <a href="contactos.html?scope=integral" id="dynamic-quote-btn" class="bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest px-8 py-4 hover:bg-dsc-navy-deep hover:border-dsc-gold border border-dsc-navy transition-all duration-200 rounded-none inline-flex items-center gap-3 shadow-md hover:shadow-lg hover:shadow-dsc-navy/20 arrow-trigger">
+          <a href="contactos.html?scope=integral" id="dynamic-quote-btn" class="bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider px-8 py-4 hover:bg-dsc-navy-deep hover:border-dsc-gold border border-dsc-navy transition-all duration-200 rounded-none inline-flex items-center gap-3 shadow-md hover:shadow-lg hover:shadow-dsc-navy/20 arrow-trigger">
             <span data-i18n="services.btn_quote">Solicitar Cotação para as Etapas Selecionadas</span>
-            <span class="arrow-target text-dsc-gold font-mono">&rarr;</span>
+            <span class="arrow-target text-dsc-gold">&rarr;</span>
           </a>
         </div>
 
@@ -250,7 +255,7 @@
               <span class="micro-dot micro-dot-pulse"></span>
               Modelo Operacional de Contratação
             </span>
-            <h2 class="text-3xl font-light tracking-tight text-dsc-navy">
+            <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">
               Comparativo de Modelos: Solução Completa vs. Intervenção Modular
             </h2>
             <p class="text-sm text-dsc-body font-light leading-relaxed mt-2">
@@ -321,11 +326,11 @@
                 <span class="micro-dot micro-dot-pulse"></span>
                 <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">Personalização Integral B2B</span>
               </div>
-              <h3 class="text-2xl sm:text-3xl font-light tracking-tight text-dsc-navy" data-i18n="services.private_label.title">
+              <h3 class="font-serif font-normal text-2xl sm:text-3xl tracking-tight text-dsc-navy" data-i18n="services.private_label.title">
                 Capacidade Private Label para Marcas Globais & Hospitality
               </h3>
             </div>
-            <a href="contactos.html?subject=privatelabel" class="inline-flex items-center gap-2 px-5 py-3 border border-dsc-navy bg-dsc-navy text-white font-mono text-xs uppercase tracking-widest hover:bg-dsc-navy-deep hover:border-dsc-gold transition-all duration-200">
+            <a href="contactos.html?subject=privatelabel" class="inline-flex items-center gap-2 px-5 py-3 border border-dsc-navy bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep hover:border-dsc-gold transition-all duration-200">
               <span>Personalizar Coleção</span>
               <span class="text-dsc-gold">&rarr;</span>
             </a>
@@ -334,28 +339,28 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="p-5 border border-dsc-line bg-slate-50/50 hover:border-dsc-navy transition-colors">
               <span class="font-mono text-dsc-gold text-xs font-bold block mb-2">01 // BRANDING TÊXTIL</span>
-              <h4 class="font-medium text-dsc-navy text-sm mb-1.5">Etiquetas Tecidas em Damasco</h4>
+              <h4 class="font-serif text-lg font-medium text-dsc-navy mb-1.5">Etiquetas Tecidas em Damasco</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Etiquetas em alta definição cosidas em fita ou dobra terminal, cetim cortado a quente ou algodão orgânico com certificação OEKO-TEX.
               </p>
             </div>
             <div class="p-5 border border-dsc-line bg-slate-50/50 hover:border-dsc-navy transition-colors">
               <span class="font-mono text-dsc-gold text-xs font-bold block mb-2">02 // JACQUARD & BORDADOS</span>
-              <h4 class="font-medium text-dsc-navy text-sm mb-1.5">Bordaduras & Relevos</h4>
+              <h4 class="font-serif text-lg font-medium text-dsc-navy mb-1.5">Bordaduras & Relevos</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Logótipos de marca tecidos diretamente no felpo com relevo alto/baixo, faixas lisas dobby ou bordados de alta precisão resistentes a lavagens a 90ºC.
               </p>
             </div>
             <div class="p-5 border border-dsc-line bg-slate-50/50 hover:border-dsc-navy transition-colors">
               <span class="font-mono text-dsc-gold text-xs font-bold block mb-2">03 // PACKAGING RETAIL</span>
-              <h4 class="font-medium text-dsc-navy text-sm mb-1.5">Cintas Kraft & Caixas Gift</h4>
+              <h4 class="font-serif text-lg font-medium text-dsc-navy mb-1.5">Cintas Kraft & Caixas Gift</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Bands de papel kraft reciclado com impressão de certificação FSC, sacos compostáveis ou caixas rígidas de luxo para linhas de comércio eletrónico.
               </p>
             </div>
             <div class="p-5 border border-dsc-line bg-slate-50/50 hover:border-dsc-navy transition-colors">
               <span class="font-mono text-dsc-gold text-xs font-bold block mb-2">04 // RASTREABILIDADE DIGITAL</span>
-              <h4 class="font-medium text-dsc-navy text-sm mb-1.5">EAN-13 & QR Code DPP</h4>
+              <h4 class="font-serif text-lg font-medium text-dsc-navy mb-1.5">EAN-13 & QR Code DPP</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Etiquetas de composição com código de barras comercial e QR Code pronto para a futura diretiva europeia de Passaporte Digital do Produto.
               </p>
@@ -370,7 +375,7 @@
               <span class="micro-dot micro-dot-pulse"></span>
               Fiabilidade de Calendário
             </span>
-            <h2 class="text-3xl font-light tracking-tight text-dsc-navy">
+            <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">
               Prazos de Execução & Lead Times Industriais
             </h2>
             <p class="text-sm text-dsc-body font-light leading-relaxed mt-2">
@@ -384,7 +389,7 @@
                 <span class="font-mono text-2xl font-bold text-dsc-navy">01</span>
                 <span class="badge-gold">3–5 Dias</span>
               </div>
-              <h4 class="font-medium text-dsc-navy text-sm mb-2">Lab Dips & Análise de Cor</h4>
+              <h4 class="font-serif text-lg font-medium text-dsc-navy mb-2">Lab Dips & Análise de Cor</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Formulações de cor em laboratório com aprovação via espectrofotómetro contra referências Pantone TCX ou amostra física.
               </p>
@@ -395,7 +400,7 @@
                 <span class="font-mono text-2xl font-bold text-dsc-navy">02</span>
                 <span class="badge-gold">7–10 Dias</span>
               </div>
-              <h4 class="font-medium text-dsc-navy text-sm mb-2">Amostragem & Protótipo</h4>
+              <h4 class="font-serif text-lg font-medium text-dsc-navy mb-2">Amostragem & Protótipo</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Produção de protótipos funcionais com o felpo, gramagem, toque e acabamentos finais para aprovação do conselho técnico do cliente.
               </p>
@@ -406,7 +411,7 @@
                 <span class="font-mono text-2xl font-bold text-dsc-navy">03</span>
                 <span class="badge-gold">4–6 Semanas</span>
               </div>
-              <h4 class="font-medium text-dsc-navy text-sm mb-2">Produção Industrial em Massa</h4>
+              <h4 class="font-serif text-lg font-medium text-dsc-navy mb-2">Produção Industrial em Massa</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Urdidura, tecelagem, tinturaria contínua e confeção com relatórios periódicos de avanço e controlo de qualidade estatístico AQL 2.5.
               </p>
@@ -417,7 +422,7 @@
                 <span class="font-mono text-2xl font-bold text-dsc-navy">04</span>
                 <span class="badge-gold">48–96 Horas</span>
               </div>
-              <h4 class="font-medium text-dsc-navy text-sm mb-2">Despacho & Transporte UE</h4>
+              <h4 class="font-serif text-lg font-medium text-dsc-navy mb-2">Despacho & Transporte UE</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Paletes plastificadas e etiquetadas enviadas por frota rodoviária expresso diretamente para os centros de distribuição em Espanha, França, Alemanha e Benelux.
               </p>
@@ -440,9 +445,9 @@
             <span class="micro-dot micro-dot-pulse"></span>
             <span data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
           </span>
-          <h2 class="text-2xl sm:text-3xl font-light text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
+          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
         </div>
-        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-mono text-xs uppercase tracking-widest transition-all duration-200 shadow-md group">
+        <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-sans text-xs uppercase font-medium tracking-wider transition-all duration-200 shadow-md group">
           <span data-i18n="footer_cta_btn">Iniciar Diálogo Técnico</span>
           <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
@@ -502,7 +507,7 @@
           <div class="space-y-2 text-xs font-mono text-slate-400">
             <div>
               <span class="text-slate-200">Sede Fabril:</span>
-              <div class="text-slate-300 font-sans mt-0.5"><span class="ph">[INSERIR_MORADA_FABRIL_DSC]</span>, Portugal</div>
+              <div class="text-slate-300 font-sans mt-0.5"><span class="ph">Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso</span>, Portugal</div>
             </div>
             <div>
               <span class="text-slate-200">Exportação Direta:</span>
@@ -543,7 +548,7 @@
         <div>
           <span data-i18n="footer_rights">&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
           <span class="mx-2 hidden md:inline">•</span>
-          <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">[500_XXX_XXX]</span></span>
+          <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">505 528 606</span></span>
         </div>
         <div class="flex items-center space-x-6">
           <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_terms">Termos B2B</a>

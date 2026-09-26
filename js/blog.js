@@ -316,7 +316,7 @@ function renderBlogCards() {
             </span>
             <span class="text-dsc-muted font-normal">${data.readTime}</span>
           </div>
-          <h3 class="text-xl font-medium tracking-tight text-dsc-navy mb-3 leading-snug group-hover:text-dsc-navy transition-colors">
+          <h3 class="font-serif text-2xl font-normal tracking-tight text-dsc-navy mb-3 leading-snug group-hover:text-dsc-navy transition-colors">
             ${data.title}
           </h3>
           <p class="text-xs text-dsc-body font-light leading-relaxed mb-8 line-clamp-3">
@@ -325,7 +325,7 @@ function renderBlogCards() {
         </div>
         <div class="flex justify-between items-center border-t border-dsc-line/80 pt-4 mt-auto">
           <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">${data.date}</span>
-          <span class="arrow-trigger font-mono text-[10px] uppercase tracking-widest text-dsc-navy font-semibold flex items-center gap-1.5">
+          <span class="arrow-trigger font-sans text-xs uppercase font-medium tracking-wider text-dsc-navy flex items-center gap-1.5">
             <span>${data.readBtn}</span>
             <span class="arrow-target text-dsc-gold font-bold">&rarr;</span>
           </span>

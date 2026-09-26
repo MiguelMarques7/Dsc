@@ -1,39 +1,47 @@
 /**
  * DSC (Domingos Silva & Cunha, Lda.)
- * Centralized Tailwind CSS Configuration
+ * Centralized Tailwind CSS Configuration — v3.0 Editorial Premium
  */
 tailwind.config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans:  ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+        mono:  ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
         dsc: {
-          white: '#FFFFFF',
-          canvas: '#F8FAFD',
-          surface: '#EEF3F9',
-          line: '#DCE5F2',
-          'line-dark': '#CBD5E1',
-          muted: '#62748E',
-          body: '#2D3E56',
+          white:      '#FFFFFF',
+          canvas:     '#F7F5F2',   /* warm linen off-white */
+          surface:    '#F0EDE8',
+          line:       '#E4DDD5',   /* warm dividers */
+          'line-dark':'#C9BFB5',
+          muted:      '#7A6F65',   /* warm muted brown */
+          body:       '#3D3530',
           navy: {
-            deep: '#070D1E',
-            DEFAULT: '#0B1E48',
-            light: '#142C69',
-            slate: '#1E3A70',
-            subtle: '#1E2E4A',
-            accent: '#2563EB',
+            DEFAULT: '#0F172A',
+            deep:    '#060C1A',
+            light:   '#1E293B',
+            slate:   '#334155',
           },
           gold: {
-            subtle: '#FEF3C7',
-            light: '#FBBF24',
-            DEFAULT: '#F59E0B',
-            dark: '#D97706',
+            DEFAULT: '#B39860',   /* warm editorial antique gold */
+            light:   '#C9AE7A',
+            dark:    '#8C7444',
+            subtle:  'rgba(179,152,96,0.08)',
           }
         }
-      }
+      },
+      animation: {
+        'marquee': 'marquee-scroll 36s linear infinite',
+      },
+      keyframes: {
+        'marquee-scroll': {
+          from: { transform: 'translateX(0)' },
+          to:   { transform: 'translateX(-50%)' },
+        },
+      },
     }
   }
 };

@@ -1324,22 +1324,7 @@ function setLanguage(lang) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         el.placeholder = text;
       } else if (el.children.length === 0) {
-        el.innerText = text;
-      } else {
-        // Element has child elements (e.g. golden dots, arrow spans, svg icons)
-        // Update direct text node while preserving child markup
-        let updatedText = false;
-        for (let i = 0; i < el.childNodes.length; i++) {
-          const child = el.childNodes[i];
-          if (child.nodeType === Node.TEXT_NODE && child.nodeValue.trim().length > 0) {
-            child.nodeValue = ' ' + text.trim() + ' ';
-            updatedText = true;
-            break;
-          }
-        }
-        if (!updatedText && !el.querySelector('svg, span')) {
-          el.innerText = text;
-        }
+        el.textContent = text;
       }
     }
   });

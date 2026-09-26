@@ -1,58 +1,52 @@
 /**
- * DSC (Domingos Silva & Cunha, Lda.)
- * Architecture & Design System Stylesheet
- * 
- * Palette: DSC Navy Tonal System, Architectural White & Textile Amber/Gold
- * Typography: Inter (Sans) & JetBrains Mono (Mono)
+ * DSC — Domingos Silva & Cunha, Lda.
+ * Design System — v3.0 — Editorial Premium
+ *
+ * Palette: Architectural White / DSC Navy / Warm Editorial Gold
+ * Type:    Cormorant Garamond · Plus Jakarta Sans · JetBrains Mono
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* ==========================================================================
-   1. DESIGN TOKENS & CSS VARIABLES
-   ========================================================================== */
+/* ============================================================
+   1. DESIGN TOKENS
+   ============================================================ */
 :root {
-  /* Colors - Architectural White & Canvas */
-  --dsc-white: #FFFFFF;
-  --dsc-canvas: #F8FAFD;
-  --dsc-surface: #EEF3F9;
-  --dsc-surface-hover: #E5ECF6;
-  --dsc-line: #DCE5F2;
-  --dsc-line-dark: #CBD5E1;
-  --dsc-muted: #62748E;
-  --dsc-body: #2D3E56;
+  --dsc-white:        #FFFFFF;
+  --dsc-canvas:       #F7F5F2;
+  --dsc-canvas-cool:  #F8FAFC;
+  --dsc-surface:      #F0EDE8;
+  --dsc-surface-hover:#E8E4DE;
+  --dsc-line:         #E4DDD5;
+  --dsc-line-dark:    #C9BFB5;
+  --dsc-muted:        #7A6F65;
+  --dsc-body:         #3D3530;
 
-  /* Colors - DSC Navy Tonal Scale */
-  --dsc-navy-deep: #070D1E;
-  --dsc-navy: #0B1E48;
-  --dsc-navy-light: #142C69;
-  --dsc-navy-slate: #1E3A70;
-  --dsc-navy-subtle: #1E2E4A;
-  --dsc-navy-accent: #2563EB;
+  --dsc-navy-deep:    #060C1A;
+  --dsc-navy:         #0F172A;
+  --dsc-navy-light:   #1E293B;
+  --dsc-navy-slate:   #334155;
 
-  /* Colors - Yellow / Refined Architectural Amber Gold (Micro-Details) */
-  --dsc-gold: #F59E0B;
-  --dsc-gold-light: #FBBF24;
-  --dsc-gold-dark: #D97706;
-  --dsc-gold-subtle: #FEF3C7;
-  --dsc-gold-glow: rgba(245, 158, 11, 0.45);
+  --dsc-gold:         #B39860;
+  --dsc-gold-light:   #C9AE7A;
+  --dsc-gold-dark:    #8C7444;
+  --dsc-gold-subtle:  rgba(179,152,96,0.08);
+  --dsc-gold-glow:    rgba(179,152,96,0.35);
 
-  /* Typography */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-serif:  'Cormorant Garamond', Georgia, serif;
+  --font-sans:   'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:   'JetBrains Mono', ui-monospace, monospace;
 
-  /* Transitions */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast:   150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --t-mid:    280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --t-slow:   500ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==========================================================================
-   2. BASE & RESET STYLES
-   ========================================================================== */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
@@ -61,428 +55,299 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   font-family: var(--font-sans);
-  background-color: var(--dsc-canvas);
+  background: var(--dsc-canvas);
   color: var(--dsc-navy);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
+  line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
 
-::selection {
-  background-color: var(--dsc-navy);
-  color: var(--dsc-white);
+::selection { background: var(--dsc-navy); color: var(--dsc-white); }
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+
+/* ============================================================
+   3. TYPOGRAPHY UTILITIES
+   ============================================================ */
+.font-serif { font-family: var(--font-serif);  }
+.font-sans  { font-family: var(--font-sans);   }
+.font-mono  { font-family: var(--font-mono);   }
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #8C7444 0%, #B39860 50%, #C9AE7A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Transição global por omissão para interações táteis */
-a, button, input, select, textarea, .interactive-card {
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+.text-gradient-navy {
+  background: linear-gradient(135deg, var(--dsc-navy-deep), var(--dsc-navy-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* ==========================================================================
-   3. TYPOGRAPHY & TECHNICAL BADGES
-   ========================================================================== */
-.font-sans {
-  font-family: var(--font-sans);
-}
-
-.font-mono {
-  font-family: var(--font-mono);
-}
-
-/* Technical Placeholder Badges */
-.ph {
-  font-family: var(--font-mono);
-  font-size: 0.82em;
-  background-color: var(--dsc-surface);
-  border: 1px dashed var(--dsc-line-dark);
-  padding: 0.15rem 0.5rem;
-  color: var(--dsc-navy-slate);
-  letter-spacing: -0.01em;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 2px;
-}
-
-footer .ph {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(245, 158, 11, 0.35);
-  color: #F8FAFD;
-}
-
-.ph-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--dsc-muted);
-}
-
-/* Micro-detalhes em Amarelo/Dourado Âmbar */
+/* ============================================================
+   4. MICRO-DETAILS & BADGES
+   ============================================================ */
 .micro-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 9999px;
-  background-color: var(--dsc-gold);
   display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--dsc-gold);
   box-shadow: 0 0 8px var(--dsc-gold-glow);
   vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .micro-dot-pulse {
-  animation: micro-pulse 2.4s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  animation: micro-pulse 2.6s ease-in-out infinite;
 }
 
 @keyframes micro-pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-    box-shadow: 0 0 6px var(--dsc-gold-glow);
-  }
-  50% {
-    opacity: 0.75;
-    transform: scale(0.85);
-    box-shadow: 0 0 12px rgba(245, 158, 11, 0.75);
-  }
+  0%, 100% { opacity: 1; transform: scale(1);    box-shadow: 0 0 6px var(--dsc-gold-glow); }
+  50%       { opacity: .7; transform: scale(.82); box-shadow: 0 0 14px rgba(179,152,96,.6); }
 }
 
 .badge-gold {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
+  display: inline-flex; align-items: center; gap: .35rem;
   font-family: var(--font-mono);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.2rem 0.6rem;
-  background-color: rgba(245, 158, 11, 0.08);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  color: #B45309;
+  font-size: 10px; text-transform: uppercase; letter-spacing: .12em;
+  padding: .2rem .6rem;
+  background: var(--dsc-gold-subtle);
+  border: 1px solid rgba(179,152,96,.3);
+  color: var(--dsc-gold-dark);
 }
 
 .badge-navy {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
+  display: inline-flex; align-items: center; gap: .35rem;
   font-family: var(--font-mono);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.25rem 0.65rem;
-  background-color: var(--dsc-navy);
+  font-size: 10px; text-transform: uppercase; letter-spacing: .12em;
+  padding: .25rem .65rem;
+  background: var(--dsc-navy);
   color: var(--dsc-white);
   border: 1px solid var(--dsc-navy-light);
 }
 
-/* ==========================================================================
-   4. NAVIGATION & HEADER
-   ========================================================================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background-color: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-top: 2px solid var(--dsc-navy);
-  border-bottom: 1px solid var(--dsc-line);
-  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+.ph {
+  font-family: var(--font-mono); font-size: .82em;
+  background: var(--dsc-surface);
+  border: 1px dashed var(--dsc-line-dark);
+  padding: .15rem .5rem; color: var(--dsc-navy-slate);
+  display: inline-block; vertical-align: middle; border-radius: 2px;
 }
 
-/* Efeito de linha deslizante com toque dourado sob links de navegação */
+footer .ph {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(179,152,96,.3);
+  color: #F8FAFD;
+}
+
+/* ============================================================
+   5. NAVIGATION & HEADER
+   ============================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 2px solid var(--dsc-navy);
+  border-bottom: 1px solid var(--dsc-line);
+  transition: box-shadow var(--t-mid);
+}
+
+.site-header.scrolled {
+  box-shadow: 0 4px 24px rgba(15,23,42,.09);
+}
+
 .nav-link {
   position: relative;
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.25rem 0;
-  color: var(--dsc-muted);
+  font-family: var(--font-sans); font-size: .875rem; font-weight: 500;
+  padding: .25rem 0;
+  color: var(--dsc-body);
+  transition: color var(--t-fast);
 }
 
 .nav-link::after {
   content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--dsc-navy) 0%, var(--dsc-gold) 100%);
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: linear-gradient(90deg, var(--dsc-navy), var(--dsc-gold));
+  transition: width var(--t-mid);
 }
 
-.nav-link:hover {
-  color: var(--dsc-navy);
-}
-
+.nav-link:hover { color: var(--dsc-navy); }
 .nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
+.nav-link.active::after { width: 100%; }
+.nav-link.active { color: var(--dsc-navy); font-weight: 600; }
 
-.nav-link.active {
-  color: var(--dsc-navy);
-  font-weight: 600;
-}
+#mobile-menu { transition: transform var(--t-slow), opacity var(--t-slow); }
+#mobile-menu.menu-closed { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+#mobile-menu.menu-open   { transform: translateY(0);     opacity: 1; pointer-events: auto; }
 
-/* Mobile Menu Drawer */
-#mobile-menu {
-  transition: transform var(--transition-slow), opacity var(--transition-slow);
-}
-
-#mobile-menu.menu-closed {
-  transform: translateY(-100%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-#mobile-menu.menu-open {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* ==========================================================================
-   5. MICRO-INTERAÇÕES & CARTÕES TÉCNICOS
-   ========================================================================== */
-/* Micro-zoom suave em imagens/placeholders de tecido/toalha */
-.img-zoom-container {
-  overflow: hidden;
-  position: relative;
-}
-
-.img-zoom-container .zoom-target {
-  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.interactive-card:hover .zoom-target {
-  transform: scale(1.045);
-}
-
-/* Efeito de elevação milimétrica com contorno azul marinho e detalhe dourado */
+/* ============================================================
+   6. INTERACTIVE CARDS
+   ============================================================ */
 .interactive-card {
   position: relative;
-  background-color: var(--dsc-white);
+  background: var(--dsc-white);
   border: 1px solid var(--dsc-line);
   will-change: transform, box-shadow;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform var(--t-mid), box-shadow var(--t-mid), border-color var(--t-mid), background var(--t-mid);
 }
 
 .interactive-card::before {
   content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--dsc-navy) 0%, var(--dsc-gold) 100%);
+  position: absolute; inset-x: 0; top: 0; height: 2px;
+  background: linear-gradient(90deg, var(--dsc-navy), var(--dsc-gold));
   opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 10;
+  transition: opacity var(--t-mid);
+  z-index: 1;
 }
 
 .interactive-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px -10px rgba(11, 30, 72, 0.12);
-  border-color: var(--dsc-navy) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px -12px rgba(15,23,42,.14), 0 4px 12px rgba(15,23,42,.06);
+  border-color: rgba(179,152,96,.5) !important;
 }
 
-.interactive-card:hover::before {
-  opacity: 1;
+.interactive-card:hover::before { opacity: 1; }
+
+/* Ken Burns image zoom */
+.img-zoom-container { overflow: hidden; position: relative; }
+
+.img-zoom-container .zoom-target {
+  transition: transform .75s var(--ease-out);
 }
 
-/* Indicador de seta animada em botões e links de catálogo */
-.arrow-trigger {
-  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
+.interactive-card:hover .zoom-target { transform: scale(1.07); }
 
-.arrow-trigger:hover {
-  color: var(--dsc-navy);
+/* Arrow links */
+.arrow-trigger { transition: color var(--t-fast); }
+.arrow-trigger:hover { color: var(--dsc-navy); }
+.arrow-target {
+  display: inline-block;
+  transition: transform var(--t-fast), color var(--t-fast);
 }
-
 .arrow-trigger:hover .arrow-target {
-  transform: translateX(5px);
+  transform: translateX(6px);
   color: var(--dsc-gold);
 }
 
-.arrow-target {
-  display: inline-block;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+/* ============================================================
+   7. MARQUEE TICKER
+   ============================================================ */
+.marquee-wrapper { overflow: hidden; }
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 36s linear infinite;
 }
 
-/* Matrix Stage Selection Box (servicos.html) */
-.matrix-box {
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  background-color: var(--dsc-white);
+.marquee-track:hover { animation-play-state: paused; }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
-.matrix-box:hover {
-  border-color: var(--dsc-navy) !important;
-  background-color: #F8FAFD;
-}
-
-/* ==========================================================================
-   6. FORMS & INPUTS
-   ========================================================================== */
-/* Foco moderno em inputs com anel de precisão no tom azul marinho */
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px var(--dsc-navy), 0 0 0 4px rgba(11, 30, 72, 0.08);
-  border-color: var(--dsc-navy) !important;
-  background-color: #FFFFFF !important;
-}
-
-/* ==========================================================================
-   7. FEEDBACK TOAST / NOTIFICATION
-   ========================================================================== */
-.dsc-toast {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 100;
-  max-width: 24rem;
-  background-color: var(--dsc-navy-deep);
-  color: var(--dsc-white);
-  border-left: 3px solid var(--dsc-gold);
-  padding: 1rem 1.25rem;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  box-shadow: 0 20px 25px -5px rgba(7, 13, 30, 0.35);
-  transform: translateY(150%);
-  opacity: 0;
-  transition: transform var(--transition-slow), opacity var(--transition-slow);
-}
-
-.dsc-toast.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* ==========================================================================
-   8. SCROLLBAR & ACCESSIBILITY
-   ========================================================================== */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--dsc-canvas);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--dsc-line-dark);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--dsc-navy-slate);
-}
-
-:focus-visible {
-  outline: 2px solid var(--dsc-gold);
-  outline-offset: 2px;
-}
-
-/* ==========================================================================
-   9. PRINT MEDIA
-   ========================================================================== */
-@media print {
-  .site-header, footer, #mobile-menu, .no-print, #scroll-progress-bar, #back-to-top {
-    display: none !important;
-  }
-
-  body {
-    background: #FFFFFF !important;
-    color: #000000 !important;
-  }
-}
-
-/* ==========================================================================
-   10. LIGHTWEIGHT VISUAL POLISH & TEXTILE PATTERNS (PURE CSS)
-   ========================================================================== */
-/* Clean, smooth architectural backgrounds without textured patterns */
-.bg-grid-pattern,
-.bg-grid-pattern-dark,
-.bg-weave-pattern {
-  background-image: none !important;
-}
-
-/* Lightweight Scroll Reveal */
+/* ============================================================
+   8. SCROLL REVEAL
+   ============================================================ */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(28px);
+  transition: opacity .65s var(--ease-out), transform .65s var(--ease-out);
   will-change: opacity, transform;
 }
 
-.reveal-on-scroll.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal-on-scroll.revealed { opacity: 1; transform: translateY(0); }
 
-/* Modern Gradient Text */
-.text-gradient-navy {
-  background: linear-gradient(135deg, var(--dsc-navy-deep) 0%, var(--dsc-navy-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+.reveal-on-scroll[data-delay="1"] { transition-delay: .1s; }
+.reveal-on-scroll[data-delay="2"] { transition-delay: .2s; }
+.reveal-on-scroll[data-delay="3"] { transition-delay: .3s; }
+.reveal-on-scroll[data-delay="4"] { transition-delay: .4s; }
 
-.text-gradient-gold {
-  background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #FBBF24 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Interactive GSM Slider (Pure CSS) */
+/* ============================================================
+   9. GSM SLIDER
+   ============================================================ */
 .gsm-slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 4px;
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 3px;
   background: var(--dsc-line);
-  outline: none;
-  border-radius: 0;
-  transition: background 0.2s;
+  outline: none; border-radius: 0;
 }
 
 .gsm-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 18px;
-  height: 18px;
+  -webkit-appearance: none; appearance: none;
+  width: 18px; height: 18px;
   background: var(--dsc-navy);
   border: 2px solid var(--dsc-gold);
   cursor: pointer;
-  transition: transform 0.15s, background-color 0.15s;
-  box-shadow: 0 2px 6px rgba(11, 30, 72, 0.25);
+  transition: transform .15s, background .15s;
+  box-shadow: 0 2px 8px rgba(15,23,42,.25);
 }
 
-.gsm-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-  background: var(--dsc-navy-deep);
-}
-
+.gsm-slider::-webkit-slider-thumb:hover { transform: scale(1.25); }
 .gsm-slider::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
-  background: var(--dsc-navy);
-  border: 2px solid var(--dsc-gold);
-  cursor: pointer;
-  border-radius: 0;
-  transition: transform 0.15s, background-color 0.15s;
-  box-shadow: 0 2px 6px rgba(11, 30, 72, 0.25);
+  width: 18px; height: 18px;
+  background: var(--dsc-navy); border: 2px solid var(--dsc-gold);
+  cursor: pointer; border-radius: 0;
 }
 
-.gsm-slider::-moz-range-thumb:hover {
-  transform: scale(1.2);
+/* ============================================================
+   10. MATRIX BOX
+   ============================================================ */
+.matrix-box {
+  cursor: pointer; background: var(--dsc-white);
+  transition: all var(--t-mid);
+}
+.matrix-box:hover { border-color: var(--dsc-navy) !important; background: #F8FAFD; }
+
+/* ============================================================
+   11. TOAST
+   ============================================================ */
+.dsc-toast {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 100;
+  max-width: 24rem;
   background: var(--dsc-navy-deep);
+  color: var(--dsc-white);
+  border-left: 3px solid var(--dsc-gold);
+  padding: 1rem 1.25rem;
+  font-family: var(--font-sans); font-size: .85rem;
+  box-shadow: 0 24px 48px rgba(6,12,26,.4);
+  transform: translateY(150%); opacity: 0;
+  transition: transform var(--t-slow), opacity var(--t-slow);
 }
+.dsc-toast.show { transform: translateY(0); opacity: 1; }
 
+/* ============================================================
+   12. SCROLLBAR & ACCESSIBILITY
+   ============================================================ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--dsc-canvas); }
+::-webkit-scrollbar-thumb { background: var(--dsc-line-dark); }
+::-webkit-scrollbar-thumb:hover { background: var(--dsc-navy-slate); }
+
+:focus-visible { outline: 2px solid var(--dsc-gold); outline-offset: 2px; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ============================================================
+   13. BACKGROUND PATTERNS
+   ============================================================ */
+.bg-grid-pattern,
+.bg-grid-pattern-dark,
+.bg-weave-pattern { background-image: none !important; }
+
+/* ============================================================
+   14. PRINT
+   ============================================================ */
+@media print {
+  .site-header, footer, #mobile-menu { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+}
