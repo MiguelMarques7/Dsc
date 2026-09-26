@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function setMapActive(type) {
     if (type === 'gmap') {
       if (gmapIframe) {
-        gmapIframe.src = "https://maps.google.com/maps?q=41.348600,-8.384200+(DSC+-+Domingos+Silva+%26+Cunha+Lda)&t=m&z=17&ie=UTF8&iwloc=B&output=embed";
+        gmapIframe.src = "https://maps.google.com/maps?q=41.342554,-8.384385+(DSC+-+Domingos+Silva+%26+Cunha+Lda)&t=m&z=17&ie=UTF8&iwloc=B&output=embed";
       }
       if (btnGmap) btnGmap.className = "px-3 py-1.5 bg-dsc-navy text-white font-medium transition-all";
       if (btnSat) btnSat.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all";
     } else if (type === 'sat') {
       if (gmapIframe) {
-        gmapIframe.src = "https://maps.google.com/maps?q=41.348600,-8.384200+(DSC+-+Domingos+Silva+%26+Cunha+Lda)&t=k&z=18&ie=UTF8&iwloc=B&output=embed";
+        gmapIframe.src = "https://maps.google.com/maps?q=41.342554,-8.384385+(DSC+-+Domingos+Silva+%26+Cunha+Lda)&t=k&z=18&ie=UTF8&iwloc=B&output=embed";
       }
       if (btnSat) btnSat.className = "px-3 py-1.5 bg-dsc-navy text-white font-medium transition-all";
       if (btnGmap) btnGmap.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all";

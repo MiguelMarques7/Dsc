@@ -27,7 +27,7 @@ Este repositório alberga o **Portal Institucional B2B** da empresa — uma plat
 - **Caderno Técnico & Artigos de I&D**: 6 ensaios técnicos aprofundados sobre calibração de gramagens, física de torção de fios, Passaporte Digital do Produto (DPP) e eficiência energética em lavandaria industrial.
 - **Marcos Históricos & Bodas de Prata**: Secção dedicada à trajetória fabril da DSC, comemoração dos 25 anos de atividade, galardões PME Líder / PME Excelência e projetos de sustentabilidade.
 - **Matriz Operacional de Serviços (Ciclo Integral vs. Modular)**: Seletor interativo para orçamentação de ciclo completo *Turnkey Full-Package* ou etapas industriais isoladas (Fiação, Urdissagem, Tecelagem, Tinturaria e Confeção).
-- **Geolocalização & Mapa Fabril de Alta Precisão**: Integração com Google Maps (visão de ruas e satélite HD) com coordenadas exatas da fábrica em Roriz (`41.348600, -8.384200`) e tempos de ligação logística ao Porto de Leixões e Aeroporto Francisco Sá Carneiro (OPO).
+- **Geolocalização & Mapa Fabril de Alta Precisão**: Integração com Google Maps (visão de ruas e satélite HD) com coordenadas exatas da fábrica na Rua Quinta do Pinheiro, 74, em Roriz (`41.342554, -8.384385`) e tempos de ligação logística ao Porto de Leixões e Aeroporto Francisco Sá Carneiro (OPO).
 - **Formulário de Sourcing B2B Inteligente**: Sistema com pré-seleção automática de referências de amostras a partir do catálogo ou serviços, com presets rápidos e feedback visual.
 
 ---
