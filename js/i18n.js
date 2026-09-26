@@ -183,7 +183,12 @@ const dictionary = {
       "email": "comercial@dsc.pt",
       "phone_title": "Telefone Direto",
       "phone": "+351 252 881 145",
-      "hours": "Segunda a Sexta-feira: 08:30 — 17:30 (GMT)"
+      "hours": "Segunda a Sexta-feira: 08:30 — 17:30 (GMT)",
+      "guarantees_title": "GARANTIAS & DIRETRIZES B2B",
+      "g1": "Amostras em 24/48h",
+      "g2": "Acordo NDA / Sigilo",
+      "g3": "Cotação em < 24h",
+      "g4": "Atendimento Multilíngue"
     },
     "form": {
       "title": "Formulário de Pedido Técnico B2B",
@@ -404,7 +409,12 @@ const dictionary = {
       "email": "comercial@dsc.pt",
       "phone_title": "Direct Phone",
       "phone": "+351 252 881 145",
-      "hours": "Monday to Friday: 08:30 — 17:30 (GMT)"
+      "hours": "Monday to Friday: 08:30 — 17:30 (GMT)",
+      "guarantees_title": "B2B GUARANTEES & STANDARDS",
+      "g1": "Samples in 24/48h",
+      "g2": "NDA & Confidentiality",
+      "g3": "Quotation in < 24h",
+      "g4": "Multilingual Support"
     },
     "form": {
       "title": "B2B Technical Sourcing Form",
