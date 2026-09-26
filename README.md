@@ -57,12 +57,11 @@ O projeto foi intencionalmente construído com tecnologias web limpas, garantind
 
 ```
 ├── index.html                  # Redirecionamento canónico para html/index.html
-├── html/                       # 7 Páginas modulares completas
+├── html/                       # 6 Páginas modulares completas
 │   ├── index.html              # Página Principal B2B
 │   ├── sobre.html              # Herança fabril & Parque Industrial
 │   ├── servicos.html           # Modelo de produção vertical e modular
 │   ├── catalogo.html           # Catálogo técnico de banho
-│   ├── produtos.html           # Alias / Redirecionamento para catálogo
 │   ├── sustentabilidade.html   # Práticas ESG & Certificações
 │   ├── blog.html               # Caderno técnico & Artigos de I&D
 │   └── contactos.html          # Sourcing, mapa logístico & formulário
@@ -153,12 +152,11 @@ Built with clean, lightweight web standards for maximum execution speed, zero co
 
 ```
 ├── index.html                  # Canonical redirect to html/index.html
-├── html/                       # 7 Modular production pages
+├── html/                       # 6 Modular production pages
 │   ├── index.html              # B2B Institutional Home
 │   ├── sobre.html              # Mill Heritage & Industrial Capacity
 │   ├── servicos.html           # Vertical & Modular Manufacturing Model
 │   ├── catalogo.html           # Technical Bath Linen Catalog
-│   ├── produtos.html           # Alias / Redirect to catalog
 │   ├── sustentabilidade.html   # ESG Practices & Environmental Compliance
 │   ├── blog.html               # Technical Journal & R&D Articles
 │   └── contactos.html          # Sourcing, Logistics Map & Inquiry Form

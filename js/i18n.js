@@ -466,10 +466,6 @@ const PAGE_TITLES = {
     "pt": "DSC — Catálogo Técnico de Banho",
     "en": "DSC — Technical Bath Linen Catalog"
   },
-  "produtos.html": {
-    "pt": "DSC — Catálogo Técnico de Banho",
-    "en": "DSC — Technical Bath Linen Catalog"
-  },
   "sustentabilidade.html": {
     "pt": "DSC — Sustentabilidade & Conformidade",
     "en": "DSC — Sustainability & Compliance"
