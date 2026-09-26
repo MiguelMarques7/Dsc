@@ -20,11 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const DSC_COORDS = [41.34860, -8.38420];
   const DSC_ZOOM = 18;
 
-  // 1. Initialize High-Zoom Amplified Map (Leaflet)
-  const mapContainer = document.getElementById('dsc-interactive-map');
-  if (mapContainer && typeof L !== 'undefined') {
+  // 1. Google Maps & Interactive Map Controller
+  const gmapIframe = document.getElementById('dsc-google-map-iframe');
+  const leafletContainer = document.getElementById('dsc-interactive-map');
+  const btnGmap = document.getElementById('map-btn-gmap');
+  const btnSat = document.getElementById('map-btn-sat');
+  const btnLeaflet = document.getElementById('map-btn-leaflet');
+
+  let leafletMapInstance = null;
+
+  function initLeafletMap() {
+    if (leafletMapInstance || !leafletContainer || typeof L === 'undefined') return;
     try {
-      const map = L.map('dsc-interactive-map', {
+      leafletMapInstance = L.map('dsc-interactive-map', {
         center: DSC_COORDS,
         zoom: DSC_ZOOM,
         maxZoom: 19,
@@ -33,18 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
         zoomControl: true
       });
 
-      // Map Layers
-      const streetLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; CARTO &copy; OpenStreetMap',
         maxZoom: 19
-      }).addTo(map);
+      }).addTo(leafletMapInstance);
 
-      const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: '&copy; Esri, Maxar, Earthstar Geographics',
-        maxZoom: 19
-      });
-
-      // Custom Industrial Factory Pin Icon
       const factoryIcon = L.divIcon({
         className: 'dsc-custom-map-pin',
         html: `
@@ -81,51 +82,61 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
-      const marker = L.marker(DSC_COORDS, { icon: factoryIcon }).addTo(map);
+      const marker = L.marker(DSC_COORDS, { icon: factoryIcon }).addTo(leafletMapInstance);
       marker.bindPopup(popupContent).openPopup();
-
-      // Street vs Satellite Controls
-      const btnStreet = document.getElementById('map-btn-street');
-      const btnSat = document.getElementById('map-btn-sat');
-      const btnRecenter = document.getElementById('map-btn-recenter');
-
-      if (btnStreet && btnSat) {
-        btnStreet.addEventListener('click', () => {
-          if (map.hasLayer(satelliteLayer)) {
-            map.removeLayer(satelliteLayer);
-          }
-          if (!map.hasLayer(streetLayer)) {
-            map.addLayer(streetLayer);
-          }
-          btnStreet.className = "px-3 py-1.5 bg-dsc-navy text-white font-medium transition-all";
-          btnSat.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all";
-        });
-
-        btnSat.addEventListener('click', () => {
-          if (map.hasLayer(streetLayer)) {
-            map.removeLayer(streetLayer);
-          }
-          if (!map.hasLayer(satelliteLayer)) {
-            map.addLayer(satelliteLayer);
-          }
-          btnSat.className = "px-3 py-1.5 bg-dsc-navy text-white font-medium transition-all";
-          btnStreet.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all";
-        });
-      }
-
-      if (btnRecenter) {
-        btnRecenter.addEventListener('click', () => {
-          map.flyTo(DSC_COORDS, DSC_ZOOM, { duration: 1.2 });
-          marker.openPopup();
-        });
-      }
-
-      // Handle window resize or orientation changes
-      setTimeout(() => { map.invalidateSize(); }, 250);
-    } catch (err) {
-      console.warn("Leaflet map initialization fallback:", err);
+      setTimeout(() => { leafletMapInstance.invalidateSize(); }, 300);
+    } catch (e) {
+      console.warn("Leaflet map initialization:", e);
     }
   }
+
+  function setMapActive(type) {
+    if (type === 'gmap') {
+      if (gmapIframe) {
+        gmapIframe.src = "https://maps.google.com/maps?q=41.348600,-8.384200+(DSC+-+Domingos+Silva+%26+Cunha+Lda)&t=m&z=17&ie=UTF8&iwloc=B&output=embed";
+        gmapIframe.style.opacity = "1";
+        gmapIframe.style.pointerEvents = "auto";
+      }
+      if (leafletContainer) {
+        leafletContainer.style.opacity = "0";
+        leafletContainer.style.pointerEvents = "none";
+      }
+      if (btnGmap) btnGmap.className = "px-3 py-1.5 bg-dsc-navy text-white font-medium transition-all";
+      if (btnSat) btnSat.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all";
+      if (btnLeaflet) btnLeaflet.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all hidden sm:inline-block";
+    } else if (type === 'sat') {
+      if (gmapIframe) {
+        gmapIframe.src = "https://maps.google.com/maps?q=41.348600,-8.384200+(DSC+-+Domingos+Silva+%26+Cunha+Lda)&t=k&z=18&ie=UTF8&iwloc=B&output=embed";
+        gmapIframe.style.opacity = "1";
+        gmapIframe.style.pointerEvents = "auto";
+      }
+      if (leafletContainer) {
+        leafletContainer.style.opacity = "0";
+        leafletContainer.style.pointerEvents = "none";
+      }
+      if (btnSat) btnSat.className = "px-3 py-1.5 bg-dsc-navy text-white font-medium transition-all";
+      if (btnGmap) btnGmap.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all";
+      if (btnLeaflet) btnLeaflet.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all hidden sm:inline-block";
+    } else if (type === 'leaflet') {
+      initLeafletMap();
+      if (gmapIframe) {
+        gmapIframe.style.opacity = "0";
+        gmapIframe.style.pointerEvents = "none";
+      }
+      if (leafletContainer) {
+        leafletContainer.style.opacity = "1";
+        leafletContainer.style.pointerEvents = "auto";
+        if (leafletMapInstance) setTimeout(() => { leafletMapInstance.invalidateSize(); }, 200);
+      }
+      if (btnLeaflet) btnLeaflet.className = "px-3 py-1.5 bg-dsc-navy text-white font-medium transition-all hidden sm:inline-block";
+      if (btnGmap) btnGmap.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all";
+      if (btnSat) btnSat.className = "px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all";
+    }
+  }
+
+  if (btnGmap) btnGmap.addEventListener('click', () => setMapActive('gmap'));
+  if (btnSat) btnSat.addEventListener('click', () => setMapActive('sat'));
+  if (btnLeaflet) btnLeaflet.addEventListener('click', () => setMapActive('leaflet'));
 
   // 2. Handle Specific Item Sample Request
   if (ref) {

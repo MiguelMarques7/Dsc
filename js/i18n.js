@@ -176,13 +176,13 @@ const dictionary = {
     "h1": "Inicie o seu próximo projeto têxtil com a equipa da DSC.",
     "lead": "Estamos à disposição para receber pedidos de cotação de produção, envio de coleções de amostras ou marcação de reuniões com o nosso departamento técnico-comercial.",
     "info": {
-      "factory_title": "Unidade Fabril & Sede",
-      "address": "Rua do Progresso, 120, Guimarães / Vizela, Portugal",
-      "geo": "Bacia Têxtil do Vale do Ave",
-      "email_title": "Email Corporativo & B2B",
-      "email": "export@dsc.pt",
+      "factory_title": "Sede Fabril & Produção",
+      "address": "Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso, Portugal",
+      "geo": "Cluster do Vale do Ave",
+      "email_title": "Email Corporativo",
+      "email": "comercial@dsc.pt",
       "phone_title": "Telefone Direto",
-      "phone": "+351 253 000 000",
+      "phone": "+351 252 881 145",
       "hours": "Segunda a Sexta-feira: 08:30 — 17:30 (GMT)"
     },
     "form": {
@@ -397,13 +397,13 @@ const dictionary = {
     "h1": "Initiate your upcoming textile project with the DSC team.",
     "lead": "We are available to review production quotation inquiries, ship curated sample boxes, or arrange mill meetings with our technical-commercial department.",
     "info": {
-      "factory_title": "Industrial Mill & Headquarters",
-      "address": "Rua do Progresso, 120, Guimarães / Vizela, Portugal",
+      "factory_title": "Mill Headquarters & Production",
+      "address": "Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso, Portugal",
       "geo": "Ave Valley Textile Basin",
-      "email_title": "B2B & Export Inquiries",
-      "email": "export@dsc.pt",
+      "email_title": "Corporate Email",
+      "email": "comercial@dsc.pt",
       "phone_title": "Direct Phone",
-      "phone": "+351 253 000 000",
+      "phone": "+351 252 881 145",
       "hours": "Monday to Friday: 08:30 — 17:30 (GMT)"
     },
     "form": {
