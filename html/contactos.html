@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DSC — Contactos & Sourcing B2B</title>
   
-  <!-- Tailwind CSS & Centralized Configuration -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../js/tailwind-config.js"></script>
-
   <!-- Importação Tipográfica: Editorial + Suave + Técnica -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS & Centralized Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/tailwind-config.js"></script>
 
   <!-- Design System & Architecture Stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
@@ -89,288 +89,385 @@
   </header>
 
   <main>
-    <section class="py-16 lg:py-20 bg-dsc-canvas border-b border-dsc-line" id="contact-section">
+    <section class="py-16 lg:py-24 bg-dsc-canvas border-b border-dsc-line relative overflow-hidden" id="contact-section">
+      
+      <!-- Architectural background ambient lighting -->
+      <div class="absolute -right-20 -top-20 w-96 h-96 rounded-full opacity-[0.035] pointer-events-none" style="background: radial-gradient(circle, #B39860 0%, transparent 70%);"></div>
+
       <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Main Contact Header & Split Row -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
-          <!-- Lado Esquerdo (Informações) -->
-          <div class="lg:col-span-5">
-            <span class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
-              <span class="micro-dot micro-dot-pulse"></span>
-              <span data-i18n="contacts.badge">06 / Relações Comerciais & Exportação</span>
-            </span>
-            <h1 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1] text-dsc-navy mb-5" data-i18n="contacts.h1">
-              Inicie o seu próximo projeto têxtil com a equipa da DSC.
-            </h1>
-            <p class="text-sm sm:text-base text-dsc-body leading-relaxed font-light mb-8" data-i18n="contacts.lead">
-              Estamos à disposição para receber pedidos de cotação de produção, envio de coleções de amostras ou marcação de reuniões com o nosso departamento técnico-comercial.
-            </p>
+          <!-- Lado Esquerdo (Informações Corporativas & Fabris) -->
+          <div class="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <span class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
+                <span class="micro-dot micro-dot-pulse"></span>
+                <span data-i18n="contacts.badge">06 / RELA&Ccedil;&Otilde;ES COMERCIAIS &middot; SOURCING B2B</span>
+              </span>
+              
+              <h1 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1] text-dsc-navy mb-5" data-i18n="contacts.h1">
+                Inicie o seu pr&oacute;ximo projeto t&ecirc;xtil com a equipa da DSC.
+              </h1>
+              
+              <p class="text-sm sm:text-base text-dsc-body leading-relaxed font-light mb-8" data-i18n="contacts.lead">
+                Estamos &agrave; disposi&ccedil;&atilde;o de marcas, retalhistas e grupos hoteleiros para pedidos de cota&ccedil;&atilde;o industrial, envio de cole&ccedil;&otilde;es de amostras f&iacute;sicas ou agendamento de reuni&otilde;es t&eacute;cnicas na nossa f&aacute;brica em Roriz, Santo Tirso.
+              </p>
+            </div>
             
-            <div class="space-y-6 border-t border-dsc-line pt-8 text-xs font-mono">
-              <div class="bg-white p-5 border border-dsc-line interactive-card">
-                <div class="text-[10px] text-dsc-muted uppercase tracking-widest mb-1.5 flex items-center gap-2" data-i18n="contacts.info.factory_title">
-                  <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                  Unidade Fabril & Sede:
+            <div class="space-y-4 pt-2 text-xs font-mono">
+              
+              <!-- Card 1: Instalações Fabris -->
+              <div class="bg-white p-6 border border-dsc-line interactive-card shadow-sm">
+                <div class="text-[10px] text-dsc-muted uppercase tracking-widest mb-1.5 flex items-center justify-between">
+                  <span class="flex items-center gap-1.5 text-dsc-gold font-bold">
+                    <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                    SEDE FABRIL &amp; PRODU&Ccedil;&Atilde;O
+                  </span>
+                  <span class="text-dsc-muted">NIF: 505 528 606</span>
                 </div>
-                <div class="text-dsc-navy font-sans font-normal text-sm"><span class="ph">Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso</span>, Portugal</div>
-                <div class="text-dsc-muted mt-2 text-[10px] uppercase tracking-widest flex items-center gap-1.5" data-i18n="contacts.info.geo">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  Cluster Têxtil do Vale do Ave
+                <div class="text-dsc-navy font-sans font-medium text-base mt-1">
+                  Domingos Silva &amp; Cunha, Lda.
+                </div>
+                <div class="text-dsc-body font-sans font-light text-xs mt-1">
+                  Rua Quinta do Pinheiro, N.&ordm; 74, 4795-376 Roriz, Santo Tirso, Portugal
+                </div>
+                <div class="mt-3 pt-2.5 border-t border-dsc-line text-[10px] text-dsc-muted flex items-center justify-between">
+                  <span>4.800 m&sup2; de &Aacute;rea Fabril</span>
+                  <span class="text-emerald-600 font-medium">Cluster do Vale do Ave</span>
                 </div>
               </div>
 
-              <div class="bg-white p-5 border border-dsc-line interactive-card">
-                <div class="text-[10px] text-dsc-muted uppercase tracking-widest mb-1.5 flex items-center gap-2" data-i18n="contacts.info.email_title">
-                  <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                  Departamento Comercial & B2B:
+              <!-- Card 2: Contacto Telefónico & Horário -->
+              <div class="bg-white p-6 border border-dsc-line interactive-card shadow-sm">
+                <div class="text-[10px] text-dsc-muted uppercase tracking-widest mb-1.5 flex items-center justify-between">
+                  <span class="flex items-center gap-1.5 text-dsc-gold font-bold">
+                    <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                    TELEFONE DIRETO
+                  </span>
+                  <span class="text-dsc-muted">Seg &ndash; Sex: 08:30 &ndash; 17:30 GMT</span>
                 </div>
-                <div class="text-dsc-navy text-sm font-semibold"><span class="ph">[EMAIL_COMERCIAL@DSC.PT]</span></div>
+                <div class="text-dsc-navy font-mono font-semibold text-base mt-1 flex items-center gap-2">
+                  <a href="tel:+351252881145" class="hover:text-dsc-gold transition-colors">+351 252 881 145</a>
+                </div>
+                <div class="text-dsc-muted text-[10px] mt-1">
+                  Chamada para a rede fixa nacional &middot; Atendimento t&eacute;cnico em PT, EN, FR, ES
+                </div>
               </div>
 
-              <div class="bg-white p-5 border border-dsc-line interactive-card">
-                <div class="text-[10px] text-dsc-muted uppercase tracking-widest mb-1.5 flex items-center gap-2" data-i18n="contacts.info.phone_title">
-                  <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                  Telefone Direto:
+              <!-- Card 3: Email Comercial -->
+              <div class="bg-white p-6 border border-dsc-line interactive-card shadow-sm">
+                <div class="text-[10px] text-dsc-muted uppercase tracking-widest mb-1.5 flex items-center justify-between">
+                  <span class="flex items-center gap-1.5 text-dsc-gold font-bold">
+                    <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                    EMAIL CORPORATIVO
+                  </span>
+                  <span class="text-emerald-600 font-medium">Resposta em 24h &uacute;teis</span>
                 </div>
-                <div class="text-dsc-navy text-sm font-semibold"><span class="ph">+351 252 881 145</span></div>
-                <div class="text-dsc-muted mt-2 text-[10px] uppercase tracking-widest" data-i18n="contacts.info.hours">
-                  Segunda a Sexta-feira: 08:30 — 17:30 (GMT)
+                <div class="text-dsc-navy font-mono font-semibold text-base mt-1">
+                  <a href="mailto:comercial@dsc.pt" class="hover:text-dsc-gold transition-colors">comercial@dsc.pt</a>
+                </div>
+                <div class="text-dsc-muted text-[10px] mt-1">
+                  Para pedidos de cota&ccedil;&atilde;o, amostragem e cadernos de encargos t&eacute;cnicos.
                 </div>
               </div>
+
             </div>
           </div>
 
-          <!-- Lado Direito (Formulário) -->
-          <div class="lg:col-span-7 bg-white border border-dsc-line shadow-md p-8 md:p-12 relative rounded-none">
+          <!-- Lado Direito (Formulário B2B de Alta Precisão) -->
+          <div class="lg:col-span-7 bg-white border border-dsc-line shadow-lg p-8 md:p-12 relative rounded-none flex flex-col justify-between">
             
-            <div class="flex items-center justify-between pb-4 border-b border-dsc-line mb-8">
-              <h2 class="font-serif font-normal text-2xl sm:text-3xl text-dsc-navy flex items-center gap-2" data-i18n="contacts.form.title">
-                <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                Formulário de Pedido Técnico B2B
-              </h2>
-              <span class="text-[10px] font-mono text-dsc-muted uppercase">Resposta em 24h úteis</span>
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-dsc-line mb-8">
+                <div>
+                  <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted block mb-1">Engenharia T&ecirc;xtil B2B</span>
+                  <h2 class="font-serif font-normal text-2xl sm:text-3xl text-dsc-navy flex items-center gap-2" data-i18n="contacts.form.title">
+                    <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                    Formul&aacute;rio de Pedido T&eacute;cnico &amp; Cota&ccedil;&atilde;o
+                  </h2>
+                </div>
+                <span class="badge-gold text-[9px] uppercase hidden sm:inline-block">RESPOSTA &lt; 24H</span>
+              </div>
+
+              <!-- Sample Badge Selector Container (Visible when navigated from catalog) -->
+              <div id="sample-badge" class="hidden mb-6 bg-dsc-canvas border border-dsc-gold/50 p-4 text-[11px] font-mono tracking-wider uppercase text-dsc-navy flex items-center justify-between rounded-none shadow-sm">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-dsc-gold micro-dot-pulse"></span>
+                  <div>
+                    <strong data-i18n="contacts.form.sample_badge_prefix">Amostra em configura&ccedil;&atilde;o:</strong> 
+                    <span id="sample-ref-name" class="font-bold text-dsc-navy ml-1"></span>
+                  </div>
+                </div>
+                <span class="badge-navy text-[8px]">AMOSTRA B2B</span>
+              </div>
+
+              <form id="b2b-contact-form" class="space-y-6">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-dsc-navy font-medium mb-2">
+                      Nome Completo <span class="text-dsc-gold">*</span>
+                    </label>
+                    <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3.5 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_name" placeholder="Ex: Eng. João Silva">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-dsc-navy font-medium mb-2">
+                      Empresa / Entidade <span class="text-dsc-gold">*</span>
+                    </label>
+                    <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3.5 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_company" placeholder="Ex: Maison Textile GmbH">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-dsc-navy font-medium mb-2">
+                      Pa&iacute;s de Destino <span class="text-dsc-gold">*</span>
+                    </label>
+                    <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3.5 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_country" placeholder="Ex: Alemanha, França, EUA, Suécia...">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-dsc-navy font-medium mb-2">
+                      Email Corporativo <span class="text-dsc-gold">*</span>
+                    </label>
+                    <input type="email" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3.5 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_email" placeholder="nome@empresa.com">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-dsc-navy font-medium mb-2">
+                      Telefone / WhatsApp
+                    </label>
+                    <input type="tel" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3.5 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_phone" placeholder="+351 912 345 678">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono uppercase tracking-wider text-dsc-navy font-medium mb-2">
+                      &Acirc;mbito do Projeto <span class="text-dsc-gold">*</span>
+                    </label>
+                    <select id="form-scope-select" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3.5 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-body rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150">
+                      <option value="" disabled selected data-i18n="contacts.form.field_scope">Selecione o &acirc;mbito...</option>
+                      <option value="opt0" data-i18n="contacts.form.scope_options.opt0">Pedido de Amostras de Toalhas</option>
+                      <option value="opt1" data-i18n="contacts.form.scope_options.opt1">Desenvolvimento de Cole&ccedil;&atilde;o Private Label</option>
+                      <option value="opt2" data-i18n="contacts.form.scope_options.opt2">Produ&ccedil;&atilde;o Modular (Tecelagem / Confe&ccedil;&atilde;o)</option>
+                      <option value="opt3" data-i18n="contacts.form.scope_options.opt3">Parceria / Representa&ccedil;&atilde;o Comercial</option>
+                      <option value="opt4" data-i18n="contacts.form.scope_options.opt4">Outro Pedido T&eacute;cnico / Visita Fabril</option>
+                      <option value="opt_sample" data-i18n="contacts.form.scope_options.opt_sample" class="hidden">Amostragem de Artigo Espec&iacute;fico</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono uppercase tracking-wider text-dsc-navy font-medium mb-2">
+                    Especifica&ccedil;&otilde;es T&eacute;cnicas &amp; Quantidades <span class="text-dsc-gold">*</span>
+                  </label>
+                  <textarea id="form-specs" rows="4" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3.5 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_details" placeholder="Descreva os requisitos técnicos (Ex: 2.000 toalhas 550g em algodão penteado, cor Pantone personalizada, etiquetas em damasco)..."></textarea>
+                </div>
+
+                <div class="pt-2">
+                  <p class="font-mono text-[10px] text-dsc-muted font-light leading-relaxed mb-4 tracking-wider uppercase flex items-center gap-1.5" data-i18n="contacts.form.privacy">
+                    <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                    Os dados facultados destinam-se exclusivamente à análise comercial e resposta técnica pela equipa DSC.
+                  </p>
+
+                  <button type="submit" class="w-full py-4 bg-dsc-navy hover:bg-dsc-navy-deep border border-dsc-navy hover:border-dsc-gold text-white text-xs font-sans uppercase font-medium tracking-wider transition-all duration-200 rounded-none cursor-pointer shadow-md hover:shadow-xl hover:shadow-dsc-navy/20 active:scale-[0.99] flex items-center justify-center gap-3 arrow-trigger" data-i18n="contacts.form.button">
+                    <span>Enviar Pedido de Cota&ccedil;&atilde;o</span>
+                    <span class="arrow-target text-dsc-gold">&rarr;</span>
+                  </button>
+                </div>
+
+              </form>
             </div>
 
-            <div id="sample-badge" class="hidden mb-6 bg-dsc-surface border border-dsc-gold/40 p-4 text-[10px] font-mono tracking-widest uppercase text-dsc-navy flex items-center rounded-none shadow-sm">
-              <span class="w-2 h-2 rounded-full bg-dsc-gold micro-dot-pulse mr-3"></span>
-              <div>
-                <strong data-i18n="contacts.form.sample_badge_prefix">Amostra em configuração:</strong> <span id="sample-ref-name" class="font-bold text-dsc-navy ml-1"></span>
-              </div>
-            </div>
-
-            <form id="b2b-contact-form" class="space-y-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
-                    Nome Completo <span class="text-dsc-gold">*</span>
-                  </label>
-                  <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_name" placeholder="Ex: Eng. João Silva">
-                </div>
-                <div>
-                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
-                    Empresa / Entidade <span class="text-dsc-gold">*</span>
-                  </label>
-                  <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_company" placeholder="Ex: Textil Brand Ltd.">
-                </div>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
-                    País de Destino <span class="text-dsc-gold">*</span>
-                  </label>
-                  <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_country" placeholder="Ex: Portugal, França, Alemanha...">
-                </div>
-                <div>
-                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
-                    Email Corporativo <span class="text-dsc-gold">*</span>
-                  </label>
-                  <input type="email" required class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_email" placeholder="nome@empresa.com">
-                </div>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
-                    Telefone / WhatsApp
-                  </label>
-                  <input type="tel" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_phone" placeholder="+351 912 345 678">
-                </div>
-                <div>
-                  <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
-                    Âmbito do Projeto <span class="text-dsc-gold">*</span>
-                  </label>
-                  <select id="form-scope-select" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-body rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150">
-                    <option value="" disabled selected data-i18n="contacts.form.field_scope">Selecione o âmbito...</option>
-                    <option value="opt0" data-i18n="contacts.form.scope_options.opt0">Pedido de Amostras de Toalhas</option>
-                    <option value="opt1" data-i18n="contacts.form.scope_options.opt1">Desenvolvimento de Coleção Private Label</option>
-                    <option value="opt2" data-i18n="contacts.form.scope_options.opt2">Produção Modular (Tecelagem / Confeção)</option>
-                    <option value="opt3" data-i18n="contacts.form.scope_options.opt3">Parceria / Representação Comercial de Marca Própria</option>
-                    <option value="opt4" data-i18n="contacts.form.scope_options.opt4">Outro Pedido Técnico</option>
-                    <option value="opt_sample" data-i18n="contacts.form.scope_options.opt_sample" class="hidden">Amostragem de Artigo Específico</option>
-                  </select>
-                </div>
-              </div>
-              <div>
-                <label class="block text-sm font-sans font-medium text-dsc-navy mb-1.5">
-                  Especificações Técnicas <span class="text-dsc-gold">*</span>
-                </label>
-                <textarea id="form-specs" rows="4" class="w-full bg-dsc-canvas border border-dsc-line px-4 py-3 text-sm focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy-slate transition-colors duration-150" data-i18n="contacts.form.field_details" placeholder="Especificações do Pedido (Quantidades estimadas, gramagens pretendidas, referências) *"></textarea>
-              </div>
-              <p class="font-mono text-[10px] text-dsc-muted font-light leading-relaxed mb-4 tracking-widest uppercase flex items-center gap-1.5" data-i18n="contacts.form.privacy">
-                <span class="w-1 h-1 rounded-full bg-dsc-gold"></span>
-                Os seus dados serão processados exclusivamente pela equipa comercial da DSC para resposta à presente consulta técnica.
-              </p>
-              <button type="submit" class="w-full py-4 bg-dsc-navy hover:bg-dsc-navy-deep border border-dsc-navy hover:border-dsc-gold text-white text-xs font-sans uppercase font-medium tracking-wider transition-all duration-200 rounded-none cursor-pointer shadow-md hover:shadow-xl hover:shadow-dsc-navy/20 active:scale-[0.99] flex items-center justify-center gap-3 arrow-trigger" data-i18n="contacts.form.button">
-                <span>Enviar Pedido de Cotação</span>
-                <span class="arrow-target text-dsc-gold">&rarr;</span>
-              </button>
-            </form>
           </div>
 
         </div>
 
-        <!-- ================= MAPA FABRIL & HUB LOGÍSTICO ================= -->
-        <div class="mt-24 border border-dsc-line bg-white shadow-sm overflow-hidden">
-          <div class="p-8 md:p-10 border-b border-dsc-line bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <!-- ================= MAPA FABRIL COM LOCALIZAÇÃO EXATA DSC ================= -->
+        <div class="mt-24 border border-dsc-line bg-white shadow-lg overflow-hidden">
+          
+          <div class="p-8 md:p-10 border-b border-dsc-line bg-dsc-canvas flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
               <div class="inline-flex items-center gap-2 mb-2">
                 <span class="micro-dot micro-dot-pulse"></span>
-                <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">Geolocalização Industrial</span>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">Unidade Fabril &amp; Polo Log&iacute;stico</span>
               </div>
               <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">
-                No Coração do Cluster Têxtil Europeu: Santo Tirso, Vale do Ave
+                Localiza&ccedil;&atilde;o da F&aacute;brica DSC: Roriz, Santo Tirso
               </h2>
               <p class="text-xs sm:text-sm text-dsc-body font-light mt-1 max-w-2xl">
-                A nossa unidade industrial e sede em Roriz, Santo Tirso, beneficia de ligações rodoviárias diretas aos principais eixos logísticos da Península Ibérica e Europa central.
+                A nossa unidade industrial na <strong>Rua Quinta do Pinheiro, N.&ordm; 74 (Roriz)</strong> est&aacute; estrategicamente posicionada a curta dist&acirc;ncia dos eixos rodovi&aacute;rios A3 e A7, do Aeroporto Sá Carneiro e do Porto de Leixões.
               </p>
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Quinta+do+Pinheiro+74+4795-376+Roriz+Santo+Tirso+Portugal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 border border-dsc-navy bg-white hover:bg-dsc-navy hover:text-white font-sans text-xs uppercase font-medium tracking-wider text-dsc-navy transition-all duration-200 shrink-0">
-              <span>Abrir no Google Maps</span>
-              <span class="text-dsc-gold">&rarr;</span>
-            </a>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="https://www.google.com/maps/search/?api=1&query=Rua+Quinta+do+Pinheiro+74+4795-376+Roriz+Santo+Tirso+Portugal" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 border border-dsc-navy bg-white hover:bg-dsc-navy hover:text-white font-sans text-xs uppercase font-medium tracking-wider text-dsc-navy transition-all duration-200 shrink-0 shadow-sm">
+                <span>Abrir no Google Maps</span>
+                <span class="text-dsc-gold">&nearr;</span>
+              </a>
+              <a href="https://maps.apple.com/?q=Rua+Quinta+do+Pinheiro+74+Roriz+Santo+Tirso" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 border border-dsc-line bg-dsc-canvas hover:border-dsc-navy font-sans text-xs uppercase font-medium tracking-wider text-dsc-navy transition-all duration-200 shrink-0">
+                <span>Apple Maps</span>
+              </a>
+            </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12">
-            <!-- Iframe do Mapa (Embed de alta precisão de Santo Tirso / Roriz) -->
-            <div class="lg:col-span-8 min-h-[380px] h-full relative bg-slate-100">
+            
+            <!-- Iframe do Mapa com Pin Exato em Santo Tirso / Roriz -->
+            <div class="lg:col-span-8 min-h-[420px] h-full relative bg-slate-100">
               <iframe 
-                class="w-full h-full min-h-[380px] border-0" 
+                class="w-full h-full min-h-[420px] border-0" 
                 src="https://maps.google.com/maps?q=Rua+Quinta+do+Pinheiro+74,+4795-376+Roriz,+Santo+Tirso,+Portugal&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 loading="lazy"
-                title="Mapa de Localização DSC — Rua Quinta do Pinheiro 74, Roriz, Santo Tirso">
+                title="Localização DSC — Rua Quinta do Pinheiro 74, Roriz, Santo Tirso">
               </iframe>
-              <div class="absolute bottom-4 left-4 bg-dsc-navy text-white px-4 py-2.5 text-[11px] font-mono shadow-lg flex items-center gap-2 border border-slate-700">
-                <span class="w-2 h-2 rounded-full bg-dsc-gold micro-dot-pulse"></span>
-                <span>DSC • Sede &amp; Unidade Fabril (Roriz, Santo Tirso)</span>
+              
+              <!-- Floating Industrial Pin Overlay Card -->
+              <div class="absolute bottom-5 left-5 right-5 sm:right-auto bg-dsc-navy-deep/95 backdrop-blur-md text-white p-4 border border-white/20 shadow-2xl max-w-sm">
+                <div class="flex items-center justify-between gap-4 mb-1.5">
+                  <span class="badge-gold text-[8px] uppercase tracking-widest">SEDE &amp; UNIDADE INDUSTRIAL</span>
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 micro-dot-pulse"></span>
+                </div>
+                <h4 class="font-serif text-base font-medium text-white">DSC &mdash; Domingos Silva &amp; Cunha</h4>
+                <p class="text-[11px] text-slate-300 font-light mt-0.5">
+                  Rua Quinta do Pinheiro, 74 &middot; 4795-376 Roriz, Santo Tirso
+                </p>
+                <div class="mt-2.5 pt-2 border-t border-white/10 flex items-center justify-between text-[10px] font-mono text-dsc-gold">
+                  <span>GPS: 41&deg;20'55.0"N 8&deg;23'03.1"W</span>
+                  <span class="text-white font-sans text-[11px]">&bull; Vale do Ave</span>
+                </div>
               </div>
             </div>
 
-            <!-- Painel de Conectividade Logística -->
+            <!-- Painel de Conectividade Logística e Exportação -->
             <div class="lg:col-span-4 p-8 border-t lg:border-t-0 lg:border-l border-dsc-line bg-white flex flex-col justify-between space-y-6">
               <div>
-                <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-gold font-bold block mb-4">
-                  Conexões Estratégicas de Exportação
+                <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-gold font-bold block mb-4 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
+                  Conex&otilde;es Estrat&eacute;gicas de Exporta&ccedil;&atilde;o
                 </span>
                 
                 <div class="space-y-4 font-mono text-xs">
-                  <div class="p-3 border border-dsc-line bg-slate-50">
-                    <div class="text-[10px] text-dsc-muted uppercase">Aeroporto de Carga Aérea</div>
-                    <div class="text-dsc-navy font-semibold text-sm mt-0.5">Aeroporto Francisco Sá Carneiro (OPO)</div>
-                    <div class="text-[11px] text-dsc-gold font-bold mt-1">38 km • 30 min via A3 / A7</div>
+                  <div class="p-3.5 border border-dsc-line bg-dsc-canvas interactive-card">
+                    <div class="text-[10px] text-dsc-muted uppercase">Aeroporto Internacional</div>
+                    <div class="text-dsc-navy font-semibold text-sm mt-0.5 font-sans">Francisco S&aacute; Carneiro (OPO)</div>
+                    <div class="text-[11px] text-dsc-gold font-bold mt-1">38 km &bull; 30 min via A3 / A7</div>
                   </div>
 
-                  <div class="p-3 border border-dsc-line bg-slate-50">
-                    <div class="text-[10px] text-dsc-muted uppercase">Terminal Marítimo de Contentores</div>
-                    <div class="text-dsc-navy font-semibold text-sm mt-0.5">Porto de Leixões (Matosinhos)</div>
-                    <div class="text-[11px] text-dsc-gold font-bold mt-1">45 km • 35 min via A3 / A28</div>
+                  <div class="p-3.5 border border-dsc-line bg-dsc-canvas interactive-card">
+                    <div class="text-[10px] text-dsc-muted uppercase">Porto de Contentores Mar&iacute;timo</div>
+                    <div class="text-dsc-navy font-semibold text-sm mt-0.5 font-sans">Porto de Leix&otilde;es (Matosinhos)</div>
+                    <div class="text-[11px] text-dsc-gold font-bold mt-1">45 km &bull; 35 min via A3 / A28</div>
                   </div>
 
-                  <div class="p-3 border border-dsc-line bg-slate-50">
-                    <div class="text-[10px] text-dsc-muted uppercase">Eixo Rodoviário Ibérico</div>
-                    <div class="text-dsc-navy font-semibold text-sm mt-0.5">Autoestradas A3 / A7 / A11</div>
-                    <div class="text-[11px] text-dsc-gold font-bold mt-1">Acesso direto a Vigo, Madrid e França</div>
+                  <div class="p-3.5 border border-dsc-line bg-dsc-canvas interactive-card">
+                    <div class="text-[10px] text-dsc-muted uppercase">Rede Rodovi&aacute;ria Ib&eacute;rica</div>
+                    <div class="text-dsc-navy font-semibold text-sm mt-0.5 font-sans">Autoestradas A3 / A7 / A11</div>
+                    <div class="text-[11px] text-dsc-gold font-bold mt-1">Acesso r&aacute;pido a Espanha, Fran&ccedil;a e Europa Central</div>
                   </div>
                 </div>
               </div>
 
-              <div class="pt-4 border-t border-dsc-line text-[11px] font-mono text-dsc-muted">
-                <span>Coordenadas GPS Fabril:</span>
-                <div class="text-dsc-navy font-semibold mt-1">41°20'55.0"N 8°23'03.1"W &middot; Santo Tirso</div>
+              <div class="pt-4 border-t border-dsc-line text-[11px] font-mono text-dsc-muted space-y-1">
+                <div class="flex justify-between">
+                  <span>Recep&ccedil;&atilde;o de Cargas:</span>
+                  <span class="text-dsc-navy font-semibold">Port&atilde;o Log&iacute;stico Sul</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Hor&aacute;rio de Carga:</span>
+                  <span class="text-dsc-navy font-semibold">08:00 &ndash; 17:00</span>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
 
-        <!-- ================= CANAIS DE DEPARTAMENTO DIRETOS ================= -->
-        <div class="mt-20">
-          <div class="max-w-2xl mb-8">
+        <!-- ================= CANAIS DIRETOS POR DEPARTAMENTO ================= -->
+        <div class="mt-24">
+          <div class="max-w-2xl mb-10">
             <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2 flex items-center gap-2">
               <span class="micro-dot micro-dot-pulse"></span>
-              Comunicação Corporativa Dedicada
+              Comunica&ccedil;&atilde;o Corporativa Dedicada
             </span>
-            <h2 class="text-3xl font-light tracking-tight text-dsc-navy">
+            <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">
               Canais Diretos por Departamento
             </h2>
+            <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed mt-2">
+              Contacte diretamente os nossos especialistas para agilizar o tratamento do seu projeto.
+            </p>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="border border-dsc-line bg-white p-6 shadow-sm interactive-card">
-              <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">01 // AMOSTRAGEM</span>
-              <h4 class="font-medium text-dsc-navy text-sm mb-1">Pedidos de Amostras B2B</h4>
-              <p class="text-xs text-dsc-body font-light mb-3">Envio de conjuntos de catálogo, cartelas de cores e fichas técnicas para aprovação.</p>
-              <span class="copy-trigger cursor-pointer font-mono text-xs font-semibold text-dsc-navy hover:text-dsc-gold transition-colors inline-flex items-center gap-1.5" data-copy="samples@dsc.pt" title="Copiar email">
+            
+            <div class="border border-dsc-line bg-white p-6 shadow-sm interactive-card flex flex-col justify-between">
+              <div>
+                <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">01 // AMOSTRAGEM</span>
+                <h4 class="font-serif font-medium text-dsc-navy text-lg mb-1">Pedidos de Amostras B2B</h4>
+                <p class="text-xs text-dsc-body font-light mb-4">Envio de conjuntos de catálogo, cartelas de cores Pantone e amostras de toque para validação.</p>
+              </div>
+              <span class="copy-trigger cursor-pointer font-mono text-xs font-semibold text-dsc-navy hover:text-dsc-gold transition-colors inline-flex items-center gap-1.5 pt-3 border-t border-dsc-line" data-copy="samples@dsc.pt" title="Copiar email">
                 <span>samples@dsc.pt</span>
-                <svg class="w-3 h-3 text-dsc-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <svg class="w-3.5 h-3.5 text-dsc-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
               </span>
             </div>
 
-            <div class="border border-dsc-line bg-white p-6 shadow-sm interactive-card">
-              <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">02 // ENGENHARIA</span>
-              <h4 class="font-medium text-dsc-navy text-sm mb-1">I&D & Fichas Técnicas</h4>
-              <p class="text-xs text-dsc-body font-light mb-3">Apoio a designers e diretores de compras na seleção de gramagens e ensaios laboratoriais.</p>
-              <span class="copy-trigger cursor-pointer font-mono text-xs font-semibold text-dsc-navy hover:text-dsc-gold transition-colors inline-flex items-center gap-1.5" data-copy="engineering@dsc.pt" title="Copiar email">
+            <div class="border border-dsc-line bg-white p-6 shadow-sm interactive-card flex flex-col justify-between">
+              <div>
+                <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">02 // ENGENHARIA</span>
+                <h4 class="font-serif font-medium text-dsc-navy text-lg mb-1">I&amp;D &amp; Fichas T&eacute;cnicas</h4>
+                <p class="text-xs text-dsc-body font-light mb-4">Apoio a designers e diretores de compras na seleção de gramagens, densidades e ensaios laboratoriais.</p>
+              </div>
+              <span class="copy-trigger cursor-pointer font-mono text-xs font-semibold text-dsc-navy hover:text-dsc-gold transition-colors inline-flex items-center gap-1.5 pt-3 border-t border-dsc-line" data-copy="engineering@dsc.pt" title="Copiar email">
                 <span>engineering@dsc.pt</span>
-                <svg class="w-3 h-3 text-dsc-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <svg class="w-3.5 h-3.5 text-dsc-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
               </span>
             </div>
 
-            <div class="border border-dsc-line bg-white p-6 shadow-sm interactive-card">
-              <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">03 // EXPORTAÇÃO</span>
-              <h4 class="font-medium text-dsc-navy text-sm mb-1">Vendas & Mercados Globais</h4>
-              <p class="text-xs text-dsc-body font-light mb-3">Cotações de grande volume, contratos marco anuais e condições aduaneiras internacionais.</p>
-              <span class="copy-trigger cursor-pointer font-mono text-xs font-semibold text-dsc-navy hover:text-dsc-gold transition-colors inline-flex items-center gap-1.5" data-copy="export@dsc.pt" title="Copiar email">
+            <div class="border border-dsc-line bg-white p-6 shadow-sm interactive-card flex flex-col justify-between">
+              <div>
+                <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">03 // EXPORTA&Ccedil;&Atilde;O</span>
+                <h4 class="font-serif font-medium text-dsc-navy text-lg mb-1">Vendas &amp; Mercados Globais</h4>
+                <p class="text-xs text-dsc-body font-light mb-4">Cotações de grande volume, contratos marco anuais e condições aduaneiras internacionais.</p>
+              </div>
+              <span class="copy-trigger cursor-pointer font-mono text-xs font-semibold text-dsc-navy hover:text-dsc-gold transition-colors inline-flex items-center gap-1.5 pt-3 border-t border-dsc-line" data-copy="export@dsc.pt" title="Copiar email">
                 <span>export@dsc.pt</span>
-                <svg class="w-3 h-3 text-dsc-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <svg class="w-3.5 h-3.5 text-dsc-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
               </span>
             </div>
 
-            <div class="border border-dsc-line bg-white p-6 shadow-sm interactive-card">
-              <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">04 // LOGÍSTICA</span>
-              <h4 class="font-serif font-medium text-dsc-navy text-lg mb-1">Expedição & Tracking</h4>
-              <p class="text-xs text-dsc-body font-light mb-3">Agendamento de cargas, documentação EUR1/CMR e seguimento de contentores.</p>
-              <span class="copy-trigger cursor-pointer font-mono text-xs font-semibold text-dsc-navy hover:text-dsc-gold transition-colors inline-flex items-center gap-1.5" data-copy="logistics@dsc.pt" title="Copiar email">
+            <div class="border border-dsc-line bg-white p-6 shadow-sm interactive-card flex flex-col justify-between">
+              <div>
+                <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">04 // LOG&Iacute;STICA</span>
+                <h4 class="font-serif font-medium text-dsc-navy text-lg mb-1">Expedi&ccedil;&atilde;o &amp; Tracking</h4>
+                <p class="text-xs text-dsc-body font-light mb-4">Agendamento de cargas, documentação EUR1/CMR e seguimento de contentores marítimos e terrestres.</p>
+              </div>
+              <span class="copy-trigger cursor-pointer font-mono text-xs font-semibold text-dsc-navy hover:text-dsc-gold transition-colors inline-flex items-center gap-1.5 pt-3 border-t border-dsc-line" data-copy="logistics@dsc.pt" title="Copiar email">
                 <span>logistics@dsc.pt</span>
-                <svg class="w-3 h-3 text-dsc-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <svg class="w-3.5 h-3.5 text-dsc-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
               </span>
             </div>
+
           </div>
         </div>
 
         <!-- ================= B2B TECHNICAL FAQ ================= -->
-        <div class="mt-20 bg-white border border-dsc-line p-8 md:p-12 shadow-sm">
+        <div class="mt-24 bg-white border border-dsc-line p-8 md:p-12 shadow-sm">
           <div class="max-w-2xl mb-10">
             <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-dsc-muted block mb-2 flex items-center gap-2">
               <span class="micro-dot micro-dot-pulse"></span>
               Respostas a Compradores Internacionais
             </span>
             <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">
-              Perguntas Frequentes sobre Parcerias & Aprovisionamento B2B
+              Perguntas Frequentes sobre Parcerias &amp; Aprovisionamento B2B
             </h2>
           </div>
 
           <div class="space-y-4">
             <details class="group border border-dsc-line bg-slate-50/50 p-5 open:bg-white transition-colors cursor-pointer">
               <summary class="font-serif font-medium text-dsc-navy text-lg flex items-center justify-between list-none">
-                <span>Qual é a Quantidade Mínima de Encomenda (MOQ)?</span>
+                <span>Qual &eacute; a Quantidade M&iacute;nima de Encomenda (MOQ)?</span>
                 <span class="text-dsc-gold font-mono text-lg transition-transform group-open:rotate-45">+</span>
               </summary>
               <p class="text-xs text-dsc-body font-light leading-relaxed mt-3 pt-3 border-t border-dsc-line">
@@ -390,7 +487,7 @@
 
             <details class="group border border-dsc-line bg-slate-50/50 p-5 open:bg-white transition-colors cursor-pointer">
               <summary class="font-serif font-medium text-dsc-navy text-lg flex items-center justify-between list-none">
-                <span>Quais os Incoterms e modalidades de expedição praticados?</span>
+                <span>Quais os Incoterms e modalidades de expedi&ccedil;&atilde;o praticados?</span>
                 <span class="text-dsc-gold font-mono text-lg transition-transform group-open:rotate-45">+</span>
               </summary>
               <p class="text-xs text-dsc-body font-light leading-relaxed mt-3 pt-3 border-t border-dsc-line">
@@ -400,7 +497,7 @@
 
             <details class="group border border-dsc-line bg-slate-50/50 p-5 open:bg-white transition-colors cursor-pointer">
               <summary class="font-serif font-medium text-dsc-navy text-lg flex items-center justify-between list-none">
-                <span>É possível assinar Acordo de Confidencialidade (NDA) para marcas próprias?</span>
+                <span>&Eacute; poss&iacute;vel assinar Acordo de Confidencialidade (NDA) para marcas pr&oacute;prias?</span>
                 <span class="text-dsc-gold font-mono text-lg transition-transform group-open:rotate-45">+</span>
               </summary>
               <p class="text-xs text-dsc-body font-light leading-relaxed mt-3 pt-3 border-t border-dsc-line">
