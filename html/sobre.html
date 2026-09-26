@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="../css/style.css">
 
   <!-- Core Scripts -->
-  <script src="../js/i18n.js" defer></script>
   <script src="../js/main.js" defer></script>
 </head>
 <body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
@@ -31,38 +30,30 @@
           DSC
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
         </span>
-        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors" data-i18n="sobre_domingos_silva_cunha">Domingos Silva & Cunha</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors">Domingos Silva & Cunha</span>
       </a>
       
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-8 font-sans text-sm font-medium tracking-normal text-dsc-body">
-        <a href="sobre.html" class="nav-link active" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="nav-link" data-i18n="nav.services">Serviços</a>
-        <a href="catalogo.html" class="nav-link" data-i18n="nav.products">Catálogo</a>
-        <a href="sustentabilidade.html" class="nav-link" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
-        <a href="contactos.html" class="nav-link" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="nav-link active">Sobre Nós</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="catalogo.html" class="nav-link">Catálogo</a>
+        <a href="sustentabilidade.html" class="nav-link">Sustentabilidade</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contactos.html" class="nav-link">Contactos</a>
       </nav>
 
       <!-- Desktop Language & CTA -->
       <div class="hidden sm:flex items-center space-x-6">
-        <div class="flex items-center border border-dsc-line bg-dsc-surface/60 rounded-none p-0.5 font-mono text-[11px]">
-          <button id="btn-pt" onclick="applyLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-medium transition-all" aria-label="Versão em Português" data-i18n="sobre_pt">PT</button>
-          <button id="btn-en" onclick="applyLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all" aria-label="English Version" data-i18n="sobre_en">EN</button>
-        </div>
         <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
-          <span data-i18n="nav.cta">Sourcing B2B</span>
+          <span>Sourcing B2B</span>
           <span class="text-dsc-gold text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <div class="flex items-center space-x-3 md:hidden">
-        <div class="flex items-center border border-dsc-line bg-dsc-surface/60 text-[11px] font-mono">
-          <button onclick="applyLanguage('pt')" class="btn-lang-pt px-2 py-1 bg-dsc-navy text-white active:scale-95" aria-label="Versão em Português" data-i18n="sobre_pt">PT</button>
-          <button onclick="applyLanguage('en')" class="btn-lang-en px-2 py-1 text-dsc-muted active:scale-95" aria-label="English Version" data-i18n="sobre_en">EN</button>
-        </div>
         <button id="mobile-menu-btn" aria-label="Abrir Menu" class="p-2 border border-dsc-line text-dsc-navy hover:border-dsc-navy active:scale-95">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -74,14 +65,14 @@
     <!-- Mobile Drawer Menu -->
     <div id="mobile-menu" class="menu-closed md:hidden fixed inset-x-0 top-20 bg-dsc-white border-b border-dsc-line shadow-xl z-40 px-6 py-8">
       <nav class="flex flex-col space-y-5">
-        <a href="sobre.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços</a>
-        <a href="catalogo.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo</a>
-        <a href="sustentabilidade.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Blog</a>
-        <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Sobre Nós</a>
+        <a href="servicos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Serviços</a>
+        <a href="catalogo.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Catálogo</a>
+        <a href="sustentabilidade.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Sustentabilidade</a>
+        <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Blog</a>
+        <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Contactos</a>
         <div class="pt-4 border-t border-dsc-line">
-          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider" data-i18n="nav.cta">Sourcing B2B</a>
+          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider">Sourcing B2B</a>
         </div>
       </nav>
     </div>
@@ -125,14 +116,14 @@
           <p class="font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] text-dsc-gold mb-4">
             Domingos Silva &amp; Cunha &mdash; est. 2001
           </p>
-          <h1 class="font-serif font-normal text-white mb-6 text-3xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight" data-i18n-html="about.hero_h1_html">
+          <h1 class="font-serif font-normal text-white mb-6 text-3xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
             Tradi&ccedil;&atilde;o t&ecirc;xtil,<br>
             <span style="color: #B39860; font-style: italic;">engenharia</span>
             e vis&atilde;o global<br>
             <span class="text-white/70">a partir de Portugal.</span>
           </h1>
           <div class="w-16 h-px bg-dsc-gold mb-6 mt-1"></div>
-          <p class="font-sans text-white/75 font-light leading-relaxed max-w-2xl text-sm sm:text-base" data-i18n="about.hero_p">
+          <p class="font-sans text-white/75 font-light leading-relaxed max-w-2xl text-sm sm:text-base">
             46 colaboradores &middot; Roriz, Santo Tirso &middot; Cluster t&ecirc;xtil do Ave &mdash;
             o epicentro da fabrica&ccedil;&atilde;o de t&ecirc;xteis-lar de exporta&ccedil;&atilde;o europeia.
             Saber-fazer aut&ecirc;ntico aliado a tecnologia contempor&acirc;nea de tecelagem Jacquard.
@@ -184,7 +175,7 @@
               <span>01 / Identidade &amp; Engenharia</span>
             </span>
             
-            <h2 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl text-dsc-navy tracking-tight leading-[1.1] mb-6" data-i18n="about.story_title">
+            <h2 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl text-dsc-navy tracking-tight leading-[1.1] mb-6">
               Engenharia têxtil<br>
               <span style="color: #B39860; font-style: italic;">com alma portuguesa.</span>
             </h2>
@@ -197,10 +188,10 @@
             </div>
 
             <div class="space-y-4 text-sm text-dsc-body font-light leading-relaxed my-4">
-              <p data-i18n="about.story_p1">
+              <p>
                 Nascemos no ecossistema t&ecirc;xtil de excel&ecirc;ncia de Portugal com um prop&oacute;sito claro: entregar artigos de t&ecirc;xteis-lar que combinam rigor estrutural, durabilidade comprovada e um toque distinto. N&atilde;o encaramos o produto t&ecirc;xtil como uma comodidade, mas como o resultado de uma criteriosa engenharia de fios, tor&ccedil;&otilde;es e acabamentos.
               </p>
-              <p data-i18n="about.story_p2">
+              <p>
                 Com um modelo operacional &aacute;gil, combinamos o desenvolvimento cont&iacute;nuo da nossa marca pr&oacute;pria com uma rela&ccedil;&atilde;o estreita com parceiros e retalhistas internacionais. Oferecemos a solidez de uma manufatura de raiz europeia com capacidade para responder aos padr&otilde;es mais exigentes de private label e canal contract.
               </p>
             </div>
@@ -243,13 +234,13 @@
             <!-- Card 1: Origem Fabril -->
             <div class="bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card group relative overflow-hidden">
               <div class="flex items-center justify-between gap-2 mb-4">
-                <span class="badge-gold text-[9px]" data-i18n="sobre_cluster_do_ave">Cluster do Ave</span>
+                <span class="badge-gold text-[9px]">Cluster do Ave</span>
                 <span class="font-mono text-[10px] text-dsc-muted">41.35&deg; N &middot; 8.44&deg; W</span>
               </div>
               <div>
                 <div class="flex items-baseline gap-2 mb-1">
                   <span class="font-serif text-4xl sm:text-5xl font-light text-dsc-navy">Ave</span>
-                  <span class="font-mono text-xs text-dsc-gold font-semibold uppercase" data-i18n="sobre_norte_pt">Norte PT</span>
+                  <span class="font-mono text-xs text-dsc-gold font-semibold uppercase">Norte PT</span>
                 </div>
                 <h4 class="font-serif font-medium text-lg text-dsc-navy mb-2">Polo T&ecirc;xtil Europeu</h4>
                 <p class="text-xs text-dsc-body font-light leading-relaxed">
@@ -257,7 +248,7 @@
                 </p>
               </div>
               <div class="mt-5 pt-3.5 border-t border-dsc-line/80 flex items-center justify-between text-[10px] font-mono text-dsc-muted">
-                <span data-i18n="sobre_sede_roriz_santo_tirso">Sede: Roriz, Santo Tirso</span>
+                <span>Sede: Roriz, Santo Tirso</span>
                 <span class="text-dsc-navy font-medium">CAE 13920</span>
               </div>
             </div>
@@ -265,7 +256,7 @@
             <!-- Card 2: Área Fabril -->
             <div class="bg-dsc-white border border-dsc-line p-7 flex flex-col justify-between interactive-card group relative overflow-hidden">
               <div class="flex items-center justify-between gap-2 mb-4">
-                <span class="badge-navy text-[9px]" data-i18n="sobre_unidade_fabril">Unidade Fabril</span>
+                <span class="badge-navy text-[9px]">Unidade Fabril</span>
                 <span class="font-mono text-[10px] text-dsc-muted">Instala&ccedil;&otilde;es</span>
               </div>
               <div>
@@ -293,7 +284,7 @@
               <div>
                 <div class="flex items-baseline gap-1.5 mb-1">
                   <span class="font-serif text-4xl sm:text-5xl font-light text-dsc-navy">2.500<span class="text-2xl text-dsc-gold">+</span></span>
-                  <span class="font-mono text-xs text-dsc-muted uppercase" data-i18n="sobre_ton_ano">Ton./Ano</span>
+                  <span class="font-mono text-xs text-dsc-muted uppercase">Ton./Ano</span>
                 </div>
                 <h4 class="font-serif font-medium text-lg text-dsc-navy mb-2">Capacidade de Transforma&ccedil;&atilde;o</h4>
                 <p class="text-xs text-dsc-body font-light leading-relaxed">
@@ -316,12 +307,12 @@
             <div class="bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card group relative overflow-hidden">
               <div class="flex items-center justify-between gap-2 mb-4">
                 <span class="badge-navy text-[9px]">Exporta&ccedil;&atilde;o</span>
-                <span class="font-mono text-[10px] text-dsc-muted" data-i18n="sobre_24_mercados">24+ Mercados</span>
+                <span class="font-mono text-[10px] text-dsc-muted">24+ Mercados</span>
               </div>
               <div>
                 <div class="flex items-baseline gap-1.5 mb-1">
                   <span class="font-serif text-4xl sm:text-5xl font-light text-dsc-navy">85<span class="text-2xl text-dsc-gold">%</span></span>
-                  <span class="font-mono text-xs text-dsc-muted uppercase" data-i18n="sobre_global">Global</span>
+                  <span class="font-mono text-xs text-dsc-muted uppercase">Global</span>
                 </div>
                 <h4 class="font-serif font-medium text-lg text-dsc-navy mb-2">Presen&ccedil;a Internacional</h4>
                 <p class="text-xs text-dsc-body font-light leading-relaxed">
@@ -329,10 +320,10 @@
                 </p>
               </div>
               <div class="mt-5 pt-3.5 border-t border-dsc-line/80 flex items-center gap-1.5 flex-wrap font-mono text-[9px]">
-                <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy" data-i18n="sobre_alemanha">Alemanha</span>
+                <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy">Alemanha</span>
                 <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy">Fran&ccedil;a</span>
                 <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy">Su&iacute;&ccedil;a</span>
-                <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy" data-i18n="sobre_eua">EUA</span>
+                <span class="px-1.5 py-0.5 bg-white border border-dsc-line text-dsc-navy">EUA</span>
               </div>
             </div>
 
@@ -360,7 +351,7 @@
           </div>
           <button id="carousel-toggle" aria-label="Pausar / Retomar Carrossel" class="px-3 py-1.5 border border-dsc-line hover:border-dsc-navy hover:text-dsc-navy active:scale-95 transition-all text-xs font-mono bg-white flex items-center gap-1.5">
             <span id="carousel-toggle-icon">&parallel;</span>
-            <span id="carousel-toggle-text" data-i18n="sobre_pausar">Pausar</span>
+            <span id="carousel-toggle-text">Pausar</span>
           </button>
         </div>
       </div>
@@ -373,7 +364,7 @@
           <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0">
             <div>
               <div class="flex justify-between items-center mb-4">
-                <span class="badge-gold text-[9px]" data-i18n="sobre_hotelaria_5_estrelas">HOTELARIA 5 ESTRELAS</span>
+                <span class="badge-gold text-[9px]">HOTELARIA 5 ESTRELAS</span>
                 <span class="font-mono text-[10px] text-dsc-muted">700 g/m&sup2;</span>
               </div>
               <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Luxury Hospitality &amp; Resorts</h4>
@@ -382,7 +373,7 @@
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
-              <span data-i18n="sobre_lotes_com_rastreabilidade">Lotes com rastreabilidade</span>
+              <span>Lotes com rastreabilidade</span>
               <span class="text-dsc-navy font-medium">Lavagem a 90&deg;C</span>
             </div>
           </div>
@@ -394,14 +385,14 @@
                 <span class="badge-navy text-[9px]">RETALHO DE PREST&Iacute;GIO</span>
                 <span class="font-mono text-[10px] text-dsc-muted">550 g/m&sup2;</span>
               </div>
-              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2" data-i18n="sobre_european_department_stores">European Department Stores</h4>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">European Department Stores</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Desenvolvimento de cole&ccedil;&otilde;es sazonais de marca pr&oacute;pria em turco penteado e veludo jacquard para redes na Alemanha, &Aacute;ustria e Benelux.
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
               <span>Embalamento com c&oacute;digo EAN</span>
-              <span class="text-dsc-navy font-medium" data-i18n="sobre_selo_fsc">Selo FSC</span>
+              <span class="text-dsc-navy font-medium">Selo FSC</span>
             </div>
           </div>
 
@@ -410,16 +401,16 @@
             <div>
               <div class="flex justify-between items-center mb-4">
                 <span class="badge-gold text-[9px]">ECO-DESIGN N&Oacute;RDICO</span>
-                <span class="font-mono text-[10px] text-dsc-muted" data-i18n="sobre_gots_organic">GOTS Organic</span>
+                <span class="font-mono text-[10px] text-dsc-muted">GOTS Organic</span>
               </div>
-              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2" data-i18n="sobre_nordic_living_brands">Nordic Living Brands</h4>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Nordic Living Brands</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Produ&ccedil;&atilde;o exclusiva em 100% algod&atilde;o biol&oacute;gico certificado e linho europeu com estruturas waffle 3D para marcas da Escandin&aacute;via.
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
-              <span data-i18n="sobre_certificado_gots_anexo_6">Certificado GOTS Anexo 6</span>
-              <span class="text-dsc-navy font-medium" data-i18n="sobre_tinto_em_fio">Tinto em Fio</span>
+              <span>Certificado GOTS Anexo 6</span>
+              <span class="text-dsc-navy font-medium">Tinto em Fio</span>
             </div>
           </div>
 
@@ -428,7 +419,7 @@
             <div>
               <div class="flex justify-between items-center mb-4">
                 <span class="badge-navy text-[9px]">BEM-ESTAR &amp; SPAS</span>
-                <span class="font-mono text-[10px] text-dsc-muted" data-i18n="sobre_zero_twist_600g">Zero-Twist 600g</span>
+                <span class="font-mono text-[10px] text-dsc-muted">Zero-Twist 600g</span>
               </div>
               <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Thermal &amp; Thalasso Spas</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
@@ -437,7 +428,7 @@
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
               <span>Secagem ultrarr&aacute;pida</span>
-              <span class="text-dsc-navy font-medium" data-i18n="sobre_toque_volumoso">Toque volumoso</span>
+              <span class="text-dsc-navy font-medium">Toque volumoso</span>
             </div>
           </div>
 
@@ -445,17 +436,17 @@
           <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0">
             <div>
               <div class="flex justify-between items-center mb-4">
-                <span class="badge-gold text-[9px]" data-i18n="sobre_boutique_estates">BOUTIQUE ESTATES</span>
-                <span class="font-mono text-[10px] text-dsc-muted" data-i18n="sobre_jacquard_custom">Jacquard Custom</span>
+                <span class="badge-gold text-[9px]">BOUTIQUE ESTATES</span>
+                <span class="font-mono text-[10px] text-dsc-muted">Jacquard Custom</span>
               </div>
-              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2" data-i18n="sobre_heritage_country_estates">Heritage Country Estates</h4>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Heritage Country Estates</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Cole&ccedil;&otilde;es personalizadas com bordaduras jacquard exclusivas e monogramas bordados de alta defini&ccedil;&atilde;o para o Douro, Toscana e Proven&ccedil;a.
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
               <span>Bordados indel&eacute;veis</span>
-              <span class="text-dsc-navy font-medium" data-i18n="sobre_bordadura_relevo">Bordadura Relevo</span>
+              <span class="text-dsc-navy font-medium">Bordadura Relevo</span>
             </div>
           </div>
 
@@ -466,13 +457,13 @@
                 <span class="badge-navy text-[9px]">MARINE &amp; AVIATION</span>
                 <span class="font-mono text-[10px] text-dsc-muted">800 g/m&sup2; Premium</span>
               </div>
-              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2" data-i18n="sobre_bespoke_yachting_interiors">Bespoke Yachting Interiors</h4>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Bespoke Yachting Interiors</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Felpos de alta densidade em algod&atilde;o nobre com acabamento antibacteriano e resist&ecirc;ncia &agrave; salinidade mar&iacute;tima para frotas navais e jatos privados.
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
-              <span data-i18n="sobre_tratamento_antimicrobiano">Tratamento antimicrobiano</span>
+              <span>Tratamento antimicrobiano</span>
               <span class="text-dsc-navy font-medium">M&oacute;naco &middot; Genebra</span>
             </div>
           </div>
@@ -482,7 +473,7 @@
           <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0" aria-hidden="true">
             <div>
               <div class="flex justify-between items-center mb-4">
-                <span class="badge-gold text-[9px]" data-i18n="sobre_hotelaria_5_estrelas">HOTELARIA 5 ESTRELAS</span>
+                <span class="badge-gold text-[9px]">HOTELARIA 5 ESTRELAS</span>
                 <span class="font-mono text-[10px] text-dsc-muted">700 g/m&sup2;</span>
               </div>
               <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Luxury Hospitality &amp; Resorts</h4>
@@ -491,7 +482,7 @@
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
-              <span data-i18n="sobre_lotes_com_rastreabilidade">Lotes com rastreabilidade</span>
+              <span>Lotes com rastreabilidade</span>
               <span class="text-dsc-navy font-medium">Lavagem a 90&deg;C</span>
             </div>
           </div>
@@ -503,14 +494,14 @@
                 <span class="badge-navy text-[9px]">RETALHO DE PREST&Iacute;GIO</span>
                 <span class="font-mono text-[10px] text-dsc-muted">550 g/m&sup2;</span>
               </div>
-              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2" data-i18n="sobre_european_department_stores">European Department Stores</h4>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">European Department Stores</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Desenvolvimento de cole&ccedil;&otilde;es sazonais de marca pr&oacute;pria em turco penteado e veludo jacquard para redes na Alemanha, &Aacute;ustria e Benelux.
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
               <span>Embalamento com c&oacute;digo EAN</span>
-              <span class="text-dsc-navy font-medium" data-i18n="sobre_selo_fsc">Selo FSC</span>
+              <span class="text-dsc-navy font-medium">Selo FSC</span>
             </div>
           </div>
 
@@ -519,16 +510,16 @@
             <div>
               <div class="flex justify-between items-center mb-4">
                 <span class="badge-gold text-[9px]">ECO-DESIGN N&Oacute;RDICO</span>
-                <span class="font-mono text-[10px] text-dsc-muted" data-i18n="sobre_gots_organic">GOTS Organic</span>
+                <span class="font-mono text-[10px] text-dsc-muted">GOTS Organic</span>
               </div>
-              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2" data-i18n="sobre_nordic_living_brands">Nordic Living Brands</h4>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Nordic Living Brands</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Produ&ccedil;&atilde;o exclusiva em 100% algod&atilde;o biol&oacute;gico certificado e linho europeu com estruturas waffle 3D para marcas da Escandin&aacute;via.
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
-              <span data-i18n="sobre_certificado_gots_anexo_6">Certificado GOTS Anexo 6</span>
-              <span class="text-dsc-navy font-medium" data-i18n="sobre_tinto_em_fio">Tinto em Fio</span>
+              <span>Certificado GOTS Anexo 6</span>
+              <span class="text-dsc-navy font-medium">Tinto em Fio</span>
             </div>
           </div>
 
@@ -537,7 +528,7 @@
             <div>
               <div class="flex justify-between items-center mb-4">
                 <span class="badge-navy text-[9px]">BEM-ESTAR &amp; SPAS</span>
-                <span class="font-mono text-[10px] text-dsc-muted" data-i18n="sobre_zero_twist_600g">Zero-Twist 600g</span>
+                <span class="font-mono text-[10px] text-dsc-muted">Zero-Twist 600g</span>
               </div>
               <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Thermal &amp; Thalasso Spas</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
@@ -546,7 +537,7 @@
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
               <span>Secagem ultrarr&aacute;pida</span>
-              <span class="text-dsc-navy font-medium" data-i18n="sobre_toque_volumoso">Toque volumoso</span>
+              <span class="text-dsc-navy font-medium">Toque volumoso</span>
             </div>
           </div>
 
@@ -554,17 +545,17 @@
           <div class="w-[320px] sm:w-[360px] bg-dsc-canvas border border-dsc-line p-7 flex flex-col justify-between interactive-card shrink-0" aria-hidden="true">
             <div>
               <div class="flex justify-between items-center mb-4">
-                <span class="badge-gold text-[9px]" data-i18n="sobre_boutique_estates">BOUTIQUE ESTATES</span>
-                <span class="font-mono text-[10px] text-dsc-muted" data-i18n="sobre_jacquard_custom">Jacquard Custom</span>
+                <span class="badge-gold text-[9px]">BOUTIQUE ESTATES</span>
+                <span class="font-mono text-[10px] text-dsc-muted">Jacquard Custom</span>
               </div>
-              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2" data-i18n="sobre_heritage_country_estates">Heritage Country Estates</h4>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Heritage Country Estates</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Cole&ccedil;&otilde;es personalizadas com bordaduras jacquard exclusivas e monogramas bordados de alta defini&ccedil;&atilde;o para o Douro, Toscana e Proven&ccedil;a.
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
               <span>Bordados indel&eacute;veis</span>
-              <span class="text-dsc-navy font-medium" data-i18n="sobre_bordadura_relevo">Bordadura Relevo</span>
+              <span class="text-dsc-navy font-medium">Bordadura Relevo</span>
             </div>
           </div>
 
@@ -575,13 +566,13 @@
                 <span class="badge-navy text-[9px]">MARINE &amp; AVIATION</span>
                 <span class="font-mono text-[10px] text-dsc-muted">800 g/m&sup2; Premium</span>
               </div>
-              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2" data-i18n="sobre_bespoke_yachting_interiors">Bespoke Yachting Interiors</h4>
+              <h4 class="font-serif text-xl font-medium text-dsc-navy mb-2">Bespoke Yachting Interiors</h4>
               <p class="text-xs text-dsc-body font-light leading-relaxed">
                 Felpos de alta densidade em algod&atilde;o nobre com acabamento antibacteriano e resist&ecirc;ncia &agrave; salinidade mar&iacute;tima para frotas navais e jatos privados.
               </p>
             </div>
             <div class="mt-6 pt-3.5 border-t border-dsc-line flex items-center justify-between text-[10px] font-mono text-dsc-muted">
-              <span data-i18n="sobre_tratamento_antimicrobiano">Tratamento antimicrobiano</span>
+              <span>Tratamento antimicrobiano</span>
               <span class="text-dsc-navy font-medium">M&oacute;naco &middot; Genebra</span>
             </div>
           </div>
@@ -601,8 +592,8 @@
               <img src="../assets/factory_interior.png" alt="Parque Industrial DSC no Vale do Ave" class="w-full h-full object-cover zoom-target">
             </div>
             <div class="absolute -bottom-6 -right-6 bg-dsc-navy text-white p-6 shadow-xl hidden sm:block border-l-2 border-dsc-gold max-w-xs">
-              <span class="text-[10px] font-mono uppercase tracking-widest text-dsc-gold block mb-1" data-i18n="sobre_capacidade_operacional">Capacidade Operacional</span>
-              <p class="text-xs font-light leading-relaxed text-slate-300" data-i18n="sobre_parque_de_teares_eletr_nicos_de_lti">Parque de teares eletrónicos de última geração com controlo de tensão ponto a ponto.</p>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-dsc-gold block mb-1">Capacidade Operacional</span>
+              <p class="text-xs font-light leading-relaxed text-slate-300">Parque de teares eletrónicos de última geração com controlo de tensão ponto a ponto.</p>
             </div>
           </div>
 
@@ -611,25 +602,25 @@
               <span class="micro-dot"></span>
               Infraestrutura & Teares
             </span>
-            <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight" data-i18n="sobre_capacidade_fabril_moderna_instalada">Capacidade fabril moderna instalada no berço têxtil português.</h2>
-            <p class="font-sans text-base text-dsc-body font-light leading-relaxed" data-i18n="sobre_a_nossa_unidade_fabril_integra_toda">A nossa unidade fabril integra todas as fases críticas do desenvolvimento têxtil: desde a receção e ensaio de fios de fiações selecionadas, passando por urdissagem e tecelagem em teares de pinças e ar, até ao acabamento dimensional e confeção de alta tolerância.</p>
+            <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight">Capacidade fabril moderna instalada no berço têxtil português.</h2>
+            <p class="font-sans text-base text-dsc-body font-light leading-relaxed">A nossa unidade fabril integra todas as fases críticas do desenvolvimento têxtil: desde a receção e ensaio de fios de fiações selecionadas, passando por urdissagem e tecelagem em teares de pinças e ar, até ao acabamento dimensional e confeção de alta tolerância.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-xs font-mono">
               <div class="border border-dsc-line bg-white p-4">
                 <span class="text-dsc-gold font-bold text-sm block mb-1">100%</span>
-                <span class="text-dsc-navy" data-i18n="sobre_inspe_o_pe_a_a_pe_a_antes_de_embala">Inspeção peça a peça antes de embalamento</span>
+                <span class="text-dsc-navy">Inspeção peça a peça antes de embalamento</span>
               </div>
               <div class="border border-dsc-line bg-white p-4">
                 <span class="text-dsc-gold font-bold text-sm block mb-1">0.1 mm</span>
-                <span class="text-dsc-navy" data-i18n="sobre_precis_o_no_corte_e_costura_de_cant">Precisão no corte e costura de cantos</span>
+                <span class="text-dsc-navy">Precisão no corte e costura de cantos</span>
               </div>
               <div class="border border-dsc-line bg-white p-4">
                 <span class="text-dsc-gold font-bold text-sm block mb-1">90 ºC</span>
-                <span class="text-dsc-navy" data-i18n="sobre_resist_ncia_comprovada_em_lavagem_i">Resistência comprovada em lavagem industrial</span>
+                <span class="text-dsc-navy">Resistência comprovada em lavagem industrial</span>
               </div>
               <div class="border border-dsc-line bg-white p-4">
-                <span class="text-dsc-gold font-bold text-sm block mb-1" data-i18n="sobre_100_solar">100% Solar</span>
-                <span class="text-dsc-navy" data-i18n="sobre_energia_fotovoltaica_na_cobertura_f">Energia fotovoltaica na cobertura fabril</span>
+                <span class="text-dsc-gold font-bold text-sm block mb-1">100% Solar</span>
+                <span class="text-dsc-navy">Energia fotovoltaica na cobertura fabril</span>
               </div>
             </div>
           </div>
@@ -644,35 +635,35 @@
       <div class="max-w-7xl mx-auto px-6">
         
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="font-mono text-xs uppercase tracking-widest text-dsc-muted block mb-2" data-i18n="sobre_quatro_d_cadas_de_saber_fazer">Quatro Décadas de Saber-Fazer</span>
-          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight mb-4" data-i18n="sobre_a_evolu_o_industrial_da_dsc">A Evolução Industrial da DSC</h2>
-          <p class="font-sans text-base text-dsc-body font-light" data-i18n="sobre_da_funda_o_no_vale_do_ave_consolida">Da fundação no Vale do Ave à consolidação como parceiro de engenharia têxtil internacional.</p>
+          <span class="font-mono text-xs uppercase tracking-widest text-dsc-muted block mb-2">Quatro Décadas de Saber-Fazer</span>
+          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-dsc-navy tracking-tight mb-4">A Evolução Industrial da DSC</h2>
+          <p class="font-sans text-base text-dsc-body font-light">Da fundação no Vale do Ave à consolidação como parceiro de engenharia têxtil internacional.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           
           <div class="border-t-2 border-dsc-navy pt-6 relative interactive-card p-6 bg-dsc-canvas">
-            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2" data-i18n="sobre_1984_funda_o">1984 — FUNDAÇÃO</span>
-            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2" data-i18n="sobre_ra_zes_no_vale_do_ave">Raízes no Vale do Ave</h3>
-            <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="sobre_arranque_com_teares_mec_nicos_dedic">Arranque com teares mecânicos dedicados à tecelagem de turco tradicional português de elevada densidade e resistência.</p>
+            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">1984 — FUNDAÇÃO</span>
+            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2">Raízes no Vale do Ave</h3>
+            <p class="text-xs text-dsc-body font-light leading-relaxed">Arranque com teares mecânicos dedicados à tecelagem de turco tradicional português de elevada densidade e resistência.</p>
           </div>
 
           <div class="border-t-2 border-dsc-navy pt-6 relative interactive-card p-6 bg-dsc-canvas">
-            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2" data-i18n="sobre_1998_exporta_o">1998 — EXPORTAÇÃO</span>
-            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2" data-i18n="sobre_entrada_no_mercado_europeu">Entrada no Mercado Europeu</h3>
-            <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="sobre_primeiros_fornecimentos_de_grande_e">Primeiros fornecimentos de grande escala para hotelaria e retalho em França, Alemanha e Reino Unido.</p>
+            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">1998 — EXPORTAÇÃO</span>
+            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2">Entrada no Mercado Europeu</h3>
+            <p class="text-xs text-dsc-body font-light leading-relaxed">Primeiros fornecimentos de grande escala para hotelaria e retalho em França, Alemanha e Reino Unido.</p>
           </div>
 
           <div class="border-t-2 border-dsc-navy pt-6 relative interactive-card p-6 bg-dsc-canvas">
-            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2" data-i18n="sobre_2012_moderniza_o">2012 — MODERNIZAÇÃO</span>
-            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2" data-i18n="sobre_teares_jacquard_digitais">Teares Jacquard Digitais</h3>
-            <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="sobre_implementa_o_de_teares_eletr_nicos_">Implementação de teares eletrónicos de alta velocidade e criação do laboratório interno de controlo de qualidade e cor.</p>
+            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">2012 — MODERNIZAÇÃO</span>
+            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2">Teares Jacquard Digitais</h3>
+            <p class="text-xs text-dsc-body font-light leading-relaxed">Implementação de teares eletrónicos de alta velocidade e criação do laboratório interno de controlo de qualidade e cor.</p>
           </div>
 
           <div class="border-t-2 border-dsc-navy pt-6 relative interactive-card p-6 bg-dsc-canvas">
-            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2" data-i18n="sobre_2026_sustentabilidade">2026 — SUSTENTABILIDADE</span>
-            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2" data-i18n="sobre_transi_o_circular_energia_limpa">Transição Circular & Energia Limpa</h3>
-            <p class="text-xs text-dsc-body font-light leading-relaxed" data-i18n="sobre_100_energia_solar_fotovoltaica_cert">100% energia solar fotovoltaica, certificações globais GOTS/OEKO-TEX e integração de fios reciclados de economia circular.</p>
+            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold block mb-2">2026 — SUSTENTABILIDADE</span>
+            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2">Transição Circular & Energia Limpa</h3>
+            <p class="text-xs text-dsc-body font-light leading-relaxed">100% energia solar fotovoltaica, certificações globais GOTS/OEKO-TEX e integração de fios reciclados de economia circular.</p>
           </div>
 
         </div>
@@ -686,27 +677,27 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
           
           <div class="border-t-2 border-dsc-navy pt-6 relative">
-            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-semibold block mb-4 flex items-center gap-1.5" data-i18n="about.values.0.num">
+            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-semibold block mb-4 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> 01
             </span>
-            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-3" data-i18n="about.values.0.title">Saber-Fazer Fabril</h3>
-            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="about.values.0.desc">Domínio profundo das técnicas de tecelagem felpuda, controlo de tensão de urdidura e confeção de alta tolerância.</p>
+            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-3">Saber-Fazer Fabril</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed">Domínio profundo das técnicas de tecelagem felpuda, controlo de tensão de urdidura e confeção de alta tolerância.</p>
           </div>
 
           <div class="border-t-2 border-dsc-navy pt-6 relative">
-            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-semibold block mb-4 flex items-center gap-1.5" data-i18n="about.values.1.num">
+            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-semibold block mb-4 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> 02
             </span>
-            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-3" data-i18n="about.values.1.title">Rigor Técnico Europeu</h3>
-            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="about.values.1.desc">Garantia de conformidade dimensional, estabilidade de cor e resistência a ciclos exigentes de lavagem industrial.</p>
+            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-3">Rigor Técnico Europeu</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed">Garantia de conformidade dimensional, estabilidade de cor e resistência a ciclos exigentes de lavagem industrial.</p>
           </div>
 
           <div class="border-t-2 border-dsc-navy pt-6 relative">
-            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-semibold block mb-4 flex items-center gap-1.5" data-i18n="about.values.2.num">
+            <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-semibold block mb-4 flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> 03
             </span>
-            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-3" data-i18n="about.values.2.title">Flexibilidade Operacional</h3>
-            <p class="text-sm text-dsc-body font-light leading-relaxed" data-i18n="about.values.2.desc">Capacidade para desenvolver desde pequenas séries exclusivas até lotes industriais de grande escala com consistência.</p>
+            <h3 class="font-serif font-medium text-xl text-dsc-navy mb-3">Flexibilidade Operacional</h3>
+            <p class="text-sm text-dsc-body font-light leading-relaxed">Capacidade para desenvolver desde pequenas séries exclusivas até lotes industriais de grande escala com consistência.</p>
           </div>
 
         </div>
@@ -723,12 +714,12 @@
         <div>
           <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1 flex items-center gap-2">
             <span class="micro-dot micro-dot-pulse"></span>
-            <span data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
+            <span>Capacidade Fabril Europeia</span>
           </span>
-          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
+          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-white tracking-tight">Pronto para elevar os padrões da sua coleção têxtil?</h2>
         </div>
         <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-sans text-xs uppercase font-medium tracking-wider transition-all duration-200 shadow-md group">
-          <span data-i18n="footer_cta_btn">Iniciar Diálogo Técnico</span>
+          <span>Iniciar Diálogo Técnico</span>
           <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
@@ -745,55 +736,55 @@
               DSC
               <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
             </span>
-            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400" data-i18n="sobre_domingos_silva_cunha">Domingos Silva & Cunha</span>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Domingos Silva & Cunha</span>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed font-light pr-6" data-i18n="footer_bio">
+          <p class="text-xs text-slate-400 leading-relaxed font-light pr-6">
             Desenvolvimento e engenharia de têxteis-lar e felpos de alto rendimento. Combinamos coleções de marca própria com produção modular flexível para mercados internacionais.
           </p>
           <div class="inline-flex items-center gap-2 pt-2 text-[11px] font-mono text-slate-400">
             <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-            <span data-i18n="sobre_norte_de_portugal_vale_do_ave">Norte de Portugal • Vale do Ave</span>
+            <span>Norte de Portugal • Vale do Ave</span>
           </div>
         </div>
 
         <!-- Coluna 2: Navegação (Span 2) -->
         <div class="lg:col-span-2 space-y-3">
-          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_nav">Estrutura</span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2">Estrutura</span>
           <ul class="space-y-2 text-xs font-mono text-slate-400">
-            <li><a href="sobre.html" class="hover:text-white transition-colors" data-i18n="nav_about">Sobre nós</a></li>
-            <li><a href="servicos.html" class="hover:text-white transition-colors" data-i18n="nav_services">Serviços</a></li>
-            <li><a href="catalogo.html" class="hover:text-white transition-colors" data-i18n="nav_catalog">Catálogo</a></li>
-            <li><a href="sustentabilidade.html" class="hover:text-white transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors" data-i18n="nav_blog">Blog</a></li>
-            <li><a href="contactos.html" class="hover:text-white transition-colors" data-i18n="nav_contact">Contactos</a></li>
+            <li><a href="sobre.html" class="hover:text-white transition-colors">Sobre nós</a></li>
+            <li><a href="servicos.html" class="hover:text-white transition-colors">Serviços</a></li>
+            <li><a href="catalogo.html" class="hover:text-white transition-colors">Catálogo</a></li>
+            <li><a href="sustentabilidade.html" class="hover:text-white transition-colors">Sustentabilidade</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="contactos.html" class="hover:text-white transition-colors">Contactos</a></li>
           </ul>
         </div>
 
         <!-- Coluna 3: Especializações (Span 2) -->
         <div class="lg:col-span-2 space-y-3">
-          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_spec">Especialidade</span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2">Especialidade</span>
           <ul class="space-y-2 text-xs font-mono text-slate-400">
-            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors" data-i18n="sobre_toalhas_felpo_550g">Toalhas Felpo 550g</a></li>
-            <li><a href="catalogo.html?cat=contract" class="hover:text-white transition-colors" data-i18n="sobre_linha_contract_700g">Linha Contract 700g</a></li>
-            <li><a href="catalogo.html?cat=waffle" class="hover:text-white transition-colors" data-i18n="sobre_waffle_linho">Waffle & Linho</a></li>
-            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors" data-i18n="sobre_zero_twist_macio">Zero-Twist Macio</a></li>
-            <li><a href="servicos.html" class="hover:text-white transition-colors" data-i18n="sobre_private_label_b2b">Private Label B2B</a></li>
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Toalhas Felpo 550g</a></li>
+            <li><a href="catalogo.html?cat=contract" class="hover:text-white transition-colors">Linha Contract 700g</a></li>
+            <li><a href="catalogo.html?cat=waffle" class="hover:text-white transition-colors">Waffle & Linho</a></li>
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Zero-Twist Macio</a></li>
+            <li><a href="servicos.html" class="hover:text-white transition-colors">Private Label B2B</a></li>
           </ul>
         </div>
 
         <!-- Coluna 4: Unidade Fabril & Logística (Span 4) -->
         <div class="lg:col-span-4 space-y-4">
-          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_mill">Instalações & Logística</span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2">Instalações & Logística</span>
           <div class="space-y-2 text-xs font-mono text-slate-400">
             <div>
-              <span class="text-slate-200" data-i18n="sobre_sede_fabril_">Sede Fabril:</span>
+              <span class="text-slate-200">Sede Fabril:</span>
               <div class="text-slate-300 font-sans mt-0.5"><span class="ph">Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso</span>, Portugal</div>
             </div>
             <div>
-              <span class="text-slate-200" data-i18n="sobre_exporta_o_direta_">Exportação Direta:</span>
+              <span class="text-slate-200">Exportação Direta:</span>
               <div class="text-slate-300 mt-0.5"><span class="ph">[EMAIL_COMERCIAL@DSC.PT]</span></div>
             </div>
-            <div class="pt-2 text-[11px] text-slate-400 leading-normal border-t border-slate-800" data-i18n="sobre_a_45_min_do_aeroporto_s_carneiro_op">A 45 min. do Aeroporto Sá Carneiro (OPO) e Porto de Leixões. Expedição de contentores para os principais hubs da Europa.</div>
+            <div class="pt-2 text-[11px] text-slate-400 leading-normal border-t border-slate-800">A 45 min. do Aeroporto Sá Carneiro (OPO) e Porto de Leixões. Expedição de contentores para os principais hubs da Europa.</div>
           </div>
         </div>
 
@@ -811,7 +802,7 @@
         </div>
         <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
           <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Origem & Fabricação</div>
-          <div class="text-white mt-1 font-medium" data-i18n="sobre_made_in_portugal_ue_">MADE IN PORTUGAL (UE)</div>
+          <div class="text-white mt-1 font-medium">MADE IN PORTUGAL (UE)</div>
         </div>
         <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
           <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Auditoria Social</div>
@@ -824,14 +815,14 @@
     <div class="border-t border-slate-800/80 bg-[#050914]">
       <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-[11px] font-mono text-slate-400 gap-4">
         <div>
-          <span data-i18n="footer_rights">&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
+          <span>&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
           <span class="mx-2 hidden md:inline">•</span>
           <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">505 528 606</span></span>
         </div>
         <div class="flex items-center space-x-6">
-          <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_terms">Termos B2B</a>
-          <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_privacy">Privacidade</a>
-          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="hover:text-white transition-colors" data-i18n="footer_legal_complaints">Livro de Reclamações</a>
+          <a href="contactos.html" class="hover:text-white transition-colors">Termos B2B</a>
+          <a href="contactos.html" class="hover:text-white transition-colors">Privacidade</a>
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="hover:text-white transition-colors">Livro de Reclamações</a>
         </div>
       </div>
     </div>

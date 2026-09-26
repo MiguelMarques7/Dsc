@@ -1,6 +1,6 @@
 /**
  * DSC (Domingos Silva & Cunha, Lda.)
- * Contacts & Technical Request Form Module + Amplified Interactive Factory Map
+ * Módulo de Formulário de Contactos & Mapa da Unidade Fabril (100% Português)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,11 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const textarea = document.getElementById('form-specs');
   const contactForm = document.getElementById('b2b-contact-form');
 
-  // Exact DSC Factory Coordinates in Roriz, Santo Tirso
-  const DSC_COORDS = [41.34860, -8.38420];
-  const DSC_ZOOM = 18;
-
-  // 1. Google Maps Controller (Street View vs Satellite HD)
+  // 1. Controlo do Mapa Google (Ruas vs Satélite HD)
   const gmapIframe = document.getElementById('dsc-google-map-iframe');
   const btnGmap = document.getElementById('map-btn-gmap');
   const btnSat = document.getElementById('map-btn-sat');
@@ -44,37 +40,27 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnGmap) btnGmap.addEventListener('click', () => setMapActive('gmap'));
   if (btnSat) btnSat.addEventListener('click', () => setMapActive('sat'));
 
-  // Quick Preset Prefill Handler
+  // Preenchimento Rápido com Presets
   window.prefillSpecs = function(type) {
     if (!textarea) return;
-    const currentLang = (typeof window.getCurrentLanguage === 'function') ? window.getCurrentLanguage() : 'pt';
-    const isEn = (currentLang === 'en');
     
     if (type === 'hotel') {
-      textarea.value = isEn 
-        ? "Quotation request for Hospitality Contract Line: 2,500 pcs Bath Towels (550 GSM, 100% Ring-Spun Combed Cotton 24/2, White) + 1,000 pcs Bath Sheets (700 GSM)." 
-        : "Pedido de cotação para Linha Hotelaria Contract: 2.500 toalhas de rosto (550g/m², fio retorcido 24/2 algodão penteado, cor branca) + 1.000 toalhões de banho (700g/m²).";
+      textarea.value = "Pedido de cotação para Linha Hotelaria Contract: 2.500 toalhas de rosto (550g/m², fio retorcido 24/2 algodão penteado, cor branca) + 1.000 toalhões de banho (700g/m²).";
       if (scopeSelect) scopeSelect.value = 'opt0';
     } else if (type === 'plabel') {
-      textarea.value = isEn
-        ? "Private Label Collection Development: Customized terry line with Jacquard woven logo header, custom Pantone TCX dyed colors, and bespoke woven satin brand labels."
-        : "Desenvolvimento de Coleção Private Label: Linha completa de banho com barra Jacquard personalizada, tinturaria em cor Pantone TCX exclusiva e etiquetas tecidas em cetim.";
+      textarea.value = "Desenvolvimento de Coleção Private Label: Linha completa de banho com barra Jacquard personalizada, tinturaria em cor Pantone TCX exclusiva e etiquetas tecidas em cetim.";
       if (scopeSelect) scopeSelect.value = 'opt1';
     } else if (type === 'zerotwist') {
-      textarea.value = isEn
-        ? "Sample Box Request: Zero-Twist ultra-soft 600 GSM bath collection + Waffle spa line. Required for retail boutique touch & absorbency evaluation."
-        : "Envio de Amostras: Coleção de banho Zero-Twist 600g/m² de toque aveludado + Linha Waffle. Pretendemos testar toque, absorção e estabilidade dimensional.";
+      textarea.value = "Envio de Amostras: Coleção de banho Zero-Twist 600g/m² de toque aveludado + Linha Waffle. Pretendemos testar toque, absorção e estabilidade dimensional.";
       if (scopeSelect) scopeSelect.value = 'opt0';
     } else if (type === 'visit') {
-      textarea.value = isEn
-        ? "Technical Mill Visit Scheduling: Sourcing delegation meeting at DSC facilities in Roriz, Santo Tirso to inspect weaving capacity, Jacquard looms, and review fabric archives."
-        : "Agendamento de Reunião & Visita Fabril: Reunião com a equipa de engenharia e compras nas instalações da DSC em Roriz, Santo Tirso, para inspecionar teares Jacquard e arquivo de artigos.";
+      textarea.value = "Agendamento de Reunião & Visita Fabril: Reunião com a equipa de engenharia e compras nas instalações da DSC em Roriz, Santo Tirso, para inspecionar teares Jacquard e arquivo de artigos.";
       if (scopeSelect) scopeSelect.value = 'opt4';
     }
     textarea.focus();
   };
 
-  // 2. Handle Specific Item Sample Request
+  // 2. Pré-seleção de Amostra Vinda do Catálogo
   if (ref) {
     if (sampleBadge && sampleRefName) {
       sampleBadge.classList.remove('hidden');
@@ -88,17 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
       scopeSelect.classList.add('bg-dsc-surface', 'text-dsc-navy', 'border-dsc-navy');
     }
 
-    const updateTextareaPrefill = () => {
-      if (!textarea) return;
-      const currentLang = (typeof window.getCurrentLanguage === 'function') ? window.getCurrentLanguage() : 'pt';
-      if (typeof window.getNestedValue === 'function' && window.dictionary) {
-        let tmpl = window.getNestedValue(window.dictionary[currentLang], "contacts.form.sample_prefill");
-        if (tmpl) textarea.value = tmpl.replace('{ref}', ref);
-      }
-    };
-
-    updateTextareaPrefill();
-    window.addEventListener('languageChanged', updateTextareaPrefill);
+    if (textarea) {
+      textarea.value = `Gostaria de solicitar uma amostra física do artigo [${ref}] para avaliação técnica de toque, gramagem e acabamento.`;
+    }
 
     if (contactSection) {
       setTimeout(() => {
@@ -107,19 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 3. Handle Modular Scope Selection
+  // 3. Pré-seleção de Âmbito Modular Vindo de Serviços
   if (scope && !ref) {
-    const currentLang = (typeof window.getCurrentLanguage === 'function') ? window.getCurrentLanguage() : 'pt';
-    const isEn = currentLang === 'en';
-
     if (textarea) {
-      textarea.value = isEn
-        ? `Selected modular phases: ${scope.toUpperCase()}\nPlease provide additional technical specifications for your project...`
-        : `Fases modulares selecionadas: ${scope.toUpperCase()}\nPor favor forneça mais detalhes sobre o seu projeto...`;
+      textarea.value = `Fases modulares selecionadas: ${scope.toUpperCase()}\nPor favor forneça mais detalhes sobre o seu projeto...`;
     }
 
     if (scopeSelect) {
-      scopeSelect.value = 'opt2'; // Modular service
+      scopeSelect.value = 'opt2'; // Produção Modular
     }
 
     if (contactSection) {
@@ -129,15 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 4. Handle Form Submission with Toast Feedback
+  // 4. Submissão do Formulário com Feedback Visual
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const currentLang = (typeof window.getCurrentLanguage === 'function') ? window.getCurrentLanguage() : 'pt';
-      const successMessage = (currentLang === 'en')
-        ? "Technical request submitted successfully! Our commercial department will review your specifications shortly."
-        : "Pedido técnico enviado com sucesso! O nosso departamento comercial entrará em contacto brevemente.";
+      const successMessage = "Pedido técnico enviado com sucesso! O nosso departamento comercial entrará em contacto em menos de 24 horas úteis.";
 
       if (typeof window.showDscToast === 'function') {
         window.showDscToast(successMessage, 5000);

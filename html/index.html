@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="../css/style.css">
 
   <!-- Core Scripts -->
-  <script src="../js/i18n.js" defer></script>
   <script src="../js/main.js" defer></script>
 </head>
 <body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
@@ -31,38 +30,30 @@
           DSC
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
         </span>
-        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors" data-i18n="index_domingos_silva_cunha">Domingos Silva & Cunha</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors">Domingos Silva & Cunha</span>
       </a>
       
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-8 font-sans text-sm font-medium tracking-normal text-dsc-body">
-        <a href="sobre.html" class="nav-link" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="nav-link" data-i18n="nav.services">Serviços</a>
-        <a href="catalogo.html" class="nav-link" data-i18n="nav.products">Catálogo</a>
-        <a href="sustentabilidade.html" class="nav-link" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
-        <a href="contactos.html" class="nav-link" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="nav-link">Sobre Nós</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="catalogo.html" class="nav-link">Catálogo</a>
+        <a href="sustentabilidade.html" class="nav-link">Sustentabilidade</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contactos.html" class="nav-link">Contactos</a>
       </nav>
 
       <!-- Desktop Language & CTA -->
       <div class="hidden sm:flex items-center space-x-6">
-        <div class="flex items-center border border-dsc-line bg-dsc-surface/60 rounded-none p-0.5 font-mono text-[11px]">
-          <button id="btn-pt" onclick="applyLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-medium transition-all" aria-label="Versão em Português" data-i18n="index_pt">PT</button>
-          <button id="btn-en" onclick="applyLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all" aria-label="English Version" data-i18n="index_en">EN</button>
-        </div>
         <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
-          <span data-i18n="nav.cta">Sourcing B2B</span>
+          <span>Sourcing B2B</span>
           <span class="text-dsc-gold text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <div class="flex items-center space-x-3 md:hidden">
-        <div class="flex items-center border border-dsc-line bg-dsc-surface/60 text-[11px] font-mono">
-          <button onclick="applyLanguage('pt')" class="btn-lang-pt px-2 py-1 bg-dsc-navy text-white active:scale-95" aria-label="Versão em Português" data-i18n="index_pt">PT</button>
-          <button onclick="applyLanguage('en')" class="btn-lang-en px-2 py-1 text-dsc-muted active:scale-95" aria-label="English Version" data-i18n="index_en">EN</button>
-        </div>
         <button id="mobile-menu-btn" aria-label="Abrir Menu" class="p-2 border border-dsc-line text-dsc-navy hover:border-dsc-navy active:scale-95">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -74,14 +65,14 @@
     <!-- Mobile Drawer Menu -->
     <div id="mobile-menu" class="menu-closed md:hidden fixed inset-x-0 top-20 bg-dsc-white border-b border-dsc-line shadow-xl z-40 px-6 py-8">
       <nav class="flex flex-col space-y-5">
-        <a href="sobre.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços</a>
-        <a href="catalogo.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo</a>
-        <a href="sustentabilidade.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Blog</a>
-        <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Sobre Nós</a>
+        <a href="servicos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Serviços</a>
+        <a href="catalogo.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Catálogo</a>
+        <a href="sustentabilidade.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Sustentabilidade</a>
+        <a href="blog.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Blog</a>
+        <a href="contactos.html" class="text-xs font-mono uppercase tracking-widest text-dsc-body hover:text-dsc-navy py-1">Contactos</a>
         <div class="pt-4 border-t border-dsc-line">
-          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider" data-i18n="nav.cta">Sourcing B2B</a>
+          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider">Sourcing B2B</a>
         </div>
       </nav>
     </div>
@@ -106,10 +97,10 @@
         <div class="flex items-center justify-between flex-wrap gap-3 pt-2">
           <div class="flex items-center gap-3">
             <span class="micro-dot micro-dot-pulse"></span>
-            <span class="font-mono text-[10px] sm:text-xs uppercase tracking-[.28em] text-white/60" data-i18n="index.hero_eyebrow">Engenharia Têxtil &middot; Manufatura em Portugal</span>
+            <span class="font-mono text-[10px] sm:text-xs uppercase tracking-[.28em] text-white/60">Engenharia Têxtil &middot; Manufatura em Portugal</span>
           </div>
           <div class="flex items-center gap-3">
-            <span class="badge-gold" data-i18n="index_vale_do_ave">Vale do Ave</span>
+            <span class="badge-gold">Vale do Ave</span>
             <span class="badge-navy text-[9px]">B2B &amp; Private Label</span>
           </div>
         </div>
@@ -119,24 +110,24 @@
           <p class="font-mono text-[10px] sm:text-xs uppercase tracking-[.3em] text-dsc-gold mb-4" style="color: #B39860;">
             DSC &mdash; Domingos Silva &amp; Cunha &mdash; Roriz, Santo Tirso
           </p>
-          <h1 class="font-serif font-normal text-white mb-6 text-3xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight" data-i18n-html="index.hero_title_html">
+          <h1 class="font-serif font-normal text-white mb-6 text-3xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
             Precis&atilde;o fabril<br>
             <span style="color:#B39860; font-style:italic;">e desenvolvimento</span><br>
             <span class="text-white/70">modular para o</span>
             t&ecirc;xtil-lar.
           </h1>
           <div class="w-16 h-px mb-6" style="background:#B39860;"></div>
-          <p class="font-sans font-light text-white/75 leading-relaxed max-w-xl mb-8 text-sm sm:text-base" data-i18n="index.hero_desc">
+          <p class="font-sans font-light text-white/75 leading-relaxed max-w-xl mb-8 text-sm sm:text-base">
             Da arquitectura da fibra ao acabamento final. Coleções de marca própria
             e modelo modular para qualquer fase da cadeia produtiva.
           </p>
           <div class="flex flex-wrap items-center gap-4">
             <a href="catalogo.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy font-sans text-xs uppercase font-semibold tracking-wider hover:bg-dsc-gold hover:text-white active:scale-[.98] transition-all duration-200 group shadow-sm">
-              <span data-i18n="index.hero_btn_explore">Explorar Cat&aacute;logo</span>
+              <span>Explorar Cat&aacute;logo</span>
               <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
             </a>
             <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 border border-white/30 text-white font-sans text-xs uppercase font-medium tracking-wider hover:border-white hover:bg-white/10 active:scale-[.98] transition-all duration-200 backdrop-blur-sm">
-              <span data-i18n="nav.cta">Sourcing B2B</span>
+              <span>Sourcing B2B</span>
               <span>&rarr;</span>
             </a>
           </div>
@@ -145,26 +136,26 @@
         <!-- Bottom stats strip -->
         <div class="border-t border-white/15 -mx-6 px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/15 backdrop-blur-md" style="background: rgba(6,12,26,.75);">
           <div class="py-4 sm:py-5 pr-6 sm:pr-8">
-            <span class="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1" data-i18n="index.stats_gsm_label">Gramagens</span>
-            <span class="font-mono text-white font-medium text-xs sm:text-sm" data-i18n="index.stats_gsm_val">350 &mdash; 950 g/m&sup2;</span>
-            <span class="font-mono text-[10px] text-white/40 block mt-0.5" data-i18n="index.stats_gsm_sub">Felpo &middot; Waffle &middot; Zero-Twist</span>
+            <span class="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">Gramagens</span>
+            <span class="font-mono text-white font-medium text-xs sm:text-sm">350 &mdash; 950 g/m&sup2;</span>
+            <span class="font-mono text-[10px] text-white/40 block mt-0.5">Felpo &middot; Waffle &middot; Zero-Twist</span>
           </div>
           <div class="py-4 sm:py-5 px-6 sm:px-8">
-            <span class="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1" data-i18n="index.stats_cap_label">Capacidade</span>
-            <span class="font-mono text-white font-medium text-xs sm:text-sm" data-i18n="index.stats_cap_val">2.500<span style="color:#B39860;">+</span> Ton./ano</span>
-            <span class="font-mono text-[10px] text-white/40 block mt-0.5" data-i18n="index.stats_cap_sub">Teares de alta precisão</span>
+            <span class="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">Capacidade</span>
+            <span class="font-mono text-white font-medium text-xs sm:text-sm">2.500<span style="color:#B39860;">+</span> Ton./ano</span>
+            <span class="font-mono text-[10px] text-white/40 block mt-0.5">Teares de alta precisão</span>
           </div>
           <div class="py-4 sm:py-5 px-6 sm:px-8">
-            <span class="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1" data-i18n="index.stats_exp_label">Exportação</span>
-            <span class="font-mono text-white font-medium text-xs sm:text-sm" data-i18n="index.stats_exp_val">24<span style="color:#B39860;">+</span> países</span>
-            <span class="font-mono text-[10px] text-white/40 block mt-0.5" data-i18n="index.stats_exp_sub">85% da produção</span>
+            <span class="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1">Exportação</span>
+            <span class="font-mono text-white font-medium text-xs sm:text-sm">24<span style="color:#B39860;">+</span> países</span>
+            <span class="font-mono text-[10px] text-white/40 block mt-0.5">85% da produção</span>
           </div>
           <div class="py-4 sm:py-5 pl-6 sm:pl-8">
-            <span class="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1 flex items-center gap-1.5" data-i18n="index.stats_sample_label">
+            <span class="font-mono text-[9px] uppercase tracking-widest text-white/50 block mb-1 flex items-center gap-1.5">
               <span class="inline-block w-1.5 h-1.5 rounded-full" style="background:#B39860; animation: micro-pulse 2.6s ease-in-out infinite;"></span>Amostras
             </span>
-            <span class="font-mono text-white font-medium text-xs sm:text-sm" data-i18n="index.stats_sample_val">7 &mdash; 10 dias</span>
-            <span class="font-mono text-[10px] text-white/40 block mt-0.5" data-i18n="index.stats_sample_sub">Lab-dips &amp; protótipos</span>
+            <span class="font-mono text-white font-medium text-xs sm:text-sm">7 &mdash; 10 dias</span>
+            <span class="font-mono text-[10px] text-white/40 block mt-0.5">Lab-dips &amp; protótipos</span>
           </div>
         </div>
 
@@ -223,15 +214,15 @@
           <div>
             <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted block mb-2 flex items-center gap-2">
               <span class="micro-dot"></span>
-              <span data-i18n="index.collections_badge">Linhas de Referência Industrial</span>
+              <span>Linhas de Referência Industrial</span>
             </span>
-            <h2 class="font-serif font-normal text-dsc-navy tracking-tight" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.05;" data-i18n="index.collections_title">
+            <h2 class="font-serif font-normal text-dsc-navy tracking-tight" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.05;">
               Engenharia de artigo adaptada ao seu canal de distribuição.
             </h2>
           </div>
           <div class="mt-4 md:mt-0">
             <a href="catalogo.html" class="inline-flex items-center gap-2 font-sans text-xs uppercase font-medium tracking-wider text-dsc-navy hover:text-dsc-gold transition-colors arrow-trigger">
-              <span data-i18n="index.collections_view_all">Ver Catálogo Completo</span>
+              <span>Ver Catálogo Completo</span>
               <span class="arrow-target">&rarr;</span>
             </a>
           </div>
@@ -245,11 +236,11 @@
               <span class="absolute top-3 left-3 badge-gold text-[9px]">550 g/m&sup2;</span>
             </div>
             <div class="p-6 flex flex-col flex-1">
-              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted mb-2" data-i18n="index.card1_ref">Ref. DSC-T550</span>
-              <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2" data-i18n="index.card1_title">Turco Algodão Penteado</h3>
-              <p class="text-xs text-dsc-body font-light leading-relaxed mb-4 flex-1" data-i18n="index.card1_desc">Laçada ultra-homogénea com toque aveludado e absorção rápida. Alta rotação para marcas de luxo e retalho.</p>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-T550</span>
+              <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2">Turco Algodão Penteado</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed mb-4 flex-1">Laçada ultra-homogénea com toque aveludado e absorção rápida. Alta rotação para marcas de luxo e retalho.</p>
               <a href="contactos.html?ref=DSC-T550" class="arrow-trigger text-xs font-sans uppercase font-medium tracking-wider text-dsc-navy flex justify-between items-center pt-4 border-t border-dsc-line">
-                <span data-i18n="index.card_btn_sample">Pedir Amostra B2B</span>
+                <span>Pedir Amostra B2B</span>
                 <span class="arrow-target text-dsc-gold">&rarr;</span>
               </a>
             </div>
@@ -261,11 +252,11 @@
               <span class="absolute top-3 left-3 badge-gold text-[9px]">700 g/m&sup2;</span>
             </div>
             <div class="p-6 flex flex-col flex-1">
-              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted mb-2" data-i18n="index.card2_ref">Ref. DSC-T700</span>
-              <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2" data-i18n="index.card2_title">Linha Heavy Contract</h3>
-              <p class="text-xs text-dsc-body font-light leading-relaxed mb-4 flex-1" data-i18n="index.card2_desc">Fio duplo retorcido 24/2 com laçada anti-puxão. Calibrada para lavagens industriais a 90ºC em hotelaria 5★.</p>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-T700</span>
+              <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2">Linha Heavy Contract</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed mb-4 flex-1">Fio duplo retorcido 24/2 com laçada anti-puxão. Calibrada para lavagens industriais a 90ºC em hotelaria 5★.</p>
               <a href="contactos.html?ref=DSC-T700" class="arrow-trigger text-xs font-sans uppercase font-medium tracking-wider text-dsc-navy flex justify-between items-center pt-4 border-t border-dsc-line">
-                <span data-i18n="index.card_btn_sample">Pedir Amostra B2B</span>
+                <span>Pedir Amostra B2B</span>
                 <span class="arrow-target text-dsc-gold">&rarr;</span>
               </a>
             </div>
@@ -277,11 +268,11 @@
               <span class="absolute top-3 left-3 badge-gold text-[9px]">420 g/m&sup2;</span>
             </div>
             <div class="p-6 flex flex-col flex-1">
-              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted mb-2" data-i18n="index.card3_ref">Ref. DSC-W420</span>
-              <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2" data-i18n="index.card3_title">Ninho de Abelha &amp; Linho</h3>
-              <p class="text-xs text-dsc-body font-light leading-relaxed mb-4 flex-1" data-i18n="index.card3_desc">Estrutura alveolar 3D que seca 2× mais depressa. Reduz volume de transporte e consumo de lavagem.</p>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-W420</span>
+              <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2">Ninho de Abelha &amp; Linho</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed mb-4 flex-1">Estrutura alveolar 3D que seca 2× mais depressa. Reduz volume de transporte e consumo de lavagem.</p>
               <a href="contactos.html?ref=DSC-W420" class="arrow-trigger text-xs font-sans uppercase font-medium tracking-wider text-dsc-navy flex justify-between items-center pt-4 border-t border-dsc-line">
-                <span data-i18n="index.card_btn_sample">Pedir Amostra B2B</span>
+                <span>Pedir Amostra B2B</span>
                 <span class="arrow-target text-dsc-gold">&rarr;</span>
               </a>
             </div>
@@ -293,11 +284,11 @@
               <span class="absolute top-3 left-3 badge-gold text-[9px]">600 g/m&sup2;</span>
             </div>
             <div class="p-6 flex flex-col flex-1">
-              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted mb-2" data-i18n="index.card4_ref">Ref. DSC-Z600</span>
-              <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2" data-i18n="index.card4_title">Zero-Twist Spa Premium</h3>
-              <p class="text-xs text-dsc-body font-light leading-relaxed mb-4 flex-1" data-i18n="index.card4_desc">Fibras sem torção que criam bolsas de ar no fio. Volumetria surpreendente com leveza e secagem ultrarrápida.</p>
+              <span class="font-mono text-[9px] uppercase tracking-widest text-dsc-muted mb-2">Ref. DSC-Z600</span>
+              <h3 class="font-serif font-medium text-xl text-dsc-navy mb-2">Zero-Twist Spa Premium</h3>
+              <p class="text-xs text-dsc-body font-light leading-relaxed mb-4 flex-1">Fibras sem torção que criam bolsas de ar no fio. Volumetria surpreendente com leveza e secagem ultrarrápida.</p>
               <a href="contactos.html?ref=DSC-Z600" class="arrow-trigger text-xs font-sans uppercase font-medium tracking-wider text-dsc-navy flex justify-between items-center pt-4 border-t border-dsc-line">
-                <span data-i18n="index.card_btn_sample">Pedir Amostra B2B</span>
+                <span>Pedir Amostra B2B</span>
                 <span class="arrow-target text-dsc-gold">&rarr;</span>
               </a>
             </div>
@@ -317,18 +308,18 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <span class="font-mono text-[10px] uppercase tracking-[.3em] block mb-6 flex items-center gap-2" style="color: rgba(179,152,96,.7);">
-              <span class="micro-dot"></span><span data-i18n="index.rigor_badge">O Rigor DSC</span>
+              <span class="micro-dot"></span><span>O Rigor DSC</span>
             </span>
-            <h2 class="font-serif font-light text-white mb-6" style="font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.05;" data-i18n-html="index.rigor_title_html">
+            <h2 class="font-serif font-light text-white mb-6" style="font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.05;">
               Porque os maiores<br>
               distribuidores escolhem<br>
               <span style="color: #B39860; font-style: italic;">a nossa manufatura.</span>
             </h2>
-            <p class="font-sans font-light leading-relaxed mb-10" style="color: rgba(255,255,255,.55); font-size: 1rem;" data-i18n="index.rigor_desc">
+            <p class="font-sans font-light leading-relaxed mb-10" style="color: rgba(255,255,255,.55); font-size: 1rem;">
               Eliminamos os riscos habituais do sourcing internacional: controlo laboratorial próprio, tempos de transporte curtos dentro da Europa e certificações de conformidade plena em cada lote.
             </p>
             <a href="servicos.html" class="inline-flex items-center gap-3 px-7 py-4 border font-sans text-xs uppercase font-medium tracking-wider transition-all duration-200 group hover:bg-white hover:text-dsc-navy" style="border-color: rgba(255,255,255,.25); color: white;">
-              <span data-i18n="index.rigor_btn">Ver Modelo de Serviço</span>
+              <span>Ver Modelo de Serviço</span>
               <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
             </a>
           </div>
@@ -337,29 +328,29 @@
               <div class="w-10 h-10 border flex items-center justify-center mb-5" style="border-color: rgba(179,152,96,.3);">
                 <svg class="w-5 h-5" fill="none" stroke="#B39860" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M9 12l2 2 4-4M7 20H5a2 2 0 01-2-2V6a2 2 0 012-2h8l6 6v2m-6-8v6h6"/></svg>
               </div>
-              <h3 class="font-serif font-medium text-white text-lg mb-2" data-i18n="index.pillar1_title">Controlo Total</h3>
-              <p class="text-xs font-light leading-relaxed" style="color: rgba(255,255,255,.5);" data-i18n="index.pillar1_desc">Lab interno com inspeção peça a peça e rastreabilidade completa desde o fio.</p>
+              <h3 class="font-serif font-medium text-white text-lg mb-2">Controlo Total</h3>
+              <p class="text-xs font-light leading-relaxed" style="color: rgba(255,255,255,.5);">Lab interno com inspeção peça a peça e rastreabilidade completa desde o fio.</p>
             </div>
             <div class="p-8 border reveal-on-scroll" style="border-color: rgba(255,255,255,.1); background: rgba(255,255,255,.04);" data-delay="2">
               <div class="w-10 h-10 border flex items-center justify-center mb-5" style="border-color: rgba(179,152,96,.3);">
                 <svg class="w-5 h-5" fill="none" stroke="#B39860" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               </div>
-              <h3 class="font-serif font-medium text-white text-lg mb-2" data-i18n="index.pillar2_title">Agilidade Europeia</h3>
-              <p class="text-xs font-light leading-relaxed" style="color: rgba(255,255,255,.5);" data-i18n="index.pillar2_desc">Logística directa via Porto de Leixões e Aeroporto Francisco Sá Carneiro.</p>
+              <h3 class="font-serif font-medium text-white text-lg mb-2">Agilidade Europeia</h3>
+              <p class="text-xs font-light leading-relaxed" style="color: rgba(255,255,255,.5);">Logística directa via Porto de Leixões e Aeroporto Francisco Sá Carneiro.</p>
             </div>
             <div class="p-8 border reveal-on-scroll" style="border-color: rgba(255,255,255,.1); background: rgba(255,255,255,.04);" data-delay="3">
               <div class="w-10 h-10 border flex items-center justify-center mb-5" style="border-color: rgba(179,152,96,.3);">
                 <svg class="w-5 h-5" fill="none" stroke="#B39860" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
               </div>
-              <h3 class="font-serif font-medium text-white text-lg mb-2" data-i18n="index.pillar3_title">Private Label</h3>
-              <p class="text-xs font-light leading-relaxed" style="color: rgba(255,255,255,.5);" data-i18n="index.pillar3_desc">Desenvolvimento de coleções exclusivas com jacquard, bordados e embalagem EAN.</p>
+              <h3 class="font-serif font-medium text-white text-lg mb-2">Private Label</h3>
+              <p class="text-xs font-light leading-relaxed" style="color: rgba(255,255,255,.5);">Desenvolvimento de coleções exclusivas com jacquard, bordados e embalagem EAN.</p>
             </div>
             <div class="p-8 border reveal-on-scroll" style="border-color: rgba(255,255,255,.1); background: rgba(255,255,255,.04);" data-delay="4">
               <div class="w-10 h-10 border flex items-center justify-center mb-5" style="border-color: rgba(179,152,96,.3);">
                 <svg class="w-5 h-5" fill="none" stroke="#B39860" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
               </div>
-              <h3 class="font-serif font-medium text-white text-lg mb-2" data-i18n="index.pillar4_title">Sustentabilidade</h3>
-              <p class="text-xs font-light leading-relaxed" style="color: rgba(255,255,255,.5);" data-i18n="index.pillar4_desc">GOTS, OEKO-TEX®, fios reciclados e energia solar fotovoltaica na unidade fabril.</p>
+              <h3 class="font-serif font-medium text-white text-lg mb-2">Sustentabilidade</h3>
+              <p class="text-xs font-light leading-relaxed" style="color: rgba(255,255,255,.5);">GOTS, OEKO-TEX®, fios reciclados e energia solar fotovoltaica na unidade fabril.</p>
             </div>
           </div>
         </div>
@@ -382,13 +373,13 @@
             </div>
             <div class="flex items-center gap-3">
               <span class="font-mono text-xs text-dsc-muted">Calibração:</span>
-              <span id="gsm-val-display" class="font-mono text-xl font-bold text-dsc-navy bg-dsc-surface border border-dsc-line px-3 py-1" data-i18n="index_550_g_m_">550 g/m²</span>
+              <span id="gsm-val-display" class="font-mono text-xl font-bold text-dsc-navy bg-dsc-surface border border-dsc-line px-3 py-1">550 g/m²</span>
             </div>
           </div>
           <p class="font-sans text-base text-dsc-body font-light leading-relaxed max-w-3xl mb-8">Arraste o cursor para explorar o comportamento físico e a aplicação recomendada para cada densidade têxtil.</p>
           <div class="mb-10 max-w-4xl">
             <div class="flex justify-between font-mono text-[11px] text-dsc-muted mb-2">
-              <span>350 g/m²</span><span data-i18n="index_550_g_m_">550 g/m²</span><span data-i18n="index_700_g_m_">700 g/m²</span><span data-i18n="index_950_g_m_">950 g/m²</span>
+              <span>350 g/m²</span><span>550 g/m²</span><span>700 g/m²</span><span>950 g/m²</span>
             </div>
             <input type="range" min="350" max="950" value="550" step="25" id="gsm-slider-input" class="gsm-slider w-full cursor-pointer" aria-label="Calibrar Gramagem">
           </div>
@@ -425,12 +416,12 @@
         <div>
           <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1 flex items-center gap-2">
             <span class="micro-dot micro-dot-pulse"></span>
-            <span data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
+            <span>Capacidade Fabril Europeia</span>
           </span>
-          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
+          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-white tracking-tight">Pronto para elevar os padrões da sua coleção têxtil?</h2>
         </div>
         <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-sans text-xs uppercase font-medium tracking-wider transition-all duration-200 shadow-md group">
-          <span data-i18n="footer_cta_btn">Iniciar Diálogo Técnico</span>
+          <span>Iniciar Diálogo Técnico</span>
           <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
@@ -447,55 +438,55 @@
               DSC
               <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
             </span>
-            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400" data-i18n="index_domingos_silva_cunha">Domingos Silva & Cunha</span>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Domingos Silva & Cunha</span>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed font-light pr-6" data-i18n="footer_bio">
+          <p class="text-xs text-slate-400 leading-relaxed font-light pr-6">
             Desenvolvimento e engenharia de têxteis-lar e felpos de alto rendimento. Combinamos coleções de marca própria com produção modular flexível para mercados internacionais.
           </p>
           <div class="inline-flex items-center gap-2 pt-2 text-[11px] font-mono text-slate-400">
             <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-            <span data-i18n="index_norte_de_portugal_vale_do_ave">Norte de Portugal • Vale do Ave</span>
+            <span>Norte de Portugal • Vale do Ave</span>
           </div>
         </div>
 
         <!-- Coluna 2: Navegação (Span 2) -->
         <div class="lg:col-span-2 space-y-3">
-          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_nav">Estrutura</span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2">Estrutura</span>
           <ul class="space-y-2 text-xs font-mono text-slate-400">
-            <li><a href="sobre.html" class="hover:text-white transition-colors" data-i18n="nav_about">Sobre nós</a></li>
-            <li><a href="servicos.html" class="hover:text-white transition-colors" data-i18n="nav_services">Serviços</a></li>
-            <li><a href="catalogo.html" class="hover:text-white transition-colors" data-i18n="nav_catalog">Catálogo</a></li>
-            <li><a href="sustentabilidade.html" class="hover:text-white transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors" data-i18n="nav_blog">Blog</a></li>
-            <li><a href="contactos.html" class="hover:text-white transition-colors" data-i18n="nav_contact">Contactos</a></li>
+            <li><a href="sobre.html" class="hover:text-white transition-colors">Sobre nós</a></li>
+            <li><a href="servicos.html" class="hover:text-white transition-colors">Serviços</a></li>
+            <li><a href="catalogo.html" class="hover:text-white transition-colors">Catálogo</a></li>
+            <li><a href="sustentabilidade.html" class="hover:text-white transition-colors">Sustentabilidade</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="contactos.html" class="hover:text-white transition-colors">Contactos</a></li>
           </ul>
         </div>
 
         <!-- Coluna 3: Especializações (Span 2) -->
         <div class="lg:col-span-2 space-y-3">
-          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_spec">Especialidade</span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2">Especialidade</span>
           <ul class="space-y-2 text-xs font-mono text-slate-400">
-            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors" data-i18n="index_toalhas_felpo_550g">Toalhas Felpo 550g</a></li>
-            <li><a href="catalogo.html?cat=contract" class="hover:text-white transition-colors" data-i18n="index_linha_contract_700g">Linha Contract 700g</a></li>
-            <li><a href="catalogo.html?cat=waffle" class="hover:text-white transition-colors" data-i18n="index_waffle_linho">Waffle & Linho</a></li>
-            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors" data-i18n="index_zero_twist_macio">Zero-Twist Macio</a></li>
-            <li><a href="servicos.html" class="hover:text-white transition-colors" data-i18n="index_private_label_b2b">Private Label B2B</a></li>
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Toalhas Felpo 550g</a></li>
+            <li><a href="catalogo.html?cat=contract" class="hover:text-white transition-colors">Linha Contract 700g</a></li>
+            <li><a href="catalogo.html?cat=waffle" class="hover:text-white transition-colors">Waffle & Linho</a></li>
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Zero-Twist Macio</a></li>
+            <li><a href="servicos.html" class="hover:text-white transition-colors">Private Label B2B</a></li>
           </ul>
         </div>
 
         <!-- Coluna 4: Unidade Fabril & Logística (Span 4) -->
         <div class="lg:col-span-4 space-y-4">
-          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_mill">Instalações & Logística</span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2">Instalações & Logística</span>
           <div class="space-y-2 text-xs font-mono text-slate-400">
             <div>
-              <span class="text-slate-200" data-i18n="index_sede_fabril_">Sede Fabril:</span>
+              <span class="text-slate-200">Sede Fabril:</span>
               <div class="text-slate-300 font-sans mt-0.5"><span class="ph">Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso</span>, Portugal</div>
             </div>
             <div>
-              <span class="text-slate-200" data-i18n="index_exporta_o_direta_">Exportação Direta:</span>
+              <span class="text-slate-200">Exportação Direta:</span>
               <div class="text-slate-300 mt-0.5"><span class="ph">[EMAIL_COMERCIAL@DSC.PT]</span></div>
             </div>
-            <div class="pt-2 text-[11px] text-slate-400 leading-normal border-t border-slate-800" data-i18n="index_a_45_min_do_aeroporto_s_carneiro_op">A 45 min. do Aeroporto Sá Carneiro (OPO) e Porto de Leixões. Expedição de contentores para os principais hubs da Europa.</div>
+            <div class="pt-2 text-[11px] text-slate-400 leading-normal border-t border-slate-800">A 45 min. do Aeroporto Sá Carneiro (OPO) e Porto de Leixões. Expedição de contentores para os principais hubs da Europa.</div>
           </div>
         </div>
 
@@ -513,7 +504,7 @@
         </div>
         <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
           <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Origem & Fabricação</div>
-          <div class="text-white mt-1 font-medium" data-i18n="index_made_in_portugal_ue_">MADE IN PORTUGAL (UE)</div>
+          <div class="text-white mt-1 font-medium">MADE IN PORTUGAL (UE)</div>
         </div>
         <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
           <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Auditoria Social</div>
@@ -526,14 +517,14 @@
     <div class="border-t border-slate-800/80 bg-[#050914]">
       <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-[11px] font-mono text-slate-400 gap-4">
         <div>
-          <span data-i18n="footer_rights">&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
+          <span>&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
           <span class="mx-2 hidden md:inline">•</span>
           <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">505 528 606</span></span>
         </div>
         <div class="flex items-center space-x-6">
-          <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_terms">Termos B2B</a>
-          <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_privacy">Privacidade</a>
-          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="hover:text-white transition-colors" data-i18n="footer_legal_complaints">Livro de Reclamações</a>
+          <a href="contactos.html" class="hover:text-white transition-colors">Termos B2B</a>
+          <a href="contactos.html" class="hover:text-white transition-colors">Privacidade</a>
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="hover:text-white transition-colors">Livro de Reclamações</a>
         </div>
       </div>
     </div>

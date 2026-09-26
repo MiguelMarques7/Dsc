@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="../css/style.css">
 
   <!-- Core Scripts -->
-  <script src="../js/i18n.js" defer></script>
   <script src="../js/main.js" defer></script>
 </head>
 <body class="bg-dsc-canvas text-dsc-navy font-sans antialiased selection:bg-dsc-navy selection:text-white">
@@ -31,38 +30,30 @@
           DSC
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
         </span>
-        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors" data-i18n="sustentabilidade_domingos_silva_cunha">Domingos Silva & Cunha</span>
+        <span class="text-[9px] uppercase font-mono tracking-widest text-dsc-muted group-hover:text-dsc-navy transition-colors">Domingos Silva & Cunha</span>
       </a>
       
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-normal text-dsc-body">
-        <a href="sobre.html" class="nav-link" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="nav-link" data-i18n="nav.services">Serviços</a>
-        <a href="catalogo.html" class="nav-link" data-i18n="nav.products">Catálogo</a>
-        <a href="sustentabilidade.html" class="nav-link active" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
-        <a href="contactos.html" class="nav-link" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="nav-link">Sobre Nós</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="catalogo.html" class="nav-link">Catálogo</a>
+        <a href="sustentabilidade.html" class="nav-link active">Sustentabilidade</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contactos.html" class="nav-link">Contactos</a>
       </nav>
 
       <!-- Desktop Language & CTA -->
       <div class="hidden sm:flex items-center space-x-6">
-        <div class="flex items-center border border-dsc-line bg-dsc-surface/60 rounded-none p-0.5 font-mono text-[11px]">
-          <button id="btn-pt" onclick="applyLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-medium transition-all" aria-label="Versão em Português" data-i18n="sustentabilidade_pt">PT</button>
-          <button id="btn-en" onclick="applyLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all" aria-label="English Version" data-i18n="sustentabilidade_en">EN</button>
-        </div>
         <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
-          <span data-i18n="nav.cta">Sourcing B2B</span>
+          <span>Sourcing B2B</span>
           <span class="text-dsc-gold text-xs transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <div class="flex items-center space-x-3 md:hidden">
-        <div class="flex items-center border border-dsc-line bg-dsc-surface/60 text-[11px] font-mono">
-          <button onclick="applyLanguage('pt')" class="btn-lang-pt px-2 py-1 bg-dsc-navy text-white active:scale-95" aria-label="Versão em Português" data-i18n="sustentabilidade_pt">PT</button>
-          <button onclick="applyLanguage('en')" class="btn-lang-en px-2 py-1 text-dsc-muted active:scale-95" aria-label="English Version" data-i18n="sustentabilidade_en">EN</button>
-        </div>
         <button id="mobile-menu-btn" aria-label="Abrir Menu" class="p-2 border border-dsc-line text-dsc-navy hover:border-dsc-navy active:scale-95">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -74,14 +65,14 @@
     <!-- Mobile Drawer Menu -->
     <div id="mobile-menu" class="menu-closed md:hidden fixed inset-x-0 top-20 bg-dsc-white border-b border-dsc-line shadow-xl z-40 px-6 py-8">
       <nav class="flex flex-col space-y-5">
-        <a href="sobre.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.about">Sobre Nós</a>
-        <a href="servicos.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.services">Serviços</a>
-        <a href="catalogo.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.products">Catálogo</a>
-        <a href="sustentabilidade.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.sustainability">Sustentabilidade</a>
-        <a href="blog.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.blog">Blog</a>
-        <a href="contactos.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1" data-i18n="nav.contacts">Contactos</a>
+        <a href="sobre.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1">Sobre Nós</a>
+        <a href="servicos.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1">Serviços</a>
+        <a href="catalogo.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1">Catálogo</a>
+        <a href="sustentabilidade.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1">Sustentabilidade</a>
+        <a href="blog.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1">Blog</a>
+        <a href="contactos.html" class="text-sm font-sans font-medium text-dsc-body hover:text-dsc-navy py-1">Contactos</a>
         <div class="pt-4 border-t border-dsc-line">
-          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider" data-i18n="nav.cta">Sourcing B2B</a>
+          <a href="contactos.html" class="block text-center py-3 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider">Sourcing B2B</a>
         </div>
       </nav>
     </div>
@@ -101,15 +92,15 @@
           <div class="lg:col-span-7">
             <span class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-dsc-muted block mb-3 flex items-center gap-2">
               <span class="micro-dot micro-dot-pulse"></span>
-              <span data-i18n="sustainability.badge">04 / RESPONSABILIDADE AMBIENTAL &middot; CONFORMIDADE ESG</span>
+              <span>04 / RESPONSABILIDADE AMBIENTAL &middot; CONFORMIDADE ESG</span>
             </span>
-            <h1 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1] text-dsc-navy mb-5" data-i18n="sustainability.h1">
+            <h1 class="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1] text-dsc-navy mb-5">
               Compromisso ecológico com práticas de fabrico <span style="color: #B39860; font-style: italic;">limpas e rastreáveis</span>.
             </h1>
           </div>
           <div class="lg:col-span-5 flex flex-col justify-center">
             <div class="border-l-2 border-dsc-gold/60 pl-6 py-1">
-              <p class="text-sm sm:text-base text-dsc-body font-light leading-relaxed mb-4" data-i18n="sustainability.lead">
+              <p class="text-sm sm:text-base text-dsc-body font-light leading-relaxed mb-4">
                 Acreditamos que a verdadeira excelência têxtil respeita os recursos naturais. Toda a nossa produção segue diretivas comunitárias rigorosas de proteção ambiental, economia circular e dignidade laboral no Norte de Portugal.
               </p>
               <div class="flex items-center gap-3 text-[11px] font-mono text-dsc-muted">
@@ -136,7 +127,7 @@
               <span class="font-mono text-3xl sm:text-4xl font-light text-dsc-navy group-hover:text-dsc-gold transition-colors">100%</span>
               <span class="w-2 h-2 rounded-full bg-dsc-gold"></span>
             </div>
-            <span class="badge-gold text-[9px] mb-3 inline-block" data-i18n="sustentabilidade_matriz_fotovoltaica">Matriz Fotovoltaica</span>
+            <span class="badge-gold text-[9px] mb-3 inline-block">Matriz Fotovoltaica</span>
             <p class="text-xs text-dsc-body font-light leading-relaxed">
               Autossuficiência energética diurna nas linhas de confeção através de painéis solares instalados na unidade fabril e contratos de energia verde garantida (GdO).
             </p>
@@ -201,10 +192,10 @@
                   <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold flex items-center gap-1.5">
                     <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> PILAR // 01
                   </span>
-                  <span class="badge-navy text-[9px] uppercase" data-i18n="sustentabilidade_efici_ncia_h_drica">Eficiência Hídrica</span>
+                  <span class="badge-navy text-[9px] uppercase">Eficiência Hídrica</span>
                 </div>
-                <h3 class="font-serif text-2xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.0.title">Tratamento &amp; Recircula&ccedil;&atilde;o Avan&ccedil;ada de &Aacute;gua</h3>
-                <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed mb-4" data-i18n="sustainability.pillars.0.desc">
+                <h3 class="font-serif text-2xl font-medium tracking-tight text-dsc-navy mb-3">Tratamento &amp; Recircula&ccedil;&atilde;o Avan&ccedil;ada de &Aacute;gua</h3>
+                <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed mb-4">
                   Os processos de tingimento e purga utilizam máquinas de última geração com monitorização eletrónica do consumo de litros por kg de felpo. As águas residuais passam por desmineralização e retorno térmico, transferindo calor para os novos banhos antes da depuração final.
                 </p>
               </div>
@@ -221,15 +212,15 @@
                   <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold flex items-center gap-1.5">
                     <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> PILAR // 02
                   </span>
-                  <span class="badge-navy text-[9px] uppercase" data-i18n="t_mat_rias_primas">Matérias-Primas</span>
+                  <span class="badge-navy text-[9px] uppercase">Matérias-Primas</span>
                 </div>
-                <h3 class="font-serif text-2xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.1.title">Fibras Org&acirc;nicas Certificadas &amp; Linho Europeu</h3>
-                <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed mb-4" data-i18n="sustainability.pillars.1.desc">
+                <h3 class="font-serif text-2xl font-medium tracking-tight text-dsc-navy mb-3">Fibras Org&acirc;nicas Certificadas &amp; Linho Europeu</h3>
+                <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed mb-4">
                   Damos primazia a fiação com algodão biológico cultivado sem pesticidas sintéticos ou sementes geneticamente modificadas (não-OGM). Integramos linho europeu rastreado European Flax® e algodão reciclado mecânico pré-consumo sem químicos tóxicos.
                 </p>
               </div>
               <div class="font-mono text-[11px] text-dsc-muted pt-4 border-t border-dsc-line/80 flex items-center justify-between">
-                <span data-i18n="t_fibras_">Fibras:</span>
+                <span>Fibras:</span>
                 <span class="text-dsc-navy font-semibold">Algodão GOTS &middot; Linho Europeu &middot; BCI Cotton</span>
               </div>
             </div>
@@ -241,16 +232,16 @@
                   <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold flex items-center gap-1.5">
                     <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> PILAR // 03
                   </span>
-                  <span class="badge-navy text-[9px] uppercase" data-i18n="sustentabilidade_seguran_a_qu_mica">Segurança Química</span>
+                  <span class="badge-navy text-[9px] uppercase">Segurança Química</span>
                 </div>
-                <h3 class="font-serif text-2xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.2.title">Tinturaria de Reativos Livres de Subst&acirc;ncias Nocivas</h3>
-                <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed mb-4" data-i18n="sustainability.pillars.2.desc">
+                <h3 class="font-serif text-2xl font-medium tracking-tight text-dsc-navy mb-3">Tinturaria de Reativos Livres de Subst&acirc;ncias Nocivas</h3>
+                <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed mb-4">
                   Todos os corantes utilizados possuem fixação de elevada afinidade molecular, reduzindo a lavagem subsequente e garantindo que as toalhas libertam zero químicos ou alérgenos em contacto com a pele humana ou na lavagem doméstica.
                 </p>
               </div>
               <div class="font-mono text-[11px] text-dsc-muted pt-4 border-t border-dsc-line/80 flex items-center justify-between">
-                <span data-i18n="t_padr_o_">Padrão:</span>
-                <span class="text-dsc-navy font-semibold" data-i18n="t_oeko_tex_standard_100_classe_i_apto_para">OEKO-TEX Standard 100 Classe I (Apto para Bebés)</span>
+                <span>Padrão:</span>
+                <span class="text-dsc-navy font-semibold">OEKO-TEX Standard 100 Classe I (Apto para Bebés)</span>
               </div>
             </div>
 
@@ -261,15 +252,15 @@
                   <span class="font-mono text-xs uppercase tracking-widest text-dsc-gold font-bold flex items-center gap-1.5">
                     <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> PILAR // 04
                   </span>
-                  <span class="badge-navy text-[9px] uppercase" data-i18n="t__tica_pessoas">Ética & Pessoas</span>
+                  <span class="badge-navy text-[9px] uppercase">Ética & Pessoas</span>
                 </div>
-                <h3 class="font-serif text-2xl font-medium tracking-tight text-dsc-navy mb-3" data-i18n="sustainability.pillars.3.title">Dignidade Laboral &amp; Padr&otilde;es Sociais SMETA</h3>
-                <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed mb-4" data-i18n="sustainability.pillars.3.desc">
+                <h3 class="font-serif text-2xl font-medium tracking-tight text-dsc-navy mb-3">Dignidade Laboral &amp; Padr&otilde;es Sociais SMETA</h3>
+                <p class="text-xs sm:text-sm text-dsc-body font-light leading-relaxed mb-4">
                   Produzir em Portugal significa operar dentro do mais exigente quadro legislativo de proteção do trabalhador da União Europeia. Garantimos salários justos, igualdade de género, formação técnica continuada e ergonomia no chão de fábrica.
                 </p>
               </div>
               <div class="font-mono text-[11px] text-dsc-muted pt-4 border-t border-dsc-line/80 flex items-center justify-between">
-                <span data-i18n="t_auditoria_">Auditoria:</span>
+                <span>Auditoria:</span>
                 <span class="text-dsc-navy font-semibold">Sedex / SMETA 4-Pillars &middot; Fabricação 100% Portugal</span>
               </div>
             </div>
@@ -298,7 +289,7 @@
             <div class="bg-white p-6 border border-dsc-line hover:border-dsc-navy transition-colors interactive-card flex flex-col justify-between">
               <div>
                 <div class="font-mono text-xs font-bold text-dsc-navy mb-2 flex items-center justify-between">
-                  <span data-i18n="t_oeko_tex_100">OEKO-TEX® 100</span>
+                  <span>OEKO-TEX® 100</span>
                   <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 </div>
                 <div class="text-[10px] font-mono text-dsc-gold font-semibold uppercase mb-3">Classe I (Beb&eacute; &amp; Pele Sens&iacute;vel)</div>
@@ -314,7 +305,7 @@
             <div class="bg-white p-6 border border-dsc-line hover:border-dsc-navy transition-colors interactive-card flex flex-col justify-between">
               <div>
                 <div class="font-mono text-xs font-bold text-dsc-navy mb-2 flex items-center justify-between">
-                  <span data-i18n="sustentabilidade_gots_certified">GOTS CERTIFIED</span>
+                  <span>GOTS CERTIFIED</span>
                   <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 </div>
                 <div class="text-[10px] font-mono text-dsc-gold font-semibold uppercase mb-3">Cadeia de Cust&oacute;dia Org&acirc;nica</div>
@@ -322,16 +313,16 @@
                   Assegura que pelo menos 95% das fibras provêm de agricultura biológica certificada, com rastreio integral de transação.
                 </p>
               </div>
-              <div class="mt-4 pt-3 border-t border-dsc-line/60 text-[10px] font-mono text-dsc-muted" data-i18n="t_transaction_certificate_tc_">Transaction Certificate (TC)</div>
+              <div class="mt-4 pt-3 border-t border-dsc-line/60 text-[10px] font-mono text-dsc-muted">Transaction Certificate (TC)</div>
             </div>
 
             <div class="bg-white p-6 border border-dsc-line hover:border-dsc-navy transition-colors interactive-card flex flex-col justify-between">
               <div>
                 <div class="font-mono text-xs font-bold text-dsc-navy mb-2 flex items-center justify-between">
-                  <span data-i18n="t_smeta_sedex">SMETA / SEDEX</span>
+                  <span>SMETA / SEDEX</span>
                   <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 </div>
-                <div class="text-[10px] font-mono text-dsc-gold font-semibold uppercase mb-3" data-i18n="t_auditoria_social_4_pilares">Auditoria Social 4 Pilares</div>
+                <div class="text-[10px] font-mono text-dsc-gold font-semibold uppercase mb-3">Auditoria Social 4 Pilares</div>
                 <p class="text-xs text-dsc-body font-light leading-relaxed">
                   Verificação independente das condições de trabalho, ambiente fabril, saúde ocupacional e boas práticas de negócio.
                 </p>
@@ -344,7 +335,7 @@
             <div class="bg-white p-6 border border-dsc-line hover:border-dsc-navy transition-colors interactive-card flex flex-col justify-between">
               <div>
                 <div class="font-mono text-xs font-bold text-dsc-navy mb-2 flex items-center justify-between">
-                  <span data-i18n="t_iso_9001_14001">ISO 9001 / 14001</span>
+                  <span>ISO 9001 / 14001</span>
                   <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
                 </div>
                 <div class="text-[10px] font-mono text-dsc-gold font-semibold uppercase mb-3">Gest&atilde;o de Qualidade &amp; Ambiente</div>
@@ -368,24 +359,24 @@
             <div class="lg:col-span-8">
               <div class="inline-flex items-center gap-2 mb-3">
                 <span class="w-2 h-2 rounded-full bg-dsc-gold micro-dot-pulse"></span>
-                <span class="font-mono text-[10px] uppercase tracking-widest text-slate-300" data-i18n="t_regulamenta_o_europeia_espr_2026_2027">Regulamentação Europeia ESPR 2026/2027</span>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-slate-300">Regulamentação Europeia ESPR 2026/2027</span>
               </div>
-              <h3 class="font-serif font-normal text-2xl sm:text-3xl tracking-tight mb-4 text-white" data-i18n="t_preparados_para_o_passaporte_digital_do_">Preparados para o Passaporte Digital do Produto (DPP)</h3>
+              <h3 class="font-serif font-normal text-2xl sm:text-3xl tracking-tight mb-4 text-white">Preparados para o Passaporte Digital do Produto (DPP)</h3>
               <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed mb-6 max-w-2xl">
                 A DSC já possui a arquitetura de dados e etiquetagem QR necessária para integrar o futuro Passaporte Digital do Produto da UE. As marcas nossas clientes podem fornecer aos consumidores finais o histórico completo da toalha: quilómetros de transporte, consumo de água, percentagem de reciclagem e diretrizes de fim de vida.
               </p>
               <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-300">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                  <span data-i18n="t_rastreabilidade_de_fio_lote_a_lote">Rastreabilidade de Fio Lote a Lote</span>
+                  <span>Rastreabilidade de Fio Lote a Lote</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                  <span data-i18n="t_pegada_de_carbono_calculada">Pegada de Carbono Calculada</span>
+                  <span>Pegada de Carbono Calculada</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-                  <span data-i18n="t_qr_code_cosido_em_cetim_reutiliz_vel">QR Code Cosido em Cetim Reutilizável</span>
+                  <span>QR Code Cosido em Cetim Reutilizável</span>
                 </div>
               </div>
             </div>
@@ -417,12 +408,12 @@
         <div>
           <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1 flex items-center gap-2">
             <span class="micro-dot micro-dot-pulse"></span>
-            <span data-i18n="footer_cta_badge">Capacidade Fabril Europeia</span>
+            <span>Capacidade Fabril Europeia</span>
           </span>
-          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-white tracking-tight" data-i18n="footer_cta_title">Pronto para elevar os padrões da sua coleção têxtil?</h2>
+          <h2 class="font-serif font-normal text-3xl sm:text-4xl text-white tracking-tight">Pronto para elevar os padrões da sua coleção têxtil?</h2>
         </div>
         <a href="contactos.html" class="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-dsc-navy hover:bg-dsc-gold hover:text-dsc-navy-deep font-sans text-xs uppercase font-medium tracking-wider transition-all duration-200 shadow-md group">
-          <span data-i18n="footer_cta_btn">Iniciar Diálogo Técnico</span>
+          <span>Iniciar Diálogo Técnico</span>
           <span class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </a>
       </div>
@@ -439,55 +430,55 @@
               DSC
               <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
             </span>
-            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400" data-i18n="sustentabilidade_domingos_silva_cunha">Domingos Silva & Cunha</span>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Domingos Silva & Cunha</span>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed font-light pr-6" data-i18n="footer_bio">
+          <p class="text-xs text-slate-400 leading-relaxed font-light pr-6">
             Desenvolvimento e engenharia de têxteis-lar e felpos de alto rendimento. Combinamos coleções de marca própria com produção modular flexível para mercados internacionais.
           </p>
           <div class="inline-flex items-center gap-2 pt-2 text-[11px] font-mono text-slate-400">
             <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-            <span data-i18n="sustentabilidade_norte_de_portugal_vale_do_ave">Norte de Portugal • Vale do Ave</span>
+            <span>Norte de Portugal • Vale do Ave</span>
           </div>
         </div>
 
         <!-- Coluna 2: Navegação (Span 2) -->
         <div class="lg:col-span-2 space-y-3">
-          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_nav">Estrutura</span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2">Estrutura</span>
           <ul class="space-y-2 text-xs font-mono text-slate-400">
-            <li><a href="sobre.html" class="hover:text-white transition-colors" data-i18n="nav_about">Sobre nós</a></li>
-            <li><a href="servicos.html" class="hover:text-white transition-colors" data-i18n="nav_services">Serviços</a></li>
-            <li><a href="catalogo.html" class="hover:text-white transition-colors" data-i18n="nav_catalog">Catálogo</a></li>
-            <li><a href="sustentabilidade.html" class="hover:text-white transition-colors" data-i18n="nav_sustainability">Sustentabilidade</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors" data-i18n="nav_blog">Blog</a></li>
-            <li><a href="contactos.html" class="hover:text-white transition-colors" data-i18n="nav_contact">Contactos</a></li>
+            <li><a href="sobre.html" class="hover:text-white transition-colors">Sobre nós</a></li>
+            <li><a href="servicos.html" class="hover:text-white transition-colors">Serviços</a></li>
+            <li><a href="catalogo.html" class="hover:text-white transition-colors">Catálogo</a></li>
+            <li><a href="sustentabilidade.html" class="hover:text-white transition-colors">Sustentabilidade</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="contactos.html" class="hover:text-white transition-colors">Contactos</a></li>
           </ul>
         </div>
 
         <!-- Coluna 3: Especializações (Span 2) -->
         <div class="lg:col-span-2 space-y-3">
-          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_spec">Especialidade</span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2">Especialidade</span>
           <ul class="space-y-2 text-xs font-mono text-slate-400">
-            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors" data-i18n="sustentabilidade_toalhas_felpo_550g">Toalhas Felpo 550g</a></li>
-            <li><a href="catalogo.html?cat=contract" class="hover:text-white transition-colors" data-i18n="sustentabilidade_linha_contract_700g">Linha Contract 700g</a></li>
-            <li><a href="catalogo.html?cat=waffle" class="hover:text-white transition-colors" data-i18n="sustentabilidade_waffle_linho">Waffle & Linho</a></li>
-            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors" data-i18n="sustentabilidade_zero_twist_macio">Zero-Twist Macio</a></li>
-            <li><a href="servicos.html" class="hover:text-white transition-colors" data-i18n="sustentabilidade_private_label_b2b">Private Label B2B</a></li>
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Toalhas Felpo 550g</a></li>
+            <li><a href="catalogo.html?cat=contract" class="hover:text-white transition-colors">Linha Contract 700g</a></li>
+            <li><a href="catalogo.html?cat=waffle" class="hover:text-white transition-colors">Waffle & Linho</a></li>
+            <li><a href="catalogo.html?cat=terry" class="hover:text-white transition-colors">Zero-Twist Macio</a></li>
+            <li><a href="servicos.html" class="hover:text-white transition-colors">Private Label B2B</a></li>
           </ul>
         </div>
 
         <!-- Coluna 4: Unidade Fabril & Logística (Span 4) -->
         <div class="lg:col-span-4 space-y-4">
-          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2" data-i18n="footer_col_mill">Instalações & Logística</span>
+          <span class="text-[11px] font-mono uppercase tracking-widest text-white block mb-2">Instalações & Logística</span>
           <div class="space-y-2 text-xs font-mono text-slate-400">
             <div>
-              <span class="text-slate-200" data-i18n="sustentabilidade_sede_fabril_">Sede Fabril:</span>
+              <span class="text-slate-200">Sede Fabril:</span>
               <div class="text-slate-300 font-sans mt-0.5"><span class="ph">Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso</span>, Portugal</div>
             </div>
             <div>
-              <span class="text-slate-200" data-i18n="sustentabilidade_exporta_o_direta_">Exportação Direta:</span>
+              <span class="text-slate-200">Exportação Direta:</span>
               <div class="text-slate-300 mt-0.5"><span class="ph">[EMAIL_COMERCIAL@DSC.PT]</span></div>
             </div>
-            <div class="pt-2 text-[11px] text-slate-400 leading-normal border-t border-slate-800" data-i18n="sustentabilidade_a_45_min_do_aeroporto_s_carneiro_op">A 45 min. do Aeroporto Sá Carneiro (OPO) e Porto de Leixões. Expedição de contentores para os principais hubs da Europa.</div>
+            <div class="pt-2 text-[11px] text-slate-400 leading-normal border-t border-slate-800">A 45 min. do Aeroporto Sá Carneiro (OPO) e Porto de Leixões. Expedição de contentores para os principais hubs da Europa.</div>
           </div>
         </div>
 
@@ -505,7 +496,7 @@
         </div>
         <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
           <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Origem & Fabricação</div>
-          <div class="text-white mt-1 font-medium" data-i18n="sustentabilidade_made_in_portugal_ue_">MADE IN PORTUGAL (UE)</div>
+          <div class="text-white mt-1 font-medium">MADE IN PORTUGAL (UE)</div>
         </div>
         <div class="border border-slate-800 p-3 bg-slate-900/40 hover:border-dsc-gold/40 transition-colors">
           <div class="text-[10px] text-slate-400 uppercase flex items-center justify-center gap-1.5"><span class="w-1 h-1 rounded-full bg-dsc-gold"></span> Auditoria Social</div>
@@ -518,14 +509,14 @@
     <div class="border-t border-slate-800/80 bg-[#050914]">
       <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-[11px] font-mono text-slate-400 gap-4">
         <div>
-          <span data-i18n="footer_rights">&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
+          <span>&copy; 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.</span>
           <span class="mx-2 hidden md:inline">•</span>
           <span class="block md:inline mt-1 md:mt-0">NIF: <span class="ph">505 528 606</span></span>
         </div>
         <div class="flex items-center space-x-6">
-          <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_terms">Termos B2B</a>
-          <a href="contactos.html" class="hover:text-white transition-colors" data-i18n="footer_legal_privacy">Privacidade</a>
-          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="hover:text-white transition-colors" data-i18n="footer_legal_complaints">Livro de Reclamações</a>
+          <a href="contactos.html" class="hover:text-white transition-colors">Termos B2B</a>
+          <a href="contactos.html" class="hover:text-white transition-colors">Privacidade</a>
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="hover:text-white transition-colors">Livro de Reclamações</a>
         </div>
       </div>
     </div>

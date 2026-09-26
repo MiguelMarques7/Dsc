@@ -1031,16 +1031,8 @@ const DSC_ARTICLES = [
 
 let activeArticleId = null;
 
-function getBlogLang() {
-  if (typeof window.getCurrentLanguage === 'function') {
-    return window.getCurrentLanguage();
-  }
-  const saved = localStorage.getItem('dsc_lang');
-  return saved === 'en' ? 'en' : 'pt';
-}
-
-function createArticleCardHTML(art, lang) {
-  const data = art[lang] || art.pt;
+function createArticleCardHTML(art) {
+  const data = art.pt || art;
   return `
     <article onclick="openArticleById('${art.id}')" class="p-7 sm:p-8 bg-dsc-white hover:bg-slate-50 transition-all duration-200 cursor-pointer flex flex-col justify-between h-full rounded-none interactive-card group border border-dsc-line shadow-sm">
       <div>
@@ -1061,7 +1053,7 @@ function createArticleCardHTML(art, lang) {
       <div class="flex justify-between items-center border-t border-dsc-line/80 pt-4 mt-auto">
         <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">${data.date}</span>
         <span class="arrow-trigger font-sans text-xs uppercase font-medium tracking-wider text-dsc-navy flex items-center gap-1.5 group-hover:text-dsc-gold transition-colors">
-          <span>${data.readBtn || (lang === 'en' ? 'Read Article' : 'Ler Artigo')}</span>
+          <span>${data.readBtn || 'Ler Artigo'}</span>
           <span class="arrow-target text-dsc-gold font-bold">&rarr;</span>
         </span>
       </div>
@@ -1072,18 +1064,17 @@ function createArticleCardHTML(art, lang) {
 function renderBlogCards() {
   const blogContainer = document.getElementById('blog-grid');
   const eventsContainer = document.getElementById('events-grid');
-  const lang = getBlogLang();
 
-  // 1. Render 6 Primary Technical Articles
+  // 1. Render 6 Artigos Técnicos Principais
   if (blogContainer) {
     const primaryArticles = DSC_ARTICLES.slice(0, 6);
-    blogContainer.innerHTML = primaryArticles.map(art => createArticleCardHTML(art, lang)).join('');
+    blogContainer.innerHTML = primaryArticles.map(art => createArticleCardHTML(art)).join('');
   }
 
-  // 2. Render 6 Historical / Event Milestone Articles with identical styling
+  // 2. Render 6 Eventos e Marcos Históricos com a mesma grelha
   if (eventsContainer) {
     const eventArticles = DSC_ARTICLES.slice(6, 12);
-    eventsContainer.innerHTML = eventArticles.map(art => createArticleCardHTML(art, lang)).join('');
+    eventsContainer.innerHTML = eventArticles.map(art => createArticleCardHTML(art)).join('');
   }
 }
 
@@ -1092,8 +1083,7 @@ window.openArticleById = function(id) {
   if (!article) return;
 
   activeArticleId = id;
-  const lang = getBlogLang();
-  const data = article[lang] || article.pt;
+  const data = article.pt || article;
 
   const modal = document.getElementById('article-reader-modal');
   if (!modal) return;
@@ -1112,7 +1102,7 @@ window.openArticleById = function(id) {
   if (bodyEl) bodyEl.innerHTML = data.content;
 
   if (sampleBtn) {
-    sampleBtn.innerText = `${data.ctaBtn} →`;
+    sampleBtn.innerText = `${data.ctaBtn || 'Falar Sobre Este Tema'} →`;
     sampleBtn.href = `contactos.html?subject=${encodeURIComponent(data.title)}`;
   }
 
@@ -1149,15 +1139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Listen for languageChanged event to re-render in real-time
-  window.addEventListener('languageChanged', (e) => {
-    renderBlogCards();
-    if (activeArticleId) {
-      openArticleById(activeArticleId);
-    }
-  });
-
-  // Handle URL hash directly on initial load
+  // Tratamento de âncora de URL no carregamento inicial
   if (window.location.hash) {
     const articleId = window.location.hash.replace('#', '');
     if (articleId) openArticleById(articleId);
