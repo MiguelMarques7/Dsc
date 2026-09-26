@@ -51,9 +51,9 @@
 
       <!-- Desktop Language & CTA -->
       <div class="hidden sm:flex items-center space-x-6">
-        <div class="flex items-center border border-dsc-line rounded-none text-xs font-mono">
-          <button id="btn-pt" onclick="setLanguage('pt')" class="btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95">PT</button>
-          <button id="btn-en" onclick="setLanguage('en')" class="btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95">EN</button>
+        <div class="flex items-center border border-dsc-line bg-dsc-surface/60 rounded-none p-0.5 font-mono text-[11px]">
+          <button id="btn-pt" onclick="applyLanguage('pt')" class="px-2.5 py-1 bg-dsc-navy text-white font-medium transition-all" aria-label="Versão em Português">PT</button>
+          <button id="btn-en" onclick="applyLanguage('en')" class="px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all" aria-label="English Version">EN</button>
         </div>
         <a href="contactos.html" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-dsc-navy/30 bg-dsc-navy text-white font-sans text-xs uppercase font-medium tracking-wider hover:bg-dsc-navy-deep hover:border-dsc-gold active:scale-[0.98] transition-all duration-200 rounded-none shadow-sm group">
           <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
@@ -64,9 +64,9 @@
 
       <!-- Mobile Menu Button -->
       <div class="flex items-center space-x-3 md:hidden">
-        <div class="flex items-center border border-dsc-line text-[11px] font-mono">
-          <button onclick="setLanguage('pt')" class="btn-lang-pt px-2 py-1 bg-dsc-navy text-white active:scale-95">PT</button>
-          <button onclick="setLanguage('en')" class="btn-lang-en px-2 py-1 text-dsc-muted active:scale-95">EN</button>
+        <div class="flex items-center border border-dsc-line p-0.5 text-[11px] font-mono">
+          <button onclick="applyLanguage('pt')" class="px-2 py-1 bg-dsc-navy text-white active:scale-95" aria-label="Versão em Português">PT</button>
+          <button onclick="applyLanguage('en')" class="px-2 py-1 text-dsc-muted active:scale-95" aria-label="English Version">EN</button>
         </div>
         <button id="mobile-menu-btn" aria-label="Abrir Menu" class="p-2 border border-dsc-line text-dsc-navy hover:border-dsc-navy active:scale-95">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -242,43 +242,43 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-navy font-medium mb-1">
-                      Nome Completo <span class="text-dsc-gold">*</span>
+                      <span data-i18n="contacts.form.label_name">Nome Completo</span> <span class="text-dsc-gold">*</span>
                     </label>
-                    <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_name" placeholder="Ex: Eng. João Silva">
+                    <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n-placeholder="form_placeholder_name" placeholder="Ex: Eng. João Silva">
                   </div>
                   <div>
                     <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-navy font-medium mb-1">
-                      Empresa / Entidade <span class="text-dsc-gold">*</span>
+                      <span data-i18n="contacts.form.label_company">Empresa / Entidade</span> <span class="text-dsc-gold">*</span>
                     </label>
-                    <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_company" placeholder="Ex: Maison Textile GmbH">
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-navy font-medium mb-1">
-                      País de Destino <span class="text-dsc-gold">*</span>
-                    </label>
-                    <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_country" placeholder="Ex: Alemanha, França, EUA...">
-                  </div>
-                  <div>
-                    <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-navy font-medium mb-1">
-                      Email Corporativo <span class="text-dsc-gold">*</span>
-                    </label>
-                    <input type="email" required class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_email" placeholder="nome@empresa.com">
+                    <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n-placeholder="form_placeholder_company" placeholder="Ex: Maison Textile GmbH">
                   </div>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-navy font-medium mb-1">
-                      Telefone / WhatsApp
+                      <span data-i18n="contacts.form.label_country">País de Destino</span> <span class="text-dsc-gold">*</span>
                     </label>
-                    <input type="tel" class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_phone" placeholder="+351 912 345 678">
+                    <input type="text" required class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n-placeholder="form_placeholder_country" placeholder="Ex: Alemanha, França, EUA...">
                   </div>
                   <div>
                     <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-navy font-medium mb-1">
-                      Âmbito do Projeto <span class="text-dsc-gold">*</span>
+                      <span data-i18n="contacts.form.label_email">Email Corporativo</span> <span class="text-dsc-gold">*</span>
+                    </label>
+                    <input type="email" required class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n-placeholder="form_placeholder_email" placeholder="nome@empresa.com">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-navy font-medium mb-1">
+                      <span data-i18n="contacts.form.label_phone">Telefone / WhatsApp</span>
+                    </label>
+                    <input type="tel" class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n-placeholder="form_placeholder_phone" placeholder="+351 912 345 678">
+                  </div>
+                  <div>
+                    <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-navy font-medium mb-1">
+                      <span data-i18n="contacts.form.label_scope">Âmbito do Projeto</span> <span class="text-dsc-gold">*</span>
                     </label>
                     <select id="form-scope-select" class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-body rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150">
                       <option value="" disabled selected data-i18n="contacts.form.field_scope">Selecione o âmbito...</option>
@@ -295,18 +295,18 @@
                 <div>
                   <div class="flex items-center justify-between mb-1">
                     <label class="block text-[11px] font-mono uppercase tracking-wider text-dsc-navy font-medium">
-                      Especificações Técnicas &amp; Quantidades <span class="text-dsc-gold">*</span>
+                      <span data-i18n="contacts.form.label_details">Especificações Técnicas &amp; Quantidades</span> <span class="text-dsc-gold">*</span>
                     </label>
-                    <span class="text-[9px] font-mono text-dsc-muted hidden sm:inline-block">Preenchimento rápido:</span>
+                    <span class="text-[9px] font-mono text-dsc-muted hidden sm:inline-block" data-i18n="contacts.form.quick_fill">Preenchimento rápido:</span>
                   </div>
                   <!-- Quick Preset Tags -->
                   <div class="flex flex-wrap gap-1.5 mb-2">
-                    <button type="button" onclick="prefillSpecs('hotel')" class="px-2 py-0.5 text-[9px] font-mono bg-dsc-canvas hover:bg-dsc-navy hover:text-white border border-dsc-line transition-all text-dsc-muted rounded-none">+ 550g Hotelaria</button>
-                    <button type="button" onclick="prefillSpecs('plabel')" class="px-2 py-0.5 text-[9px] font-mono bg-dsc-canvas hover:bg-dsc-navy hover:text-white border border-dsc-line transition-all text-dsc-muted rounded-none">+ Private Label</button>
-                    <button type="button" onclick="prefillSpecs('zerotwist')" class="px-2 py-0.5 text-[9px] font-mono bg-dsc-canvas hover:bg-dsc-navy hover:text-white border border-dsc-line transition-all text-dsc-muted rounded-none">+ Zero-Twist</button>
-                    <button type="button" onclick="prefillSpecs('visit')" class="px-2 py-0.5 text-[9px] font-mono bg-dsc-canvas hover:bg-dsc-navy hover:text-white border border-dsc-line transition-all text-dsc-muted rounded-none">+ Visita a Roriz</button>
+                    <button type="button" onclick="prefillSpecs('hotel')" class="px-2 py-0.5 text-[9px] font-mono bg-dsc-canvas hover:bg-dsc-navy hover:text-white border border-dsc-line transition-all text-dsc-muted rounded-none" data-i18n="contacts.form.preset_hotel">+ 550g Hotelaria</button>
+                    <button type="button" onclick="prefillSpecs('plabel')" class="px-2 py-0.5 text-[9px] font-mono bg-dsc-canvas hover:bg-dsc-navy hover:text-white border border-dsc-line transition-all text-dsc-muted rounded-none" data-i18n="contacts.form.preset_plabel">+ Private Label</button>
+                    <button type="button" onclick="prefillSpecs('zerotwist')" class="px-2 py-0.5 text-[9px] font-mono bg-dsc-canvas hover:bg-dsc-navy hover:text-white border border-dsc-line transition-all text-dsc-muted rounded-none" data-i18n="contacts.form.preset_zerotwist">+ Zero-Twist</button>
+                    <button type="button" onclick="prefillSpecs('visit')" class="px-2 py-0.5 text-[9px] font-mono bg-dsc-canvas hover:bg-dsc-navy hover:text-white border border-dsc-line transition-all text-dsc-muted rounded-none" data-i18n="contacts.form.preset_visit">+ Visita a Roriz</button>
                   </div>
-                  <textarea id="form-specs" rows="2" class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n="contacts.form.field_details" placeholder="Descreva os requisitos técnicos (Ex: 2.000 toalhas 550g em algodão penteado, cor Pantone personalizada, etiquetas em damasco)..."></textarea>
+                  <textarea id="form-specs" rows="2" class="w-full bg-dsc-canvas border border-dsc-line px-3 py-2 text-xs focus:outline-none focus:bg-white focus:border-dsc-navy text-dsc-navy rounded-none font-sans font-light hover:border-dsc-navy transition-colors duration-150" data-i18n-placeholder="form_placeholder_details" placeholder="Descreva os requisitos técnicos (Ex: 2.000 toalhas 550g em algodão penteado, cor Pantone personalizada, etiquetas em damasco)..."></textarea>
                 </div>
 
                 <div class="pt-1">

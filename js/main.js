@@ -49,8 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 1. Initialize Internationalization
-  if (typeof window.getCurrentLanguage === 'function' && typeof window.setLanguage === 'function') {
-    window.setLanguage(window.getCurrentLanguage());
+  const initLang = (typeof window.getCurrentLanguage === 'function') 
+    ? window.getCurrentLanguage() 
+    : (localStorage.getItem('dsc_lang') || 'pt');
+
+  if (typeof window.applyLanguage === 'function') {
+    window.applyLanguage(initLang);
+  } else if (typeof window.setLanguage === 'function') {
+    window.setLanguage(initLang);
   }
 
   // 2. Mobile Menu Toggle

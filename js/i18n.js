@@ -1,11 +1,12 @@
 /**
  * DSC (Domingos Silva & Cunha, Lda.)
- * Full-Site Internationalization (i18n) Engine & Bilingual Dictionary (PT / EN)
- * Guarantees 100% complete bilingual transition across all pages, dynamic components, modals, and forms.
+ * Full-Site Internationalization (i18n) Engine & B2B Textile Terminology Dictionary (PT / EN)
+ * Complete implementation supporting data-i18n, data-i18n-placeholder, data-i18n-aria, data-i18n-html, select options, and full-DOM traversal.
  */
 
 const dictionary = {
   pt: {
+    // Navigation
     nav: {
       about: "Sobre Nós",
       services: "Serviços",
@@ -15,11 +16,29 @@ const dictionary = {
       contacts: "Contactos",
       cta: "Sourcing B2B"
     },
+    nav_about: "Sobre nós",
+    nav_services: "Serviços",
+    nav_catalog: "Catálogo",
+    nav_sustainability: "Sustentabilidade",
+    nav_blog: "Blog",
+    nav_contact: "Contactos",
+
+    // Flat form placeholder keys
+    form_placeholder_name: "Ex: Eng.º João Silva / Diretor de Compras",
+    form_placeholder_company: "Ex: Maison Textile SAS / Hotel Boutique Group",
+    form_placeholder_country: "Ex: França, Alemanha, Reino Unido, EUA...",
+    form_placeholder_email: "contacto@empresa.com",
+    form_placeholder_phone: "+351 912 345 678",
+    form_placeholder_details: "Descreva os requisitos técnicos (Ex: 2.000 toalhas 550 g/m² em algodão penteado, cor Pantone personalizada, fio retorcido 24/2, etiquetas em cetim)...",
+    form_search_blog: "Pesquisar artigos por título, tema ou tecnologia...",
+    form_search_catalog: "Pesquisar por referência, GSM ou material...",
+
+    // Index Page
     index: {
       hero_eyebrow: "Engenharia Têxtil • Manufatura em Portugal",
       hero_location: "DSC — Domingos Silva & Cunha — Roriz, Santo Tirso",
       hero_title_html: "Precisão fabril<br><span style=\"color:#B39860; font-style:italic;\">e desenvolvimento</span><br><span class=\"text-white/70\">modular para o</span> têxtil-lar.",
-      hero_desc: "Da arquitectura da fibra ao acabamento final. Coleções de marca própria e modelo modular para qualquer fase da cadeia produtiva.",
+      hero_desc: "Da arquitectura da fibra ao acabamento final. Coleções de marca própria e modelo modular para qualquer fase da cadeia produtiva têxtil.",
       hero_btn_explore: "Explorar Catálogo",
       hero_btn_sourcing: "Sourcing B2B",
       stats_gsm_label: "Gramagens",
@@ -70,6 +89,8 @@ const dictionary = {
       gsm_box_use: "Segmento Recomendado",
       gsm_btn_cta: "Solicitar Amostra Nesta Gramagem"
     },
+
+    // About Page
     about: {
       badge: "01 / HERANÇA & CAPACIDADE FABRIL",
       location: "Roriz • Santo Tirso • Portugal",
@@ -108,6 +129,8 @@ const dictionary = {
       park_item3_title: "Acabamento & Confeção de Precisão",
       park_item3_desc: "Linhas especializadas em costuras duplas reforçadas, aplicação de etiquetas tecidas de alta definição e embalagem adaptada aos requisitos de logística do cliente."
     },
+
+    // Services Page
     services: {
       badge: "02 / ESTRUTURA OPERACIONAL • CADEIA DE VALOR",
       h1: "Engenharia têxtil integral, da conceção do fio ao destino internacional.",
@@ -136,6 +159,8 @@ const dictionary = {
         step5_desc: "Costuras duplas reforçadas, etiquetagem personalizada e embalamento de acordo com os requisitos logísticos."
       }
     },
+
+    // Products / Catalog
     products: {
       badge: "03 / Arquitetura de Catálogo",
       h1: "Coleções de banho concebidas com precisão, estética e durabilidade.",
@@ -242,6 +267,8 @@ const dictionary = {
       modal_btn_sample: "Solicitar Amostra Deste Artigo →",
       modal_btn_close: "Fechar"
     },
+
+    // Sustainability Page
     sustainability: {
       badge: "04 / RESPONSABILIDADE AMBIENTAL • CONFORMIDADE ESG",
       h1: "Compromisso ecológico com práticas de fabrico limpas e rastreáveis.",
@@ -279,6 +306,8 @@ const dictionary = {
       cert4_title: "Made in Portugal / UE",
       cert4_desc: "Garantia de conformidade com todas as normas laborais, fiscais e ambientais da União Europeia."
     },
+
+    // Blog Page
     blog: {
       badge: "05 / CADERNO TÉCNICO, I&D & HISTÓRIA",
       h1: "Artigos técnicos de engenharia têxtil, tendências de mercado e património fabril.",
@@ -296,6 +325,8 @@ const dictionary = {
       btn_discuss: "Falar Sobre Este Tema",
       btn_close: "Fechar"
     },
+
+    // Contacts Page & Form
     contacts: {
       badge: "06 / DIÁLOGO TÉCNICO & SOURCING INDUSTRIAL",
       h1: "Inicie o desenvolvimento da sua coleção com a nossa equipa fabril.",
@@ -312,38 +343,47 @@ const dictionary = {
       map_title: "Localização Fabril DSC (Roriz, Santo Tirso)",
       map_btn_street: "Mapa de Ruas",
       map_btn_sat: "Satélite HD",
-      form_badge: "Formulário Estruturado B2B",
-      form_title: "Solicitação de Amostras & Cotação",
-      form_lead: "Preencha os detalhes do seu projeto. A nossa equipa técnica responde no prazo máximo de 24 a 48 horas úteis.",
-      form_name_label: "Nome do Contacto / Cargo *",
-      form_name_ph: "Ex: Eng.º Miguel Silva / Diretor de Compras",
-      form_company_label: "Empresa / Entidade *",
-      form_company_ph: "Ex: Maison Textiles SAS / Hotel Boutique Group",
-      form_email_label: "Email Profissional *",
-      form_email_ph: "contacto@empresa.com",
-      form_phone_label: "Telefone / WhatsApp",
-      form_phone_ph: "+351 912 345 678",
-      form_country_label: "País / Região de Destino *",
-      form_country_ph: "Ex: França, Alemanha, Reino Unido, Portugal",
-      form_scope_label: "Tipo de Solicitação / Âmbito *",
-      form_scope_opt0: "Amostras Físicas de Artigos do Catálogo",
-      form_scope_opt1: "Desenvolvimento de Marca Própria (Private Label Turnkey)",
-      form_scope_opt2: "Cotação para Tecelagem / Subcontratação Modular",
-      form_scope_opt3: "Linha Hotelaria Contract / Lavandaria Industrial",
-      form_scope_opt4: "Agendamento de Visita às Instalações Fabris",
-      form_specs_label: "Especificações do Projeto / Referências de Interesse *",
-      form_specs_ph: "Descreva requisitos: gramagens desejadas (ex: 550g/m²), composições (100% algodão penteado, linho, etc.), quantidades estimadas por cor/tamanho e referências do catálogo...",
-      sample_prefill: "Gostaria de solicitar o envio de amostra técnica e cotação para o artigo de referência {ref}. Por favor indiquem condições de fornecimento, prazos de envio de lab-dips e ficha técnica completa.",
-      form_btn_submit: "Enviar Solicitação Técnica B2B",
-      form_gdpr_note: "Os dados submetidos serão tratados exclusivamente pela DSC para efeitos de resposta comercial e técnica, em conformidade com o RGPD.",
-      guarantees_title: "Garantias Operacionais DSC",
-      g1_title: "Resposta Rápida",
-      g1_desc: "Proposta técnica e comercial formal no prazo de 24h a 48h úteis.",
-      g2_title: "Amostragem Ágil",
-      g2_desc: "Envio de amostras de catálogo e lab-dips em 7 a 10 dias úteis.",
-      g3_title: "Rastreabilidade Europeia",
-      g3_desc: "Fabricação integral em Portugal segundo as normas laborais e ambientais da UE."
+      form: {
+        badge: "Formulário Estruturado B2B",
+        title: "Formulário de Pedido Técnico & Cotação",
+        lead: "Preencha os detalhes do seu projeto. A nossa equipa técnica responde no prazo máximo de 24 a 48 horas úteis.",
+        name_label: "Nome Completo *",
+        company_label: "Empresa / Entidade *",
+        email_label: "Email Corporativo *",
+        phone_label: "Telefone / WhatsApp",
+        country_label: "País de Destino *",
+        scope_label: "Âmbito do Projeto *",
+        field_scope: "Selecione o âmbito...",
+        scope_options: {
+          opt0: "Pedido de Amostras de Toalhas",
+          opt1: "Desenvolvimento de Coleção Private Label",
+          opt2: "Produção Modular (Tecelagem / Confeção)",
+          opt3: "Parceria / Representação Comercial",
+          opt4: "Outro Pedido Técnico / Visita Fabril",
+          opt_sample: "Amostragem de Artigo Específico"
+        },
+        specs_label: "Especificações Técnicas & Quantidades *",
+        field_name: "Ex: Eng.º João Silva",
+        field_company: "Ex: Maison Textile GmbH",
+        field_country: "Ex: Alemanha, França, EUA...",
+        field_email: "nome@empresa.com",
+        field_phone: "+351 912 345 678",
+        field_details: "Descreva os requisitos técnicos (Ex: 2.000 toalhas 550g em algodão penteado, cor Pantone personalizada, etiquetas em damasco)...",
+        sample_prefill: "Gostaria de solicitar o envio de amostra técnica e cotação para o artigo de referência {ref}. Por favor indiquem condições de fornecimento, prazos de envio de lab-dips e ficha técnica completa.",
+        sample_badge_prefix: "Amostra em configuração:",
+        button: "Enviar Pedido de Cotação",
+        privacy: "Os dados facultados destinam-se exclusivamente à análise comercial e resposta técnica pela equipa DSC."
+      },
+      info: {
+        guarantees_title: "GARANTIAS & DIRETRIZES B2B",
+        g1: "Amostras em 24/48h",
+        g2: "Acordo NDA / Sigilo",
+        g3: "Cotação em < 24h",
+        g4: "Atendimento Multilíngue"
+      }
     },
+
+    // Footer
     footer: {
       cta_badge: "Capacidade Fabril Europeia",
       cta_title: "Pronto para elevar os padrões da sua coleção têxtil?",
@@ -366,9 +406,22 @@ const dictionary = {
       terms: "Termos B2B",
       privacy: "Privacidade",
       complaints: "Livro de Reclamações"
-    }
+    },
+    footer_cta_badge: "Capacidade Fabril Europeia",
+    footer_cta_title: "Pronto para elevar os padrões da sua coleção têxtil?",
+    footer_cta_btn: "Iniciar Diálogo Técnico",
+    footer_bio: "Desenvolvimento e engenharia de têxteis-lar e felpos de alto rendimento. Combinamos coleções de marca própria com produção modular flexível para mercados internacionais.",
+    footer_col_nav: "Estrutura",
+    footer_col_spec: "Especialidade",
+    footer_col_mill: "Instalações & Logística",
+    footer_rights: "© 2026 DSC (Domingos Silva & Cunha, Lda.). Todos os direitos reservados.",
+    footer_legal_terms: "Termos B2B",
+    footer_legal_privacy: "Privacidade",
+    footer_legal_complaints: "Livro de Reclamações"
   },
+
   en: {
+    // Navigation
     nav: {
       about: "About Us",
       services: "Services",
@@ -378,11 +431,29 @@ const dictionary = {
       contacts: "Contact",
       cta: "B2B Sourcing"
     },
+    nav_about: "About Us",
+    nav_services: "Services",
+    nav_catalog: "Catalog",
+    nav_sustainability: "Sustainability",
+    nav_blog: "Blog",
+    nav_contact: "Contact",
+
+    // Flat form placeholder keys
+    form_placeholder_name: "e.g. John Doe / Sourcing Director",
+    form_placeholder_company: "e.g. Maison Textile SAS / Boutique Hotel Group",
+    form_placeholder_country: "e.g. France, Germany, United Kingdom, USA...",
+    form_placeholder_email: "contact@company.com",
+    form_placeholder_phone: "+351 912 345 678",
+    form_placeholder_details: "Describe technical requirements (e.g., 2,000 bath towels 550 GSM in combed cotton, custom Pantone shade, double-twisted 2-ply yarn 24/2, satin woven labels)...",
+    form_search_blog: "Search technical articles by title, topic, or technology...",
+    form_search_catalog: "Search by reference, GSM weight, or yarn construction...",
+
+    // Index Page
     index: {
       hero_eyebrow: "Textile Engineering • Manufacturing in Portugal",
       hero_location: "DSC — Domingos Silva & Cunha — Roriz, Santo Tirso",
       hero_title_html: "Factory precision<br><span style=\"color:#B39860; font-style:italic;\">and modular</span><br><span class=\"text-white/70\">development for</span> home textiles.",
-      hero_desc: "From fiber architecture to final finishing. In-house brand collections and modular manufacturing for any phase of the production chain.",
+      hero_desc: "From fiber architecture to final finishing. In-house brand collections and modular manufacturing for any phase of the textile production chain.",
       hero_btn_explore: "Explore Catalog",
       hero_btn_sourcing: "B2B Sourcing",
       stats_gsm_label: "Weights (GSM)",
@@ -402,16 +473,16 @@ const dictionary = {
       collections_view_all: "View Full Catalog",
       card1_ref: "Ref. DSC-T550",
       card1_title: "Combed Cotton Terry Towel",
-      card1_desc: "Ultra-consistent loop pile with plush velvet hand-feel and rapid absorbency. High rotation for luxury brands and retail.",
+      card1_desc: "Ultra-consistent terry pile with plush velvet hand-feel and rapid absorbency. High rotation for luxury brands and retail.",
       card2_ref: "Ref. DSC-T700",
       card2_title: "Heavy Contract Hospitality Line",
-      card2_desc: "Two-ply 24/2 ring-spun yarn with anti-snag dense loop. Calibrated for 90ºC industrial laundering in 5★ hospitality.",
+      card2_desc: "Double-twisted 2-ply yarn (24/2) with anti-snag dense loop. Calibrated for 90ºC industrial laundering in 5★ hospitality.",
       card3_ref: "Ref. DSC-W420",
       card3_title: "Honeycomb Waffle & Flax Linen",
       card3_desc: "Aerated 3D cellular structure drying 2× faster. Significantly cuts shipping weight and commercial laundry energy.",
       card4_ref: "Ref. DSC-Z600",
       card4_title: "Zero-Twist Luxury Spa Terry",
-      card4_desc: "Twistless yarn construction creating air micro-pockets. Exceptional cloud-like loft with ultra-fast dry times.",
+      card4_desc: "Twistless cotton construction creating air micro-pockets. Exceptional cloud-like loft with ultra-fast dry times.",
       card_btn_sample: "Request B2B Sample",
       rigor_badge: "The DSC Standard",
       rigor_title_html: "Why leading<br>distributors choose<br><span style=\"color: #B39860; font-style: italic;\">our manufacturing.</span>",
@@ -433,6 +504,8 @@ const dictionary = {
       gsm_box_use: "Recommended Channel",
       gsm_btn_cta: "Request Sample in This GSM"
     },
+
+    // About Page
     about: {
       badge: "01 / HERITAGE & MANUFACTURING CAPACITY",
       location: "Roriz • Santo Tirso • Portugal",
@@ -446,7 +519,7 @@ const dictionary = {
       val1_title: "Mill Craftsmanship",
       val1_desc: "Deep mastery of terry weaving techniques, warp tension control, and high-tolerance computerized tailoring.",
       val2_title: "European Technical Rigor",
-      val2_desc: "Guaranteed dimensional stability, colorfastness, and resistance to severe commercial wash cycles.",
+      val2_desc: "Guaranteed dimensional stability, high colorfastness, and resistance to severe commercial wash cycles.",
       val3_title: "Operational Flexibility",
       val3_desc: "Ability to engineer everything from exclusive boutique capsules to large-scale industrial bulk orders with unwavering consistency.",
       metric1_label: "Location",
@@ -469,8 +542,10 @@ const dictionary = {
       park_item2_title: "In-House Quality Control Lab",
       park_item2_desc: "Rigorous testing for washfastness, friction rub, capillary water absorption, and dimensional shrinkage prior to dispatch.",
       park_item3_title: "Precision Finishing & Hemming",
-      park_item3_desc: "Specialized lines for reinforced double-stitch hems, high-definition woven brand labels, and barcoded retail-ready packaging."
+      park_item3_desc: "Specialized lines for reinforced double-stitched hems, high-definition woven brand labels, and barcoded retail-ready packaging."
     },
+
+    // Services Page
     services: {
       badge: "02 / OPERATIONAL STRUCTURE • VALUE CHAIN",
       h1: "Complete textile engineering, from yarn architecture to global delivery.",
@@ -487,7 +562,7 @@ const dictionary = {
         step1_desc: "Determining GSM targets, yarn structure, loop height, and formulating custom lab-dip colorways.",
         step2_num: "02",
         step2_title: "Yarn Preparation",
-        step2_desc: "Sourcing premium raw materials: combed cotton, carded two-ply, flax linen, bamboo, and certified recycled fibers.",
+        step2_desc: "Sourcing premium raw materials: combed cotton, double-twisted 2-ply yarn, flax linen, bamboo, and certified recycled fibers.",
         step3_num: "03",
         step3_title: "Terry & Waffle Weaving",
         step3_desc: "Weaving on high-precision Jacquard and Dobby looms with electronic warp tension and weight controls.",
@@ -499,6 +574,8 @@ const dictionary = {
         step5_desc: "Reinforced lockstitch hems, custom satin branding labels, and customized export-ready boxing."
       }
     },
+
+    // Products / Catalog
     products: {
       badge: "03 / Catalog Architecture",
       h1: "Bath collections engineered with precision, aesthetics, and durability.",
@@ -516,7 +593,7 @@ const dictionary = {
       items: [
         {
           name: "Combed Cotton Terry Towel",
-          desc: "DSC benchmark article. Dense, homogeneous terry loop delivering velvet hand-feel and rapid absorbency from first use.",
+          desc: "DSC benchmark article. Dense, homogeneous terry pile delivering velvet hand-feel and rapid absorbency from first use.",
           specs: {
             composition: "100% Long-Staple Combed Cotton",
             density: "550 g/m²"
@@ -540,7 +617,7 @@ const dictionary = {
         },
         {
           name: "Premium Zero-Twist Plush Towel",
-          desc: "Twistless fibers trapping micro air pockets inside the yarn. Provides extraordinary visual loft with soothing skin softness.",
+          desc: "Twistless cotton trapping micro air pockets inside the yarn. Provides extraordinary visual loft with soothing skin softness.",
           specs: {
             composition: "100% Noble Soluble PVA Cotton",
             density: "600 g/m²"
@@ -550,7 +627,7 @@ const dictionary = {
           name: "Greek Key Framed Hotel Bath Mat",
           desc: "Heavy-duty construction for hotel bathroom floors. Compact short loop ground engineered for 95°C boil-washing and high-pressure calenders.",
           specs: {
-            composition: "100% Plied Carded Cotton",
+            composition: "100% Double-Twisted 2-Ply Cotton",
             density: "950 g/m²"
           }
         },
@@ -605,6 +682,8 @@ const dictionary = {
       modal_btn_sample: "Request Sample for This Article →",
       modal_btn_close: "Close"
     },
+
+    // Sustainability Page
     sustainability: {
       badge: "04 / ENVIRONMENTAL RESPONSIBILITY • ESG COMPLIANCE",
       h1: "Eco-conscious manufacturing with clean, fully traceable operations.",
@@ -628,7 +707,7 @@ const dictionary = {
       p2_title: "Thermal Efficiency & Emissions",
       p2_desc: "Continuous monitoring of gas and electrical consumption per kilogram of terry fabric, coupled with heat-recovery systems on industrial dryers.",
       p3_title: "Circular Economy & Zero Waste",
-      p3_desc: "100% of fabric cutting offcuts and selvages are sorted and routed to certified textile shredders for regeneration into new spun yarns.",
+      p3_desc: "100% of fabric cutting offcuts and selvedges are sorted and routed to certified textile shredders for regeneration into new spun yarns.",
       p4_title: "Social Responsibility & SMETA",
       p4_desc: "Strict adherence to fair worker compensation, occupational health and safety, non-discrimination, and zero tolerance for precarious labor.",
       certs_badge: "Third-Party Audits & Certifications",
@@ -642,6 +721,8 @@ const dictionary = {
       cert4_title: "Made in Portugal / EU",
       cert4_desc: "Direct compliance with the European Union's environmental, fiscal, and labor directives."
     },
+
+    // Blog Page
     blog: {
       badge: "05 / TECHNICAL JOURNAL, R&D & HERITAGE",
       h1: "Technical textile engineering essays, market insights, and mill heritage.",
@@ -659,6 +740,8 @@ const dictionary = {
       btn_discuss: "Discuss This Topic",
       btn_close: "Close"
     },
+
+    // Contacts Page & Form
     contacts: {
       badge: "06 / TECHNICAL SOURCING & INQUIRIES",
       h1: "Initiate collection development with our manufacturing engineering team.",
@@ -675,38 +758,47 @@ const dictionary = {
       map_title: "DSC Mill Location (Roriz, Santo Tirso)",
       map_btn_street: "Street Map",
       map_btn_sat: "Satellite HD",
-      form_badge: "Structured B2B Inquiry Form",
-      form_title: "Sample Box Request & Quotation",
-      form_lead: "Provide your project specifications below. Our technical engineering team responds within 24 to 48 business hours.",
-      form_name_label: "Contact Name / Role *",
-      form_name_ph: "e.g. John Doe / Sourcing Director",
-      form_company_label: "Company / Brand Name *",
-      form_company_ph: "e.g. Maison Textiles SAS / Hotel Boutique Group",
-      form_email_label: "Corporate Email *",
-      form_email_ph: "contact@company.com",
-      form_phone_label: "Phone / WhatsApp",
-      form_phone_ph: "+351 912 345 678",
-      form_country_label: "Destination Country / Market *",
-      form_country_ph: "e.g. France, Germany, United Kingdom, USA",
-      form_scope_label: "Inquiry Scope / Request Type *",
-      form_scope_opt0: "Physical Catalog Sample Box",
-      form_scope_opt1: "Turnkey Private Label Collection Development",
-      form_scope_opt2: "Contract Weaving / Modular Subcontracting",
-      form_scope_opt3: "Commercial Hospitality / Heavy Contract Line",
-      form_scope_opt4: "On-Site Factory Visit Scheduling",
-      form_specs_label: "Project Specifications / Articles of Interest *",
-      form_specs_ph: "Describe requirements: target GSM (e.g. 550 GSM), yarn blends (100% combed cotton, linen, etc.), estimated order volumes per color/size, and catalog references...",
-      sample_prefill: "I would like to request a technical sample box and formal quotation for article reference {ref}. Please provide supply terms, lab-dip turnaround times, and full technical spec sheets.",
-      form_btn_submit: "Submit B2B Technical Request",
-      form_gdpr_note: "Submitted data is processed solely by DSC for commercial and technical fulfillment under GDPR compliance.",
-      guarantees_title: "DSC Operational Guarantees",
-      g1_title: "Rapid Turnaround",
-      g1_desc: "Formal commercial and technical quotations within 24h to 48h.",
-      g2_title: "Agile Sampling",
-      g2_desc: "Catalog sample boxes and lab-dip strike-offs shipped in 7 to 10 days.",
-      g3_title: "European Traceability",
-      g3_desc: "100% manufactured in Portugal adhering to EU environmental and labor standards."
+      form: {
+        badge: "Structured B2B Inquiry Form",
+        title: "Technical Sourcing & Quotation Request",
+        lead: "Provide your project specifications below. Our technical engineering team responds within 24 to 48 business hours.",
+        name_label: "Full Name *",
+        company_label: "Company / Brand Name *",
+        email_label: "Corporate Email *",
+        phone_label: "Phone / WhatsApp",
+        country_label: "Destination Market / Country *",
+        scope_label: "Project Scope *",
+        field_scope: "Select scope...",
+        scope_options: {
+          opt0: "Terry Towel & Linens Sample Box",
+          opt1: "Full-Package Private Label Collection Development",
+          opt2: "Modular Contract Manufacturing (Weaving / Confection)",
+          opt3: "Commercial Hospitality / Heavy Contract Line",
+          opt4: "On-Site Factory Visit Scheduling",
+          opt_sample: "Specific Article Lab Dip / Swatch Sampling"
+        },
+        specs_label: "Technical Specifications & Order Volumes *",
+        field_name: "e.g. John Doe / Sourcing Director",
+        field_company: "e.g. Maison Textile GmbH",
+        field_country: "e.g. Germany, France, United Kingdom, USA...",
+        field_email: "contact@company.com",
+        field_phone: "+351 912 345 678",
+        field_details: "Describe technical requirements (e.g., 2,000 bath towels 550 GSM in combed cotton, custom Pantone shade, damask labels)...",
+        sample_prefill: "I would like to request a technical sample box and formal quotation for article reference {ref}. Please provide supply terms, lab-dip turnaround times, and full technical spec sheets.",
+        sample_badge_prefix: "Configuring Sample Request:",
+        button: "Submit Quotation Request",
+        privacy: "Submitted information is processed exclusively for commercial and technical fulfillment under GDPR compliance."
+      },
+      info: {
+        guarantees_title: "B2B GUARANTEES & OPERATIONAL DIRECTIVES",
+        g1: "Samples in 24/48h",
+        g2: "NDA / Confidentiality Agreement",
+        g3: "Quotation in < 24h",
+        g4: "Multilingual Technical Support"
+      }
     },
+
+    // Footer
     footer: {
       cta_badge: "European Manufacturing Capacity",
       cta_title: "Ready to elevate the standards of your home linen collection?",
@@ -729,7 +821,18 @@ const dictionary = {
       terms: "B2B Terms",
       privacy: "Privacy Policy",
       complaints: "Complaints Book"
-    }
+    },
+    footer_cta_badge: "European Manufacturing Capacity",
+    footer_cta_title: "Ready to engineer your upcoming home textile collection?",
+    footer_cta_btn: "Initiate Technical Sourcing",
+    footer_bio: "Engineering and manufacturing high-performance home and bath linens. Uniting in-house brand collections with flexible modular manufacturing for global export.",
+    footer_col_nav: "Navigation",
+    footer_col_spec: "Specialization",
+    footer_col_mill: "Mill Facilities & Logistics",
+    footer_rights: "© 2026 DSC (Domingos Silva & Cunha, Lda.). All rights reserved.",
+    footer_legal_terms: "B2B Terms",
+    footer_legal_privacy: "Privacy Policy",
+    footer_legal_complaints: "Complaints Book"
   }
 };
 
@@ -826,16 +929,16 @@ const PT_TO_EN = {
   "Amostras": "Sampling",
   "350 — 950 g/m²": "350 — 950 g/m²",
   "350 &mdash; 950 g/m&sup2;": "350 — 950 g/m²",
-  "Felpo · Waffle · Zero-Twist": "Terry · Waffle · Zero-Twist",
-  "Felpo &middot; Waffle &middot; Zero-Twist": "Terry · Waffle · Zero-Twist",
+  "Felpo · Waffle · Zero-Twist": "Terry Pile · Waffle · Zero-Twist",
+  "Felpo &middot; Waffle &middot; Zero-Twist": "Terry Pile · Waffle · Zero-Twist",
   "2.500+ Ton./ano": "2,500+ Ton./year",
   "Teares de alta precisão": "High-precision looms",
   "24+ países": "24+ countries",
   "85% da produção": "85% of production",
   "7 — 10 dias": "7 — 10 days",
   "7 &mdash; 10 dias": "7 — 10 days",
-  "Lab-dips & protótipos": "Lab-dips & prototypes",
-  "Lab-dips &amp; protótipos": "Lab-dips & prototypes",
+  "Lab-dips & protótipos": "Lab-dips & quality swatches",
+  "Lab-dips &amp; protótipos": "Lab-dips & quality swatches",
 
   // Marquee
   "24+ Países de Exportação": "24+ Export Destinations",
@@ -853,14 +956,14 @@ const PT_TO_EN = {
   "Ver Catálogo Completo": "View Full Catalog",
   "Explorar Catálogo": "Explore Catalog",
   "Turco Algodão Penteado": "Combed Cotton Terry Towel",
-  "Laçada ultra-homogénea com toque aveludado e absorção rápida. Alta rotação para marcas de luxo e retalho.": "Ultra-consistent loop pile with plush velvet hand-feel and rapid absorbency. High rotation for luxury brands and retail.",
+  "Laçada ultra-homogénea com toque aveludado e absorção rápida. Alta rotação para marcas de luxo e retalho.": "Ultra-consistent terry pile with plush velvet hand-feel and rapid absorbency. High rotation for luxury brands and retail.",
   "Linha Heavy Contract": "Heavy Contract Hospitality Line",
-  "Fio duplo retorcido 24/2 com laçada anti-puxão. Calibrada para lavagens industriais a 90ºC em hotelaria 5★.": "Two-ply 24/2 ring-spun yarn with anti-snag dense loop. Calibrated for 90ºC industrial laundering in 5★ hospitality.",
+  "Fio duplo retorcido 24/2 com laçada anti-puxão. Calibrada para lavagens industriais a 90ºC em hotelaria 5★.": "Double-twisted 2-ply yarn (24/2) with anti-snag dense loop. Calibrated for 90ºC industrial laundering in 5★ hospitality.",
   "Ninho de Abelha & Linho": "Honeycomb Waffle & Flax Linen",
   "Ninho de Abelha &amp; Linho": "Honeycomb Waffle & Flax Linen",
   "Estrutura alveolar 3D que seca 2× mais depressa. Reduz volume de transporte e consumo de lavagem.": "Aerated 3D cellular structure drying 2× faster. Significantly cuts shipping weight and commercial laundry energy.",
   "Zero-Twist Spa Premium": "Zero-Twist Luxury Spa Terry",
-  "Fibras sem torção que criam bolsas de ar no fio. Volumetria surpreendente com leveza e secagem ultrarrápida.": "Twistless yarn construction creating air micro-pockets. Exceptional cloud-like loft with ultra-fast dry times.",
+  "Fibras sem torção que criam bolsas de ar no fio. Volumetria surpreendente com leveza e secagem ultrarrápida.": "Twistless cotton construction creating air micro-pockets. Exceptional cloud-like loft with ultra-fast dry times.",
   "Pedir Amostra B2B": "Request B2B Sample",
   "Pedir Amostra": "Request Sample",
   "Ver Ficha Técnica": "View Technical Sheet",
@@ -899,7 +1002,7 @@ const PT_TO_EN = {
   "Saber-Fazer Fabril": "Mill Craftsmanship",
   "Domínio profundo das técnicas de tecelagem felpuda, controlo de tensão de urdidura e confeção de alta tolerância.": "Deep mastery of terry weaving techniques, warp tension control, and high-tolerance computerized tailoring.",
   "Rigor Técnico Europeu": "European Technical Rigor",
-  "Garantia de conformidade dimensional, estabilidade de cor e resistência a ciclos exigentes de lavagem industrial.": "Guaranteed dimensional stability, colorfastness, and resistance to severe commercial wash cycles.",
+  "Garantia de conformidade dimensional, estabilidade de cor e resistência a ciclos exigentes de lavagem industrial.": "Guaranteed dimensional stability, high colorfastness, and resistance to severe commercial wash cycles.",
   "Flexibilidade Operacional": "Operational Flexibility",
   "Capacidade para desenvolver desde pequenas séries exclusivas até lotes industriais de grande escala com consistência.": "Ability to engineer everything from exclusive boutique capsules to large-scale industrial bulk orders with unwavering consistency.",
   "Localização": "Location",
@@ -926,7 +1029,7 @@ const PT_TO_EN = {
   "Ensaios sistemáticos de solidez à lavagem, fricção, absorção capilar e estabilidade dimensional antes de cada expedição.": "Rigorous testing for washfastness, friction rub, capillary water absorption, and dimensional shrinkage prior to dispatch.",
   "Acabamento & Confeção de Precisão": "Precision Finishing & Hemming",
   "Acabamento &amp; Confeção de Precisão": "Precision Finishing & Hemming",
-  "Linhas especializadas em costuras duplas reforçadas, aplicação de etiquetas tecidas de alta definição e embalagem adaptada aos requisitos de logística do cliente.": "Specialized lines for reinforced double-stitch hems, high-definition woven brand labels, and barcoded retail-ready packaging.",
+  "Linhas especializadas em costuras duplas reforçadas, aplicação de etiquetas tecidas de alta definição e embalagem adaptada aos requisitos de logística do cliente.": "Specialized lines for reinforced double-stitched hems, high-definition woven brand labels, and barcoded retail-ready packaging.",
   "Manufatura em Santo Tirso": "Manufacturing in Santo Tirso",
   "Fios Penteados Long-Staple": "Long-Staple Combed Cotton",
   "Tolerância Rigorosa ±3%": "Strict Tolerance ±3%",
@@ -955,7 +1058,7 @@ const PT_TO_EN = {
   "Definição de gramagens, estrutura de fio, torções e desenvolvimento de lab-dips de cor.": "Determining GSM targets, yarn structure, loop height, and formulating custom lab-dip colorways.",
   "Preparação & Fiação": "Yarn Preparation",
   "Preparação &amp; Fiação": "Yarn Preparation",
-  "Seleção criteriosa de matérias-primas: algodão penteado, cardado, linho, bambu e fibras recicladas.": "Sourcing premium raw materials: combed cotton, carded two-ply, flax linen, bamboo, and certified recycled fibers.",
+  "Seleção criteriosa de matérias-primas: algodão penteado, cardado, linho, bambu e fibras recicladas.": "Sourcing premium raw materials: combed cotton, double-twisted 2-ply yarn, flax linen, bamboo, and certified recycled fibers.",
   "Tecelagem Felpuda & Waffle": "Terry & Waffle Weaving",
   "Tecelagem Felpuda &amp; Waffle": "Terry & Waffle Weaving",
   "Tecelagem em teares Jacquard e Ratier com controlo contínuo de tensão de urdidura e peso por m².": "Weaving on high-precision Jacquard and Dobby looms with electronic warp tension and weight controls.",
@@ -978,7 +1081,7 @@ const PT_TO_EN = {
   "de": "of",
   "referências técnicas": "technical references",
   "Toalha Turco Algodão Penteado": "Combed Cotton Terry Towel",
-  "Artigo de referência da DSC. Laçada de turco densa e homogénea que garante toque aveludado e absorção rápida desde a primeira utilização.": "DSC benchmark article. Dense, homogeneous terry loop delivering velvet hand-feel and rapid absorbency from first use.",
+  "Artigo de referência da DSC. Laçada de turco densa e homogénea que garante toque aveludado e absorção rápida desde a primeira utilização.": "DSC benchmark article. Dense, homogeneous terry pile delivering velvet hand-feel and rapid absorbency from first use.",
   "100% Algodão Penteado Long-Staple": "100% Long-Staple Combed Cotton",
   "550 g/m²": "550 g/m²",
   "Simples 16/1 Ring-Spun": "Single 16/1 Ring-Spun",
@@ -992,12 +1095,12 @@ const PT_TO_EN = {
   "80% Alg. Orgânico / 20% Linho": "80% Organic Cotton / 20% Linen",
   "420 g/m²": "420 g/m²",
   "Toalha Turco Zero-Twist Premium": "Premium Zero-Twist Plush Towel",
-  "Fibras sem torção que aprisionam micro-bolsas de ar no interior do fio. Proporciona um volume visual extraordinário com extrema suavidade cutânea.": "Twistless fibers trapping micro air pockets inside the yarn. Provides extraordinary visual loft with soothing skin softness.",
+  "Fibras sem torção que aprisionam micro-bolsas de ar no interior do fio. Proporciona um volume visual extraordinário com extrema suavidade cutânea.": "Twistless cotton trapping micro air pockets inside the yarn. Provides extraordinary visual loft with soothing skin softness.",
   "100% Algodão Nobre Solúvel PVA": "100% Noble Soluble PVA Cotton",
   "600 g/m²": "600 g/m²",
   "Tapete de Banho Pé de Hotel Greca": "Greek Key Framed Hotel Bath Mat",
   "Construção de alta densidade para pavimentos de casa de banho em hotelaria. Laçada curta compactada resistente a lavagens a 95°C e calandra.": "Heavy-duty construction for hotel bathroom floors. Compact short loop ground engineered for 95°C boil-washing and high-pressure calenders.",
-  "100% Algodão Cardado Retorcido": "100% Plied Carded Cotton",
+  "100% Algodão Cardado Retorcido": "100% Double-Twisted 2-Ply Cotton",
   "950 g/m²": "950 g/m²",
   "Roupão Velour Gola Xale Spa Luxury": "Luxury Shawl-Collar Velour Spa Bathrobe",
   "Exterior em veludo tosquiado elegante e interior em turco absorvente. Desenvolvido para resorts de bem-estar, spas e suites premium.": "Elegant sheared velour exterior with absorbent terry interior. Crafted for luxury wellness resorts, thermal spas, and presidential suites.",
@@ -1012,7 +1115,7 @@ const PT_TO_EN = {
   "Tecelagem Jacquard em piquet tridimensional de favo aberto. Elevada respirabilidade, leveza excecional e secagem em metade do tempo.": "Jacquard weaving in 3D open-cell piqué structure. Enhanced breathability, lightweight loft, and drying in half the time.",
   "100% Algodão Orgânico GOTS": "100% GOTS Certified Organic Cotton",
   "480 g/m²": "480 g/m²",
-  "Pesquisar por referência, GSM ou material...": "Search by article ref, GSM weight, or yarn...",
+  "Pesquisar por referência, GSM ou material...": "Search by reference, GSM weight, or yarn construction...",
   "Ficha Técnica de Especificação": "Technical Specification Sheet",
   "Referência:": "Reference:",
   "Gramagem:": "Weight (GSM):",
@@ -1046,7 +1149,7 @@ const PT_TO_EN = {
   "Monitorização contínua do consumo de gás e eletricidade por quilo de felpo produzido, com sistemas de recuperação de calor residual nas fases de secagem e termofixação.": "Continuous monitoring of gas and electrical consumption per kilogram of terry fabric, coupled with heat-recovery systems on industrial dryers.",
   "Economia Circular & Gestão de Resíduos": "Circular Economy & Zero Waste",
   "Economia Circular &amp; Gestão de Resíduos": "Circular Economy & Zero Waste",
-  "100% dos desperdícios têxteis de corte e orlas são reencaminhados para desfibradores certificados para produção de novos fios reciclados e feltros industriais.": "100% of fabric cutting offcuts and selvages are sorted and routed to certified textile shredders for regeneration into new spun yarns.",
+  "100% dos desperdícios têxteis de corte e orlas são reencaminhados para desfibradores certificados para produção de novos fios reciclados e feltros industriais.": "100% of fabric cutting offcuts and selvedges are sorted and routed to certified textile shredders for regeneration into new spun yarns.",
   "Responsabilidade Social & Auditoria SMETA": "Social Responsibility & SMETA",
   "Responsabilidade Social &amp; Auditoria SMETA": "Social Responsibility & SMETA",
   "Compromisso rigoroso com os direitos dos trabalhadores, condições de trabalho seguras, igualdade salarial e recusa absoluta de qualquer forma de trabalho precário ou infantil.": "Strict adherence to fair worker compensation, occupational health and safety, non-discrimination, and zero tolerance for precarious labor.",
@@ -1066,7 +1169,7 @@ const PT_TO_EN = {
   "Materiais &amp; I&D": "Materials & R&D",
   "História & Marcos": "Heritage & Milestones",
   "História &amp; Marcos": "Heritage & Milestones",
-  "Pesquisar artigos por título, tema ou tecnologia...": "Search articles by title, topic, or technology...",
+  "Pesquisar artigos por título, tema ou tecnologia...": "Search technical articles by title, topic, or technology...",
   "Património & Trajetória": "Heritage & Timeline",
   "Património &amp; Trajetória": "Heritage & Timeline",
   "Momentos e Marcos que Marcaram a DSC": "Pivotal Milestones in DSC's History",
@@ -1092,30 +1195,34 @@ const PT_TO_EN = {
   "Mapa de Ruas": "Street Map",
   "Satélite HD": "Satellite HD",
   "Formulário Estruturado B2B": "Structured B2B Inquiry Form",
-  "Solicitação de Amostras & Cotação": "Sample Box Request & Quotation",
-  "Solicitação de Amostras &amp; Cotação": "Sample Box Request & Quotation",
+  "Formulário de Pedido Técnico & Cotação": "Technical Sourcing & Quotation Request",
+  "Formulário de Pedido Técnico &amp; Cotação": "Technical Sourcing & Quotation Request",
   "Preencha os detalhes do seu projeto. A nossa equipa técnica responde no prazo máximo de 24 a 48 horas úteis.": "Provide your project specifications below. Our technical engineering team responds within 24 to 48 business hours.",
-  "Nome do Contacto / Cargo *": "Contact Name / Role *",
+  "Nome Completo *": "Full Name *",
   "Empresa / Entidade *": "Company / Brand Name *",
-  "Email Profissional *": "Corporate Email *",
+  "Email Corporativo *": "Corporate Email *",
   "Telefone / WhatsApp": "Phone / WhatsApp",
-  "País / Região de Destino *": "Destination Country / Market *",
-  "Tipo de Solicitação / Âmbito *": "Inquiry Scope / Request Type *",
-  "Amostras Físicas de Artigos do Catálogo": "Physical Catalog Sample Box",
-  "Desenvolvimento de Marca Própria (Private Label Turnkey)": "Turnkey Private Label Collection Development",
-  "Cotação para Tecelagem / Subcontratação Modular": "Contract Weaving / Modular Subcontracting",
-  "Linha Hotelaria Contract / Lavandaria Industrial": "Commercial Hospitality / Heavy Contract Line",
-  "Agendamento de Visita às Instalações Fabris": "On-Site Factory Visit Scheduling",
-  "Especificações do Projeto / Referências de Interesse *": "Project Specifications / Articles of Interest *",
-  "Enviar Solicitação Técnica B2B": "Submit B2B Technical Request",
-  "Os dados submetidos serão tratados exclusivamente pela DSC para efeitos de resposta comercial e técnica, em conformidade com o RGPD.": "Submitted data is processed solely by DSC for commercial and technical fulfillment under GDPR compliance.",
-  "Garantias Operacionais DSC": "DSC Operational Guarantees",
-  "Resposta Rápida": "Rapid Turnaround",
-  "Proposta técnica e comercial formal no prazo de 24h a 48h úteis.": "Formal commercial and technical quotations within 24h to 48h.",
-  "Amostragem Ágil": "Agile Sampling",
-  "Envio de amostras de catálogo e lab-dips em 7 a 10 dias úteis.": "Catalog sample boxes and lab-dip strike-offs shipped in 7 to 10 days.",
-  "Rastreabilidade Europeia": "European Traceability",
-  "Fabricação integral em Portugal segundo as normas laborais e ambientais da UE.": "100% manufactured in Portugal adhering to EU environmental and labor standards.",
+  "País de Destino *": "Destination Market / Country *",
+  "Âmbito do Projeto *": "Project Scope *",
+  "Selecione o âmbito...": "Select scope...",
+  "Pedido de Amostras de Toalhas": "Terry Towel & Linens Sample Box",
+  "Desenvolvimento de Coleção Private Label": "Full-Package Private Label Collection Development",
+  "Produção Modular (Tecelagem / Confeção)": "Modular Contract Manufacturing (Weaving / Confection)",
+  "Parceria / Representação Comercial": "Commercial Hospitality / Heavy Contract Line",
+  "Outro Pedido Técnico / Visita Fabril": "On-Site Factory Visit Scheduling",
+  "Amostragem de Artigo Específico": "Specific Article Lab Dip / Swatch Sampling",
+  "Especificações Técnicas & Quantidades *": "Technical Specifications & Order Volumes *",
+  "Especificações Técnicas &amp; Quantidades *": "Technical Specifications & Order Volumes *",
+  "Amostra em configuração:": "Configuring Sample Request:",
+  "Enviar Pedido de Cotação": "Submit Quotation Request",
+  "Os dados facultados destinam-se exclusivamente à análise comercial e resposta técnica pela equipa DSC.": "Submitted information is processed exclusively for commercial and technical fulfillment under GDPR compliance.",
+  "GARANTIAS & DIRETRIZES B2B": "B2B GUARANTEES & OPERATIONAL DIRECTIVES",
+  "GARANTIAS &amp; DIRETRIZES B2B": "B2B GUARANTEES & OPERATIONAL DIRECTIVES",
+  "Amostras em 24/48h": "Samples in 24/48h",
+  "Acordo NDA / Sigilo": "NDA / Confidentiality Agreement",
+  "Cotação em < 24h": "Quotation in < 24h",
+  "Cotação em &lt; 24h": "Quotation in < 24h",
+  "Atendimento Multilíngue": "Multilingual Technical Support",
 
   // Footer & Legal
   "Capacidade Fabril Europeia": "European Manufacturing Capacity",
@@ -1159,10 +1266,11 @@ function normalizeStr(str) {
 }
 
 /**
- * Gets nested key value from object
+ * Gets nested or direct key value from dictionary
  */
 function getNestedValue(obj, keyPath) {
   if (!obj || !keyPath) return undefined;
+  if (keyPath in obj) return obj[keyPath];
   const parts = keyPath.split('.');
   let current = obj;
   for (const part of parts) {
@@ -1187,23 +1295,28 @@ function getCurrentLanguage() {
  * Walks all text nodes in a DOM element subtree
  */
 function walkTextNodes(root, callback) {
-  if (!root) return;
+  if (!root || typeof document.createTreeWalker !== 'function') return;
+  const showTextFilter = (typeof NodeFilter !== 'undefined' && NodeFilter.SHOW_TEXT) ? NodeFilter.SHOW_TEXT : 4;
+  const filterAccept = (typeof NodeFilter !== 'undefined' && NodeFilter.FILTER_ACCEPT) ? NodeFilter.FILTER_ACCEPT : 1;
+  const filterReject = (typeof NodeFilter !== 'undefined' && NodeFilter.FILTER_REJECT) ? NodeFilter.FILTER_REJECT : 2;
+  const filterSkip = (typeof NodeFilter !== 'undefined' && NodeFilter.FILTER_SKIP) ? NodeFilter.FILTER_SKIP : 3;
+
   const walker = document.createTreeWalker(
     root,
-    NodeFilter.SHOW_TEXT,
+    showTextFilter,
     {
       acceptNode: function(node) {
-        if (!node || !node.nodeValue) return NodeFilter.FILTER_REJECT;
+        if (!node || !node.nodeValue) return filterReject;
         const parent = node.parentElement;
-        if (!parent) return NodeFilter.FILTER_REJECT;
-        const tag = parent.tagName.toLowerCase();
+        if (!parent) return filterReject;
+        const tag = parent.tagName ? parent.tagName.toLowerCase() : '';
         if (tag === 'script' || tag === 'style' || tag === 'noscript' || tag === 'svg' || tag === 'iframe') {
-          return NodeFilter.FILTER_REJECT;
+          return filterReject;
         }
         if (!node.nodeValue.trim()) {
-          return NodeFilter.FILTER_SKIP;
+          return filterSkip;
         }
-        return NodeFilter.FILTER_ACCEPT;
+        return filterAccept;
       }
     }
   );
@@ -1217,64 +1330,132 @@ function walkTextNodes(root, callback) {
 }
 
 /**
- * Master setLanguage function
- * Reconstructs all textual and attribute states across all components.
+ * Master applyLanguage function
+ * Updates HTML lang, localStorage, data-i18n, data-i18n-placeholder, data-i18n-aria, data-i18n-html, select options, and button states.
  */
-function setLanguage(lang) {
+function applyLanguage(lang) {
   const normalizedLang = (lang === 'en') ? 'en' : 'pt';
   const targetMap = (normalizedLang === 'en') ? PT_TO_EN : EN_TO_PT;
+  const dict = dictionary[normalizedLang] || dictionary.pt;
   
-  // 1. Persist state
-  localStorage.setItem('dsc_lang', normalizedLang);
-  document.documentElement.lang = normalizedLang;
-  document.documentElement.setAttribute('data-current-lang', normalizedLang);
+  // 1. Atualizar tag html e persistir escolha
+  if (document.documentElement) {
+    document.documentElement.lang = normalizedLang;
+    if (typeof document.documentElement.setAttribute === 'function') {
+      document.documentElement.setAttribute('data-current-lang', normalizedLang);
+    }
+  }
+  try {
+    localStorage.setItem('dsc_lang', normalizedLang);
+  } catch (e) {}
 
-  // 2. Update Header & Mobile Language Buttons
-  document.querySelectorAll('.btn-lang-pt').forEach(btn => {
+  // 2. Atualizar estado visual dos botões de alternância (#btn-pt, #btn-en e .btn-lang-*)
+  const btnPt = document.getElementById('btn-pt');
+  const btnEn = document.getElementById('btn-en');
+  if (btnPt && btnEn) {
     if (normalizedLang === 'pt') {
-      btn.className = "btn-lang-pt px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95";
+      btnPt.className = "px-2.5 py-1 bg-dsc-navy text-white font-medium transition-all";
+      btnEn.className = "px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all";
     } else {
-      btn.className = "btn-lang-pt px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95";
+      btnEn.className = "px-2.5 py-1 bg-dsc-navy text-white font-medium transition-all";
+      btnPt.className = "px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all";
+    }
+  }
+
+  document.querySelectorAll('.btn-lang-pt').forEach(btn => {
+    if (btn !== btnPt) {
+      btn.className = (normalizedLang === 'pt')
+        ? "px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95"
+        : "px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95";
     }
   });
 
   document.querySelectorAll('.btn-lang-en').forEach(btn => {
-    if (normalizedLang === 'en') {
-      btn.className = "btn-lang-en px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95";
-    } else {
-      btn.className = "btn-lang-en px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95";
+    if (btn !== btnEn) {
+      btn.className = (normalizedLang === 'en')
+        ? "px-2.5 py-1 bg-dsc-navy text-white font-normal transition-all rounded-none active:scale-95"
+        : "px-2.5 py-1 text-dsc-muted hover:text-dsc-navy transition-all rounded-none active:scale-95";
     }
   });
 
-  // 3. Update Page Title
-  const pathName = window.location.pathname.split('/').pop() || 'index.html';
+  // 3. Atualizar Page Title no browser
+  const pathName = (typeof window !== 'undefined' && window.location && window.location.pathname)
+    ? window.location.pathname.split('/').pop() || 'index.html'
+    : 'index.html';
   if (PAGE_TITLES[pathName] && PAGE_TITLES[pathName][normalizedLang]) {
     document.title = PAGE_TITLES[pathName][normalizedLang];
   }
 
-  // 4. Update elements with explicit [data-i18n]
+  // 4. Atualizar elementos com [data-i18n] (textContent ou placeholder dependendo do tipo)
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    const val = getNestedValue(dictionary[normalizedLang], key);
+    const val = getNestedValue(dict, key);
     if (val !== undefined && val !== null) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = val;
+        el.setAttribute('placeholder', val);
       } else {
         el.textContent = val;
       }
     }
   });
 
-  // 5. Update elements with explicit [data-i18n-html]
+  // 5. Atualizar elementos com [data-i18n-html]
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.getAttribute('data-i18n-html');
-    const val = getNestedValue(dictionary[normalizedLang], key);
+    const val = getNestedValue(dict, key);
     if (val !== undefined && val !== null) {
       el.innerHTML = val;
     }
   });
 
-  // 6. Universal DOM text-node replacement
+  // 6. Atualizar placeholders explícitos [data-i18n-placeholder]
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const val = getNestedValue(dict, key);
+    if (val !== undefined && val !== null) {
+      el.setAttribute('placeholder', val);
+    }
+  });
+
+  // 7. Atualizar atributos de acessibilidade [data-i18n-aria] (aria-label e title)
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria');
+    const val = getNestedValue(dict, key);
+    if (val !== undefined && val !== null) {
+      if (el.hasAttribute('aria-label')) el.setAttribute('aria-label', val);
+      if (el.hasAttribute('title')) el.setAttribute('title', val);
+    }
+  });
+
+  // 8. Atualizar opções de seleção (<select option[data-i18n]>)
+  document.querySelectorAll('select option[data-i18n]').forEach(opt => {
+    const key = opt.getAttribute('data-i18n');
+    const val = getNestedValue(dict, key);
+    if (val !== undefined && val !== null) {
+      opt.textContent = val;
+    }
+  });
+
+  // 9. Atualizar restantes select options e inputs/placeholders não explicitamente anotados via frase
+  document.querySelectorAll('select option:not([data-i18n])').forEach(opt => {
+    const trimmed = opt.text.trim();
+    const normalized = normalizeStr(trimmed);
+    const match = targetMap[trimmed] || targetMap[normalized];
+    if (match) {
+      opt.text = match;
+    }
+  });
+
+  document.querySelectorAll('input[placeholder]:not([data-i18n-placeholder]):not([data-i18n]), textarea[placeholder]:not([data-i18n-placeholder]):not([data-i18n])').forEach(el => {
+    const trimmed = el.placeholder.trim();
+    const normalized = normalizeStr(trimmed);
+    const match = targetMap[trimmed] || targetMap[normalized];
+    if (match) {
+      el.setAttribute('placeholder', match);
+    }
+  });
+
+  // 10. Universal DOM text-node replacement para máxima cobertura de nós estáticos
   walkTextNodes(document.body, (node) => {
     const raw = node.nodeValue;
     const trimmed = raw.trim();
@@ -1282,7 +1463,6 @@ function setLanguage(lang) {
 
     let match = targetMap[trimmed] || targetMap[normalized];
     if (!match) {
-      // Direct normalized fallback
       for (const [k, v] of Object.entries(targetMap)) {
         if (normalizeStr(k) === normalized) {
           match = v;
@@ -1300,30 +1480,17 @@ function setLanguage(lang) {
     }
   });
 
-  // 7. Translate Inputs & Textareas Placeholders
-  document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(el => {
-    const trimmed = el.placeholder.trim();
-    const normalized = normalizeStr(trimmed);
-    const match = targetMap[trimmed] || targetMap[normalized];
-    if (match) {
-      el.placeholder = match;
-    }
-  });
-
-  // 8. Translate Select Options
-  document.querySelectorAll('select option').forEach(opt => {
-    const trimmed = opt.text.trim();
-    const normalized = normalizeStr(trimmed);
-    const match = targetMap[trimmed] || targetMap[normalized];
-    if (match) {
-      opt.text = match;
-    }
-  });
-
-  // 9. Dispatch custom event so dynamic scripts (blog cards, spec modals, form presets, GSM slider) update instantly
+  // 11. Disparar evento customizado 'languageChanged' para atualizar componentes reativos
   if (typeof window.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: normalizedLang } }));
   }
+}
+
+/**
+ * Backwards-compatibility alias
+ */
+function setLanguage(lang) {
+  applyLanguage(lang);
 }
 
 /**
@@ -1332,19 +1499,28 @@ function setLanguage(lang) {
 function translateElement(rootEl, lang) {
   const targetLang = lang || getCurrentLanguage();
   const targetMap = (targetLang === 'en') ? PT_TO_EN : EN_TO_PT;
+  const dict = dictionary[targetLang] || dictionary.pt;
 
   if (!rootEl) return;
 
   // Direct attributes
   rootEl.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    const val = getNestedValue(dictionary[targetLang], key);
+    const val = getNestedValue(dict, key);
     if (val !== undefined && val !== null) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = val;
+        el.setAttribute('placeholder', val);
       } else {
         el.textContent = val;
       }
+    }
+  });
+
+  rootEl.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const val = getNestedValue(dict, key);
+    if (val !== undefined && val !== null) {
+      el.setAttribute('placeholder', val);
     }
   });
 
@@ -1372,14 +1548,15 @@ window.EN_TO_PT = EN_TO_PT;
 window.normalizeStr = normalizeStr;
 window.getNestedValue = getNestedValue;
 window.getCurrentLanguage = getCurrentLanguage;
+window.applyLanguage = applyLanguage;
 window.setLanguage = setLanguage;
 window.translateElement = translateElement;
 
 // Auto-initialize on load
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
-    setLanguage(getCurrentLanguage());
+    applyLanguage(getCurrentLanguage());
   });
 } else {
-  setLanguage(getCurrentLanguage());
+  applyLanguage(getCurrentLanguage());
 }
