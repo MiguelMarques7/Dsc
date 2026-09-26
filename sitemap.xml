@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- 1. Página Inicial / Home -->
+  <url>
+    <loc>https://dsc.pt/html/index.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 2. Sobre Nós / Infraestrutura Fabril -->
+  <url>
+    <loc>https://dsc.pt/html/sobre.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 3. Serviços & Cadeia de Valor Industrial -->
+  <url>
+    <loc>https://dsc.pt/html/servicos.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 4. Catálogo Técnico B2B -->
+  <url>
+    <loc>https://dsc.pt/html/catalogo.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 5. Sustentabilidade & Conformidade -->
+  <url>
+    <loc>https://dsc.pt/html/sustentabilidade.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 6. Blog & Caderno Técnico -->
+  <url>
+    <loc>https://dsc.pt/html/blog.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 7. Contactos & Sourcing B2B -->
+  <url>
+    <loc>https://dsc.pt/html/contactos.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

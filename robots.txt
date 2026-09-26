@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap principal
+Sitemap: https://dsc.pt/sitemap.xml
