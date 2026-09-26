@@ -135,18 +135,18 @@
             </div>
           </div>
 
-          <!-- Grelha de Eventos e Marcos -->
+          <!-- Grelha de Eventos e Marcos (Todos Clicáveis com Leitor Informativo) -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Evento 1: Bodas de Prata -->
-            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+            <div onclick="openArticleById('bodas-de-prata')" class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group cursor-pointer hover:border-dsc-navy">
               <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <span class="badge-gold text-[9px] uppercase tracking-widest">COMEMORA&Ccedil;&Atilde;O HIST&Oacute;RICA</span>
                   <span class="font-mono text-[11px] text-dsc-muted">Roriz &middot; Santo Tirso</span>
                 </div>
-                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5 group-hover:text-dsc-gold transition-colors">
                   Celebra&ccedil;&atilde;o das Bodas de Prata da DSC
                 </h3>
                 <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
@@ -155,19 +155,19 @@
               </div>
               <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
                 <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> Marco de 25 Anos</span>
-                <span class="text-dsc-navy font-semibold">Cultura Familiar</span>
+                <span class="text-dsc-navy font-semibold flex items-center gap-1">Ler História &rarr;</span>
               </div>
             </div>
 
             <!-- Evento 2: PME Líder & PME Excelência -->
-            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+            <div onclick="openArticleById('pme-lider-excelencia')" class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group cursor-pointer hover:border-dsc-navy">
               <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <span class="badge-navy text-[9px] uppercase tracking-widest">DISTIN&Ccedil;&Atilde;O EMPRESARIAL</span>
                   <span class="font-mono text-[11px] text-dsc-gold font-bold">IAPMEI</span>
                 </div>
-                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5 group-hover:text-dsc-gold transition-colors">
                   Estatuto PME L&iacute;der &amp; PME Excel&ecirc;ncia
                 </h3>
                 <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
@@ -176,19 +176,19 @@
               </div>
               <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
                 <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Desempenho Superior</span>
-                <span class="text-dsc-navy font-semibold">M&eacute;rito de Gest&atilde;o</span>
+                <span class="text-dsc-navy font-semibold flex items-center gap-1">Ver Detalhes &rarr;</span>
               </div>
             </div>
 
             <!-- Evento 3: Projetos de Internacionalização Portugal 2020 / Norte 2020 -->
-            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+            <div onclick="openArticleById('portugal-2020-internacionalizacao')" class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group cursor-pointer hover:border-dsc-navy">
               <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <span class="badge-gold text-[9px] uppercase tracking-widest">EXPANS&Atilde;O DE MERCADOS</span>
                   <span class="font-mono text-[11px] text-dsc-muted">Europa &middot; Am&eacute;ricas</span>
                 </div>
-                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5 group-hover:text-dsc-gold transition-colors">
                   Miss&otilde;es de Internacionaliza&ccedil;&atilde;o &amp; Prospe&ccedil;&atilde;o
                 </h3>
                 <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
@@ -197,19 +197,19 @@
               </div>
               <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
                 <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> Portugal 2020 / Norte 2020</span>
-                <span class="text-dsc-navy font-semibold">24+ Pa&iacute;ses</span>
+                <span class="text-dsc-navy font-semibold flex items-center gap-1">Ler Mais &rarr;</span>
               </div>
             </div>
 
             <!-- Evento 4: Ampliação da Nave Fabril (4.800 m²) -->
-            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+            <div onclick="openArticleById('modernizacao-parque-jacquard')" class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group cursor-pointer hover:border-dsc-navy">
               <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <span class="badge-navy text-[9px] uppercase tracking-widest">INFRAESTRUTURA</span>
                   <span class="font-mono text-[11px] text-dsc-muted">4.800 m&sup2; Cobertos</span>
                 </div>
-                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5 group-hover:text-dsc-gold transition-colors">
                   Moderniza&ccedil;&atilde;o Tecnol&oacute;gica &amp; Teares Jacquard
                 </h3>
                 <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
@@ -218,19 +218,19 @@
               </div>
               <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
                 <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> Capacidade: 2.500 Ton</span>
-                <span class="text-dsc-navy font-semibold">Parque de Teares</span>
+                <span class="text-dsc-navy font-semibold flex items-center gap-1">Ver Parque &rarr;</span>
               </div>
             </div>
 
             <!-- Evento 5: Parque Solar & Descarbonização -->
-            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+            <div onclick="openArticleById('parque-solar-sustentabilidade')" class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group cursor-pointer hover:border-dsc-navy">
               <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <span class="badge-gold text-[9px] uppercase tracking-widest">SUSTENTABILIDADE ESG</span>
                   <span class="font-mono text-[11px] text-emerald-600 font-bold">100% Solar</span>
                 </div>
-                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5 group-hover:text-dsc-gold transition-colors">
                   Transi&ccedil;&atilde;o Fotovoltaica &amp; Economia Circular
                 </h3>
                 <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
@@ -239,19 +239,19 @@
               </div>
               <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
                 <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Energia Renov&aacute;vel</span>
-                <span class="text-dsc-navy font-semibold">OEKO-TEX &middot; GOTS</span>
+                <span class="text-dsc-navy font-semibold flex items-center gap-1">Ler Relat&oacute;rio &rarr;</span>
               </div>
             </div>
 
             <!-- Evento 6: Fóruns do Cluster Têxtil (ATP & CITEVE) -->
-            <div class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+            <div onclick="openArticleById('foruns-cluster-citeve-atp')" class="bg-white border border-dsc-line p-7 interactive-card flex flex-col justify-between shadow-sm relative overflow-hidden group cursor-pointer hover:border-dsc-navy">
               <div class="absolute top-0 right-0 w-16 h-16 bg-dsc-canvas -rotate-45 translate-x-8 -translate-y-8 group-hover:bg-dsc-gold/20 transition-colors"></div>
               <div>
                 <div class="flex items-center justify-between mb-4">
                   <span class="badge-navy text-[9px] uppercase tracking-widest">ECOSSISTEMA SETORIAL</span>
                   <span class="font-mono text-[11px] text-dsc-muted">ATP &middot; CITEVE</span>
                 </div>
-                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5">
+                <h3 class="font-serif text-xl font-medium text-dsc-navy mb-2.5 group-hover:text-dsc-gold transition-colors">
                   F&oacute;runs T&eacute;cnicos &amp; Passaporte Digital (DPP)
                 </h3>
                 <p class="text-xs text-dsc-body font-light leading-relaxed mb-4">
@@ -260,7 +260,7 @@
               </div>
               <div class="pt-4 border-t border-dsc-line flex items-center justify-between text-[11px] font-mono text-dsc-muted">
                 <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span> Rastreabilidade Digital</span>
-                <span class="text-dsc-navy font-semibold">EU DPP Ready</span>
+                <span class="text-dsc-navy font-semibold flex items-center gap-1">Ver Inova&ccedil;&atilde;o &rarr;</span>
               </div>
             </div>
 

@@ -1417,7 +1417,113 @@ const GLOBAL_PHRASES = {
   "Para artigos standard do catálogo técnico DSC em cores em stock, o MOQ é flexível a partir de 250 peças por referência. Para desenvolvimentos de cor exclusiva em Pantone TCX ou desenhos Jacquard personalizados sob medida, o MOQ habitual é de 250 kg a 300 kg por cor/desenho.": "For standard DSC catalog articles in stock shades, MOQ starts from 250 pieces per reference. For bespoke Pantone TCX dye batches or custom Jacquard motifs, standard MOQ is 250 kg to 300 kg per color/design.",
   "Dispomos de conjuntos de amostras físicas de toque (swatches) e toalhas completas prontas para expedição via transportadora expresso (DHL/FedEx). Para empresas com NIF intracomunitário (VIES) ou registo comercial válido, as amostras padrão são disponibilizadas para avaliação técnica.": "We maintain physical touch swatches and full sample towels ready for express courier dispatch (DHL/FedEx). For verified businesses with valid EU VAT/VIES numbers, standard evaluation samples are provided.",
   "Operamos com todos os Incoterms padrão ICC: EXW (Fábrica DSC), FOB (Porto de Leixões ou Aeroporto OPO), CIF e DDP (entrega com desalfandegamento e taxas pagas no armazém do cliente na União Europeia e Reino Unido).": "We support all standard ICC Incoterms: EXW (DSC Mill), FOB (Port of Leixões / OPO Airport), CIF, and DDP (customs-cleared direct delivery to client warehouse in the EU and UK).",
-  "Sim, absolutamente. Protegemos rigorosamente os designs, marcas e especificações exclusivas dos nossos clientes. Assinamos rotineiramente acordos de não-divulgação (NDA) antes da troca de desenhos técnicos, ficheiros de teares Jacquard ou ficheiros CAD.": "Yes, absolutely. We rigorously safeguard proprietary designs and brand IP. We routinely execute Non-Disclosure Agreements (NDAs) prior to exchanging tech packs, CAD designs, or Jacquard loom files."
+  "Sim, absolutamente. Protegemos rigorosamente os designs, marcas e especificações exclusivas dos nossos clientes. Assinamos rotineiramente acordos de não-divulgação (NDA) antes da troca de desenhos técnicos, ficheiros de teares Jacquard ou ficheiros CAD.": "Yes, absolutely. We rigorously safeguard proprietary designs and brand IP. We routinely execute Non-Disclosure Agreements (NDAs) prior to exchanging tech packs, CAD designs, or Jacquard loom files.",
+
+  // Additional broken-up sub-phrases and section elements
+  "Precisão fabril": "Industrial precision",
+  "e desenvolvimento": "and modular",
+  "modular para o": "development for",
+  "têxtil-lar.": "home textiles.",
+  "Tradição têxtil,": "Textile tradition,",
+  "engenharia": "engineering",
+  "e visão global": "and global vision",
+  "a partir de Portugal.": "from Portugal.",
+  "Engenharia têxtil integral,": "Integrated textile engineering,",
+  "da conceção do fio": "from yarn conception",
+  "da concepção do fio": "from yarn conception",
+  "ao destino internacional.": "to global delivery.",
+  "Área Coberta": "Covered Area",
+  "4.800 m²": "4,800 m²",
+  "Roriz · Santo Tirso": "Roriz · Santo Tirso",
+  "Produção / Ano": "Annual Production",
+  "2.500 Ton": "2,500 Tons",
+  "Fios / Títulos": "Yarns / Counts",
+  "Ne 12 a 30/2": "Ne 12 to 30/2",
+  "Penteado & Zero-Twist": "Combed & Zero-Twist",
+  "Conformidade": "Compliance",
+  "GOTS · SMETA": "GOTS · SMETA",
+  "UNIDADE DE TECELAGEM · SANTO TIRSO": "WEAVING UNIT · SANTO TIRSO",
+  "46 Colaboradores": "46 Collaborators",
+  "46 colaboradores · Roriz, Santo Tirso · Cluster têxtil do Ave — o epicentro da fabricação de têxteis-lar de exportação europeia. Saber-fazer autêntico aliado a tecnologia contemporânea de tecelagem Jacquard.": "46 artisans · Roriz, Santo Tirso · Ave textile cluster — the epicenter of European export home textile manufacturing. Authentic craftsmanship combined with modern Jacquard technology.",
+  "Teares Eletrónicos Dobby & Jacquard": "Electronic Dobby & Jacquard Looms",
+  "Capacidade de tecelagem contínua até 280 cm de largura com controlo de laçada micrométrico e bordaduras personalizadas.": "Continuous weaving capacity up to 280 cm width with micrometric loop control and bespoke borders.",
+  "4.800 m² de Área Fabril": "4,800 m² Mill Area",
+  "Cluster do Vale do Ave": "Ave Valley Cluster",
+  "Seg – Sex: 08:30 – 17:30 GMT": "Mon – Fri: 08:30 – 17:30 GMT",
+  "Chamada para a rede fixa nacional · Atendimento técnico em PT, EN, FR, ES": "National landline call · Technical support in PT, EN, FR, ES",
+  "+351 252 881 145": "+351 252 881 145",
+  "comercial@dsc.pt": "comercial@dsc.pt",
+  "Resposta em 24h úteis": "Response in 24 business hours",
+  "Para pedidos de cotação, amostragem e cadernos de encargos técnicos.": "For quotation requests, sampling, and technical specifications.",
+  "Formulário de Pedido Técnico B2B": "B2B Technical Request Form",
+  "Formulário de Cotação & Amostras B2B": "B2B Quotation & Sampling Form",
+  "Preencha as especificações técnicas da sua coleção para resposta rápida do nosso departamento de sourcing.": "Fill in your collection's technical specs for prompt feedback from our sourcing team.",
+  "Nome Completo *": "Full Name *",
+  "Empresa / Organização *": "Company / Organization *",
+  "País de Destino *": "Destination Country *",
+  "Email Corporativo *": "Corporate Email *",
+  "Telefone / WhatsApp": "Phone / WhatsApp",
+  "Âmbito do Projeto *": "Project Scope *",
+  "Pedido de Amostras de Toalhas": "Terry Towel Sample Box",
+  "Desenvolvimento de Coleção Private Label": "Private Label Collection Development",
+  "Produção Modular (Tecelagem / Confeção)": "Modular Production (Weaving / Confection)",
+  "Parceria / Representação Comercial de Marca Própria": "Brand Partnership / Commercial Representation",
+  "Outro Pedido Técnico": "Other Technical Inquiry",
+  "Amostragem de Artigo Específico": "Specific Article Sampling",
+  "Especificações Técnicas do Projeto (Volumes estimados, gramagens pretendidas, referências) *": "Project Technical Specifications (Estimated volumes, target GSM, references) *",
+  "Submeter Pedido Técnico": "Submit Technical Request",
+  "Os seus dados serão processados exclusivamente pela equipa comercial da DSC para resposta à presente consulta técnica.": "Your data will be processed exclusively by DSC's commercial team to respond to this technical inquiry.",
+  "Amostra em configuração:": "Sample in configuration:",
+  "Localização da Fábrica DSC: Roriz, Santo Tirso": "DSC Factory Location: Roriz, Santo Tirso",
+  "Unidade Fabril & Polo Logístico": "Manufacturing Facility & Logistics Hub",
+  "Mapa": "Street Map",
+  "Satélite HD": "HD Satellite",
+  "Centrar na Fábrica": "Center on Mill",
+  "GPS: 41°20'55.0\"N 8°23'03.1\"W": "GPS: 41°20'55.0\"N 8°23'03.1\"W",
+  "38 km • 30 min via A3 / A7": "38 km • 30 min via A3 / A7",
+  "45 km • 35 min via A3 / A28": "45 km • 35 min via A3 / A28",
+  "Autoestradas A3 / A7 / A11": "Motorways A3 / A7 / A11",
+  "Acesso rápido a Espanha, França e Europa Central": "Fast access to Spain, France, and Central Europe",
+  "Recepção de Cargas:": "Freight Reception:",
+  "Portão Logístico Sul": "South Logistics Gate",
+  "Horário de Carga:": "Loading Hours:",
+  "08:00 – 17:00": "08:00 – 17:00",
+  "Comunicação Corporativa Dedicada": "Dedicated Corporate Communication",
+  "Canais Diretos por Departamento": "Dedicated Department Channels",
+  "Contacte diretamente os nossos especialistas para agilizar o tratamento do seu projeto.": "Contact our specialists directly to expedite your project.",
+  "01 // AMOSTRAGEM": "01 // SAMPLING",
+  "02 // ENGENHARIA": "02 // ENGINEERING",
+  "03 // EXPORTAÇÃO": "03 // EXPORT",
+  "04 // LOGÍSTICA": "04 // LOGISTICS",
+  "samples@dsc.pt": "samples@dsc.pt",
+  "engineering@dsc.pt": "engineering@dsc.pt",
+  "export@dsc.pt": "export@dsc.pt",
+  "logistics@dsc.pt": "logistics@dsc.pt",
+  "Copiar email": "Copy email",
+  "Copiado!": "Copied!",
+  "Copiar Coordenadas": "Copy Coordinates",
+  "Traçar Rota →": "Get Directions →",
+  "Obter Direções →": "Get Directions →",
+  "Ler História →": "Read Story →",
+  "Ver Detalhes →": "View Details →",
+  "Ler Mais →": "Read More →",
+  "Ver Parque →": "View Loom Park →",
+  "Ler Relatório →": "Read Report →",
+  "Ver Inovação →": "View Innovation →",
+  "Gabinete Técnico & I&D": "Technical & R&D Office",
+  "Falar Sobre Este Tema →": "Discuss This Topic →",
+  "Falar Sobre Este Tema": "Discuss This Topic",
+  "Inicie o seu próximo projeto têxtil com a equipa da DSC.": "Initiate your upcoming textile project with the DSC team.",
+  "Estamos à disposição de marcas, retalhistas e grupos hoteleiros para pedidos de cotação industrial, envio de coleções de amostras físicas ou agendamento de reuniões técnicas na nossa fábrica em Roriz, Santo Tirso.": "We are at the disposal of brands, retailers, and hotel groups for industrial quotation requests, physical sample collections, or technical meetings at our factory in Roriz, Santo Tirso.",
+  "A nossa unidade industrial na Rua Quinta do Pinheiro, N.º 74 (Roriz) está estrategicamente posicionada a curta distância dos eixos rodoviários A3 e A7, do Aeroporto Sá Carneiro e do Porto de Leixões.": "Our industrial facility at Rua Quinta do Pinheiro, No. 74 (Roriz) is strategically located near the A3 and A7 motorway corridors, Sá Carneiro Airport, and the Port of Leixões.",
+  "4795-376 · PT": "4795-376 · PT",
+  "NIF: 505 528 606": "VAT: PT 505 528 606",
+  "CAE 13920": "NACE 13920",
+  "Linha Comercial": "Commercial Line",
+  "Contacto Direto": "Direct Contact",
+  "NIF": "VAT / NIF",
+  "Rua Quinta do Pinheiro, N.º 74, 4795-376 Roriz, Santo Tirso, Portugal": "Rua Quinta do Pinheiro, No. 74, 4795-376 Roriz, Santo Tirso, Portugal",
+  "Rua Quinta do Pinheiro, 74 · 4795-376 Roriz, Santo Tirso": "Rua Quinta do Pinheiro, 74 · 4795-376 Roriz, Santo Tirso"
 };
 
 // Generate reverse lookup dictionary for restoring PT perfectly
@@ -1436,6 +1542,11 @@ function getNestedValue(obj, path) {
 function getCurrentLanguage() {
   const saved = localStorage.getItem('dsc_lang');
   return saved === 'en' ? 'en' : 'pt';
+}
+
+function normalizeStr(str) {
+  if (!str) return '';
+  return str.replace(/\s+/g, ' ').trim();
 }
 
 /**
@@ -1465,28 +1576,33 @@ function translateTextNode(node, lang) {
   if (!raw) return;
   const trimmed = raw.trim();
   if (!trimmed) return;
+  const norm = normalizeStr(trimmed);
 
   if (lang === 'en') {
     if (node._origText === undefined) {
       node._origText = raw;
     }
-    if (GLOBAL_PHRASES[trimmed]) {
+    const match = GLOBAL_PHRASES[trimmed] || GLOBAL_PHRASES[norm];
+    if (match) {
       const matchLead = raw.match(/^\s*/);
       const matchTrail = raw.match(/\s*$/);
       const lead = matchLead ? matchLead[0] : '';
       const trail = matchTrail ? matchTrail[0] : '';
-      node.nodeValue = lead + GLOBAL_PHRASES[trimmed] + trail;
+      node.nodeValue = lead + match + trail;
     }
   } else {
     // Returning to PT
     if (node._origText !== undefined) {
       node.nodeValue = node._origText;
-    } else if (REVERSE_PHRASES[trimmed]) {
-      const matchLead = raw.match(/^\s*/);
-      const matchTrail = raw.match(/\s*$/);
-      const lead = matchLead ? matchLead[0] : '';
-      const trail = matchTrail ? matchTrail[0] : '';
-      node.nodeValue = lead + REVERSE_PHRASES[trimmed] + trail;
+    } else {
+      const match = REVERSE_PHRASES[trimmed] || REVERSE_PHRASES[norm];
+      if (match) {
+        const matchLead = raw.match(/^\s*/);
+        const matchTrail = raw.match(/\s*$/);
+        const lead = matchLead ? matchLead[0] : '';
+        const trail = matchTrail ? matchTrail[0] : '';
+        node.nodeValue = lead + match + trail;
+      }
     }
   }
 }
@@ -1543,9 +1659,21 @@ function setLanguage(lang) {
     
     if (text !== undefined && text !== null) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = text;
-      } else if (el.children.length === 0) {
-        el.textContent = text;
+        if (el._origPlaceholder === undefined) el._origPlaceholder = el.placeholder;
+        el.placeholder = (normalizedLang === 'pt' && el._origPlaceholder) ? el._origPlaceholder : text;
+      } else {
+        if (el._origHTML === undefined) {
+          el._origHTML = el.innerHTML;
+        }
+        if (normalizedLang === 'pt') {
+          if (el._origHTML !== undefined) {
+            el.innerHTML = el._origHTML;
+          } else {
+            el.innerHTML = text;
+          }
+        } else {
+          el.innerHTML = text;
+        }
       }
     }
   });
@@ -1562,16 +1690,22 @@ function setLanguage(lang) {
         el._origPlaceholder = el.placeholder;
       }
       const trimmed = el.placeholder.trim();
+      const norm = normalizeStr(trimmed);
       if (GLOBAL_PHRASES[trimmed]) {
         el.placeholder = GLOBAL_PHRASES[trimmed];
+      } else if (GLOBAL_PHRASES[norm]) {
+        el.placeholder = GLOBAL_PHRASES[norm];
       }
     } else {
       if (el._origPlaceholder !== undefined) {
         el.placeholder = el._origPlaceholder;
       } else {
         const trimmed = el.placeholder.trim();
+        const norm = normalizeStr(trimmed);
         if (REVERSE_PHRASES[trimmed]) {
           el.placeholder = REVERSE_PHRASES[trimmed];
+        } else if (REVERSE_PHRASES[norm]) {
+          el.placeholder = REVERSE_PHRASES[norm];
         }
       }
     }
@@ -1584,16 +1718,22 @@ function setLanguage(lang) {
         opt._origText = opt.text;
       }
       const trimmed = opt.text.trim();
+      const norm = normalizeStr(trimmed);
       if (GLOBAL_PHRASES[trimmed]) {
         opt.text = GLOBAL_PHRASES[trimmed];
+      } else if (GLOBAL_PHRASES[norm]) {
+        opt.text = GLOBAL_PHRASES[norm];
       }
     } else {
       if (opt._origText !== undefined) {
         opt.text = opt._origText;
       } else {
         const trimmed = opt.text.trim();
+        const norm = normalizeStr(trimmed);
         if (REVERSE_PHRASES[trimmed]) {
           opt.text = REVERSE_PHRASES[trimmed];
+        } else if (REVERSE_PHRASES[norm]) {
+          opt.text = REVERSE_PHRASES[norm];
         }
       }
     }
@@ -1612,8 +1752,10 @@ window.getNestedValue = getNestedValue;
 window.getCurrentLanguage = getCurrentLanguage;
 window.setLanguage = setLanguage;
 window.translateElement = translateElement;
+window.normalizeStr = normalizeStr;
 
 // Auto-run on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   setLanguage(getCurrentLanguage());
 });
+

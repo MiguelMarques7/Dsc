@@ -17,6 +17,10 @@
   <!-- Design System & Architecture Stylesheet -->
   <link rel="stylesheet" href="../css/style.css">
 
+  <!-- Interactive Leaflet Map Engine -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
   <!-- Core & Page Scripts -->
   <script src="../js/i18n.js" defer></script>
   <script src="../js/main.js" defer></script>
@@ -314,17 +318,29 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-12">
             
-            <!-- Iframe do Mapa com Pin Exato em Santo Tirso / Roriz -->
-            <div class="lg:col-span-8 min-h-[420px] h-full relative bg-slate-100">
-              <iframe 
-                class="w-full h-full min-h-[420px] border-0" 
-                src="https://maps.google.com/maps?q=Rua+Quinta+do+Pinheiro+74,+4795-376+Roriz,+Santo+Tirso,+Portugal&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                loading="lazy"
-                title="Localização DSC — Rua Quinta do Pinheiro 74, Roriz, Santo Tirso">
-              </iframe>
+            <!-- Iframe e Container Interativo do Mapa com Pin Exato em Santo Tirso / Roriz (Ampliado Zoom 18) -->
+            <div class="lg:col-span-8 min-h-[480px] h-full relative bg-slate-100 flex flex-col justify-between overflow-hidden">
+              
+              <!-- Container do Mapa Leaflet Interativo -->
+              <div id="dsc-interactive-map" class="w-full h-full min-h-[480px] relative z-0"></div>
+
+              <!-- Top Map Controls Bar -->
+              <div class="absolute top-4 left-4 right-4 z-20 flex flex-wrap items-center justify-between gap-2 pointer-events-auto">
+                <div class="inline-flex bg-white/95 backdrop-blur border border-dsc-line shadow-md text-xs font-mono">
+                  <button id="map-btn-street" class="px-3 py-1.5 bg-dsc-navy text-white font-medium transition-all">Mapa</button>
+                  <button id="map-btn-sat" class="px-3 py-1.5 text-dsc-body hover:text-dsc-navy transition-all">Satélite HD</button>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <button id="map-btn-recenter" class="px-3 py-1.5 bg-white/95 backdrop-blur border border-dsc-line shadow-md text-dsc-navy font-mono text-[11px] font-medium hover:bg-dsc-navy hover:text-white transition-all flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
+                    <span>Centrar na Fábrica</span>
+                  </button>
+                </div>
+              </div>
               
               <!-- Floating Industrial Pin Overlay Card -->
-              <div class="absolute bottom-5 left-5 right-5 sm:right-auto bg-dsc-navy-deep/95 backdrop-blur-md text-white p-4 border border-white/20 shadow-2xl max-w-sm">
+              <div class="absolute bottom-5 left-5 right-5 sm:right-auto z-20 bg-dsc-navy-deep/95 backdrop-blur-md text-white p-4 border border-white/20 shadow-2xl max-w-sm pointer-events-auto">
                 <div class="flex items-center justify-between gap-4 mb-1.5">
                   <span class="badge-gold text-[8px] uppercase tracking-widest">SEDE &amp; UNIDADE INDUSTRIAL</span>
                   <span class="w-2 h-2 rounded-full bg-emerald-500 micro-dot-pulse"></span>
@@ -334,7 +350,10 @@
                   Rua Quinta do Pinheiro, 74 &middot; 4795-376 Roriz, Santo Tirso
                 </p>
                 <div class="mt-2.5 pt-2 border-t border-white/10 flex items-center justify-between text-[10px] font-mono text-dsc-gold">
-                  <span>GPS: 41&deg;20'55.0"N 8&deg;23'03.1"W</span>
+                  <button class="copy-trigger cursor-pointer hover:underline text-dsc-gold flex items-center gap-1" data-copy="41.34860, -8.38420" title="Copiar Coordenadas">
+                    <span>GPS: 41&deg;20'55.0"N 8&deg;23'03.1"W</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  </button>
                   <span class="text-white font-sans text-[11px]">&bull; Vale do Ave</span>
                 </div>
               </div>
