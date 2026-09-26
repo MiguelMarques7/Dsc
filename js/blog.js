@@ -1039,43 +1039,52 @@ function getBlogLang() {
   return saved === 'en' ? 'en' : 'pt';
 }
 
-function renderBlogCards() {
-  const container = document.getElementById('blog-grid');
-  if (!container) return;
-
-  const lang = getBlogLang();
-  // Display the 6 main technical articles in the primary blog grid
-  const primaryArticles = DSC_ARTICLES.slice(0, 6);
-
-  container.innerHTML = primaryArticles.map((art) => {
-    const data = art[lang] || art.pt;
-    return `
-      <article onclick="openArticleById('${art.id}')" class="p-8 bg-dsc-white hover:bg-slate-50 transition-all duration-200 cursor-pointer flex flex-col justify-between h-full rounded-none interactive-card group border border-dsc-line">
-        <div>
-          <div class="font-mono text-[10px] text-dsc-navy uppercase tracking-widest mb-4 flex items-center justify-between">
-            <span class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold"></span>
-              <span>${data.category}</span>
-            </span>
-            <span class="text-dsc-muted font-normal">${data.readTime}</span>
-          </div>
-          <h3 class="font-serif text-2xl font-normal tracking-tight text-dsc-navy mb-3 leading-snug group-hover:text-dsc-navy transition-colors">
-            ${data.title}
-          </h3>
-          <p class="text-xs text-dsc-body font-light leading-relaxed mb-8 line-clamp-3">
-            ${data.snippet}
-          </p>
-        </div>
-        <div class="flex justify-between items-center border-t border-dsc-line/80 pt-4 mt-auto">
-          <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">${data.date}</span>
-          <span class="arrow-trigger font-sans text-xs uppercase font-medium tracking-wider text-dsc-navy flex items-center gap-1.5">
-            <span>${data.readBtn}</span>
-            <span class="arrow-target text-dsc-gold font-bold">&rarr;</span>
+function createArticleCardHTML(art, lang) {
+  const data = art[lang] || art.pt;
+  return `
+    <article onclick="openArticleById('${art.id}')" class="p-7 sm:p-8 bg-dsc-white hover:bg-slate-50 transition-all duration-200 cursor-pointer flex flex-col justify-between h-full rounded-none interactive-card group border border-dsc-line shadow-sm">
+      <div>
+        <div class="font-mono text-[10px] text-dsc-navy uppercase tracking-widest mb-3.5 flex items-center justify-between">
+          <span class="flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-dsc-gold micro-dot-pulse"></span>
+            <span class="font-medium text-dsc-navy">${data.category}</span>
           </span>
+          <span class="text-dsc-muted font-normal text-[11px]">${data.readTime}</span>
         </div>
-      </article>
-    `;
-  }).join('');
+        <h3 class="font-serif text-xl sm:text-2xl font-normal tracking-tight text-dsc-navy mb-3 leading-snug group-hover:text-dsc-gold transition-colors line-clamp-2">
+          ${data.title}
+        </h3>
+        <p class="text-xs text-dsc-body font-light leading-relaxed mb-6 line-clamp-3">
+          ${data.snippet}
+        </p>
+      </div>
+      <div class="flex justify-between items-center border-t border-dsc-line/80 pt-4 mt-auto">
+        <span class="font-mono text-[10px] uppercase tracking-widest text-dsc-muted">${data.date}</span>
+        <span class="arrow-trigger font-sans text-xs uppercase font-medium tracking-wider text-dsc-navy flex items-center gap-1.5 group-hover:text-dsc-gold transition-colors">
+          <span>${data.readBtn || (lang === 'en' ? 'Read Article' : 'Ler Artigo')}</span>
+          <span class="arrow-target text-dsc-gold font-bold">&rarr;</span>
+        </span>
+      </div>
+    </article>
+  `;
+}
+
+function renderBlogCards() {
+  const blogContainer = document.getElementById('blog-grid');
+  const eventsContainer = document.getElementById('events-grid');
+  const lang = getBlogLang();
+
+  // 1. Render 6 Primary Technical Articles
+  if (blogContainer) {
+    const primaryArticles = DSC_ARTICLES.slice(0, 6);
+    blogContainer.innerHTML = primaryArticles.map(art => createArticleCardHTML(art, lang)).join('');
+  }
+
+  // 2. Render 6 Historical / Event Milestone Articles with identical styling
+  if (eventsContainer) {
+    const eventArticles = DSC_ARTICLES.slice(6, 12);
+    eventsContainer.innerHTML = eventArticles.map(art => createArticleCardHTML(art, lang)).join('');
+  }
 }
 
 window.openArticleById = function(id) {
